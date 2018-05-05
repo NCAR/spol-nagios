@@ -1,0 +1,11 @@
+import sys; sys.__plen = len(sys.path)
+./MySQL_python-1.2.5-py2.7-linux-x86_64.egg
+./ply-3.6-py2.7.egg
+./pysmi-0.0.6-py2.7.egg
+./pysnmp-4.3.1-py2.7.egg
+./pycrypto-2.6.1-py2.7-linux-x86_64.egg
+./pyasn1-0.1.9-py2.7.egg
+./pysphere-0.1.7-py2.7.egg
+./simplejson-3.6.5-py2.7-linux-x86_64.egg
+./netsnmp_python-1.0a1-py2.7-linux-x86_64.egg
+import sys; new=sys.path[sys.__plen:]; del sys.path[sys.__plen:]; p=getattr(sys,'__egginsert',0); sys.path[p:p]=new; sys.__egginsert = p+len(new)

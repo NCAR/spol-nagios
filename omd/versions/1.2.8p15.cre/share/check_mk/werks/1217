@@ -1,0 +1,12 @@
+Title: dell_om_sensors: Check now uses generic temperature features
+Level: 1
+Component: checks
+Compatible: incomp
+Version: 1.2.7i1
+Date: 1422451362
+Class: feature
+
+The check now uses the WATO temperature rule which provides more configuration
+options.  If you have used the WATO room temperature rule until now, you
+have to migrate the levels.
+

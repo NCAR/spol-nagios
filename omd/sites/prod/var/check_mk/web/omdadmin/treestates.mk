@@ -1,0 +1,12 @@
+{'edit_host': {u'Hosttags': 'on'},
+ 'nform': {u'AccesstoAgents': 'on',
+           u'EventConsole': 'off',
+           u'Grouping': 'off'},
+ 'views': {u'Business Intelligence': 'on',
+           u'Host Groups': 'off',
+           u'Hosts': 'on',
+           u'Metrics': 'on',
+           u'Overview': 'on',
+           u'Problems': 'on',
+           u'Service Groups': 'off',
+           u'Services': 'on'}}

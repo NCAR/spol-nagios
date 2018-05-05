@@ -1,0 +1,2341 @@
+# NagVis language file
+#
+# Lars Michelsen <lm@larsmichelsen.com>, 2015.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: NagVis 1.9a1 \n"
+"Report-Msgid-Bugs-To: info@nagvis.org\n"
+"POT-Creation-Date: 2015-06-26 18:07+0200\n"
+"PO-Revision-Date: 2015-06-26 18:07+0200\n"
+"Last-Translator: Lars Michelsen <lars@vertical-visions.de>\n"
+"Language-Team: NagVis Team <info@nagvis.org>\n"
+"Language: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: share/server/core/classes/ViewMapAddModify.php:388
+msgid ">>> Specify other"
+msgstr ">>> Anderen Wert angeben"
+
+#: share/server/core/classes/ViewManageMaps.php:44
+#: share/server/core/classes/ViewManageMaps.php:162
+msgid "A map with this name already exists"
+msgstr "Eine Karte mit diesem Namen existiert bereits"
+
+#: share/server/core/classes/ViewToNewMap.php:43
+#: share/server/core/classes/ViewToStaticMap.php:43
+msgid "A map with this name already exists."
+msgstr ""
+
+#: share/server/core/classes/ViewMapManageTmpl.php:42
+#: share/server/core/classes/ViewMapManageTmpl.php:122
+#: share/server/core/classes/ViewMapManageTmpl.php:223
+msgid "A map with this name does not exists"
+msgstr ""
+
+#: share/server/core/classes/ViewManageRoles.php:46
+msgid "A role with this name already exists."
+msgstr ""
+
+#: share/server/core/classes/ViewMapManageTmpl.php:56
+msgid "A template with this name already exists."
+msgstr "Ein Template mit diesem Namen existiert bereits."
+
+#: share/server/core/classes/ViewMapManageTmpl.php:133
+#: share/server/core/classes/ViewMapManageTmpl.php:232
+msgid "A template with this name does not exist."
+msgstr "Ein Template mit diesem Namen existiert nicht."
+
+#: share/server/core/classes/ViewManageUsers.php:46
+msgid "A user with this name already exists."
+msgstr ""
+
+#: share/server/core/classes/CoreLogonDialogHandler.php:63
+msgid "Access denied"
+msgstr "Zugriff verweigert"
+
+#: share/server/core/classes/NagVisContextMenu.php:123
+#: share/server/core/classes/ViewAck.php:111
+msgid "Acknowledge"
+msgstr "Acknowledge"
+
+#: share/server/core/classes/ViewManageRoles.php:147
+msgid "Action"
+msgstr "Aktion"
+
+#: share/server/core/classes/CoreModAction.php:75
+msgid "Action handler not implemented."
+msgstr "Aktion nicht implementiert."
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:370
+#: share/server/core/classes/GlobalMapCfg.php:1904
+#: share/server/core/classes/GlobalMapCfg.php:1906
+msgid "Actions"
+msgstr "Aktionen"
+
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: share/server/core/classes/ViewManageBackends.php:110
+msgid "Add Backend"
+msgstr ""
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:378
+msgid "Add Icon"
+msgstr "Icon Hinzufügen"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:379
+msgid "Add Line"
+msgstr "Linie Hinzufügen"
+
+#: share/server/core/classes/ViewMapManageTmpl.php:104
+#: share/server/core/classes/ViewMapManageTmpl.php:204
+msgid "Add Option"
+msgstr "Option Hinzufügen"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:381
+msgid "Add Special"
+msgstr "Spezial-Objekt Hinzufügen"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:387
+#: share/server/core/classes/GlobalCore.php:693
+msgid "Aggregation"
+msgstr "Aggregation"
+
+#: share/server/core/classes/GlobalCore.php:694
+msgid "Aggregation Name"
+msgstr "Aggregation"
+
+#: share/server/core/classes/ViewManageMaps.php:95
+msgid "Alias"
+msgstr "Alias"
+
+#: share/server/core/functions/core.php:157
+msgid "Alphabetically"
+msgstr "Alphabetisch"
+
+#: share/server/core/classes/GlobalMapCfg.php:1903
+msgid "Appearance"
+msgstr ""
+
+#: share/server/core/functions/core.php:164
+msgid "Ascending"
+msgstr "Aufsteigend"
+
+#: share/server/core/classes/GlobalMapCfg.php:377
+msgid "Attribute definition out of object. In map [MAPNAME] at line #[LINE]."
+msgstr "Attribut ausserhalb von Objekt-Definition gefunden. Auf Karte [MAPNAME] in Zeile #[LINE]."
+
+#: share/server/core/classes/CoreModAuth.php:92
+msgid "Authentication failed"
+msgstr "Login fehlgeschlagen"
+
+#: share/server/core/classes/CoreLogonDialogHandler.php:51
+msgid "Authentication failed."
+msgstr "Anmeldung fehlgeschlagen."
+
+#: share/server/core/classes/GlobalMainCfg.php:2438
+#: share/server/core/classes/GlobalMapCfg.php:1909
+msgid "Automap"
+msgstr "Automap"
+
+#: share/server/core/classes/ViewManageMaps.php:33
+msgid "Automap based on parent/child relations"
+msgstr "Automap basierend auf Eltern/Kind Beziehungen"
+
+#: share/server/core/classes/ViewManageUsers.php:159
+msgid "Available Roles"
+msgstr "Rollen verfügbar"
+
+#: share/server/core/classes/ViewManageBackends.php:175
+#: share/server/core/classes/ViewManageBackends.php:186
+#: share/server/core/classes/ViewManageBackends.php:252
+msgid "Backend ID"
+msgstr ""
+
+#: share/server/core/classes/ViewManageBackends.php:179
+msgid "Backend Type"
+msgstr ""
+
+#: share/server/core/classes/ViewManageBackgrounds.php:213
+msgid "Background"
+msgstr ""
+
+#: share/server/core/sources/automap.php:51
+msgid "Bottom to top"
+msgstr "Von unten nach oben"
+
+#: share/server/core/sources/geomap.php:148
+msgid "CSV-File"
+msgstr "CSV-Datei"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:372
+#: share/server/core/classes/ViewChangePassword.php:92
+msgid "Change password"
+msgstr "Passwort ändern"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:368
+msgid "Choose Language"
+msgstr "Sprache wählen"
+
+#: share/server/core/classes/ViewManageBackgrounds.php:215
+msgid "Choose a background"
+msgstr ""
+
+#: share/server/core/classes/ViewManageMaps.php:198
+#: share/server/core/classes/ViewManageMaps.php:261
+#: share/server/core/classes/ViewManageMaps.php:305
+msgid "Choose a map"
+msgstr "Wähle eine Karte"
+
+#: share/server/core/classes/ViewManageShapes.php:142
+msgid "Choose a shape"
+msgstr ""
+
+#: share/server/core/classes/ViewManageBackgrounds.php:151
+#: share/server/core/classes/ViewManageShapes.php:74
+msgid "Choose an Image"
+msgstr ""
+
+#: share/server/core/classes/NagVisContextMenu.php:126
+msgid "Clone object"
+msgstr "Objekt klonen"
+
+#: share/server/core/classes/ViewManageBackgrounds.php:79
+msgid "Color"
+msgstr ""
+
+#: share/server/core/classes/ViewMapAddModify.php:236
+msgid "Color select"
+msgstr "Farbe wählen"
+
+#: share/server/core/classes/ViewAck.php:99
+msgid "Comment"
+msgstr "Kommentar"
+
+#: share/server/core/classes/CoreBackendMgmt.php:570
+msgid "Configuration Error: The statusHost ([STATUSHOST]) is in same backend as the one to check."
+msgstr "Fehler in Konfiguration: Der Status-Host ([STATUSHOST]) ist aus dem zu prüfenden Backend."
+
+#: share/server/core/classes/NagVisContextMenu.php:168
+msgid "Connect (HTTP)"
+msgstr "Verbinden (HTTP)"
+
+#: share/server/core/classes/NagVisContextMenu.php:172
+msgid "Connect (HTTPS)"
+msgstr "Verbinden (HTTPS)"
+
+#: share/server/core/classes/NagVisContextMenu.php:160
+msgid "Connect (RDP)"
+msgstr "Verbinden (RDP)"
+
+#: share/server/core/classes/NagVisContextMenu.php:164
+msgid "Connect (SSH)"
+msgstr "Verbinden (SSH)"
+
+#: share/server/core/classes/CoreBackendMgmt.php:219
+#: share/server/core/classes/CoreBackendMgmt.php:249
+#: share/server/core/classes/CoreBackendMgmt.php:274
+#: share/server/core/classes/CoreBackendMgmt.php:293
+#: share/server/core/classes/CoreBackendMgmt.php:376
+#: share/server/core/classes/CoreBackendMgmt.php:415
+msgid "Connection Problem (Backend: [BACKENDID]): [MSG]"
+msgstr "Verbindungsproblem (Backend: [BACKENDID]): [MSG]"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:391
+msgid "Container"
+msgstr "Container"
+
+#: share/server/core/classes/objects/NagVisStatefulObject.php:728
+msgid "Contains"
+msgstr "Enthält"
+
+#: share/frontend/nagvis-js/classes/NagVisLoginView.php:70
+msgid "Cookies disabled"
+msgstr "Cookies deaktiviert"
+
+#: share/server/core/classes/ViewManageBackgrounds.php:100
+#: share/server/core/classes/ViewManageMaps.php:107
+#: share/server/core/classes/ViewManageRoles.php:75
+#: share/server/core/classes/ViewManageUsers.php:97
+#: share/server/core/classes/ViewMapManageTmpl.php:109
+msgid "Create"
+msgstr "Erstellen"
+
+#: share/server/core/classes/ViewManageBackgrounds.php:30
+msgid "Create Background"
+msgstr ""
+
+#: share/server/core/classes/ViewManageMaps.php:27
+msgid "Create Map"
+msgstr "Karte erstellen"
+
+#: share/server/core/classes/GlobalCore.php:680
+msgid "Create Object"
+msgstr "Objekt erzeugen"
+
+#: share/server/core/classes/ViewManageRoles.php:30
+msgid "Create Role"
+msgstr "Rolle erstellen"
+
+#: share/server/core/classes/ViewMapManageTmpl.php:30
+msgid "Create Template"
+msgstr "Template erstellen"
+
+#: share/server/core/classes/ViewManageUsers.php:30
+msgid "Create User"
+msgstr "Nutzer erstellen"
+
+#: share/server/core/classes/ViewMapAddModify.php:377
+msgid "Current value is not a known option - falling back to input field."
+msgstr "Aktueller Wert ist unbekannt - zeige Eingabefeld."
+
+#: share/server/core/classes/CoreAuthHandler.php:70
+msgid "Data has an invalid format"
+msgstr "Die Daten haben ein ungültiges Format"
+
+#: share/server/core/classes/CoreModGeneral.php:94
+msgid "Data not parsable: [URL] ([MSG])"
+msgstr "Daten konnten nicht eingelesen werden: [URL] ([MSG])"
+
+#: share/server/core/classes/ViewManageBackends.php:63
+#: share/server/core/classes/ViewManageBackends.php:89
+msgid "Default Backend"
+msgstr ""
+
+#: share/server/core/classes/ViewManageBackends.php:262
+#: share/server/core/classes/ViewManageBackgrounds.php:223
+#: share/server/core/classes/ViewManageMaps.php:269
+#: share/server/core/classes/ViewManageRoles.php:219
+#: share/server/core/classes/ViewManageShapes.php:150
+#: share/server/core/classes/ViewManageUsers.php:223
+#: share/server/core/classes/ViewMapManageTmpl.php:263
+msgid "Delete"
+msgstr "Löschen"
+
+#: share/server/core/classes/ViewManageBackends.php:223
+msgid "Delete Backend"
+msgstr ""
+
+#: share/server/core/classes/ViewManageBackgrounds.php:163
+msgid "Delete Background"
+msgstr ""
+
+#: share/server/core/classes/ViewManageMaps.php:217
+msgid "Delete Map"
+msgstr "Karte löschen"
+
+#: share/server/core/classes/ViewManageRoles.php:171
+msgid "Delete Role"
+msgstr "Rolle löschen"
+
+#: share/server/core/classes/ViewManageShapes.php:86
+msgid "Delete Shape"
+msgstr ""
+
+#: share/server/core/classes/ViewMapManageTmpl.php:216
+msgid "Delete Template"
+msgstr "Template löschen"
+
+#: share/server/core/classes/ViewManageUsers.php:178
+msgid "Delete User"
+msgstr "Nutzer löschen"
+
+#: share/server/core/classes/NagVisContextMenu.php:138
+msgid "Delete object"
+msgstr "Objekt löschen"
+
+#: share/server/core/functions/core.php:165
+msgid "Descending"
+msgstr "Absteigend"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:386
+#: share/server/core/classes/GlobalCore.php:690
+msgid "Dynamic Group"
+msgstr "Dynamische Gruppe"
+
+#: share/server/core/classes/GlobalCore.php:691
+msgid "Dynamic Group Name"
+msgstr "Gruppenname"
+
+#: share/server/core/classes/ViewManageMaps.php:34
+msgid "Dynamic map"
+msgstr "Dynamische Karte"
+
+#: share/server/core/classes/GlobalMapCfg.php:1908
+msgid "Dynmap"
+msgstr ""
+
+#: share/server/core/classes/CoreExceptions.php:32
+#: share/server/core/classes/CoreExceptions.php:71
+msgid "ERROR"
+msgstr "FEHLER"
+
+#: share/server/core/classes/ViewManageBackends.php:112
+msgid "Edit Backend"
+msgstr ""
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:388
+msgid "Edit Map"
+msgstr "Karte bearbeiten"
+
+#: share/frontend/nagvis-js/classes/ViewError.php:38
+msgid "Error"
+msgstr ""
+
+#: share/server/core/classes/CoreModMultisite.php:206
+msgid "Error: "
+msgstr "Fehler:"
+
+#: share/server/core/ajax_handler.php:66
+msgid "Error: PHP Error"
+msgstr ""
+
+#: share/server/core/ajax_handler.php:72
+msgid "Error: Unhandled Exception"
+msgstr ""
+
+#: share/server/core/classes/GlobalMapCfg.php:1913
+msgid "Events"
+msgstr ""
+
+#: share/server/core/classes/ViewManageMaps.php:313
+msgid "Export"
+msgstr "Exportieren"
+
+#: share/server/core/classes/ViewManageMaps.php:275
+msgid "Export Map"
+msgstr "Karte exportieren"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:413
+msgid "Export to static map"
+msgstr "Als statische Karte exportieren"
+
+#: share/server/core/sources/worldmap.php:229
+msgid "Failed to add object: [E]: [Q]"
+msgstr ""
+
+#: share/server/core/classes/ViewManageMaps.php:61
+msgid "Failed to create the map"
+msgstr "Fehler beim erstellen der Karte"
+
+#: share/server/core/sources/worldmap.php:295
+msgid "Failed to delete object: [E]: [Q]"
+msgstr ""
+
+#: share/server/core/classes/GlobalCore.php:669
+msgid "Failed to write file to disk"
+msgstr "Datei konnte nicht geschrieben werden."
+
+#: share/server/core/classes/GlobalCore.php:665
+msgid "File is too large (FORM limit)"
+msgstr "Datei ist zu groß (FORM limit)"
+
+#: share/server/core/classes/GlobalCore.php:664
+msgid "File is too large (PHP limit)"
+msgstr "Datei is zu groß (PHP limit)"
+
+#: share/server/core/classes/GlobalCore.php:670
+msgid "File upload stopped by extension"
+msgstr "Ungültiges Dateiformat. Upload gestoppt."
+
+#: share/server/core/mapcfg/default.php:106
+msgid "Fill screen"
+msgstr "Bildschirm füllen"
+
+#: share/server/core/classes/GlobalMapCfg.php:1902
+msgid "General"
+msgstr ""
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:398
+msgid "General Configuration"
+msgstr "Hauptkonfiguration"
+
+#: share/server/core/classes/ViewManageMaps.php:31
+msgid "Geographical map (interactive)"
+msgstr ""
+
+#: share/server/core/classes/ViewManageMaps.php:32
+msgid "Geographical map (non interactive)"
+msgstr ""
+
+#: share/server/core/classes/GlobalMapCfg.php:1910
+msgid "Geomap"
+msgstr ""
+
+#: share/server/core/classes/ViewMapAddModify.php:247
+msgid "Get current size"
+msgstr "Aktuelle Größe auslesen"
+
+#: share/server/core/classes/GlobalMainCfg.php:2432
+msgid "Global Settings"
+msgstr "Globale EInstellungen"
+
+#: share/server/core/sources/geomap.php:300
+msgid "Got empty map after filtering. Terminate rendering geomap."
+msgstr "Die Karte ist leer. Breche darstellung der Karte ab."
+
+msgid "Got invalid data from \"[U]\""
+msgstr "Ungültige Daten von \"[U]\""
+
+#: share/server/core/sources/geomap.php:384
+msgid "Got invalid data from \"[U]\": \"[C]\""
+msgstr "Ungültige Daten von \"[U]\": \"[C]\""
+
+#: share/server/core/sources/geomap.php:379
+msgid "Got invalid response from \"[U]\". This is mostly caused by an unhandled request."
+msgstr "Ungültige Antwort von \"[U]\" erhalten. Eventuell wird die Anfrage nicht unterstützt."
+
+#: share/server/core/sources/automap_pos.php:232
+msgid "Graphviz call failed ([CODE]): [OUTPUT]<br /><br >Command was: \"[CMD]\""
+msgstr "Fehler bei Graphiz Aufruf: ([CODE]): [OUTPUT]<br /><br >Befehl: \"[CMD]\""
+
+#: share/server/core/mapcfg/default.php:68
+msgid "HTML Code"
+msgstr "HTML-Code"
+
+#: share/server/core/classes/ViewManageBackgrounds.php:94
+msgid "Height"
+msgstr ""
+
+#: share/server/core/sources/dynmap.php:65
+msgid "Hostgroup"
+msgstr "Gerätegruppe"
+
+#: share/server/core/mapcfg/default.php:91
+#: share/server/core/sources/dynmap.php:63
+msgid "Hosts"
+msgstr "Geräte"
+
+#: share/server/core/classes/ViewManageMaps.php:90
+msgid "ID (Internal Name)"
+msgstr "ID (Interner Name)"
+
+#: share/server/core/classes/CoreExceptions.php:62
+msgid "INFO"
+msgstr "INFO"
+
+#: share/server/core/mapcfg/default.php:67
+msgid "Image"
+msgstr "Bild"
+
+#: share/server/core/classes/ViewManageMaps.php:371
+msgid "Import"
+msgstr "Importieren"
+
+#: share/server/core/classes/ViewManageMaps.php:319
+msgid "Import Map"
+msgstr "Karte importieren"
+
+#: share/server/core/classes/ViewMapAddModify.php:551
+msgid "Invalid clone object id"
+msgstr ""
+
+#: share/server/core/classes/CoreUserCfg.php:66
+msgid "Invalid data in \"[FILE]\"."
+msgstr "Ungültige Daten in \"[FILE]\"."
+
+#: share/server/core/classes/ViewEditMainCfg.php:59
+msgid "Invalid format given. Regex: [r]"
+msgstr "Ungültiges Format. Regulärer Ausdruck: [r]"
+
+#: share/server/core/classes/CoreLogonDialogHandler.php:81
+msgid "Invalid password."
+msgstr "Ungültiges Passwort."
+
+#: share/server/core/classes/CoreModMap.php:84
+msgid "Invalid query. The parameter [NAME] is missing or has an invalid format."
+msgstr "Ungültige Anfrage. Der Parameter [NAME] ist nicht vorhanden oder hat ein ungültiges Format."
+
+#: share/server/core/classes/GlobalBackendmkbi.php:145
+#: share/server/core/classes/GlobalBackendmkbi.php:153
+msgid "Invalid response ([BACKENDID]): [RESPONSE]"
+msgstr "Ungültige Antwort ([BACKENDID]): [RESPONSE]"
+
+#: share/server/core/classes/objects/NagVisStatefulObject.php:707
+msgid "Invalid state+substate ([STATE], [SUBSTATE]) found on state comparision in an object of type [TYPE] named [NAME]."
+msgstr "Ungültiger Status+Substatus ([STATE], [SUBSTATE]) während Status-Vergleich in einem Objekt vom Typ [TYPE] mit dem Namen [NAME] gefunden."
+
+#: share/server/core/classes/objects/NagVisStatefulObject.php:655
+msgid "Invalid state+substate ([STATE], [SUBSTATE]) found while loading the current summary state of an object of type [TYPE]."
+msgstr "Ungültiger Status+Substatus ([STATE], [SUBSTATE]) während der Ermittlung des Gesamtstatus in einem Objekt vom Typ [TYPE] mit dem Namen [NAME] gefunden."
+
+#: share/server/core/classes/GlobalBackendmkbi.php:235
+#: share/server/core/classes/GlobalBackendnagiosbp.php:215
+msgid "Invalid state: \"[S]\""
+msgstr "Ungültiger Zustand: \"[S]\""
+
+#: share/server/core/classes/CoreLogonDialogHandler.php:77
+msgid "Invalid username."
+msgstr "Ungültiger Nutzername."
+
+#: share/server/core/classes/ViewManageRoles.php:90
+#: share/server/core/classes/ViewManageRoles.php:179
+#: share/server/core/classes/ViewManageUsers.php:114
+#: share/server/core/classes/ViewManageUsers.php:186
+#: share/server/core/classes/ViewManageUsers.php:240
+msgid "Invalid value provided."
+msgstr ""
+
+#: share/server/core/classes/ViewManageBackends.php:147
+#: share/server/core/classes/ViewManageRoles.php:42
+#: share/server/core/classes/ViewManageUsers.php:42
+msgid "Invalid value provided. Needs to match: [P]."
+msgstr ""
+
+#: share/server/core/classes/ViewMapManageTmpl.php:94
+#: share/server/core/classes/ViewMapManageTmpl.php:187
+msgid "Key"
+msgstr ""
+
+#: share/server/core/classes/GlobalMapCfg.php:1907
+msgid "Label"
+msgstr ""
+
+#: share/server/core/sources/automap.php:50
+msgid "Left to right"
+msgstr "Links nach rechts"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:380
+msgid "Line"
+msgstr "Linie"
+
+#: share/server/core/classes/GlobalBackendmklivestatus.php:972
+#: share/server/core/classes/GlobalBackendmklivestatus.php:1164
+#: share/server/core/classes/GlobalBackendmklivestatus.php:1316
+msgid "Livestatus version used in backend [BACKENDID] is too old. Please update."
+msgstr "Livestatus Version zu alt (Backend: [BACKENDID]). Bitte aktualisieren."
+
+#: share/server/core/sources/geomap.php:21
+msgid "Location source file \"[F]\" does not exist."
+msgstr "Die Positionsdatei \"[F]\" existiert nicht."
+
+#: share/server/core/classes/NagVisContextMenu.php:129
+msgid "Lock"
+msgstr "Sperren"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:395
+msgid "Lock/Unlock all"
+msgstr "Alle Sperren/Freigeben"
+
+#: share/server/core/classes/NagVisContextMenu.php:141
+msgid "Lock/Unlock line middle"
+msgstr "Mittel-Knoten sperren/freigeben"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:371
+msgid "Logged in"
+msgstr "Eingeloggt"
+
+#: share/frontend/nagvis-js/classes/NagVisLoginView.php:69
+msgid "Login"
+msgstr "Einloggen"
+
+#: share/server/core/classes/CoreLogonMultisite.php:127
+msgid "LogonMultisite: Not authenticated."
+msgstr "LogonMultisite: Nicht angemeldet."
+
+#: share/server/core/classes/CoreLogonMultisite.php:47
+msgid "LogonMultisite: The htpasswd file \"[HTPASSWD]\" or the authentication serial file \"[SERIAL]\" do not exist."
+msgstr "LogonMultisite: die htpasswd-Datei \"[HTPASSWD]\" oder die Serial-Datei \"[SERIAL]\" existieren nicht."
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:409
+msgid "Logout"
+msgstr "Ausloggen"
+
+#: share/server/core/classes/ViewMapAddModify.php:512
+msgid "Make Permanent"
+msgstr "Permament speichern"
+
+#: share/server/core/classes/NagVisContextMenu.php:156
+msgid "Make root"
+msgstr "Als Wurzel verwenden"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:399
+msgid "Manage Backends"
+msgstr "Datenquellen verwalten"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:400
+msgid "Manage Backgrounds"
+msgstr "Hintergründe verwalten"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:401
+msgid "Manage Maps"
+msgstr "Karten verwalten"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:365
+msgid "Manage Roles"
+msgstr "Rollen verwalten"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:402
+msgid "Manage Shapes"
+msgstr "Bilder verwalten"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:377
+msgid "Manage Templates"
+msgstr "Templates verwalten"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:364
+msgid "Manage Users"
+msgstr "Nutzer verwalten"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:374
+#: share/server/core/classes/ViewManageMaps.php:196
+#: share/server/core/classes/ViewManageMaps.php:259
+#: share/server/core/classes/ViewManageMaps.php:303
+msgid "Map"
+msgstr "Karte"
+
+#: share/server/core/classes/CoreModMultisite.php:196
+msgid "Map Configuration Error: "
+msgstr "Konfigurationsfehler auf der Karte: "
+
+#: share/server/core/classes/objects/NagVisMapObj.php:359
+msgid "Map Configuration Error: [ERR]"
+msgstr "Konfigurationsfehler auf der Karte: [ERR]"
+
+#: share/server/core/classes/CoreModOverview.php:214
+msgid "Map Error: [ERR]"
+msgstr "Karten-Fehler: [ERR]"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:376
+msgid "Map Options"
+msgstr "Karten Konfiguration"
+
+#: share/server/core/classes/ViewManageMaps.php:100
+msgid "Map Type"
+msgstr "Kartentyp"
+
+#: share/server/core/classes/ViewManageMaps.php:365
+msgid "Map file"
+msgstr "Karten-Datei"
+
+#: share/server/core/classes/ViewMapManageTmpl.php:39
+#: share/server/core/classes/ViewMapManageTmpl.php:119
+#: share/server/core/classes/ViewMapManageTmpl.php:220
+msgid "Map name missing"
+msgstr ""
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:389
+msgid "Maps"
+msgstr "Karten"
+
+#: share/server/core/classes/GlobalCore.php:668
+msgid "Missing a temporary folder"
+msgstr "Temporäres Verzeichnis fehlt"
+
+#: share/server/core/classes/ViewMapManageTmpl.php:210
+msgid "Modify"
+msgstr "Bearbeiten"
+
+msgid "Modify Automap view"
+msgstr "Automap modifizieren"
+
+#: share/server/core/classes/ViewManageRoles.php:81
+msgid "Modify Role"
+msgstr "Rollen bearbeiten"
+
+#: share/server/core/classes/ViewMapManageTmpl.php:115
+msgid "Modify Template"
+msgstr "Templates bearbeiten"
+
+#: share/server/core/classes/ViewManageUsers.php:105
+msgid "Modify User"
+msgstr "Nutzer bearbeiten"
+
+#: share/server/core/classes/NagVisContextMenu.php:135
+msgid "Modify object"
+msgstr "Objekt bearbeiten"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:414
+msgid "Modify view"
+msgstr "Ansicht bearbeiten"
+
+#: share/server/core/classes/ViewManageRoles.php:146
+msgid "Module"
+msgstr "Modul"
+
+#: share/server/core/sources/geomap.php:149
+msgid "NagVis Backend"
+msgstr "NagVis-Datenquelle"
+
+#: share/frontend/nagvis-js/classes/NagVisLoginView.php:71
+msgid "NagVis is unable to set a cookie in your browser. Please enable cookies for at least the NagVis host."
+msgstr "NagVis konnte kein Cookie im Browser speichern. Damit NagVis benutzt werden kann, müssen Cookies für den NagVis-Host aktiviert sein."
+
+#: share/frontend/nagvis-js/classes/NagVisLoginView.php:67
+#: share/server/core/classes/GlobalCore.php:695
+#: share/server/core/classes/ViewManageBackgrounds.php:75
+#: share/server/core/classes/ViewManageRoles.php:69
+#: share/server/core/classes/ViewManageRoles.php:209
+#: share/server/core/classes/ViewManageUsers.php:138
+#: share/server/core/classes/ViewManageUsers.php:214
+#: share/server/core/classes/ViewManageUsers.php:282
+#: share/server/core/classes/ViewMapManageTmpl.php:86
+#: share/server/core/classes/ViewMapManageTmpl.php:174
+#: share/server/core/classes/ViewMapManageTmpl.php:254
+msgid "Name"
+msgstr "Name"
+
+#: share/server/core/classes/ViewManageMaps.php:204
+msgid "New name"
+msgstr "Neuer Name"
+
+#: share/server/core/classes/ViewChangePassword.php:81
+msgid "New password"
+msgstr "Neues Passwort"
+
+#: share/server/core/classes/ViewChangePassword.php:85
+msgid "New password (confirm)"
+msgstr "Neues Passwort (Bestätigung)"
+
+#: share/server/core/classes/ViewEditMainCfg.php:191
+msgid "No"
+msgstr "Nein"
+
+#: share/server/core/classes/GlobalMainCfg.php:2453
+#: share/server/core/classes/GlobalMapCfg.php:1666
+msgid "No \"list\" function registered for option \"[OPT]\" of type \"[TYPE]\""
+msgstr "Keine \"list\"-Funktion für die Option \"[OPT]\" des Objekttyps \"TYPE\" registriert"
+
+#: share/server/core/classes/CoreAuthorisationModMultisite.php:35
+msgid "No auth file configured. Please specify the option authorisation_multisite_file in main configuration"
+msgstr "Keine Authentifizierungsdatei konfiguriert. Bitte stellen Sie die Option authorisation_multisite_file ein."
+
+#: share/server/core/classes/GlobalCore.php:667
+msgid "No file uploaded"
+msgstr "Datei konnte nicht hochgeladen werden"
+
+#: share/server/core/classes/CoreAuthorisationModGroups.php:38
+msgid "No group permission file specified. Please configure one via the option authorisation_group_perms_file in global section of the main configuration."
+msgstr "Keine Gruppenberechtigungsdatei konfiguriert. Bitte stellen Sie die Option authorisation_group_perms_file ein."
+
+#: share/server/core/sources/geomap.php:18
+msgid "No location source file given. Terminate rendering geomap."
+msgstr "Keine Standortquelldatei konfiguriert. Verarbeitung der Karte abgebrochen."
+
+#: share/frontend/nagvis-js/classes/FrontendModUrl.php:70
+msgid "No url given."
+msgstr "Keine URL angegeben."
+
+#: share/server/core/classes/objects/NagVisAggr.php:143
+msgid "Nodes"
+msgstr "Knoten"
+
+#: share/server/core/classes/NagVisHoverUrl.php:89
+msgid "Not allowed url"
+msgstr "Ungültige URL"
+
+#: share/server/core/classes/ViewManageRoles.php:185
+msgid "Not deleting this role, the role is in use by the users [U]."
+msgstr "Rolle konnte nicht gelöscht werden, da diese noch vom Nutzer [U] genutzt wird."
+
+#: share/server/core/classes/ViewAck.php:107
+msgid "Notify contacts"
+msgstr ""
+
+#: share/server/core/classes/CoreExceptions.php:72
+msgid "OK"
+msgstr "OK"
+
+#: share/server/core/classes/GlobalMapCfg.php:1912
+msgid "Obj. Defaults"
+msgstr ""
+
+#: share/server/core/classes/ViewManageRoles.php:148
+msgid "Object"
+msgstr "Objekt"
+
+#: share/server/core/classes/GlobalMainCfg.php:2433
+msgid "Object Defaults"
+msgstr "Objekt-Standardwerte"
+
+#: share/server/core/classes/GlobalCore.php:692
+msgid "Object Name"
+msgstr "Objekt-Name"
+
+#: share/server/core/classes/ViewChangePassword.php:77
+msgid "Old password"
+msgstr "Altes Passwort"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:373
+msgid "Open"
+msgstr "Öffnen"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:397
+msgid "Options"
+msgstr "Optionen"
+
+#: share/server/core/classes/GlobalMainCfg.php:2434
+msgid "Overview Page"
+msgstr "Übersichtsseite"
+
+msgid "PHP ERROR"
+msgstr "PHP-FEHLER"
+
+#: share/frontend/nagvis-js/classes/NagVisLoginView.php:68
+#: share/server/core/classes/ViewManageUsers.php:87
+#: share/server/core/classes/ViewManageUsers.php:289
+msgid "Password"
+msgstr "Passwort"
+
+#: share/server/core/classes/ViewManageUsers.php:91
+#: share/server/core/classes/ViewManageUsers.php:293
+msgid "Password Confirm"
+msgstr "Neues Passwort (Bestätigung)"
+
+#: share/server/core/classes/GlobalMainCfg.php:2437
+msgid "Paths"
+msgstr "Pfade"
+
+#: share/server/core/classes/ViewManageRoles.php:149
+msgid "Permitted"
+msgstr "Erlaubt"
+
+#: share/server/core/classes/ViewAck.php:110
+msgid "Persist comment"
+msgstr "Permanenter Kommentar"
+
+#: share/server/core/classes/ViewMapAddModify.php:145
+msgid "Personal settings saved."
+msgstr ""
+
+#: share/server/core/classes/ViewManageBackends.php:91
+#: share/server/core/classes/ViewManageBackends.php:181
+#: share/server/core/classes/ViewManageBackends.php:188
+#: share/server/core/classes/ViewManageBackends.php:254
+#: share/server/core/classes/ViewManageRoles.php:135
+#: share/server/core/classes/ViewManageRoles.php:211
+#: share/server/core/classes/ViewManageUsers.php:140
+#: share/server/core/classes/ViewManageUsers.php:216
+#: share/server/core/classes/ViewManageUsers.php:284
+#: share/server/core/classes/ViewMapManageTmpl.php:176
+#: share/server/core/classes/ViewMapManageTmpl.php:256
+msgid "Please choose"
+msgstr ""
+
+#: share/server/core/classes/ViewManageBackgrounds.php:169
+msgid "Please choose a background"
+msgstr ""
+
+#: share/server/core/classes/CoreModMap.php:169
+#: share/server/core/classes/ViewManageMaps.php:152
+#: share/server/core/classes/ViewManageMaps.php:223
+#: share/server/core/classes/ViewManageMaps.php:281
+msgid "Please choose a map"
+msgstr "Bitte eine Karte wählen"
+
+#: share/server/core/classes/ViewManageRoles.php:177
+msgid "Please choose a role to delete."
+msgstr ""
+
+#: share/server/core/classes/ViewManageRoles.php:88
+msgid "Please choose a role to edit."
+msgstr ""
+
+#: share/server/core/classes/ViewManageShapes.php:92
+msgid "Please choose a shape"
+msgstr ""
+
+#: share/server/core/classes/ViewManageUsers.php:184
+msgid "Please choose a user to delete."
+msgstr ""
+
+#: share/server/core/classes/ViewManageUsers.php:112
+msgid "Please choose a user to edit."
+msgstr ""
+
+#: share/server/core/classes/ViewManageUsers.php:238
+msgid "Please choose a user."
+msgstr ""
+
+#: share/server/core/classes/ViewManageUsers.php:57
+#: share/server/core/classes/ViewManageUsers.php:255
+msgid "Please confirm your password."
+msgstr ""
+
+#: share/server/core/classes/ViewToNewMap.php:36
+#: share/server/core/classes/ViewToStaticMap.php:36
+msgid "Please provide a map name."
+msgstr ""
+
+#: share/server/core/classes/ViewManageMaps.php:159
+msgid "Please provide a new name"
+msgstr "Bitte einen neuen Namen angeben"
+
+#: share/server/core/classes/ViewAck.php:35
+msgid "Please provide a valid map name."
+msgstr ""
+
+#: share/server/core/classes/ViewAck.php:39
+msgid "Please provide a valid object id."
+msgstr ""
+
+#: share/server/core/classes/ViewManageBackgrounds.php:40
+msgid "Please specify a color"
+msgstr ""
+
+#: share/server/core/classes/ViewManageBackgrounds.php:50
+msgid "Please specify a height"
+msgstr ""
+
+#: share/server/core/classes/ViewManageBackgrounds.php:36
+#: share/server/core/classes/ViewManageRoles.php:36
+msgid "Please specify a name"
+msgstr ""
+
+#: share/server/core/classes/ViewManageUsers.php:36
+msgid "Please specify a name."
+msgstr ""
+
+#: share/server/core/classes/ViewManageBackgrounds.php:46
+#: share/server/core/classes/ViewManageBackgrounds.php:52
+msgid "Please specify a number"
+msgstr ""
+
+#: share/server/core/classes/ViewManageUsers.php:50
+#: share/server/core/classes/ViewManageUsers.php:248
+msgid "Please specify a password."
+msgstr ""
+
+#: share/server/core/classes/ViewManageBackgrounds.php:44
+msgid "Please specify a width"
+msgstr ""
+
+#: share/server/core/classes/objects/NagVisStatefulObject.php:538
+msgid "Problem (Backend: [BACKENDID]): [MSG]"
+msgstr "Problem (Backend: [BACKENDID]): [MSG]"
+
+#: share/server/core/classes/ViewManageRoles.php:191
+msgid "Problem while deleting the role."
+msgstr "Rolle konnte nicht gelöscht werden."
+
+#: share/server/core/classes/ViewManageUsers.php:196
+msgid "Problem while deleting the user."
+msgstr ""
+
+msgid "Problem while deleting user."
+msgstr "Nutzer konnte nicht gelöscht werden."
+
+#: share/server/core/classes/objects/NagVisMapObj.php:361
+msgid "Problem while processing map: [ERR]"
+msgstr "Fehler beim verarbeiten der Karte: [ERR]"
+
+#: share/server/core/classes/GlobalBackendmklivestatus.php:273
+#: share/server/core/classes/GlobalBackendmklivestatus.php:289
+#: share/server/core/classes/GlobalBackendmklivestatus.php:297
+msgid "Problem while reading from socket [SOCKET] in backend [BACKENDID]: [MSG]"
+msgstr "Problem bei Lesen von Socket [SOCKET] im Backend [BACKENDID]: [MSG]"
+
+#: share/server/core/classes/ViewManageRoles.php:115
+msgid "Problem while updating role permissions."
+msgstr "Berechtigungen konnten nicht aktualisiert werden."
+
+#: share/server/core/classes/ViewManageUsers.php:121
+msgid "Problem while updating user roles."
+msgstr "Rollen konnten nicht aktualisiert werden."
+
+#: share/server/core/classes/GlobalBackendmklivestatus.php:252
+#: share/server/core/classes/GlobalBackendmklivestatus.php:258
+msgid "Problem while writing to socket [SOCKET] in backend [BACKENDID]: [MSG]"
+msgstr "Socket [SOCKET] konnte nicht geschrieben werden - [BACKENDID]: [MSG]"
+
+#: share/server/core/classes/objects/NagVisStatefulObject.php:546
+msgid "Problem: [MSG]"
+msgstr "Problem: [MSG]"
+
+msgid "Really delete the object?"
+msgstr "Objekt wirklich löschen?"
+
+#: share/server/core/classes/ViewManageMaps.php:30
+msgid "Regular map"
+msgstr "Normale Karte"
+
+msgid "Remove"
+msgstr "Entfernen"
+
+#: share/server/core/classes/ViewManageMaps.php:211
+msgid "Rename"
+msgstr "Umbenennen"
+
+#: share/server/core/classes/ViewManageMaps.php:146
+msgid "Rename Map"
+msgstr "Karte umbenennen"
+
+#: share/server/core/classes/GlobalMapCfg.php:638
+#: share/server/core/classes/GlobalMapCfg.php:801
+msgid "Requested source \"[S]\" does not exist"
+msgstr "Angeforderte Quelle \"[S]\" existiert nicht"
+
+#: share/server/core/classes/ViewManageUsers.php:232
+msgid "Reset Password"
+msgstr "Passwort zurücksetzen"
+
+#: share/server/core/classes/GlobalBackendnagiosbp.php:145
+msgid "Response data is too old (json_created: [C])"
+msgstr "Die Antwort ist veraltet (json_created: [C])"
+
+#: share/server/core/sources/automap.php:52
+msgid "Right to left"
+msgstr "Rechts nach links"
+
+msgid "Role Name"
+msgstr "Rollenname"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:375
+msgid "Rotations"
+msgstr "Rotationen"
+
+#: share/server/core/classes/ViewManageBackends.php:98
+#: share/server/core/classes/ViewManageBackends.php:217
+#: share/server/core/classes/ViewManageRoles.php:165
+#: share/server/core/classes/ViewManageUsers.php:172
+#: share/server/core/classes/ViewManageUsers.php:299
+#: share/server/core/classes/ViewMapAddModify.php:521
+#: share/server/core/classes/ViewToNewMap.php:74
+#: share/server/core/classes/ViewToStaticMap.php:78
+msgid "Save"
+msgstr ""
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:416
+msgid "Save View"
+msgstr ""
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:417
+msgid "Save as new Map"
+msgstr ""
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:363
+#: share/server/core/classes/ViewSearch.php:31
+msgid "Search"
+msgstr "Suchen"
+
+#: share/server/core/classes/ViewManageRoles.php:133
+msgid "Select Role"
+msgstr "Rolle wählen"
+
+msgid "Select User"
+msgstr "Nutzer wählen"
+
+#: share/server/core/classes/ViewManageBackgrounds.php:85
+msgid "Select a color"
+msgstr ""
+
+#: share/server/core/classes/ViewManageUsers.php:161
+msgid "Selected Roles"
+msgstr "Aktive Rollen"
+
+msgid "Send notification"
+msgstr "Alarmierung senden"
+
+#: share/server/core/sources/dynmap.php:66
+msgid "Servicegroup"
+msgstr "Dienstegruppe"
+
+#: share/server/core/mapcfg/default.php:92
+#: share/server/core/sources/dynmap.php:64
+msgid "Services"
+msgstr "Dienste"
+
+#: share/server/core/classes/ViewManageRoles.php:143
+msgid "Set Permissions"
+msgstr "Berechtigungen setzen"
+
+#: share/server/core/classes/ViewManageShapes.php:140
+msgid "Shape"
+msgstr ""
+
+#: share/server/core/classes/GlobalMainCfg.php:28
+msgid "Show a flat list"
+msgstr "Eine Liste zeigen"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:418
+msgid "Show all objects"
+msgstr ""
+
+#: share/server/core/classes/GlobalMainCfg.php:27
+msgid "Show the map tree"
+msgstr "Einen Baum zeigen"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:412
+msgid "Show/Hide Grid"
+msgstr "Zeige/verstecke Raster"
+
+#: share/server/core/classes/ViewManageBackends.php:102
+msgid "Some backends are not editable by using the web gui. They can only be configured by modifying the file in the NagVis conf.d directory."
+msgstr "Einige Datenquellen können hier nicht editiert werden. Diese können nur in den Konfigurationdateien im conf.d-Verzeichnis editiert werden."
+
+#: share/server/core/classes/GlobalMapCfg.php:1905
+#: share/server/core/functions/core.php:158
+msgid "State"
+msgstr "Status"
+
+#: share/server/core/classes/GlobalMainCfg.php:2435
+msgid "State Updates"
+msgstr "Zustands-Updates"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:393
+msgid "Stateless"
+msgstr "Statuslos"
+
+#: share/server/core/classes/GlobalMainCfg.php:2436
+msgid "States"
+msgstr "Zustände"
+
+#: share/server/core/classes/ViewAck.php:104
+msgid "Sticky"
+msgstr "Fest"
+
+#: share/server/core/classes/NagVisHoverMenu.php:179
+msgid "Tags"
+msgstr "Tags"
+
+#: share/server/core/classes/GlobalBackendmklivestatus.php:83
+msgid "The PHP function fsockopen is not available. Needed by backend [BACKENDID]."
+msgstr "Die PHP Funktion fsockopen ist nicht verfügbar. Wird von Backend [BACKENDID] benötigt."
+
+msgid "The [TYPE] has been added. Reloading in 2 seconds."
+msgstr "[TYPE] wurde hinzugefügt. Aktualisiere die Seite in 2 Sekunden."
+
+#: share/server/core/classes/ViewMapAddModify.php:169
+msgid "The [TYPE] has been modified. Reloading in 2 seconds."
+msgstr "[TYPE] wurde geändert. Aktualisiere die Seite in 2 Sekunden."
+
+#: share/server/core/classes/objects/NagVisAggr.php:139
+#: share/server/core/classes/objects/NagVisAggr.php:173
+msgid "The aggregation \"[NAME]\" has no members (Backend: [BACKEND])."
+msgstr "Die Aggregation \"[NAME]\" enthält keine Objekte (Backend: [BACKEND])"
+
+#: share/server/core/classes/GlobalMainCfg.php:1874
+msgid "The attribute [ATTRIBUTE] in section [TYPE] in main configuration file does not match the correct format. Please review your configuration."
+msgstr "Das Attribut [ATTRIBUTE] im Abschnitt [TYPE] in der Hauptkonfiguration hat nicht das korrekte Format. Bitte die Konfiguration prüfen."
+
+#: share/server/core/classes/GlobalMainCfg.php:1850
+msgid "The attribute [ATTRIBUTE] in section [TYPE] in main configuration file is deprecated. Please take a look at the documentation for updating your configuration."
+msgstr "Das Attribut [ATTRIBUTE] im Abschnitt [TYPE] in der Hauptkonfiguration ist veraltet. Bitte die Dokumentation nach Schritten zum Update prüfen."
+
+#: share/server/core/classes/ViewMapAddModify.php:101
+msgid "The attribute has the wrong format (Regex: [MATCH])."
+msgstr "Das Attribut hat ein ungültiges Format (Regex: [MATCH])"
+
+#: share/server/core/classes/ViewMapAddModify.php:90
+msgid "The attribute is deprecated."
+msgstr "Das Attribut ist veraltet."
+
+#: share/server/core/classes/ViewMapAddModify.php:88
+msgid "The attribute is unknown."
+msgstr "Das Attribut ist unbekannt."
+
+#: share/server/core/classes/ViewMapAddModify.php:81
+msgid "The attribute needs to be set."
+msgstr "Das Attribut muss gesetzt sein."
+
+#: share/server/core/classes/ViewManageBackends.php:236
+msgid "The backend has been deleted."
+msgstr "Das Backend wurde gelöscht."
+
+#: share/server/core/classes/CoreBackendMgmt.php:610
+msgid "The backend is reported as dead by the statusHost ([STATUSHOST])."
+msgstr "Der Status-Host ist nicht erreichbar ([STATUSHOST])."
+
+msgid "The background could not be created."
+msgstr "Das Hintergrundbild konnte nicht erstellt werden."
+
+msgid "The background could not be deleted."
+msgstr "Das Hintergrundbild konnte nicht gelöscht werden."
+
+#: share/server/core/classes/ViewManageBackgrounds.php:56
+msgid "The background does already exist."
+msgstr "Ein Hintergrundbild mit dem Namen existiert bereits."
+
+#: share/server/core/classes/ViewManageBackgrounds.php:172
+msgid "The background does not exist."
+msgstr "Das Hintergrundbild existiert nicht."
+
+#: share/server/core/classes/ViewManageBackgrounds.php:60
+msgid "The background has been created."
+msgstr "Das Hintergrundbild wurde erstellt."
+
+#: share/server/core/classes/ViewManageBackgrounds.php:196
+msgid "The background has been deleted."
+msgstr "Das Hintergrundbild wurde gelöscht."
+
+#: share/server/core/classes/ViewManageBackgrounds.php:133
+msgid "The background has been uploaded."
+msgstr ""
+
+#: share/server/core/classes/ViewManageBackends.php:159
+msgid "The changes have been saved."
+msgstr "Änderungen gespeichert."
+
+#: share/server/core/classes/ViewManageBackends.php:127
+#: share/server/core/classes/ViewManageBackends.php:229
+msgid "The choosen backend does not exist."
+msgstr ""
+
+#: share/server/core/classes/ViewEditMainCfg.php:71
+msgid "The configuration has been saved."
+msgstr "Die Konfiguration wurde gespeichert."
+
+#: share/server/core/classes/ViewManageBackends.php:74
+msgid "The default backend has been changed."
+msgstr "Das Standard-Backend wurde angepasst."
+
+#: share/server/core/classes/objects/NagVisDynGroup.php:147
+#: share/server/core/classes/objects/NagVisDynGroup.php:186
+msgid "The dynamic group \"[GROUP]\" has no members (Backend: [BACKEND])."
+msgstr "Die dynamische Gruppe \"[GROUP\" enthält keine Objekte (Backend: [BACKEND])."
+
+#: share/server/core/classes/ViewManageBackgrounds.php:115
+#: share/server/core/classes/ViewManageMaps.php:328
+#: share/server/core/classes/ViewManageShapes.php:39
+msgid "The file could not be uploaded (Error: [ERROR])."
+msgstr "Die Datei konnte nicht hochgeladen werden (Error: [ERROR])."
+
+#: share/server/core/functions/index.php:123
+msgid "The given action is not valid"
+msgstr "Die Aktion ist ungültig"
+
+#: share/server/core/classes/CoreModAction.php:54
+msgid "The given custom action is not defined."
+msgstr "Die benutzerdefinierte Aktion ist nicht bekannt."
+
+#: share/server/core/classes/CoreModMap.php:172
+#: share/server/core/classes/ViewManageMaps.php:155
+#: share/server/core/classes/ViewManageMaps.php:226
+#: share/server/core/classes/ViewManageMaps.php:284
+msgid "The given map name is invalid"
+msgstr "Der Kartenname ist ungültig."
+
+#: share/server/core/classes/CoreModuleHandler.php:61
+msgid "The given module is not registered"
+msgstr "Das Modul ist nicht registriert"
+
+#: share/server/core/classes/CoreUriHandler.php:141
+msgid "The given url is not valid"
+msgstr "Die URL ist ungültig"
+
+#: share/server/core/classes/objects/NagVisHostgroup.php:144
+msgid "The hostgroup \"[GROUP]\" has no members or does not exist (Backend: [BACKEND])."
+msgstr "Die  Gerätegruppe [NAME] hat keine Mitglieder oder existiert nicht (Backend: [BACKEND])."
+
+#: share/server/core/classes/ViewManageMaps.php:287
+msgid "The map configuration has been exported."
+msgstr "Karten-Konfiguration exportiert."
+
+#: share/server/core/classes/CoreModMap.php:359
+msgid "The map does already exist."
+msgstr "Eine Karte mit diesem Namen existiert bereits."
+
+#: share/server/core/classes/CoreModAction.php:58
+#: share/server/core/classes/CoreModMap.php:355
+#: share/server/core/classes/ViewMapAddModify.php:540
+msgid "The map does not exist."
+msgstr "Die Karte existiert nicht."
+
+#: share/server/core/classes/ViewToNewMap.php:56
+#: share/server/core/classes/ViewToStaticMap.php:60
+msgid "The map has been created."
+msgstr "Die Karte wurde erstellt."
+
+#: share/server/core/classes/ViewManageMaps.php:73
+msgid "The map has been created. Changing to the new map..."
+msgstr "Die Karte wurde erstellt. Öffne diese nun..."
+
+#: share/server/core/classes/ViewManageMaps.php:234
+msgid "The map has been deleted."
+msgstr "Die Karte wurde gelöscht."
+
+#: share/server/core/classes/ViewManageMaps.php:347
+msgid "The map has been imported. Changing to the new map..."
+msgstr "Die Karte wurde importiert. Öffne diese nun..."
+
+#: share/server/core/classes/ViewManageMaps.php:169
+msgid "The map has been renamed."
+msgstr "Die Karte wurde umbenannt."
+
+#: share/server/core/classes/CoreModOverview.php:116
+#: share/server/core/classes/CoreModOverview.php:117
+msgid "The map is in maintenance mode. Please be patient."
+msgstr "Die Karte ist im Wartungs-Modus. Bitte warten."
+
+msgid "The mapname does already exist."
+msgstr "Eine Karte mit dem Namen existiert bereits."
+
+#: share/server/core/functions/index.php:94
+msgid "The module [MOD] is not known"
+msgstr "Das Modul [MOD] ist unbekannt"
+
+#: share/server/core/classes/CoreModuleHandler.php:79
+msgid "The module class does not exist"
+msgstr "Die Klasse des Moduls existiert nicht"
+
+#: share/server/core/classes/GlobalMainCfg.php:1805
+msgid "The needed attribute [ATTRIBUTE] is missing in section [TYPE] in main configuration file. Please take a look at the documentation."
+msgstr "Das erforderliche Attribut [ATTRIBUTE] ist im Abschnitt vom Typ [TYPE] in der Hauptkonfiguration nicht angegeben."
+
+#: share/server/core/classes/ViewChangePassword.php:50
+msgid "The new and old passwords are equal. Won't change anything."
+msgstr "Das neue und alte Passwort sind gleich. Das Passwort wird nicht geändert."
+
+#: share/server/core/classes/ViewManageBackends.php:157
+msgid "The new backend has been added."
+msgstr "Neues Backend angelegt."
+
+#: share/server/core/classes/ViewChangePassword.php:47
+msgid "The new passwords do not match."
+msgstr ""
+
+#: share/server/core/classes/CoreBackendMgmt.php:500
+msgid "The object \"[OBJ]\" does not exist ([TYPE])."
+msgstr "Das Objekt \"[OBJ]\" vom Typ [TYPE] existiert nicht."
+
+msgid "The object could not be added."
+msgstr "Das Objekt konnte nicht erstellt werden."
+
+#: share/server/core/classes/CoreModMap.php:124
+msgid "The object could not be deleted."
+msgstr "Das Objekt konnte nicht gelöscht werden"
+
+#: share/server/core/classes/CoreModMap.php:115
+msgid "The object could not be modified."
+msgstr "Das Objekt konnte nicht modifiziert werden."
+
+#: share/server/core/classes/CoreModAction.php:70
+#: share/server/core/classes/CoreModMap.php:191
+#: share/server/core/classes/CoreModMap.php:244
+#: share/server/core/classes/ViewAck.php:46
+#: share/server/core/classes/ViewMapAddModify.php:152
+#: share/server/core/classes/ViewMapAddModify.php:559
+msgid "The object does not exist."
+msgstr "Das Objekt existiert nicht."
+
+#: share/server/core/classes/CoreModAction.php:67
+msgid "The object_id value is missing."
+msgstr "Der Wert für die object_id fehlt."
+
+#: share/server/core/classes/CoreUriHandler.php:103
+msgid "The parameter \"[key]\" does not match the valid value format"
+msgstr "Der Parameter \"[key]\" entspricht nicht dem gütigen Format"
+
+#: share/server/core/classes/ViewManageUsers.php:261
+msgid "The password has been reset."
+msgstr "Passwort geändert."
+
+#: share/server/core/classes/GlobalCore.php:542
+msgid "The path \"[PATH]\" does not exist."
+msgstr "Der Pfad \"[PATH]\" existiert nicht."
+
+#: share/server/core/classes/GlobalCore.php:552
+msgid "The path \"[PATH]\" is not readable."
+msgstr "Der Pfad \"[PATH]\" kann nicht gelesen werden."
+
+#: share/server/core/classes/GlobalCore.php:562
+msgid "The path \"[PATH]\" is not writeable."
+msgstr "Der Pfad \"[PATH]\" kann nicht geschrieben werden."
+
+#: share/server/core/classes/CoreAuthorisationModGroups.php:61
+msgid "The permissions file [FILE] could not be parsed."
+msgstr "Die Berechtigungs-Datei [FILE] konnte nicht eingelesen werden."
+
+#: share/server/core/classes/ViewManageRoles.php:113
+msgid "The permissions for this role have been updated."
+msgstr "Die Berechtigungen wurden aktualisiert."
+
+#: share/server/core/classes/ViewAck.php:82
+msgid "The problem has been acknowledged."
+msgstr ""
+
+#: share/server/core/classes/CoreBackendMgmt.php:661
+msgid "The requested feature [FEATURE] is not provided by the backend (Backend-ID: [BACKENDID], Backend-Type: [BACKENDTYPE]). The requested view may not be available using this backend."
+msgstr "Das Feature [FEATURE] wird vom angebenen Backend (Backend-ID: [BACKENDID], Backend-Type: [BACKENDTYPE]) nicht unterstützt. Die angeforderte Ansicht ist mit diesem Backend nicht verfügbar."
+
+#: share/server/core/classes/ViewAck.php:52
+msgid "The requested feature is not available for this backend. The MKLivestatus backend supports this feature."
+msgstr "Die angeforderte Funktion wird von dieser Datenquelle nicht unterstützt. Datenquellen vom Typ MKLivestatus unterstützen diese."
+
+#: share/server/core/classes/CoreRotation.php:130
+msgid "The requested step [STEP] of type [TYPE] does not exist in the rotation pool [ROTATION]"
+msgstr "Der gewählte Schritt [STEP] vom Typ [TYPE] existiert nicht in der Rotation [ROTATION]"
+
+#: share/server/core/classes/GlobalBackendmklivestatus.php:316
+#: share/server/core/classes/GlobalBackendnagiosbp.php:139
+msgid "The response has an invalid format in backend [BACKENDID]."
+msgstr "Die Antwort der Datenquelle hat ein ungültiges Format im Backend [BACKENDID]."
+
+#: share/server/core/classes/ViewManageRoles.php:49
+msgid "The role has been created."
+msgstr "Die Rolle wurde angelegt."
+
+#: share/server/core/classes/ViewManageRoles.php:189
+msgid "The role has been deleted."
+msgstr "Die Rolle wurde gelöscht."
+
+msgid "The rolename is invalid or does already exist."
+msgstr "Der Rollenname ist nicht gültig oder existiert bereits."
+
+#: share/server/core/classes/ViewManageUsers.php:119
+msgid "The roles for this user have been updated."
+msgstr "Die Rollen wurden aktualisiert."
+
+#: share/server/core/classes/GlobalMainCfg.php:1894
+msgid "The section [TYPE] is not supported in main configuration. Please take a look at the documentation."
+msgstr "Der Abschnitt [TYPE] wird in der Hauptkonfiguration nicht unterstützt. Bitte die Dokumentation prüfen."
+
+#: share/server/core/classes/objects/NagVisServicegroup.php:150
+msgid "The servicegroup \"[GROUP]\" has no members or does not exist (Backend: [BACKEND])."
+msgstr "Die Dienstegruppe [GROUP] hat keine Mitglieder oder existiert nicht (Backend: [BACKEND])."
+
+#: share/server/core/classes/ViewManageShapes.php:96
+msgid "The shape does not exist."
+msgstr "Das Bild existiert nicht."
+
+#: share/server/core/classes/ViewManageShapes.php:123
+msgid "The shape has been deleted."
+msgstr "Das Bild wurde gelöscht."
+
+#: share/server/core/classes/ViewManageShapes.php:56
+msgid "The shape has been uploaded."
+msgstr ""
+
+#: share/server/core/classes/ViewMapManageTmpl.php:69
+msgid "The template has been created."
+msgstr ""
+
+#: share/server/core/classes/ViewMapManageTmpl.php:236
+msgid "The template has been deleted."
+msgstr "Das Template wurde gelöscht."
+
+#: share/server/core/classes/ViewMapManageTmpl.php:156
+msgid "The template has been modified."
+msgstr ""
+
+msgid "The two new passwords are not equal."
+msgstr "Die zwei angegebenen Passwörter stimmen nicht überein."
+
+#: share/server/core/classes/ViewManageUsers.php:60
+#: share/server/core/classes/ViewManageUsers.php:258
+msgid "The two passwords are not equal."
+msgstr "Die zwei angegebenen Passwörter stimmen nicht überein."
+
+#: share/server/core/classes/ViewManageBackgrounds.php:122
+#: share/server/core/classes/ViewManageShapes.php:46
+msgid "The uploaded file is no image (png,jpg,gif) file or contains unwanted chars."
+msgstr "Die hochgeladene Datei ist kein gültiges Bild (png,jpg,gif)."
+
+#: share/server/core/classes/ViewManageMaps.php:336
+msgid "The uploaded file is no map configuration file."
+msgstr "Die hochgeladene Datei ist keine Karten-Konfiguration."
+
+#: share/server/core/classes/ViewManageBackgrounds.php:127
+#: share/server/core/classes/ViewManageShapes.php:50
+msgid "The uploaded file is not an image (png, jpg and gif are allowed)."
+msgstr ""
+
+#: share/server/core/classes/ViewManageUsers.php:63
+msgid "The user has been created."
+msgstr "Der Nutzer wurde angelegt."
+
+#: share/server/core/classes/ViewManageUsers.php:194
+msgid "The user has been deleted."
+msgstr "Der Nutzer wurde gelöscht."
+
+#: share/server/core/classes/CoreModule.php:261
+msgid "The value of option \"[ATTRIBUTE]\" does not match the valid format."
+msgstr "Der Wert der Option \"[ATTRIBUTE]\" hat ein ungültiges Format."
+
+#: share/server/core/classes/ViewManageBackends.php:125
+msgid "This ID is already used by another backend."
+msgstr ""
+
+#: share/server/core/classes/ViewManageMaps.php:56
+msgid "This is not a valid map alias (need to match [M])"
+msgstr "Ungültiger Kartenalias (Muss mit [M] übereinstimmen)"
+
+#: share/server/core/classes/ViewManageMaps.php:47
+#: share/server/core/classes/ViewManageMaps.php:165
+#: share/server/core/classes/ViewManageMaps.php:339
+#: share/server/core/classes/ViewToNewMap.php:39
+#: share/server/core/classes/ViewToStaticMap.php:39
+msgid "This is not a valid map name (need to match [M])"
+msgstr "Ungültiger Kartenname (Muss mit [M] übereinstimmen)"
+
+#: share/server/core/classes/ViewManageRoles.php:39
+msgid "This name is too long"
+msgstr ""
+
+#: share/server/core/classes/ViewManageUsers.php:39
+msgid "This name is too long."
+msgstr ""
+
+#: share/server/core/classes/ViewManageUsers.php:53
+#: share/server/core/classes/ViewManageUsers.php:251
+msgid "This password is too long."
+msgstr ""
+
+#: share/server/core/sources/automap.php:49
+msgid "Top to bottom"
+msgstr "Oben nach unten"
+
+#: share/server/core/classes/CoreLogonEnv.php:35
+msgid "Unable to authenticate user. The environment variable [VAR] is not set or empty."
+msgstr "Nutzer konnte nicht authentifiziert werden. Die Umgebungsvariable [VAR] ist nicht gesetzt oder leer."
+
+#: share/server/core/classes/CoreLogonModule.php:49
+msgid "Unable to authenticate user. User does not exist."
+msgstr "Nutzer konnte nicht authentifiziert werden. Der Nutzer existiert nicht."
+
+#: share/server/core/classes/GlobalBackendmklivestatus.php:78
+msgid "Unable to connect to livestatus socket. The socket [SOCKET] in backend [BACKENDID] does not exist. Maybe Nagios is not running or restarting."
+msgstr "Verbindung zum Livestatus Socket nicht möglich. Der Socket [SOCKET] im Backend [BACKENDID] existiert nicht. Eventuell läft Nagios nicht oder startet gerade neu."
+
+#: share/server/core/classes/GlobalBackendmklivestatus.php:190
+msgid "Unable to connect to the [SOCKET] in backend [BACKENDID]: [MSG]"
+msgstr "Verbindung zum Socket [SOCKET] in Backend [BACKENDID] nicht möglich: [MSG]"
+
+#: share/server/core/classes/ViewManageBackgrounds.php:189
+msgid "Unable to delete this background, because it is currently used by these maps: [M]."
+msgstr ""
+
+#: share/server/core/classes/ViewManageShapes.php:115
+msgid "Unable to delete this shape, because it is currently used by these maps: [M]."
+msgstr ""
+
+#: share/server/core/classes/ViewManageUsers.php:191
+msgid "Unable to delete your own user."
+msgstr "Der eigene Nutzer kann nicht gelöscht werden."
+
+#: share/server/core/sources/geomap.php:133
+msgid "Unable to fetch URL \"[U]\".<br/><br />The geomap needs to be able to fetch some data from the internet via webservice API. Please take a look at the docs for more details.<br /><br /><small>[E]</small>"
+msgstr "ULR \"[U]\" konnte nicht geladen werden.<br/><br/>Die geografische Karte muss diese Daten aus dem Internet über eine Webservice-Schnittstelle laden können. Bitte prüfen Sie die Dokumentation für mehr Details<br/><br/><small>[E]</small>"
+
+#: share/server/core/classes/GlobalBackendmkbi.php:136
+#: share/server/core/classes/GlobalBackendnagiosbp.php:123
+msgid "Unable to fetch data from URL [U]: [M]"
+msgstr "Daten konnten nicht geladen werden [U]: [M]"
+
+#: share/server/core/classes/ViewMapAddModify.php:392
+msgid "Unable to fetch data from backend - falling back to input field."
+msgstr "Mögliche Objekte konnten nicht geladen werden - Zeige Eingabefeld."
+
+#: share/server/core/classes/CoreModAuth.php:54
+msgid "Unable to log you out. Maybe it is not supported by your authentication module."
+msgstr "Logout nicht möglich. Wird eventuell vom Auth-Modul nicht unterstützt."
+
+#: share/server/core/classes/CoreAuthModMySQL.php:63
+#: share/server/core/classes/CoreAuthorisationModMySQL.php:41
+msgid "Unable to open auth database"
+msgstr "Die Auth-Datenbank konnte nicht geöffnet werden"
+
+#: share/server/core/classes/CoreAuthModSQLite.php:59
+#: share/server/core/classes/CoreAuthorisationModSQLite.php:37
+msgid "Unable to open auth database ([DB])"
+msgstr "Nutzerdatenbank konnte nicht geöffnet werden ([DB])"
+
+#: share/server/core/classes/CoreAuthorisationModGroups.php:41
+#: share/server/core/classes/CoreAuthorisationModMultisite.php:38
+msgid "Unable to open auth file ([FILE])."
+msgstr "Authentifizierzungs-Datei ([FILE]) konnte nicht geladen werden."
+
+#: share/server/core/sources/worldmap.php:145
+msgid "Unable to open the worldmap database ([DB])"
+msgstr ""
+
+#: share/server/core/classes/GlobalCore.php:671
+msgid "Unhandled error"
+msgstr "Unbekannter Fehler"
+
+#: share/server/core/sources/geomap.php:82
+#: share/server/core/sources/geomap.php:105
+msgid "Unhandled source type \"[S]\""
+msgstr "Unbekannte Quelle \"[S]\""
+
+msgid "Unknown message type"
+msgstr "Unbekannter Nachrichten-Typ"
+
+#: share/server/core/sources/automap_pos.php:212
+msgid "Unknown render mode: [MODE]"
+msgstr "Unbekannter Darstellungsmodus: [MODE]"
+
+#: share/server/core/classes/GlobalBackendmklivestatus.php:131
+msgid "Unknown socket type given in backend [BACKENDID]"
+msgstr "Unbekannter Socket-Typ in Backend [BACKENDID]"
+
+#: share/server/core/classes/GlobalMainCfg.php:1843
+msgid "Unknown value [ATTRIBUTE] used in section [TYPE] in main configuration file."
+msgstr "Unbekannte Option [ATTRIBUTE] im Abschnitt [TYPE] in Hauptkonfiguration gesetzt."
+
+#: share/server/core/classes/NagVisContextMenu.php:132
+msgid "Unlock"
+msgstr "Entsperren"
+
+#: share/server/core/classes/ViewManageBackgrounds.php:157
+#: share/server/core/classes/ViewManageShapes.php:80
+msgid "Upload"
+msgstr ""
+
+#: share/server/core/classes/ViewManageBackgrounds.php:106
+msgid "Upload Background Image"
+msgstr ""
+
+#: share/server/core/classes/ViewManageShapes.php:30
+msgid "Upload Shape"
+msgstr ""
+
+#: share/server/core/classes/GlobalCore.php:666
+msgid "Upload incomplete"
+msgstr "Upload nicht vollständig"
+
+#: share/server/core/classes/CoreAuthHandler.php:165
+msgid "User logged in ("
+msgstr "Nutzer eingeloggt ("
+
+#: share/server/core/classes/CoreAuthHandler.php:184
+msgid "User logged out ("
+msgstr "Nutzer ausgeloggt ("
+
+#: share/server/core/classes/CoreAuthHandler.php:167
+msgid "User login failed ("
+msgstr "Nutzer Login fehlgeschlagen ("
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:369
+msgid "User menu"
+msgstr "Nutzermenü"
+
+#: share/server/core/classes/ViewManageUsers.php:83
+msgid "Username"
+msgstr "Nutzername"
+
+#: share/server/core/classes/ViewMapManageTmpl.php:94
+#: share/server/core/classes/ViewMapManageTmpl.php:187
+msgid "Value"
+msgstr ""
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:396
+msgid "View current map"
+msgstr "Zeige aktuelle Karte"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:415
+msgid "Viewport"
+msgstr ""
+
+#: share/server/core/classes/ViewManageBackgrounds.php:90
+msgid "Width"
+msgstr ""
+
+#: share/server/core/classes/GlobalMapCfg.php:1911
+msgid "Worldmap"
+msgstr ""
+
+#: share/server/core/classes/ViewEditMainCfg.php:189
+msgid "Yes"
+msgstr "Ja"
+
+#: share/server/core/classes/CoreModAuth.php:85
+msgid "You are already logged in. You will be redirected."
+msgstr "Bereits eingeloggt. Weiterleitung..."
+
+#: share/server/core/classes/CoreLogonDialogHandler.php:63
+msgid "You are not authenticated"
+msgstr "Nicht authentifiziert"
+
+#: share/server/core/classes/CoreModule.php:124
+msgid "You are not permitted to access this page ([PAGE])."
+msgstr "Zugriff verweigert ([PAGE])."
+
+#: share/server/core/classes/CoreModAuth.php:91
+msgid "You entered invalid credentials."
+msgstr "Ungültige Zugangsdaten eingegeben."
+
+#: share/server/core/classes/CoreModMap.php:127
+#: share/server/core/classes/CoreModule.php:222
+msgid "You entered invalid information."
+msgstr "Ungültige Informationen eingegeben."
+
+#: share/server/core/classes/ViewManageBackends.php:119
+msgid "You need to choose a backend type."
+msgstr ""
+
+#: share/server/core/classes/ViewManageBackends.php:69
+msgid "You need to choose a default backend."
+msgstr ""
+
+#: share/server/core/classes/ViewMapManageTmpl.php:51
+msgid "You need to configure an unique name."
+msgstr ""
+
+#: share/server/core/classes/ViewManageBackends.php:143
+msgid "You need to configure this option."
+msgstr ""
+
+#: share/server/core/classes/ViewAck.php:69
+msgid "You need to provide a comment."
+msgstr ""
+
+#: share/server/core/classes/ViewMapAddModify.php:536
+msgid "You need to provide a map name."
+msgstr ""
+
+#: share/server/core/classes/ViewManageMaps.php:41
+msgid "You need to provide a unique map name (ID) for the map"
+msgstr "Sie müssen einen eindeutigen Kartennamen (ID) für die Karte wählen"
+
+#: share/server/core/classes/ViewManageMaps.php:324
+msgid "You need to select a file to import."
+msgstr "Sie müssen eine Datei zum Import wählen."
+
+#: share/server/core/classes/ViewManageBackgrounds.php:111
+#: share/server/core/classes/ViewManageShapes.php:35
+msgid "You need to select an image to import."
+msgstr ""
+
+#: share/server/core/classes/ViewManageBackends.php:122
+msgid "You need to specify a identifier for the backend."
+msgstr ""
+
+#: share/server/core/classes/ViewChangePassword.php:40
+msgid "You need to specify the new password."
+msgstr ""
+
+#: share/server/core/classes/ViewChangePassword.php:36
+msgid "You need to specify the old password."
+msgstr ""
+
+#: share/server/core/classes/ViewChangePassword.php:44
+msgid "You need to specify to confirm the new password."
+msgstr ""
+
+#: share/server/core/classes/ViewManageMaps.php:52
+msgid "You provided an invalid type"
+msgstr "Ungültiger Typ"
+
+#: share/server/core/classes/CoreSQLiteHandler.php:102
+msgid "Your PHP installation does not support PDO SQLite (3.x). Please check if you installed the PHP module."
+msgstr "PHP unterstützt PDO SQLite (3.x) nicht. Das Modul wird in der PHP-Installation benötigt."
+
+#: share/server/core/classes/CoreSQLiteHandler.php:97
+msgid "Your PHP installation does not support PDO. Please check if you installed the PHP module."
+msgstr "PHP unterstützt PDO nicht. Das Modul wird in der PHP-Installation benötigt."
+
+#: share/server/core/classes/CoreMySQLHandler.php:104
+msgid "Your PHP installation does not support mysql. Please check if you installed the PHP module."
+msgstr "PHP unterstützt mysql nicht. Das Modul wird in der PHP-Installation benötigt."
+
+#: share/server/core/classes/ViewChangePassword.php:59
+msgid "Your password could not be changed."
+msgstr ""
+
+#: share/server/core/classes/ViewChangePassword.php:60
+msgid "Your password has been changed."
+msgstr ""
+
+#: share/server/core/classes/NagVisHoverMenu.php:111
+msgid "address"
+msgstr "Adresse"
+
+#: share/server/core/classes/NagVisHoverMenu.php:107
+msgid "alias"
+msgstr "Alias"
+
+#: share/server/core/classes/objects/NagVisDynGroup.php:154
+#: share/server/core/classes/objects/NagVisHostgroup.php:151
+msgid "and"
+msgstr "und"
+
+#: share/server/core/classes/GlobalBackendndomy.php:241
+msgid "backendInstanceNameNotUniq"
+msgstr "Der Instanz-Name \"[NAME]\" in Backend \"[BACKENDID]\" ist nicht eindeutig."
+
+#: share/server/core/classes/GlobalBackendndomy.php:238
+msgid "backendInstanceNameNotValid"
+msgstr "Der Instanz-Name \"[NAME]\" in Backend \"[BACKENDID]\" ist nicht gültig."
+
+#: share/server/core/classes/CoreBackendMgmt.php:594
+#: share/server/core/classes/GlobalMainCfg.php:1883
+#: share/server/core/classes/GlobalMapCfg.php:1039
+msgid "backendNotDefined"
+msgstr "Das Backend mit der ID \"[BACKENDID]\" ist nicht definiert."
+
+#: share/server/core/classes/CoreBackendMgmt.php:555
+msgid "backendNotExists"
+msgstr "Das Backend mit der ID \"[BACKENDID]\" vom Typ \"[BACKENDTYPE]\" existiert nicht."
+
+#: share/server/core/classes/CoreBackendMgmt.php:641
+msgid "backendNotInitialized"
+msgstr "Die Datenquelle mit der ID \"[BACKENDID]\" vom Typ \"[BACKENDTYPE]\" ist nicht initialisiert. Möglicherweise wird eine undefinierte Datenquelle in einer Karte verwendet."
+
+#: share/server/core/classes/GlobalFileCache.php:109
+msgid "cacheFileNotWriteable"
+msgstr "Die Cache-Datei \"[FILE]\" konnte nicht geschrieben werden."
+
+#: share/server/core/sources/automap.php:65
+msgid "compress"
+msgstr "komprimieren"
+
+#: share/server/core/classes/NagVisContextMenu.php:103
+msgid "confirmDelete"
+msgstr "Wollen Sie dieses Objekt wirklich löschen?"
+
+#: share/server/core/classes/NagVisContextMenu.php:107
+msgid "contextConnectBySsh"
+msgstr "Mit SSH verbinden"
+
+#: share/server/core/classes/NagVisContextMenu.php:111
+msgid "contextRefreshStatus"
+msgstr "Status aktualisieren"
+
+#: share/server/core/classes/NagVisContextMenu.php:115
+msgid "contextRescheduleNextCheck"
+msgstr "Nächste Prüfung verschieben"
+
+#: share/server/core/classes/NagVisContextMenu.php:119
+msgid "contextScheduleDowntime"
+msgstr "Downtime eintragen"
+
+#: share/server/core/classes/GlobalMapCfg.php:1726
+msgid "couldNotDeleteMapCfg"
+msgstr "Die Karten-Konfigurationsdatei \"[MAPPATH]\" konnte nicht gelöscht werden"
+
+#: share/server/core/classes/GlobalBackground.php:202
+msgid "couldNotDeleteMapImage"
+msgstr "Das Hintergrundbild \"[IMGPATH]\" konnte nicht gelöscht werden"
+
+#: share/server/core/classes/NagVisHoverUrl.php:93
+msgid "couldNotGetHoverUrl"
+msgstr "Konnte Hover-URL \"[URL]\" nicht finden. Eventuell ist die URL Passwort-geschützt."
+
+#: share/server/core/sources/automap.php:247
+msgid "couldNotGetRootHostname"
+msgstr "Die Automap benötigt einen Ursprungs-Host.[br][br] Es gibt drei Möglichkeiten um einen Ursprungs-Host zu bestimmen: URL-Parameter \"root\", Haupt-Konfiguration \"automap > default_root\", automatische Ermittlung (nur möglich, wenn es [b]einen[/b] Host ohne Eltern-Host gibt)."
+
+#: share/server/core/classes/NagVisHoverMenu.php:155
+msgid "currentAttempt"
+msgstr "Aktueller Versuch"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:109
+msgid "de_DE"
+msgstr "Deutsch"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:106
+msgid "en_US"
+msgstr "Englisch"
+
+#: share/server/core/classes/CoreMySQLHandler.php:57
+#: share/server/core/classes/GlobalBackendndomy.php:185
+msgid "errorConnectingMySQL"
+msgstr "Fehler beim Verbinden mit dem MySQL-Server. Eventuell sind die Verbindungsparameter im Backend falsch? MySQL-Fehler: [MYSQLERR]."
+
+#: share/server/core/classes/CoreMySQLHandler.php:68
+#: share/server/core/classes/GlobalBackendndomy.php:195
+msgid "errorSelectingDb"
+msgstr "Fehler beim Selektieren der Datenbank. Falscher dbName oder fehlende Berechtigungen? MySQL-Error: [MYSQLERR]"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:112
+msgid "es_ES"
+msgstr "Spanisch"
+
+#: share/server/core/sources/automap.php:59
+msgid "false"
+msgstr "false"
+
+#: share/server/core/classes/GlobalFileCache.php:141
+msgid "fileNotCached"
+msgstr "Die Datei \"[FILE]\" ist nicht gecacht."
+
+#: share/server/core/classes/ViewMapAddModify.php:516
+msgid "for all users"
+msgstr "für alle Nutzer"
+
+#: share/server/core/classes/ViewMapAddModify.php:518
+msgid "for you"
+msgstr "für eigenen Account"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:405
+msgid "forum"
+msgstr "Forum"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:115
+msgid "fr_FR"
+msgstr "Französisch"
+
+#: share/server/core/classes/GlobalCore.php:151
+msgid "gdLibNotFound"
+msgstr "NagVis wurde konfiguriert die GD-Libs zum Parsen von Linien und Hintergrund zu verwenden (usegdlibs=1). Die GD-Libs sind nicht installiert oder geladen."
+
+#: share/server/core/sources/automap_pos.php:27
+msgid "graphvizBinaryNotFound"
+msgstr "Die benötigte Graphviz-Anwendung \"[NAME]\" konnte in den Pfaden \"[PATHS]\" nicht gefunden werden."
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:382
+#: share/server/core/classes/GlobalCore.php:682
+msgid "host"
+msgstr "Gerät"
+
+#: share/server/core/classes/objects/NagVisHostgroup.php:183
+msgid "hostGroupNotFoundInDB"
+msgstr "Die Hostgruppe \"[HOSTGROUP]\" konnte in der Datenbank nicht gefunden werden. Eventuell ist sie falsch geschrieben?"
+
+#: share/server/core/classes/objects/NagVisHost.php:221
+#: share/server/core/classes/objects/NagVisHost.php:252
+msgid "hostHasNoServices"
+msgstr "Der Host \"[HOST]\" hat keine Dienste."
+
+#: share/server/core/classes/GlobalBackendmklivestatus.php:728
+#: share/server/core/classes/GlobalBackendndomy.php:594
+msgid "hostIsPending"
+msgstr "Der Host \"[HOST]\" ist im wartenden Status."
+
+#: share/server/core/classes/objects/NagVisHost.php:182
+#: share/server/core/classes/objects/NagVisHost.php:235
+msgid "hostStateIs"
+msgstr "Der Host ist"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:384
+#: share/server/core/classes/GlobalCore.php:686
+msgid "hostgroup"
+msgstr "Gerätegruppe"
+
+#: share/server/core/classes/GlobalCore.php:687
+msgid "hostgroupname"
+msgstr "Gerätegruppenname"
+
+#: share/server/core/classes/GlobalCore.php:683
+msgid "hostname"
+msgstr "Gerätename"
+
+#: share/server/core/classes/objects/NagVisAggr.php:171
+#: share/server/core/classes/objects/NagVisDynGroup.php:152
+#: share/server/core/classes/objects/NagVisDynGroup.php:184
+#: share/server/core/classes/objects/NagVisHostgroup.php:149
+#: share/server/core/classes/objects/NagVisHostgroup.php:181
+msgid "hosts"
+msgstr "Geräte"
+
+#: share/server/core/classes/GlobalCore.php:387
+msgid "iconsetFiletypeUnknown"
+msgstr "Der Typ des Iconsets [ICONSET] konnte nicht ermittelt werden."
+
+#: share/server/core/classes/GlobalBackground.php:182
+msgid "imageAlreadyExists"
+msgstr "Das Bild \"[IMAGE]\" existiert bereits."
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:408
+#: share/server/core/classes/NagVisHoverMenu.php:139
+msgid "instance"
+msgstr "Instanz"
+
+#: share/server/core/sources/automap.php:66
+msgid "ipsep"
+msgstr "ipsep"
+
+#: share/server/core/classes/NagVisHoverMenu.php:147
+msgid "lastCheck"
+msgstr "Letzte Prüfung"
+
+#: share/server/core/classes/NagVisHoverMenu.php:159
+msgid "lastStateChange"
+msgstr "Letzter Statuswechsel"
+
+#: share/server/core/classes/NagVisHoverMenu.php:175
+msgid "lastStatusRefresh"
+msgstr "Letzte Status-Aktualisierung"
+
+#: share/server/core/classes/GlobalMainCfg.php:2394
+msgid "mainCfgCouldNotWriteMainConfigFile"
+msgstr "Die Haupt-Konfigurationsdatei ist nicht schreibbar."
+
+#: share/server/core/classes/GlobalMainCfg.php:2391
+msgid "mainCfgNotWriteable"
+msgstr "Die Haupt-Konfigurationsdatei ist nicht schreibbar."
+
+#: share/server/core/classes/GlobalCore.php:696
+msgid "map"
+msgstr "Karte"
+
+#: share/server/core/classes/ViewMapAddModify.php:168
+msgid "map configuration"
+msgstr "Karten-Konfiguration"
+
+#: share/server/core/classes/GlobalMapCfg.php:992
+msgid "mapCfgMustValueNotSet"
+msgstr "Der Pflichtwert [ATTRIBUTE] wurde im Objekt [TYPE]/[ID] in der Karte [MAPNAME] nicht angegeben."
+
+#: share/server/core/classes/objects/NagVisMapObj.php:371
+msgid "mapCfgNotExists"
+msgstr "Die Karte \"[MAP]\" existiert nicht"
+
+#: share/server/core/classes/GlobalMapCfg.php:1010
+msgid "mapDeprecatedOption"
+msgstr "Die Option \"[ATTRIBUTE]\" in einem Objekt des Typs \"[TYPE]\" auf der Karte \"[MAP]\" ist veraltet. Bitte Changelog oder Dokumentation prüfen und die Option anpassen."
+
+#: share/server/core/classes/CoreExceptions.php:61
+#: share/server/core/classes/CoreModMultisite.php:218
+msgid "mapInMaintenance"
+msgstr "Die Karte \"[MAP]\" befindet sich aktuell im Wartungsmodus. Diese Seite lädt automatisch neu."
+
+#: share/frontend/nagvis-js/classes/NagVisOverviewView.php:43
+msgid "mapIndex"
+msgstr "Kartenübersicht"
+
+#: share/server/core/classes/objects/NagVisMapObj.php:488
+msgid "mapIsEmpty"
+msgstr "Die Karte \"[MAP]\" hat keine Objekte."
+
+#: share/server/core/classes/CoreModMap.php:198
+#: share/server/core/classes/CoreModMap.php:256
+#: share/server/core/classes/ViewMapAddModify.php:188
+msgid "mapLockNotDeleted"
+msgstr "Die Sperre der Karte konnte nicht gelöscht werden"
+
+#: share/server/core/classes/GlobalMapCfg.php:1760
+msgid "mapLocked"
+msgstr "Die Karte \"[MAP]\" ist vom Benutzer \"[USER]\" von der IP \"[IP]\" seit [TIME] gesperrt. Trotzdem bearbeiten? (Sperre ignorieren?)"
+
+#: share/server/core/classes/CoreRotation.php:44
+msgid "mapRotationPoolNotExists"
+msgstr "Der angegebene Rotation-Pool \"[ROTATION]\" ist nicht definiert."
+
+#: share/server/core/classes/GlobalCore.php:697
+msgid "mapname"
+msgstr "Kartenname"
+
+#: share/server/core/classes/GlobalCore.php:679
+msgid "more items..."
+msgstr "Mehr Objekte..."
+
+#: share/server/core/classes/CoreModule.php:249
+msgid "mustValueNotSet1"
+msgstr "Der Pflichtwert \"[ATTRIBUTE]\" wurde nicht gesetzt."
+
+#: share/server/core/classes/GlobalBackendndomy.php:213
+msgid "mysqlNotSupported"
+msgstr "Ihre PHP-Installation hat keine MySQL-Unterstützung. Ohne php-mysql können Sie das NDO-Backend nicht nutzen"
+
+#: share/server/core/classes/GlobalBackendndomy.php:124
+msgid "nagiosDataNotUpToDate"
+msgstr "Laut NDO wurden von Nagios seit mehr als \"[TIMEWITHOUTUPDATE]\" Sekunden keine Daten mehr verarbeitet. Laufen Nagios und ndo2db?"
+
+#: share/server/core/classes/GlobalBackendndomy.php:119
+msgid "nagiosNotRunning"
+msgstr "Laut NDO läuft der Nagios-Dienst nicht."
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:403
+msgid "needHelp"
+msgstr "Hilfe?"
+
+#: share/server/core/classes/NagVisHoverMenu.php:143
+msgid "nextCheck"
+msgstr "Nächste Prüfung"
+
+#: share/frontend/nagvis-js/classes/NagVisInfoView.php:80
+#: share/server/core/classes/ViewEditMainCfg.php:248
+#: share/server/core/classes/ViewMapAddModify.php:351
+msgid "no"
+msgstr "Nein"
+
+#: share/frontend/nagvis-js/classes/NagVisInfoView.php:81
+#: share/frontend/nagvis-js/classes/NagVisInfoView.php:82
+msgid "no (compat mode, may lead to performance problems)"
+msgstr "Nein (Kompatibilitätsmodus, möglicherweise weniger performant)"
+
+#: share/server/core/classes/CoreBackendMgmt.php:539
+msgid "noBackendDefined"
+msgstr "Es konnte kein definiertes Backend gefunden werden."
+
+#: share/server/core/classes/objects/NagVisMapObj.php:508
+msgid "noReadPermissions"
+msgstr "Sie haben keine Berechtigung, den Status dieser Karte einzusehen."
+
+#: share/server/core/classes/GlobalBackendndomy.php:163
+msgid "noTablesExists"
+msgstr "In der Datenbank existieren keine Tabellen mit dem konfigurierten Präfix \"[PREFIX]\"."
+
+#: share/server/core/classes/NagVisHoverMenu.php:171
+msgid "notes"
+msgstr "Notiz"
+
+#: share/server/core/classes/GlobalCore.php:698
+msgid "objectname"
+msgstr "Objektname"
+
+#: share/server/core/classes/objects/NagVisMapObj.php:486
+msgid "objects"
+msgstr "Objekte"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:404
+msgid "onlineDoc"
+msgstr "Dokumentation"
+
+#: share/server/core/classes/CoreModOverview.php:324
+#: share/server/core/classes/CoreModOverview.php:387
+msgid "onlyPngOrJpgImages"
+msgstr "Es sind nur PNG- oder JPG-Bilder als Hintergrund erlaubt"
+
+#: share/server/core/sources/automap.php:62
+msgid "ortho"
+msgstr "ortho"
+
+#: share/server/core/sources/automap.php:63
+msgid "orthoxy"
+msgstr "orthoxy"
+
+#: share/server/core/sources/automap.php:64
+msgid "orthoyx"
+msgstr "orthoyz"
+
+#: share/server/core/classes/NagVisHoverMenu.php:123
+msgid "output"
+msgstr "Ausgabe"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:407
+#: share/server/core/classes/NagVisHoverMenu.php:135
+msgid "overview"
+msgstr "Übersicht"
+
+#: share/server/core/classes/NagVisHoverMenu.php:127
+msgid "perfdata"
+msgstr "Perfdata"
+
+#: share/server/core/classes/CoreModUrl.php:68
+#: share/server/core/classes/CoreModUrl.php:76
+#: share/server/core/classes/NagVisHoverUrl.php:88
+msgid "problemReadingUrl"
+msgstr "Problem beim Lesen der URL [URL]: [MSG]"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:118
+msgid "pt_BR"
+msgstr "Brasilianisches Portugiesisch"
+
+#: share/frontend/nagvis-js/classes/NagVisOverviewView.php:44
+msgid "rotationPools"
+msgstr "Rotations-Pools"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:410
+msgid "rotationStart"
+msgstr "Starte Rotation"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:411
+msgid "rotationStop"
+msgstr "Stoppe Rotation"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:121
+msgid "ru_RU"
+msgstr "Russisch"
+
+#: share/server/core/classes/ViewEditMainCfg.php:109
+msgid "save"
+msgstr "Speichern"
+
+#: share/server/core/sources/automap.php:60
+msgid "scale"
+msgstr "scale"
+
+#: share/server/core/sources/automap.php:61
+msgid "scalexy"
+msgstr "scalexy"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:383
+#: share/server/core/classes/GlobalCore.php:685
+msgid "service"
+msgstr "Dienst"
+
+#: share/server/core/classes/objects/NagVisServicegroup.php:172
+msgid "serviceGroupNotFoundInDB"
+msgstr "Die Dienstegruppe \"[SERVICEGROUP]\" konnte in der Datenbank nicht gefunden werden. Eventuell ist sie falsch geschrieben?"
+
+#: share/server/core/classes/GlobalBackendmklivestatus.php:851
+#: share/server/core/classes/GlobalBackendndomy.php:733
+msgid "serviceNotChecked"
+msgstr "Der Dienst \"[SERVICE]\" wurde bisher nicht geprüft."
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:385
+#: share/server/core/classes/GlobalCore.php:688
+msgid "servicegroup"
+msgstr "Dienstegruppe"
+
+#: share/server/core/classes/GlobalCore.php:689
+msgid "servicegroupname"
+msgstr "Dienstegruppenname"
+
+#: share/server/core/classes/GlobalCore.php:684
+#: share/server/core/classes/NagVisHoverMenu.php:167
+msgid "servicename"
+msgstr "Dienstename"
+
+#: share/server/core/classes/objects/NagVisDynGroup.php:155
+#: share/server/core/classes/objects/NagVisHost.php:217
+#: share/server/core/classes/objects/NagVisHost.php:250
+#: share/server/core/classes/objects/NagVisHostgroup.php:152
+#: share/server/core/classes/objects/NagVisServicegroup.php:146
+#: share/server/core/classes/objects/NagVisServicegroup.php:170
+msgid "services"
+msgstr "Dienste"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:392
+msgid "shape"
+msgstr "Bild"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:394
+msgid "special"
+msgstr "Spezielle"
+
+#: share/server/core/classes/NagVisHoverMenu.php:115
+msgid "state"
+msgstr "Status"
+
+#: share/server/core/classes/NagVisHoverMenu.php:163
+msgid "stateDuration"
+msgstr "Statusdauer"
+
+#: share/server/core/classes/NagVisHoverMenu.php:151
+msgid "stateType"
+msgstr "Statustyp"
+
+#: share/server/core/classes/NagVisHoverMenu.php:131
+msgid "summaryOutput"
+msgstr "Gesamtausgabe"
+
+#: share/server/core/classes/NagVisHoverMenu.php:119
+msgid "summaryState"
+msgstr "Gesamtstatus"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:406
+#: share/frontend/nagvis-js/classes/NagVisInfoView.php:50
+msgid "supportInfo"
+msgstr "NagVis-Support-Informationen"
+
+#: share/frontend/nagvis-js/classes/NagVisHeaderMenu.php:390
+msgid "textbox"
+msgstr "Textbox"
+
+#: share/server/core/sources/automap.php:58
+msgid "true"
+msgstr "true"
+
+#: share/server/core/classes/GlobalMapCfg.php:1007
+msgid "unknownAttribute"
+msgstr "Das Attribut \"[ATTRIBUTE]\" ist in Elementen des Typs \"[TYPE]\" in Map \"[MAPNAME]\" nicht erlaubt."
+
+#: share/server/core/classes/GlobalMapCfg.php:361
+#: share/server/core/classes/objects/NagVisMapObj.php:420
+msgid "unknownObject"
+msgstr "Der Objekttyp \"[TYPE]\" in der Map \"[MAPNAME]\" ist nicht erlaubt"
+
+#: share/server/core/sources/automap.php:67
+msgid "vpsc"
+msgstr "vpsc"
+
+#: share/server/core/classes/GlobalMapCfg.php:1021
+#: share/server/core/classes/GlobalMapCfg.php:1029
+msgid "wrongValueFormatMap"
+msgstr "Das Attribut \"[ATTRIBUTE]\" in einem Element vom Typ \"[TYPE]\" in der Karten-Konfigurationsdatei \"[MAP]\" entspricht nicht dem korrekten Format"
+
+#: share/frontend/nagvis-js/classes/NagVisInfoView.php:80
+#: share/frontend/nagvis-js/classes/NagVisInfoView.php:81
+#: share/frontend/nagvis-js/classes/NagVisInfoView.php:82
+#: share/server/core/classes/ViewEditMainCfg.php:247
+#: share/server/core/classes/ViewMapAddModify.php:350
+msgid "yes"
+msgstr "Ja"

@@ -1,0 +1,10 @@
+prefix=/omd/versions/1.2.8p15.cre
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: librrd
+Description: Library for the RRDtool
+Version: 1.5.4
+Libs: -L${libdir} -lrrd
+Cflags: -I${includedir}

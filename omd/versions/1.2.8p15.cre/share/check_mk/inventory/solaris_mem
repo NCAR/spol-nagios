@@ -1,0 +1,54 @@
+#!/usr/bin/python
+# -*- encoding: utf-8; py-indent-offset: 4 -*-
+# +------------------------------------------------------------------+
+# |             ____ _               _        __  __ _  __           |
+# |            / ___| |__   ___  ___| | __   |  \/  | |/ /           |
+# |           | |   | '_ \ / _ \/ __| |/ /   | |\/| | ' /            |
+# |           | |___| | | |  __/ (__|   <    | |  | | . \            |
+# |            \____|_| |_|\___|\___|_|\_\___|_|  |_|_|\_\           |
+# |                                                                  |
+# | Copyright Mathias Kettner 2014             mk@mathias-kettner.de |
+# +------------------------------------------------------------------+
+#
+# This file is part of Check_MK.
+# The official homepage is at http://mathias-kettner.de/check_mk.
+#
+# check_mk is free software;  you can redistribute it and/or modify it
+# under the  terms of the  GNU General Public License  as published by
+# the Free Software Foundation in version 2.  check_mk is  distributed
+# in the hope that it will be useful, but WITHOUT ANY WARRANTY;  with-
+# out even the implied warranty of  MERCHANTABILITY  or  FITNESS FOR A
+# PARTICULAR PURPOSE. See the  GNU General Public License for more de-
+# tails. You should have  received  a copy of the  GNU  General Public
+# License along with GNU Make; see the file  COPYING.  If  not,  write
+# to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
+# Boston, MA 02110-1301 USA.
+
+
+# <<<statgrab_mem>>>
+# mem.cache 0
+# mem.free 166014599168
+# mem.total 274877906944
+# mem.used 108863307776
+# swap.free 87748075520
+# swap.total 203939356672
+# swap.used 116191281152
+
+# statgrab_mem has a parse function with the following output:
+# {
+#    'SwapTotal' : 0,
+#    'Cached'    : 0,
+#    'MemFree'   : 1582464, # kB
+#    'MemTotal'  : 2017928, # kB
+#    'SwapFree'  : 0,
+# }
+
+def inv_solaris_mem(parsed):
+    node = inv_tree("hardware.memory.")
+    node["total_ram_usable"] = parsed["MemTotal"] * 1024
+    node["total_swap"] = parsed["SwapTotal"] * 1024
+
+
+inv_info['statgrab_mem'] = {
+   "inv_function"           : inv_solaris_mem,
+}

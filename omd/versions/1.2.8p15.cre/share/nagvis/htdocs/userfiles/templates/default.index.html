@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+    <link rel="shortcut icon" href="{$htmlBase}/frontend/nagvis-js/images/internal/favicon.png" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{$pageTitle}</title>
+    <meta name="viewport" content="width=480, initial-scale=0.6666, maximum-scale=1.0, minimum-scale=0.6666" />
+
+    {if $bUseCompressedJs}
+    <script type="text/javascript" src="{$htmlJs}NagVisCompressed.js?v={$version}"></script>
+    {else}
+    <script type="text/javascript" src="{$htmlJs}ExtStacktrace.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}ExtLeaflet.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}nagvis.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}edit.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}popupWindow.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}ExtBase.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}frontendMessage.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}frontendEventlog.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}ajax.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}ajaxActions.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}dynfavicon.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}Element.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}ElementContext.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}ElementHover.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}ElementIcon.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}ElementLine.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}ElementGadget.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}ElementLabel.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}ElementShape.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}ElementBox.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}ElementTile.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}View.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}ViewMap.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}ViewWorldmap.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}ViewOverview.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}ViewUrl.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}NagVisObject.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}NagVisStatefulObject.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}NagVisStatelessObject.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}NagVisHost.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}NagVisService.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}NagVisHostgroup.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}NagVisServicegroup.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}NagVisDynGroup.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}NagVisAggr.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}NagVisMap.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}NagVisShape.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}NagVisLine.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}NagVisTextbox.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}NagVisContainer.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}NagVisRotation.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}frontend.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}ExtWzJsGraphics.js?v={$version}"></script>
+    <script type="text/javascript" src="{$htmlJs}ExtJSColor.js?v={$version}"></script>
+    {/if}
+    <link rel="stylesheet" type="text/css" href="{$htmlTemplates}default.css?v={$version}" />
+    {if $customStylesheet != ""}
+    <link rel="stylesheet" type="text/css" href="{$customStylesheet}" />
+    {/if}
+</head>
+<body class="main">
+
+<!-- Start rotation properties -->
+<script type="text/javascript">
+oViewProperties = \{};
+oRotationProperties = \{"rotationEnabled":0,"nextStepUrl":"","nextStepTime":""};
+jscolor.dir = '{$htmlBase}/frontend/nagvis-js/images/jscolor/';
+</script>
+
+<!-- Start header menu -->
+{$headerMenu}
+
+<!-- Start content -->
+{$content}
+
+</body>
+</html>

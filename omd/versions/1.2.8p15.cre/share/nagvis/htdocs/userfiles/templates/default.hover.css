@@ -1,0 +1,103 @@
+/*****************************************************************************
+ *
+ * default.hover.css - Hover template specific css definitions
+ *
+ * Copyright (c) 2004-2011 NagVis Project (Contact: info@nagvis.org)
+ *
+ * License:
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ *
+ *****************************************************************************/
+
+div.hover {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+    background-color: #fbfbfb;
+    border: 1px solid #e5e5e5;
+    overflow: visible;
+    min-height: 50px;
+}
+
+div.hover > table {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+}
+
+div.hover > table tr.even {
+    background-color: #f0f0f0;
+}
+
+div.hover > table td, div.hover > table th {
+    padding: 5px;
+    color: #555555;
+}
+
+div.hover > table th {
+    text-align: left;
+    font-weight: normal;
+    border-bottom: 1px solid #7ea434;
+}
+
+div.hover > table td.spacer {
+    height:3px
+}
+
+div.hover > table td.label {
+    text-align:center;
+    color: #43B3CF;
+    white-space: nowrap;
+}
+
+div.hover > table label {
+    font-weight:normal;
+}
+
+div.hover > table td.stateOK, div.hover > table td.stateUP {
+    background-color:#00CC00;
+    color:#fff
+}
+
+div.hover > table td.stateWARNING {
+    background-color:#FFFF00;
+    color:#555
+}
+
+div.hover > table td.stateCRITICAL, div.hover > table td.stateDOWN, div.hover > table td.stateUNREACHABLE {
+    background-color:#F83838;
+    color:#fff
+}
+
+div.hover > table td.stateERROR {
+    background-color:#66CCFF;
+    color:#fff
+}
+
+div.hover > table td.stateUNKNOWN {
+    background-color:#FFFF99;
+    color:#000
+}
+
+div.hover > table td.child {
+    border-top: 1px solid #e5e5e5;
+    padding: 0;
+}
+
+div.hover table.childs {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,7 @@
+README
+rrdtoolmodule.c
+setup.py
+py_rrdtool.egg-info/PKG-INFO
+py_rrdtool.egg-info/SOURCES.txt
+py_rrdtool.egg-info/dependency_links.txt
+py_rrdtool.egg-info/top_level.txt

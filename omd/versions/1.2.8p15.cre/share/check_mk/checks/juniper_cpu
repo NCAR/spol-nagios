@@ -1,0 +1,55 @@
+#!/usr/bin/python
+# -*- encoding: utf-8; py-indent-offset: 4 -*-
+# +------------------------------------------------------------------+
+# |             ____ _               _        __  __ _  __           |
+# |            / ___| |__   ___  ___| | __   |  \/  | |/ /           |
+# |           | |   | '_ \ / _ \/ __| |/ /   | |\/| | ' /            |
+# |           | |___| | | |  __/ (__|   <    | |  | | . \            |
+# |            \____|_| |_|\___|\___|_|\_\___|_|  |_|_|\_\           |
+# |                                                                  |
+# | Copyright Mathias Kettner 2014             mk@mathias-kettner.de |
+# +------------------------------------------------------------------+
+#
+# This file is part of Check_MK.
+# The official homepage is at http://mathias-kettner.de/check_mk.
+#
+# check_mk is free software;  you can redistribute it and/or modify it
+# under the  terms of the  GNU General Public License  as published by
+# the Free Software Foundation in version 2.  check_mk is  distributed
+# in the hope that it will be useful, but WITHOUT ANY WARRANTY;  with-
+# out even the implied warranty of  MERCHANTABILITY  or  FITNESS FOR A
+# PARTICULAR PURPOSE. See the  GNU General Public License for more de-
+# tails. You should have  received  a copy of the  GNU  General Public
+# License along with GNU Make; see the file  COPYING.  If  not,  write
+# to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
+# Boston, MA 02110-1301 USA.
+
+juniper_cpu_default_levels = ( 80.0, 90.0 )
+
+def inventory_juniper_cpu(info):
+    return []
+
+def check_juniper_cpu(item, params, info):
+    for line in info:
+        if line[0] == item:
+            # this check was using cpu load readings falsely reporting them
+            # as utilization. Since the device doesn't seem to report the number
+            # of available cpu cores, load monitoring isn't properly doable
+            return 3, "This check is obsolete and has been replaced, " \
+                "please re-discover service on this host"
+
+check_info["juniper_cpu"] = {
+    "check_function"        : check_juniper_cpu,
+    "inventory_function"    : inventory_juniper_cpu,
+    "service_description"   : "CPU utilization %s",
+    "has_perfdata"          : True,
+    "snmp_scan_function"    : lambda oid: oid(".1.3.6.1.2.1.1.2.0").startswith(".1.3.6.1.4.1.2636.1.1.1.2"),
+    "snmp_info"             : (".1.3.6.1.4.1.2636.3.1.13.1",[
+                                                             5, #jnxOperatingDescr
+                                                             20, #jnxOperating1MinLoadAvg
+                                                             21, #jnxOperating5MinLoadAvg
+                                                             22, #jnxOperating15MinLoadAvg
+                                                             ])
+
+
+}

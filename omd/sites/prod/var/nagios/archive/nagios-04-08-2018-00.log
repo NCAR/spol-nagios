@@ -1,0 +1,617 @@
+[1523059200] LOG ROTATION: DAILY
+[1523059200] LOG VERSION: 2.0
+[1523059200] CURRENT HOST STATE: control1.gate.rtf;UP;HARD;1;OK - 192.168.4.2: rta 0.011ms, lost 0%
+[1523059200] CURRENT HOST STATE: control2.gate.rtf;UP;HARD;1;OK - 192.168.4.10: rta 0.145ms, lost 0%
+[1523059200] CURRENT HOST STATE: mgen1.gate.rtf;UP;HARD;1;OK - 192.168.4.3: rta 0.141ms, lost 0%
+[1523059200] CURRENT HOST STATE: mgen2.gate.rtf;UP;HARD;1;OK - 192.168.4.22: rta 0.110ms, lost 0%
+[1523059200] CURRENT HOST STATE: pgen1.gate.rtf;UP;HARD;1;OK - 192.168.4.23: rta 0.143ms, lost 0%
+[1523059200] CURRENT HOST STATE: pgen2.gate.rtf;UP;HARD;1;OK - 192.168.4.25: rta 0.162ms, lost 0%
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Antenna_Door_Open_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Az_Run_Line_Active;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Azimuth_Brake_Bypass_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Azimuth_Brakes_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Azimuth_Fans_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Azimuth_Stowed_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Azimuth_Temperature_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_COHO_Gate_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Circulator_Temperature_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_El_Run_Line_Active;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Elevation_Brake_Bypass_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Elevation_Brakes_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Elevation_Fans_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Elevation_Limit_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Elevation_Stowed_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Elevation_Temperature_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Mitch_Switch_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Oil_Pressure_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_RF_Disabled_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_RF_Ladder_Lockout_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Wave_Guide_Pressure_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Wave_Guide_Switch_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;CPU load;OK;HARD;1;OK - 15 min load 0.05 at 16 Cores (0.00 per Core)
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;CPU utilization;OK;HARD;1;OK - user: 0.5%, system: 0.3%, wait: 0.0%, steal: 0.0%, guest: 0.0%, total: 0.8%
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;Check_MK;OK;HARD;1;OK - Agent version 1.2.8p26, execution time 0.6 sec
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;Check_MK Discovery;OK;HARD;1;OK - no unmonitored services found, no vanished services found
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;Disk IO SUMMARY;OK;HARD;1;OK - Utilization: 0.0%, Read: 0.00 B/s, Write: 66.88 kB/s, Average Wait: 0.07 ms, Average Read Wait: 0.00 ms, Average Write Wait: 0.07 ms, Latency: 0.01 ms
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;Filesystem /;OK;HARD;1;OK - 42.7% used (16.68 of 39.04 GB), trend: +59.74 MB / 24 hours
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;Filesystem /data;OK;HARD;1;OK - 25.5% used (400.28 GB of 1.53 TB), trend: -6.55 MB / 24 hours
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;Filesystem /home;OK;HARD;1;OK - 63.3% used (29.86 of 47.17 GB), trend: +14.60 MB / 24 hours
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;HP_DataMapper_primary;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;HP_DsFileDist_ext_data;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;HP_DsServerMgr_primary;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;HP_Fmq2Fmq_monitoring;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;HP_InputWatcher_spol_cams;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;HP_Janitor_logs;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;HP_Janitor_sysview;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;HP_LdataWatcher_sysview;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;HP_Scout_primary;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;HP_SpolMonCtrl_ops;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;HawkSummary_Data;OK;HARD;1;OK - 0 data set(s) have problems
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 10/0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;Interface 2;OK;HARD;1;OK - [em1] (up) MAC: 78:2b:cb:0d:ae:c0, 1 Gbit/s, in: 6.96 kB/s(0.0%), out: 6.07 kB/s(0.0%)
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;Interface 3;OK;HARD;1;OK - [em2] (up) MAC: 78:2b:cb:0d:ae:c1, 1 Gbit/s, in: 87.67 B/s(0.0%), out: 91.50 B/s(0.0%)
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;Kernel Context Switches;OK;HARD;1;OK - 948/s
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;Kernel Major Page Faults;OK;HARD;1;OK - 0/s
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;Kernel Process Creations;OK;HARD;1;OK - 8/s
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;Logins;OK;HARD;1;OK - 7 logins on system (warn/crit at 20/30)
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;Memory;OK;HARD;1;OK - RAM used: 1.39 GB of 11.56 GB, Swap used: 0.00 B of 3.91 GB, Total virtual memory used: 1.39 GB of 15.47 GB (9.0%),
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;Mount options of /;OK;HARD;1;OK - mount options exactly as expected
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;Mount options of /data;OK;HARD;1;OK - mount options exactly as expected
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;Mount options of /home;OK;HARD;1;OK - mount options exactly as expected
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;NTP Time;OK;HARD;1;OK - stratum 2, offset 0.0034 ms, reference: C0A804F8 (192.168.4.248)
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;Number of threads;OK;HARD;1;OK - 502 threads
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;OMD prod apache;OK;HARD;1;OK - 0.08 Requests/s, 0.00 Seconds serving/s, 1.36 kB Sent/s
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;OMD prod performance;OK;HARD;1;OK - Host Checks: 0.1/s, Service Checks: 5.7/s, Process Creations: 0.2/s, Livestatus Connects: 0.1/s, Livestatus Requests: 0.2/s, Log Messages: 0.0/s, 6 Hosts, 351 Services, Core version: 3.5.0, Livestatus version: 1.2.8p15
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;OMD prod status;OK;HARD;1;OK - running
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;PM_AC_Power;OK;HARD;1;OK - Source 2
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;PM_Frequency;OK;HARD;1;OK - 600
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;PM_Source_Switched;OK;HARD;1;OK - ---
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;PM_TotalKW;OK;HARD;1;OK - 6548
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;PM_VoltageA;OK;HARD;1;OK - 122
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;PM_VoltageB;OK;HARD;1;OK - 122
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;PM_VoltageC;OK;HARD;1;OK - 123
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;PM_XmitPowerDbmH;CRITICAL;HARD;1;CRIT - CRITICAL - 53.53
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;PM_XmitPowerDbmTxTop;CRITICAL;HARD;1;CRIT - CRITICAL - 45.14
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;PM_XmitPowerDbmV;CRITICAL;HARD;1;CRIT - CRITICAL - 64.49
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;Postfix Queue;OK;HARD;1;OK - deferred queue length is 0, active queue length is 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TCP Connections;OK;HARD;1;OK - ESTABLISHED: 45, TIME_WAIT: 45, FIN_WAIT1: 60, LISTEN: 37
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TEMP_Annex;OK;HARD;1;OK - 24.7
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TEMP_Front_Wall;CRITICAL;HARD;1;CRIT - CRITICAL - 338.2
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TEMP_Horiz_LNA;CRITICAL;HARD;1;CRIT - CRITICAL - 327.4
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TEMP_Klystron;OK;HARD;1;OK - 33.7
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TEMP_Rcvr_Enclosure;CRITICAL;HARD;1;CRIT - CRITICAL - 335.4
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TEMP_Rear_Wall;OK;HARD;1;OK - 17.1
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 30.1
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TEMP_UPS_Container;OK;HARD;1;OK - 16.2
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TEMP_Vert_LNA;CRITICAL;HARD;1;CRIT - CRITICAL - 329.1
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Cabinet_Air_Temperature_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Cabinet_Airflow_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Cabinet_Interlock_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Charging_System_Fail_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Circulator_Temperature_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Filament_PS_Voltage_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Filament_ps_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Focus_Coil_Airflow_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Focus_Coil_Current_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Focus_Coil_PS_Voltage_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Inverse_Diode_Current_HV_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Klystron_Air_Temperature_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Klystron_Airflow_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Klystron_Current_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Klystron_Filament_Current_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Klystron_Vacuum_Pump_Current_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Klystron_Warmup_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_M15_VDC_PS_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Main_Power_Voltage_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Maintenance_Required_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Modulator_Inverse_Current_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Modulator_Overload_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Modulator_Switch_Fail_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Modulator_Switch_Maintenance_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_P15_VDC_PS_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_P28_VDC_PS_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_P45_VDC_PS_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_P5_VDC_PS_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_PRF_Limit_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Post_Charge_Regulator_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Spectrum_Filter_Pressure_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Transmitter_Avail_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Transmitter_Battery_Charging_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Transmitter_Oil_Level_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Transmitter_Oil_Temperature_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Transmitter_Overcurrent_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Transmitter_Overvoltage_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Transmitter_Spare_0_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Transmitter_Spare_1_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Trigger_Amplifier_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Vacuum_Pump_PS_Voltage_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_W_G_PFN_Transfer_Interlock_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Waveguide_Arc_VSWR_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Waveguide_Pressure_Humidity_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;TX_Waveguide_Switch_Position_Fault;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;UPSB_Alarms;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;UPSB_BatteryState;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;UPSB_OutputState;OK;HARD;1;OK - 0
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;UPS_Alarms;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;UPS_BatteryState;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;UPS_BatteryVoltage;OK;HARD;1;OK - 328
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;UPS_OutputState;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;Uptime;OK;HARD;1;OK - up since Wed Apr  4 19:07:27 2018 (2d 04:51:56)
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;WG_PressurePSI;OK;HARD;1;OK - 5.44
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;WG_RH;OK;HARD;1;OK - 1.97
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;WG_TempC;OK;HARD;1;OK - 19.67
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;WX_RH;OK;HARD;1;OK - 86.60
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;WX_hailIntensityHitsPerCm2;OK;HARD;1;OK - 0.00
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;WX_heatingTempC;OK;HARD;1;OK - 8.00
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;WX_heatingVoltage;OK;HARD;1;OK - 22.20
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;WX_pressureHpa;OK;HARD;1;OK - 824.20
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;WX_rainRateMmPerHr;OK;HARD;1;OK - 0.00
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;WX_supplyVoltage;OK;HARD;1;OK - 23.20
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;WX_tempC;OK;HARD;1;OK - -5.50
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;WX_windDirnDeg;OK;HARD;1;OK - 112.00
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;WX_windSpeedMps;OK;HARD;1;OK - 3.40
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;XMIT_High_Voltage_Power;CRITICAL;HARD;1;CRIT - CRITICAL - 32770
+[1523059200] CURRENT SERVICE STATE: control1.gate.rtf;XMIT_Panel_Power;CRITICAL;HARD;1;CRIT - CRITICAL - 32771
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;CPU load;OK;HARD;1;OK - 15 min load 0.05 at 16 Cores (0.00 per Core)
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;CPU utilization;OK;HARD;1;OK - user: 0.2%, system: 0.1%, wait: 0.0%, steal: 0.0%, guest: 0.0%, total: 0.3%
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;Check_MK;OK;HARD;1;OK - Agent version 1.2.8p18, execution time 0.2 sec
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;Check_MK Discovery;OK;HARD;1;OK - no unmonitored services found, no vanished services found
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;Disk IO SUMMARY;OK;HARD;1;OK - Utilization: 0.0%, Read: 68.27 B/s, Write: 56.13 kB/s, Average Wait: 0.06 ms, Average Read Wait: 9.00 ms, Average Write Wait: 0.04 ms, Latency: 0.04 ms
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;Filesystem /;OK;HARD;1;OK - 40.9% used (15.69 of 38.32 GB), trend: -1.52 MB / 24 hours
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;Filesystem /data;OK;HARD;1;OK - 5.3% used (380.17 GB of 6.96 TB), trend: +28.79 kB / 24 hours
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;Filesystem /home;OK;HARD;1;OK - 72.5% used (34.21 of 47.17 GB), trend: 0.00 B / 24 hours
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;Interface 2;OK;HARD;1;OK - [em1] (up) MAC: 78:2b:cb:0d:b1:3c, 1 Gbit/s, in: 3.25 kB/s(0.0%), out: 1.02 kB/s(0.0%)
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;Interface 3;OK;HARD;1;OK - [em2] (up) MAC: 78:2b:cb:0d:b1:3d, 1 Gbit/s, in: 8.96 B/s(0.0%), out: 0.00 B/s(0.0%)
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;Kernel Context Switches;OK;HARD;1;OK - 270/s
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;Kernel Major Page Faults;OK;HARD;1;OK - 0/s
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;Kernel Process Creations;OK;HARD;1;OK - 7/s
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;Logins;OK;HARD;1;OK - 1 logins on system (warn/crit at 20/30)
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;Memory;OK;HARD;1;OK - RAM used: 641.64 MB of 11.56 GB, Swap used: 0.00 B of 3.72 GB, Total virtual memory used: 641.64 MB of 15.29 GB (4.1%),
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;Mount options of /;OK;HARD;1;OK - mount options exactly as expected
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;Mount options of /data;OK;HARD;1;OK - mount options exactly as expected
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;Mount options of /home;OK;HARD;1;OK - mount options exactly as expected
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;NTP Time;OK;HARD;1;OK - stratum 2, offset 0.3221 ms, reference: 192.168.4.248 (ntp.gate.rtf)
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;Number of threads;OK;HARD;1;OK - 380 threads
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;OMD prod apache;OK;HARD;1;OK - No activity since last check
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;OMD prod performance;CRITICAL;HARD;1;CRIT - Host Checks: 0.1/s, Service Checks: 3.8/s, Process Creations: 0.2/s, Livestatus Connects: 0.0/s, Livestatus Requests: 0.0/s, Log Messages: 0.0/s, 6 Hosts, 232 Services, Core version: 3.5.0, Livestatus version: 1.2.8p15, Notifications are disabled(!!)
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;OMD prod status;OK;HARD;1;OK - running
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;Postfix Queue;OK;HARD;1;OK - deferred queue length is 0, active queue length is 0
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;TCP Connections;OK;HARD;1;OK - ESTABLISHED: 1, TIME_WAIT: 3, LISTEN: 7
+[1523059200] CURRENT SERVICE STATE: control2.gate.rtf;Uptime;OK;HARD;1;OK - up since Mon Apr  2 21:18:11 2018 (4d 02:40:53)
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;AntennaStatus;CRITICAL;HARD;1;CRIT - CRITICAL Antenna stopped for 4395 seconds
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;CPU load;OK;HARD;1;OK - 15 min load 1.39 at 16 Cores (0.09 per Core)
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;CPU utilization;OK;HARD;1;OK - user: 10.8%, system: 0.9%, wait: 0.0%, steal: 0.0%, guest: 0.0%, total: 11.7%
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;Check_MK;OK;HARD;1;OK - Agent version 1.2.8p26, execution time 0.4 sec
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;Check_MK Discovery;OK;HARD;1;OK - no unmonitored services found, no vanished services found
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;Disk IO SUMMARY;OK;HARD;1;OK - Utilization: 0.0%, Read: 3.33 kB/s, Write: 24.27 kB/s, Average Wait: 0.04 ms, Average Read Wait: 0.03 ms, Average Write Wait: 0.01 ms, Latency: 0.04 ms
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;Filesystem /;OK;HARD;1;OK - 17.3% used (16.57 of 96.00 GB), trend: +2.74 MB / 24 hours
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;Filesystem /data;OK;HARD;1;OK - 75.2% used (1.33 of 1.77 TB), trend: +206.80 MB / 24 hours
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;Filesystem /home;OK;HARD;1;OK - 9.9% used (9.54 of 96.00 GB), trend: +6.94 MB / 24 hours
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HD_/tmp/fmq/SpolMonCtrl;CRITICAL;HARD;1;CRIT - missing
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HD_/tmp/fmq/angles/shmem_30000;CRITICAL;HARD;1;CRIT - missing
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HD_/tmp/fmq/moments/sband/shmem_20000;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HD_/tmp/fmq/syscon;WARNING;HARD;1;WARN - late
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HD_/tmp/fmq/ts/sband/shmem_10000;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_DataMapper_primary;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_DsFileDist_suncal;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_DsFileDist_time_series;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_DsServerMgr_primary;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_Fmq2Fmq_moments.sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_Fmq2Fmq_moments.sband2;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_Fmq2Fmq_moments.spoldrx;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_Fmq2Fmq_ts.sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_Fmq2Fmq_ts.sband2;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_Iq2Dsr_sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_Iq2Dsr_spoldrx;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_Janitor_logs;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_Janitor_time_series;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_RadMon_log.sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_Scout_primary;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_SpolSysconRelay_sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_SpolTs2Fmq_sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_SpolTsMonitor_sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_SunCal_sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_TsTcp2Fmq_rvp8;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HawkSummary_Data;CRITICAL;HARD;1;CRIT - Services ok/prob: 2/3
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 20/0
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;IPMI Sensor Fan_Fan1;OK;HARD;1;OK - Current value 2520.0 RPM, critical below 600.0 RPM
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;IPMI Sensor Fan_Fan2;OK;HARD;1;OK - Current value 2400.0 RPM, critical below 600.0 RPM
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;IPMI Sensor Fan_Fan3;OK;HARD;1;OK - Current value 2280.0 RPM, critical below 600.0 RPM
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;IPMI Sensor Fan_Fan4;OK;HARD;1;OK - Current value 2280.0 RPM, critical below 600.0 RPM
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;IPMI Sensor Fan_Fan5;OK;HARD;1;OK - Current value 2400.0 RPM, critical below 600.0 RPM
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;IPMI Sensor Fan_Fan6;OK;HARD;1;OK - Current value 2280.0 RPM, critical below 600.0 RPM
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;IPMI Sensor Fan_Fan_Redundancy;OK;HARD;1;OK - Sensor status is Fully_Redundant
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;IPMI Sensor Temperature_Exhaust_Temp;OK;HARD;1;OK - Current value 28.0 C, valid range is 3.0 C ... 75.0 C
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;IPMI Sensor Temperature_Inlet_Temp;OK;HARD;1;OK - Current value 19.0 C, valid range is -7.0 C ... 47.0 C
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;IPMI Sensor Temperature_Temp;OK;HARD;1;OK - Current value 43.0 C
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;Interface 2;OK;HARD;1;OK - [em1] (up) MAC: d4:ae:52:b2:cb:ad, 1 Gbit/s, in: 23.91 MB/s(20.1%), out: 34.21 MB/s(28.7%)
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;Kernel Context Switches;OK;HARD;1;OK - 13517/s
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;Kernel Major Page Faults;OK;HARD;1;OK - 0/s
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;Kernel Process Creations;OK;HARD;1;OK - 9/s
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;Logins;OK;HARD;1;OK - 2 logins on system (warn/crit at 20/30)
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;Memory;OK;HARD;1;OK - RAM used: 2.00 GB of 62.71 GB, Swap used: 0.00 B of 31.25 GB, Total virtual memory used: 2.00 GB of 93.96 GB (2.1%),
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;Mount options of /;OK;HARD;1;OK - mount options exactly as expected
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;Mount options of /data;OK;HARD;1;OK - mount options exactly as expected
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;Mount options of /home;OK;HARD;1;OK - mount options exactly as expected
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;NTP Time;OK;HARD;1;OK - stratum 2, offset 0.0257 ms, reference: C0A804F8 (192.168.4.248)
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;Number of threads;OK;HARD;1;OK - 349 threads
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;Postfix Queue;OK;HARD;1;OK - deferred queue length is 0, active queue length is 0
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;HARD;1;WARN - stationaryPeriod = 4774 sec
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;TCP Connections;OK;HARD;1;OK - ESTABLISHED: 23, TIME_WAIT: 104, LISTEN: 30
+[1523059200] CURRENT SERVICE STATE: mgen1.gate.rtf;Uptime;OK;HARD;1;OK - up since Thu Mar 29 17:11:04 2018 (8d 06:48:01)
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;CPU load;OK;HARD;1;OK - 15 min load 0.05 at 16 Cores (0.00 per Core)
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;CPU utilization;OK;HARD;1;OK - user: 0.1%, system: 0.2%, wait: 0.0%, steal: 0.0%, guest: 0.0%, total: 0.3%
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;Check_MK;OK;HARD;1;OK - Agent version 1.2.8p26, execution time 0.3 sec
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;Check_MK Discovery;OK;HARD;1;OK - no unmonitored services found, no vanished services found
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;Disk IO SUMMARY;OK;HARD;1;OK - Utilization: 0.0%, Read: 3.47 kB/s, Write: 15.60 kB/s, Average Wait: 0.13 ms, Average Read Wait: 1.69 ms, Average Write Wait: 0.02 ms, Latency: 0.13 ms
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;Filesystem /;OK;HARD;1;OK - 15.2% used (14.58 of 96.00 GB), trend: +2.19 MB / 24 hours
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;Filesystem /data;OK;HARD;1;OK - 53.7% used (973.93 GB of 1.77 TB), trend: -1.49 MB / 24 hours
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;Filesystem /home;OK;HARD;1;OK - 11.7% used (11.19 of 96.00 GB), trend: 0.00 B / 24 hours
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;IPMI Sensor Fan_Fan1;OK;HARD;1;OK - Current value 2160.0 RPM, critical below 600.0 RPM
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;IPMI Sensor Fan_Fan2;OK;HARD;1;OK - Current value 2160.0 RPM, critical below 600.0 RPM
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;IPMI Sensor Fan_Fan3;OK;HARD;1;OK - Current value 2280.0 RPM, critical below 600.0 RPM
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;IPMI Sensor Fan_Fan4;OK;HARD;1;OK - Current value 2160.0 RPM, critical below 600.0 RPM
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;IPMI Sensor Fan_Fan5;OK;HARD;1;OK - Current value 2040.0 RPM, critical below 600.0 RPM
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;IPMI Sensor Fan_Fan6;OK;HARD;1;OK - Current value 2280.0 RPM, critical below 600.0 RPM
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;IPMI Sensor Fan_Fan_Redundancy;OK;HARD;1;OK - Sensor status is Fully_Redundant
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;IPMI Sensor Temperature_Exhaust_Temp;OK;HARD;1;OK - Current value 27.0 C, valid range is 3.0 C ... 75.0 C
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;IPMI Sensor Temperature_Inlet_Temp;OK;HARD;1;OK - Current value 17.0 C, valid range is -7.0 C ... 47.0 C
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;IPMI Sensor Temperature_Temp;OK;HARD;1;OK - Current value 38.0 C
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;Interface 2;OK;HARD;1;OK - [em1] (up) MAC: d4:ae:52:b6:1b:40, 1 Gbit/s, in: 236.59 kB/s(0.2%), out: 172.88 kB/s(0.1%)
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;Kernel Context Switches;OK;HARD;1;OK - 10380/s
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;Kernel Major Page Faults;OK;HARD;1;OK - 0/s
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;Kernel Process Creations;OK;HARD;1;OK - 7/s
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;Logins;OK;HARD;1;OK - 0 logins on system (warn/crit at 20/30)
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;Memory;OK;HARD;1;OK - RAM used: 657.88 MB of 62.71 GB, Swap used: 0.00 B of 7.81 GB, Total virtual memory used: 657.88 MB of 70.52 GB (0.9%),
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;Mount options of /;OK;HARD;1;OK - mount options exactly as expected
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;Mount options of /data;OK;HARD;1;OK - mount options exactly as expected
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;Mount options of /home;OK;HARD;1;OK - mount options exactly as expected
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;NTP Time;OK;HARD;1;OK - stratum 2, offset 0.0179 ms, reference: C0A804F8 (192.168.4.248)
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;Number of threads;OK;HARD;1;OK - 278 threads
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;Postfix Queue;OK;HARD;1;OK - deferred queue length is 0, active queue length is 0
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;TCP Connections;OK;HARD;1;OK - ESTABLISHED: 3, TIME_WAIT: 31, LISTEN: 19
+[1523059200] CURRENT SERVICE STATE: mgen2.gate.rtf;Uptime;OK;HARD;1;OK - up since Thu Mar 29 17:11:16 2018 (8d 06:48:02)
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;CPU load;OK;HARD;1;OK - 15 min load 0.18 at 24 Cores (0.01 per Core)
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;CPU utilization;OK;HARD;1;OK - user: 0.8%, system: 0.3%, wait: 0.0%, steal: 0.0%, guest: 0.0%, total: 1.1%
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;Check_MK;OK;HARD;1;OK - Agent version 1.2.8p18, execution time 0.6 sec
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;Check_MK Discovery;OK;HARD;1;OK - no unmonitored services found, no vanished services found
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;Disk IO SUMMARY;OK;HARD;1;OK - Utilization: 0.1%, Read: 955.73 B/s, Write: 15.70 kB/s, Average Wait: 1.09 ms, Average Read Wait: 8.43 ms, Average Write Wait: 0.02 ms, Latency: 1.09 ms
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;Filesystem /;OK;HARD;1;OK - 16.7% used (16.01 of 96.00 GB), trend: +916.95 kB / 24 hours
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;Filesystem /home;OK;HARD;1;OK - 16.6% used (15.93 of 96.00 GB), trend: 0.00 B / 24 hours
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;Filesystem /mnt/data;OK;HARD;1;OK - 72.0% used (19.65 of 27.28 TB), trend: +125.62 GB / 24 hours
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HD_cfradial/moments/sband;WARNING;HARD;1;WARN - late
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HD_fmq/moments/sband/shmem_20000;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HD_spdb/monitor/sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HD_spdb/rhi/sband;WARNING;HARD;1;WARN - late
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_DataMapper_primary;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_DsFileDist_front;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_DsFmqServer_manager;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_DsServerMgr_primary;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_Dsr2Radx_bscan.sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_Dsr2Radx_bscan.spoldrx;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_Dsr2Radx_covar.sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_Dsr2Radx_moments.kband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_Dsr2Radx_moments.sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_Dsr2Radx_sunscan.sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_RadxPartRain_sband.rhi;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_RadxPartRain_sband.sur;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_Rhi2Spdb_sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_Scout_primary;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_TsSmartSave_sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HawkSummary_Data;WARNING;HARD;1;WARN - Services ok/prob: 2/2
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 15/0
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;Interface 2;OK;HARD;1;OK - [em1] (up) MAC: d4:ae:52:b5:be:0b, 1 Gbit/s, in: 13.18 MB/s(11.1%), out: 131.72 kB/s(0.1%)
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;Kernel Context Switches;OK;HARD;1;OK - 5817/s
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;Kernel Major Page Faults;OK;HARD;1;OK - 0/s
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;Kernel Process Creations;OK;HARD;1;OK - 7/s
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;Logins;OK;HARD;1;OK - 1 logins on system (warn/crit at 20/30)
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;Memory;OK;HARD;1;OK - RAM used: 4.61 GB of 62.71 GB, Swap used: 488.55 MB of 7.81 GB, Total virtual memory used: 5.09 GB of 70.53 GB (7.2%),
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;Mount options of /;OK;HARD;1;OK - mount options exactly as expected
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;Mount options of /home;OK;HARD;1;OK - mount options exactly as expected
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;Mount options of /mnt/data;OK;HARD;1;OK - mount options exactly as expected
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;NTP Time;OK;HARD;1;OK - stratum 2, offset 0.0103 ms, reference: 192.168.4.248 (ntp.gate.rtf)
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;Number of threads;OK;HARD;1;OK - 367 threads
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;Postfix Queue;OK;HARD;1;OK - deferred queue length is 0, active queue length is 0
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;TCP Connections;OK;HARD;1;OK - ESTABLISHED: 5, CLOSE_WAIT: 1, TIME_WAIT: 78, FIN_WAIT2: 1, LISTEN: 26
+[1523059200] CURRENT SERVICE STATE: pgen1.gate.rtf;Uptime;OK;HARD;1;OK - up since Thu Mar 29 17:11:11 2018 (8d 06:48:02)
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;CPU load;OK;HARD;1;OK - 15 min load 0.13 at 24 Cores (0.01 per Core)
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;CPU utilization;OK;HARD;1;OK - user: 0.6%, system: 0.2%, wait: 0.0%, steal: 0.0%, guest: 0.0%, total: 0.9%
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;Check_MK;OK;HARD;1;OK - Agent version 1.2.8p18, execution time 0.6 sec
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;Check_MK Discovery;OK;HARD;1;OK - no unmonitored services found, no vanished services found
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;Disk IO SUMMARY;OK;HARD;1;OK - Utilization: 0.0%, Read: 0.00 B/s, Write: 12.72 kB/s, Average Wait: 0.03 ms, Average Read Wait: 0.00 ms, Average Write Wait: 0.03 ms, Latency: 0.03 ms
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;Filesystem /;OK;HARD;1;OK - 16.1% used (15.47 of 96.00 GB), trend: +432.54 kB / 24 hours
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;Filesystem /home;OK;HARD;1;OK - 11.7% used (11.21 of 96.00 GB), trend: 0.00 B / 24 hours
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;Filesystem /mnt/data;OK;HARD;1;OK - 78.7% used (21.48 of 27.28 TB), trend: +99.86 GB / 24 hours
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;HD_cfradial/moments/sband;WARNING;HARD;1;WARN - late
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;HD_fmq/moments/sband/shmem_20000;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;HD_spdb/monitor/sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;HD_spdb/rhi/sband;WARNING;HARD;1;WARN - late
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_DataMapper_primary;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_DsFileDist_front;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_DsFmqServer_manager;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_DsServerMgr_primary;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_Dsr2Radx_covar.sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_Dsr2Radx_moments.kband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_Dsr2Radx_moments.sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_Dsr2Radx_sunscan.sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_RadxPartRain_sband.rhi;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_RadxPartRain_sband.sur;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_Rhi2Spdb_sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_Scout_primary;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_TsSmartSave_sband;OK;HARD;1;OK - OK
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;HawkSummary_Data;WARNING;HARD;1;WARN - Services ok/prob: 2/2
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 13/0
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;Interface 2;OK;HARD;1;OK - [em1] (up) MAC: d4:ae:52:b5:b0:cc, 1 Gbit/s, in: 13.16 MB/s(11.0%), out: 131.07 kB/s(0.1%)
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;Interface 3;OK;HARD;1;OK - [em2] (up) MAC: d4:ae:52:b5:b0:cd, 1 Gbit/s, in: 127.77 B/s(0.0%), out: 0.00 B/s(0.0%)
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;Kernel Context Switches;OK;HARD;1;OK - 5699/s
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;Kernel Major Page Faults;OK;HARD;1;OK - 0/s
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;Kernel Process Creations;OK;HARD;1;OK - 7/s
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;Logins;OK;HARD;1;OK - 0 logins on system (warn/crit at 20/30)
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;Memory;OK;HARD;1;OK - RAM used: 4.39 GB of 62.71 GB, Swap used: 0.00 B of 7.81 GB, Total virtual memory used: 4.39 GB of 70.53 GB (6.2%),
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;Mount options of /;OK;HARD;1;OK - mount options exactly as expected
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;Mount options of /home;OK;HARD;1;OK - mount options exactly as expected
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;Mount options of /mnt/data;OK;HARD;1;OK - mount options exactly as expected
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;NTP Time;OK;HARD;1;OK - stratum 2, offset 0.0258 ms, reference: 192.168.4.248 (ntp.gate.rtf)
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;Number of threads;OK;HARD;1;OK - 357 threads
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;Postfix Queue;OK;HARD;1;OK - deferred queue length is 0, active queue length is 0
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;TCP Connections;OK;HARD;1;OK - ESTABLISHED: 4, TIME_WAIT: 63, LISTEN: 23
+[1523059200] CURRENT SERVICE STATE: pgen2.gate.rtf;Uptime;OK;HARD;1;OK - up since Thu Mar 29 17:11:33 2018 (8d 06:47:32)
+[1523059200] TIMEPERIOD TRANSITION: 24X7;1;1
+[1523059344] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.4
+[1523059524] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523059673] Auto-save of retention data completed successfully.
+[1523060244] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.3
+[1523060424] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523061024] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.3
+[1523061204] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523061804] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523061984] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.5
+[1523062584] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523062764] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523063273] Auto-save of retention data completed successfully.
+[1523063424] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.0
+[1523063604] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523064204] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.4
+[1523064384] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523064984] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.4
+[1523065164] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523065764] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.4
+[1523065944] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523066544] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.4
+[1523066724] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523066873] Auto-save of retention data completed successfully.
+[1523067324] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.4
+[1523067504] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523068164] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.4
+[1523068344] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523068944] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.9
+[1523069124] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523069664] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523069844] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523070444] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.4
+[1523070473] Auto-save of retention data completed successfully.
+[1523070624] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523071224] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.1
+[1523071344] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523071884] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.4
+[1523072064] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523072664] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.9
+[1523072784] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523073324] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523073504] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523074044] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523074073] Auto-save of retention data completed successfully.
+[1523074224] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523074824] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523075004] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523075604] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523075844] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.5
+[1523076444] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523076624] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.5
+[1523077224] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523077404] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523077673] Auto-save of retention data completed successfully.
+[1523078004] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523078184] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523078844] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523079024] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.5
+[1523079624] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523079804] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523080344] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.3
+[1523080524] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523081184] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523081273] Auto-save of retention data completed successfully.
+[1523081364] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.2
+[1523081904] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523082084] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523082804] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.1
+[1523082924] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523083584] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.1
+[1523083704] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523084244] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523084484] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523084873] Auto-save of retention data completed successfully.
+[1523085084] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523085264] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.5
+[1523085924] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.1
+[1523086044] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523086704] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523086884] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523087604] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523087784] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523088473] Auto-save of retention data completed successfully.
+[1523088504] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523088684] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523089404] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523089584] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.3
+[1523090184] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523090364] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.3
+[1523090964] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.4
+[1523091204] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523091864] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.1
+[1523091984] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523092073] Auto-save of retention data completed successfully.
+[1523092524] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523092704] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523093244] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523093424] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523094084] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523094264] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523094924] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.3
+[1523095104] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523095673] Auto-save of retention data completed successfully.
+[1523095704] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523095944] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523096544] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.1
+[1523096724] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523097384] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523097564] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523098164] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523098344] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523099004] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523099184] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523099273] Auto-save of retention data completed successfully.
+[1523099844] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523100024] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.5
+[1523100624] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523100804] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.2
+[1523101344] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523101524] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523102184] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.0
+[1523102364] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.5
+[1523102873] Auto-save of retention data completed successfully.
+[1523102904] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523103084] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523103744] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523103924] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523104524] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523104704] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523105364] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523105544] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523106144] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.1
+[1523106324] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523106473] Auto-save of retention data completed successfully.
+[1523106924] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523107104] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.2
+[1523107644] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523107824] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.3
+[1523108364] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.4
+[1523108544] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523109204] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523109384] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.2
+[1523109984] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.1
+[1523110073] Auto-save of retention data completed successfully.
+[1523110104] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523110704] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523110884] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.5
+[1523111544] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.1
+[1523111664] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523112264] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.1
+[1523112444] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.3
+[1523113044] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.9
+[1523113224] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.5
+[1523113673] Auto-save of retention data completed successfully.
+[1523113944] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.3
+[1523114064] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523114724] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.1
+[1523114964] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523115744] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.6
+[1523115864] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523116764] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.3
+[1523116884] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523117273] Auto-save of retention data completed successfully.
+[1523117904] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.1
+[1523118084] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523119104] SERVICE FLAPPING ALERT: control1.gate.rtf;TEMP_SCC;STOPPED; Service appears to have stopped flapping (4.0% change < 5.0% threshold)
+[1523119104] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;FLAPPINGSTOP (OK);check-mk-notify;OK - 30.2
+[1523119224] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.5
+[1523119224] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 33.5
+[1523119344] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523119344] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.9
+[1523120664] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.3
+[1523120664] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.3
+[1523120844] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523120844] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.9
+[1523120873] Auto-save of retention data completed successfully.
+[1523122344] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.3
+[1523122344] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 33.3
+[1523122464] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523122464] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.9
+[1523124444] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.6
+[1523124444] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 33.6
+[1523124473] Auto-save of retention data completed successfully.
+[1523124564] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523124564] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.9
+[1523127024] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.1
+[1523127024] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 33.1
+[1523127144] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523127144] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.9
+[1523128073] Auto-save of retention data completed successfully.
+[1523128884] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.1
+[1523128884] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 33.1
+[1523129004] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523129004] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.9
+[1523130924] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.6
+[1523130924] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 33.6
+[1523131104] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523131104] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.9
+[1523131673] Auto-save of retention data completed successfully.
+[1523132886] SERVICE ALERT: pgen2.gate.rtf;HD_spdb/rhi/sband;CRITICAL;HARD;1;CRIT - missing
+[1523132886] SERVICE NOTIFICATION: check-mk-notify;pgen2.gate.rtf;HD_spdb/rhi/sband;CRITICAL;check-mk-notify;CRIT - missing
+[1523132887] SERVICE ALERT: pgen2.gate.rtf;HawkSummary_Data;CRITICAL;HARD;1;CRIT - Services ok/prob: 2/2
+[1523132887] SERVICE NOTIFICATION: check-mk-notify;pgen2.gate.rtf;HawkSummary_Data;CRITICAL;check-mk-notify;CRIT - Services ok/prob: 2/2
+[1523132894] SERVICE ALERT: pgen1.gate.rtf;HD_spdb/rhi/sband;CRITICAL;HARD;1;CRIT - missing
+[1523132894] SERVICE NOTIFICATION: check-mk-notify;pgen1.gate.rtf;HD_spdb/rhi/sband;CRITICAL;check-mk-notify;CRIT - missing
+[1523132895] SERVICE ALERT: pgen1.gate.rtf;HawkSummary_Data;CRITICAL;HARD;1;CRIT - Services ok/prob: 2/2
+[1523132895] SERVICE NOTIFICATION: check-mk-notify;pgen1.gate.rtf;HawkSummary_Data;CRITICAL;check-mk-notify;CRIT - Services ok/prob: 2/2
+[1523132964] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.3
+[1523132964] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 33.3
+[1523133264] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523133264] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.9
+[1523135273] Auto-save of retention data completed successfully.
+[1523136924] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.5
+[1523136924] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 33.5
+[1523137164] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523137164] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.9
+[1523137686] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;OK;HARD;1;OK - stationaryPeriod = 0 sec
+[1523137686] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;OK;check-mk-notify;OK - stationaryPeriod = 0 sec
+[1523137746] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;WARNING;HARD;1;WARN - CRITICAL - stationaryPeriod = 58 sec
+[1523137746] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;WARNING;check-mk-notify;WARN - CRITICAL - stationaryPeriod = 58 sec
+[1523137806] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;HARD;1;WARN - stationaryPeriod = 106 sec
+[1523137806] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;check-mk-notify;WARN - stationaryPeriod = 106 sec
+[1523138286] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;OK;HARD;1;OK - stationaryPeriod = 0 sec
+[1523138286] SERVICE FLAPPING ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;STARTED; Service appears to have started flapping (21.4% change >= 20.0% threshold)
+[1523138286] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;FLAPPINGSTART (OK);check-mk-notify;OK - stationaryPeriod = 0 sec
+[1523138346] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;WARNING;HARD;1;WARN - CRITICAL - stationaryPeriod = 52 sec
+[1523138406] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;HARD;1;WARN - stationaryPeriod = 116 sec
+[1523138646] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;WARNING;HARD;1;WARN - CRITICAL - stationaryPeriod = 32 sec
+[1523138706] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;HARD;1;WARN - stationaryPeriod = 96 sec
+[1523138873] Auto-save of retention data completed successfully.
+[1523139126] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;OK;HARD;1;OK - stationaryPeriod = 10 sec
+[1523139186] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;HARD;1;WARN - stationaryPeriod = 74 sec
+[1523140026] SERVICE ALERT: pgen2.gate.rtf;HD_cfradial/moments/sband;CRITICAL;HARD;1;CRIT - missing
+[1523140026] SERVICE NOTIFICATION: check-mk-notify;pgen2.gate.rtf;HD_cfradial/moments/sband;CRITICAL;check-mk-notify;CRIT - missing
+[1523140034] SERVICE ALERT: pgen1.gate.rtf;HD_cfradial/moments/sband;CRITICAL;HARD;1;CRIT - missing
+[1523140034] SERVICE NOTIFICATION: check-mk-notify;pgen1.gate.rtf;HD_cfradial/moments/sband;CRITICAL;check-mk-notify;CRIT - missing
+[1523140266] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;OK;HARD;1;OK - stationaryPeriod = 14 sec
+[1523140326] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;HARD;1;WARN - stationaryPeriod = 78 sec
+[1523140764] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.0
+[1523140764] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 33.0
+[1523140806] SERVICE ALERT: mgen1.gate.rtf;HD_/tmp/fmq/syscon;CRITICAL;HARD;1;CRIT - missing
+[1523140806] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;HD_/tmp/fmq/syscon;CRITICAL;check-mk-notify;CRIT - missing
+[1523140944] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523140944] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.8
+[1523141466] SERVICE FLAPPING ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;STOPPED; Service appears to have stopped flapping (3.8% change < 5.0% threshold)
+[1523141466] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;FLAPPINGSTOP (CRITICAL);check-mk-notify;WARN - stationaryPeriod = 1214 sec
+[1523141467] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;check-mk-notify;WARN - stationaryPeriod = 1214 sec
+[1523142473] Auto-save of retention data completed successfully.
+[1523142504] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.5
+[1523142504] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 33.5
+[1523142684] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523142684] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.9
+[1523144124] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.1
+[1523144124] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 33.1
+[1523144304] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523144304] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.6
+[1523145600] TIMEPERIOD TRANSITION: 24X7;1;1

@@ -1,0 +1,735 @@
+<<<check_mk>>>
+Version: 1.2.8p26
+AgentOS: linux
+Hostname: mgen1.gate.rtf
+AgentDirectory: /etc/check-mk-agent
+DataDirectory: /var/lib/check_mk_agent
+SpoolDirectory: /var/lib/check_mk_agent/spool
+PluginsDirectory: /usr/share/check-mk-agent/plugins
+LocalDirectory: /usr/share/check-mk-agent/local
+OnlyFrom: 
+<<<df>>>
+/dev/sda2      ext4       100660296  12320632  83203280      13% /
+devtmpfs       devtmpfs    32863484         0  32863484       0% /dev
+tmpfs          tmpfs       32879036         0  32879036       0% /dev/shm
+tmpfs          tmpfs       32879036    845136  32033900       3% /run
+tmpfs          tmpfs       32879036         0  32879036       0% /sys/fs/cgroup
+/dev/sda3      ext4       100660656   4912532  90611740       6% /home
+/dev/sdb1      ext4      1902274676 823184956 982436716      46% /data
+tmpfs          tmpfs        6575808         4   6575804       1% /run/user/501
+tmpfs          tmpfs        6575808         0   6575808       0% /run/user/0
+<<<df>>>
+[df_inodes_start]
+/dev/sda2      ext4       6406144 294232   6111912    5% /
+devtmpfs       devtmpfs   8215871    513   8215358    1% /dev
+tmpfs          tmpfs      8219759      1   8219758    1% /dev/shm
+tmpfs          tmpfs      8219759    750   8219009    1% /run
+tmpfs          tmpfs      8219759     16   8219743    1% /sys/fs/cgroup
+/dev/sda3      ext4       6406144  85338   6320806    2% /home
+/dev/sdb1      ext4     120799232 832134 119967098    1% /data
+tmpfs          tmpfs      8219759      3   8219756    1% /run/user/501
+tmpfs          tmpfs      8219759      1   8219758    1% /run/user/0
+[df_inodes_end]
+<<<nfsmounts>>>
+<<<cifsmounts>>>
+<<<mounts>>>
+/dev/sda2 / ext4 rw,relatime,data=ordered 0 0
+/dev/sda3 /home ext4 rw,relatime,data=ordered 0 0
+/dev/sdb1 /data ext4 rw,relatime,data=ordered 0 0
+<<<ps>>>
+(root,60416,2528,00:14:02/21-23:53:49,1) /usr/lib/systemd/systemd --switched-root --system --deserialize 21
+(root,0,0,00:00:01/21-23:53:49,2) [kthreadd]
+(root,0,0,00:00:46/21-23:53:49,3) [ksoftirqd/0]
+(root,0,0,00:00:00/21-23:53:49,5) [kworker/0:0H]
+(root,0,0,00:00:11/21-23:53:49,6) [kworker/u96:0]
+(root,0,0,00:00:11/21-23:53:49,8) [migration/0]
+(root,0,0,00:00:00/21-23:53:49,9) [rcu_bh]
+(root,0,0,00:24:52/21-23:53:49,10) [rcu_sched]
+(root,0,0,00:00:06/21-23:53:49,11) [watchdog/0]
+(root,0,0,00:00:08/21-23:53:49,12) [watchdog/1]
+(root,0,0,00:00:13/21-23:53:49,13) [migration/1]
+(root,0,0,00:00:18/21-23:53:49,14) [ksoftirqd/1]
+(root,0,0,00:00:00/21-23:53:49,16) [kworker/1:0H]
+(root,0,0,00:00:04/21-23:53:49,18) [watchdog/2]
+(root,0,0,00:00:08/21-23:53:49,19) [migration/2]
+(root,0,0,00:02:11/21-23:53:49,20) [ksoftirqd/2]
+(root,0,0,00:00:00/21-23:53:49,22) [kworker/2:0H]
+(root,0,0,00:00:06/21-23:53:49,23) [watchdog/3]
+(root,0,0,00:00:11/21-23:53:49,24) [migration/3]
+(root,0,0,00:00:10/21-23:53:49,25) [ksoftirqd/3]
+(root,0,0,00:00:00/21-23:53:49,27) [kworker/3:0H]
+(root,0,0,00:00:05/21-23:53:49,28) [watchdog/4]
+(root,0,0,00:00:08/21-23:53:49,29) [migration/4]
+(root,0,0,00:02:52/21-23:53:49,30) [ksoftirqd/4]
+(root,0,0,00:00:00/21-23:53:49,32) [kworker/4:0H]
+(root,0,0,00:00:06/21-23:53:49,33) [watchdog/5]
+(root,0,0,00:00:10/21-23:53:49,34) [migration/5]
+(root,0,0,00:00:09/21-23:53:49,35) [ksoftirqd/5]
+(root,0,0,00:00:00/21-23:53:49,37) [kworker/5:0H]
+(root,0,0,00:00:04/21-23:53:49,38) [watchdog/6]
+(root,0,0,00:00:08/21-23:53:49,39) [migration/6]
+(root,0,0,00:44:42/21-23:53:49,40) [ksoftirqd/6]
+(root,0,0,00:00:00/21-23:53:49,42) [kworker/6:0H]
+(root,0,0,00:00:06/21-23:53:49,43) [watchdog/7]
+(root,0,0,00:00:09/21-23:53:49,44) [migration/7]
+(root,0,0,00:00:09/21-23:53:49,45) [ksoftirqd/7]
+(root,0,0,00:00:00/21-23:53:49,47) [kworker/7:0H]
+(root,0,0,00:00:03/21-23:53:49,48) [watchdog/8]
+(root,0,0,00:00:07/21-23:53:49,49) [migration/8]
+(root,0,0,03:23:07/21-23:53:49,50) [ksoftirqd/8]
+(root,0,0,00:00:00/21-23:53:49,52) [kworker/8:0H]
+(root,0,0,00:00:05/21-23:53:49,53) [watchdog/9]
+(root,0,0,00:00:08/21-23:53:49,54) [migration/9]
+(root,0,0,00:00:03/21-23:53:49,55) [ksoftirqd/9]
+(root,0,0,00:00:00/21-23:53:49,57) [kworker/9:0H]
+(root,0,0,00:00:04/21-23:53:49,58) [watchdog/10]
+(root,0,0,00:00:13/21-23:53:49,59) [migration/10]
+(root,0,0,00:10:05/21-23:53:49,60) [ksoftirqd/10]
+(root,0,0,00:00:00/21-23:53:49,62) [kworker/10:0H]
+(root,0,0,00:00:06/21-23:53:49,63) [watchdog/11]
+(root,0,0,00:00:16/21-23:53:49,64) [migration/11]
+(root,0,0,00:00:05/21-23:53:49,65) [ksoftirqd/11]
+(root,0,0,00:00:00/21-23:53:49,67) [kworker/11:0H]
+(root,0,0,00:00:04/21-23:53:49,68) [watchdog/12]
+(root,0,0,00:00:10/21-23:53:49,69) [migration/12]
+(root,0,0,00:00:50/21-23:53:49,70) [ksoftirqd/12]
+(root,0,0,00:00:00/21-23:53:49,72) [kworker/12:0H]
+(root,0,0,00:00:05/21-23:53:49,73) [watchdog/13]
+(root,0,0,00:00:11/21-23:53:49,74) [migration/13]
+(root,0,0,00:00:05/21-23:53:49,75) [ksoftirqd/13]
+(root,0,0,00:00:00/21-23:53:49,77) [kworker/13:0H]
+(root,0,0,00:00:04/21-23:53:49,78) [watchdog/14]
+(root,0,0,00:00:08/21-23:53:49,79) [migration/14]
+(root,0,0,00:05:20/21-23:53:49,80) [ksoftirqd/14]
+(root,0,0,00:00:00/21-23:53:49,82) [kworker/14:0H]
+(root,0,0,00:00:06/21-23:53:49,83) [watchdog/15]
+(root,0,0,00:00:08/21-23:53:49,84) [migration/15]
+(root,0,0,00:00:04/21-23:53:49,85) [ksoftirqd/15]
+(root,0,0,00:00:00/21-23:53:49,87) [kworker/15:0H]
+(root,0,0,00:00:00/21-23:53:49,90) [kdevtmpfs]
+(root,0,0,00:00:00/21-23:53:49,91) [netns]
+(root,0,0,00:00:01/21-23:53:49,92) [khungtaskd]
+(root,0,0,00:00:00/21-23:53:49,93) [writeback]
+(root,0,0,00:00:00/21-23:53:49,94) [kintegrityd]
+(root,0,0,00:00:00/21-23:53:49,95) [bioset]
+(root,0,0,00:00:00/21-23:53:49,96) [kblockd]
+(root,0,0,00:00:00/21-23:53:49,97) [md]
+(root,0,0,05:48:34/21-23:53:48,104) [kswapd0]
+(root,0,0,04:36:10/21-23:53:48,105) [kswapd1]
+(root,0,0,00:00:00/21-23:53:48,106) [ksmd]
+(root,0,0,00:00:27/21-23:53:48,107) [khugepaged]
+(root,0,0,00:00:00/21-23:53:48,108) [crypto]
+(root,0,0,00:00:00/21-23:53:48,116) [kthrotld]
+(root,0,0,00:00:00/21-23:53:48,118) [kmpath_rdacd]
+(root,0,0,00:00:00/21-23:53:47,126) [kpsmoused]
+(root,0,0,00:00:00/21-23:53:47,130) [ipv6_addrconf]
+(root,0,0,00:00:00/21-23:53:47,149) [deferwq]
+(root,0,0,00:00:35/21-23:53:47,150) [kworker/u96:1]
+(root,0,0,00:00:13/21-23:53:47,190) [kauditd]
+(root,0,0,00:00:00/21-23:53:47,361) [scsi_eh_0]
+(root,0,0,00:00:00/21-23:53:47,362) [scsi_tmf_0]
+(root,0,0,00:00:00/57:43,375) [kworker/8:0]
+(root,0,0,00:00:00/21-23:53:47,391) [ata_sff]
+(root,0,0,00:00:00/21-23:53:47,434) [ttm_swap]
+(root,0,0,00:00:00/21-23:53:47,441) [scsi_eh_1]
+(root,0,0,00:00:00/21-23:53:47,442) [scsi_tmf_1]
+(root,0,0,00:00:00/21-23:53:47,443) [scsi_eh_2]
+(root,0,0,00:00:00/21-23:53:47,444) [scsi_tmf_2]
+(root,0,0,00:00:00/21-23:53:47,445) [scsi_eh_3]
+(root,0,0,00:00:00/21-23:53:47,446) [scsi_tmf_3]
+(root,0,0,00:00:00/21-23:53:47,447) [scsi_eh_4]
+(root,0,0,00:00:00/21-23:53:47,448) [scsi_tmf_4]
+(root,0,0,00:00:00/21-23:53:47,449) [scsi_eh_5]
+(root,0,0,00:00:00/21-23:53:47,450) [scsi_tmf_5]
+(root,0,0,00:00:00/21-23:53:47,451) [scsi_eh_6]
+(root,0,0,00:00:00/21-23:53:47,452) [scsi_tmf_6]
+(root,0,0,00:00:56/21-23:53:46,533) [jbd2/sda2-8]
+(root,0,0,00:00:00/21-23:53:46,534) [ext4-rsv-conver]
+(root,135700,24148,00:04:06/21-23:53:44,607) /usr/lib/systemd/systemd-journald
+(root,127044,0,00:00:00/21-23:53:44,611) /usr/sbin/lvmetad -f
+(root,44444,8,00:00:00/21-23:53:44,642) /usr/lib/systemd/systemd-udevd
+(root,0,0,00:00:00/21-23:53:43,649) [rpciod]
+(root,0,0,00:00:00/21-23:53:43,650) [xprtiod]
+(root,0,0,00:00:00/21-23:53:42,746) [kvm-irqfd-clean]
+(root,0,0,00:00:00/21-23:53:42,753) [edac-poller]
+(root,0,0,00:00:12/21-23:53:41,770) [jbd2/sda3-8]
+(root,0,0,00:00:00/21-23:53:41,771) [ext4-rsv-conver]
+(root,0,0,00:01:19/21-23:53:41,776) [jbd2/sdb1-8]
+(root,0,0,00:00:00/21-23:53:41,777) [ext4-rsv-conver]
+(root,0,0,00:00:01/21-23:53:41,780) [kworker/14:1H]
+(root,0,0,00:00:01/21-23:53:41,781) [kworker/10:1H]
+(root,0,0,00:00:01/21-23:53:41,782) [kworker/0:1H]
+(root,0,0,00:00:00/57:00,788) [kworker/7:0]
+(root,55452,112,00:00:58/21-23:53:41,814) /sbin/auditd
+(root,84500,220,00:00:54/21-23:53:41,816) /sbin/audispd
+(root,19328,0,00:00:00/21-23:53:41,817) /usr/sbin/rpc.idmapd
+(root,24052,60,00:00:41/21-23:53:41,818) /usr/sbin/sedispatch
+(root,128020,116,00:00:02/21-23:53:40,839) /usr/sbin/smartd -n -q never
+(root,21608,464,00:03:49/21-23:53:40,841) /usr/sbin/irqbalance --foreground
+(dbus,27128,1176,00:09:04/21-23:53:40,844) /bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+(root,201344,88,00:00:03/21-23:53:40,851) /usr/sbin/gssproxy -D
+(rpc,64956,60,00:00:03/21-23:53:40,852) /sbin/rpcbind -w
+(root,16840,16,00:00:00/21-23:53:40,882) /usr/sbin/alsactl -s -n 19 -c -E ALSA_CONFIG_PATH=/etc/alsa/alsactl.conf --initfile=/lib/alsa/init/00main rdaemon
+(root,425948,972,00:01:03/21-23:53:40,883) /usr/sbin/ModemManager
+(root,719204,4692,00:03:17/21-23:53:40,887) /usr/sbin/rsyslogd -n
+(root,24320,952,00:04:04/21-23:53:40,889) /usr/lib/systemd/systemd-logind
+(root,219384,1360,00:00:00/21-23:53:40,893) /usr/sbin/abrtd -d -s
+(root,216908,4,00:00:00/21-23:53:40,894) /usr/bin/abrt-watch-log -F Backtrace /var/log/Xorg.0.log -- /usr/bin/abrt-dump-xorg -xD
+(root,216908,96,00:00:18/21-23:53:40,897) /usr/bin/abrt-watch-log -F BUG: WARNING: at WARNING: CPU: INFO: possible recursive locking detected ernel BUG at list_del corruption list_add corruption do_IRQ: stack overflow: ear stack overflow (cur: eneral protection fault nable to handle kernel ouble fault: RTNL: assertion failed eek! page_mapcount(page) went negative! adness at NETDEV WATCHDOG ysctl table check failed : nobody cared IRQ handler type mismatch Machine Check Exception: Machine check events logged divide error: bounds: coprocessor segment overrun: invalid TSS: segment not present: invalid opcode: alignment check: stack segment: fpu exception: simd exception: iret exception: /var/log/messages -- /usr/bin/abrt-dump-oops -xtD
+(libstoragemgmt,8532,20,00:00:05/21-23:53:40,923) /usr/bin/lsmd -d
+(polkitd,536216,884,00:03:59/21-23:53:40,925) /usr/lib/polkit-1/polkitd --no-debug
+(chrony,118212,576,00:00:16/21-23:53:40,976) /usr/sbin/chronyd
+(root,562340,320,00:04:20/21-23:53:35,1175) /usr/bin/python -Es /usr/sbin/tuned -l -P
+(root,223680,1280,00:14:46/21-23:53:35,1177) /usr/sbin/snmpd -LS0-6d -f
+(root,105996,344,00:00:00/21-23:53:35,1178) /usr/sbin/sshd -D
+(rpcuser,44460,4,00:00:00/21-23:53:35,1189) /usr/sbin/rpc.statd
+(root,27116,184,00:00:20/21-23:53:35,1192) /usr/sbin/xinetd -stayalive -pidfile /var/run/xinetd.pid
+(root,126236,404,00:00:29/21-23:53:35,1199) /usr/sbin/crond -n
+(root,25856,0,00:00:00/21-23:53:35,1202) /usr/sbin/atd -f
+(root,629140,440,00:01:00/21-23:53:35,1204) /usr/sbin/automount --pid-file /run/autofs.pid
+(root,42564,4,00:00:00/21-23:53:35,1226) /usr/sbin/rpc.mountd
+(root,91628,88,00:00:07/21-23:53:35,1286) /usr/libexec/postfix/master -w
+(postfix,91908,124,00:00:02/21-23:53:35,1288) qmgr -l -t unix -u
+(root,110044,8,00:00:00/21-23:53:34,1296) /sbin/agetty --noclear tty1 linux
+(root,0,0,00:00:02/21-23:53:34,1310) [kworker/4:1H]
+(root,0,0,00:00:00/21-23:53:34,1311) [nfsd4_callbacks]
+(root,0,0,00:00:00/21-23:53:34,1312) [lockd]
+(root,0,0,00:00:00/21-23:53:34,1318) [nfsd]
+(root,0,0,00:00:00/21-23:53:34,1319) [nfsd]
+(root,0,0,00:00:00/21-23:53:34,1320) [nfsd]
+(root,0,0,00:00:00/21-23:53:34,1321) [nfsd]
+(root,0,0,00:00:00/21-23:53:34,1322) [nfsd]
+(root,0,0,00:00:00/21-23:53:34,1323) [nfsd]
+(root,0,0,00:00:00/21-23:53:34,1324) [nfsd]
+(root,0,0,00:00:00/21-23:53:34,1325) [nfsd]
+(root,0,0,00:00:01/21-23:53:29,1335) [kworker/2:1H]
+(root,0,0,00:00:03/21-23:52:58,1366) [kworker/1:1H]
+(root,0,0,00:00:00/21-23:52:32,1551) [kworker/8:1H]
+(root,0,0,00:00:02/21-23:51:38,1714) [kworker/6:1H]
+(root,0,0,00:00:03/21-23:51:38,1715) [kworker/7:1H]
+(root,0,0,00:00:00/15:42:39,2183) [kworker/13:2]
+(root,0,0,00:00:01/13:02:37,2255) [kworker/5:3]
+(root,0,0,00:00:03/21-23:50:32,2371) [kworker/5:1H]
+(root,0,0,00:00:02/21-23:50:32,2375) [kworker/12:1H]
+(root,0,0,00:00:01/21-23:50:19,2475) [kworker/11:1H]
+(root,0,0,00:00:01/21-23:50:11,2494) [kworker/13:1H]
+(root,0,0,00:00:03/21-23:50:08,2504) [kworker/3:1H]
+(root,0,0,00:00:01/21-23:49:35,2702) [kworker/15:1H]
+(root,0,0,00:00:01/21-23:49:26,2767) [kworker/9:1H]
+(root,0,0,00:00:00/53:42,2964) [kworker/1:2]
+(root,0,0,00:00:00/51:47,4133) [kworker/u98:1]
+(root,0,0,00:00:00/51:43,4261) [kworker/15:2]
+(root,0,0,00:00:00/49:42,5461) [kworker/2:2]
+(root,0,0,00:00:00/48:43,6035) [kworker/13:0]
+(root,0,0,00:00:00/46:08,7574) [kworker/3:2]
+(root,0,0,00:00:00/45:42,7915) [kworker/10:1]
+(root,0,0,00:00:00/39:42,11584) [kworker/14:1]
+(root,0,0,00:00:00/35:42,13986) [kworker/4:0]
+(root,0,0,00:00:00/33:13,15409) [kworker/u97:1]
+(root,0,0,00:00:00/32:41,15797) [kworker/9:0]
+(root,0,0,00:00:00/30:43,17010) [kworker/6:0]
+(root,0,0,00:00:00/28:43,18215) [kworker/0:1]
+(root,0,0,00:00:00/26:01,19732) [kworker/12:1]
+(root,0,0,00:00:00/22:43,21762) [kworker/u98:0]
+(root,0,0,00:00:00/22:43,21821) [kworker/u97:2]
+(root,0,0,00:00:00/22:42,21878) [kworker/5:0]
+(root,0,0,00:00:00/21:41,22505) [kworker/2:0]
+(root,0,0,00:00:00/02:53:36,27881) [kworker/11:2]
+(postfix,91732,4008,00:00:00/11:42,28534) pickup -l -t unix -u
+(root,145720,5332,00:00:00/10:14,29393) sshd: spol [priv]
+(spol,146036,2748,00:00:00/10:13,29396) sshd: spol@pts/2
+(spol,15984,2020,00:00:00/10:13,29397) -tcsh
+(root,88576,2580,00:00:00/09:55,29641) su
+(root,13064,3316,00:00:00/09:52,29653) bash
+(root,0,0,00:00:00/09:43,29829) [kworker/0:0]
+(root,0,0,00:00:00/08:42,30432) [kworker/14:2]
+(root,0,0,00:00:00/12:15:41,30540) [kworker/9:1]
+(root,0,0,00:00:00/08:00,30853) [kworker/10:0]
+(root,0,0,00:00:00/07:42,31054) [kworker/12:0]
+(root,178124,4,00:00:00/3-12:20:37,31209) /usr/sbin/crond -n
+(root,178124,4,00:00:00/3-12:20:37,31212) /usr/sbin/crond -n
+(root,0,0,00:00:00/06:43,31694) [kworker/4:1]
+(root,0,0,00:00:00/06:00,32119) [kworker/7:2]
+(root,0,0,00:00:00/02:46:36,32147) [kworker/11:1]
+(root,0,0,00:00:00/01:24:36,32882) [kworker/1:1]
+(root,0,0,00:00:00/03:43,33485) [kworker/2:1]
+(root,0,0,00:00:00/02:43,34101) [kworker/11:0]
+(root,180212,2108,00:00:00/01:43,34601) /usr/sbin/CROND -n
+(root,113128,1476,00:00:00/01:43,34605) /bin/bash /bin/run-parts /etc/cron.hourly
+(root,347260,21708,00:00:00/01:43,34653) /usr/bin/python -tt /usr/sbin/yum-cron /etc/yum/yum-cron-hourly.conf
+(root,113492,968,00:00:00/01:43,34654) awk -v progname=/etc/cron.hourly/0yum-hourly.cron progname { ....   print progname ":\n" ....   progname=""; ...       } ...       { print; }
+(root,145720,5332,00:00:00/00:27,35500) sshd: spol [priv]
+(spol,145720,2344,00:00:00/00:26,35504) sshd: spol@pts/3
+(spol,15984,2012,00:00:00/00:26,35505) -tcsh
+(root,0,0,00:00:01/1-04:31:39,35511) [kworker/15:1]
+(root,0,0,00:00:00/00:13,35861) [kworker/u97:0]
+(root,115260,1624,00:00:00/00:00,36468) /bin/bash /usr/bin/check_mk_agent
+(root,47448,1644,00:00:00/00:00,36487) ps ax -o user:32,vsz,rss,cputime,etime,pid,command --columns 10000
+(root,13276,924,00:00:00/00:00,36488) sed -e 1d -e s/ *\([^ ]*\) *\([^ ]*\) *\([^ ]*\) *\([^ ]*\) *\([^ ]*\) *\([^ ]*\) */(\1,\2,\3,\4\/\5,\6) /
+(root,0,0,00:00:00/09:22:36,36587) [kworker/3:0]
+(root,0,0,00:00:00/01:17:43,37040) [kworker/6:1]
+(root,145720,16,00:00:00/1-19:20:59,41308) sshd: spol [priv]
+(spol,146456,812,00:30:33/1-19:20:59,41310) sshd: spol@pts/1
+(spol,16516,4,00:00:00/1-19:20:59,41311) -tcsh
+(spol,16240,4,00:00:00/1-19:20:53,41364) dbus-launch --autolaunch 44a24682ec42484097f2fab27acea9ea --binary-syntax --close-stderr
+(spol,26372,292,00:00:00/1-19:20:52,41366) /bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+(spol,1306832,55684,00:50:26/17-21:51:38,43515) Dsr2Radx -params Dsr2Radx.bscan.spoldrx
+(spol,82220,320,00:01:18/14:31:23,45568) ssh -X eng
+(root,0,0,00:00:00/02:18:42,48863) [kworker/8:1]
+<<<mem>>>
+MemTotal:       65758072 kB
+MemFree:        63751032 kB
+MemAvailable:   64534448 kB
+Buffers:          264764 kB
+Cached:           551372 kB
+SwapCached:        79772 kB
+Active:           283880 kB
+Inactive:         699032 kB
+Active(anon):      48476 kB
+Inactive(anon):   148456 kB
+Active(file):     235404 kB
+Inactive(file):   550576 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:      32767996 kB
+SwapFree:       30809980 kB
+Dirty:               760 kB
+Writeback:             0 kB
+AnonPages:         87992 kB
+Mapped:            37588 kB
+Shmem:             29884 kB
+Slab:             544016 kB
+SReclaimable:     489400 kB
+SUnreclaim:        54616 kB
+KernelStack:        4928 kB
+PageTables:        11704 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    65647032 kB
+Committed_AS:    2411772 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      399516 kB
+VmallocChunk:   34325397500 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      146368 kB
+DirectMap2M:     2953216 kB
+DirectMap1G:    63963136 kB
+<<<cpu>>>
+1.59 1.91 1.97 1/263 36491 16
+<<<uptime>>>
+1900429.28 26234917.65
+<<<lnx_if>>>
+[start_iplink]
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: em1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT qlen 1000
+    link/ether d4:ae:52:b2:cb:ad brd ff:ff:ff:ff:ff:ff
+3: em2: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT qlen 1000
+    link/ether d4:ae:52:b2:cb:ae brd ff:ff:ff:ff:ff:ff
+4: em3: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT qlen 1000
+    link/ether d4:ae:52:b2:cb:af brd ff:ff:ff:ff:ff:ff
+5: em4: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT qlen 1000
+    link/ether d4:ae:52:b2:cb:b0 brd ff:ff:ff:ff:ff:ff
+6: idrac: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT qlen 1000
+    link/ether 78:45:c4:ec:9d:04 brd ff:ff:ff:ff:ff:ff
+[end_iplink]
+<<<lnx_if:sep(58)>>>
+    lo: 17381934155794 657704083    0    0    0     0          0         0 17381934155794 657704083    0    0    0     0       0          0
+   em2:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+   em3:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+   em1: 45334339342834 37510270820    0  721    0     0          0   2777629 51913255372846 42613641596    0    0    0     0       0          0
+   em4:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+ idrac:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+[lo]
+	Link detected: yes
+	Address: 00:00:00:00:00:00
+
+[em1]
+	Speed: 1000Mb/s
+	Duplex: Full
+	Auto-negotiation: on
+	Link detected: yes
+	Address: d4:ae:52:b2:cb:ad
+
+[em2]
+	Speed: Unknown!
+	Duplex: Unknown! (255)
+	Auto-negotiation: on
+	Link detected: no
+	Address: d4:ae:52:b2:cb:ae
+
+[em3]
+	Speed: Unknown!
+	Duplex: Unknown! (255)
+	Auto-negotiation: on
+	Link detected: no
+	Address: d4:ae:52:b2:cb:af
+
+[em4]
+	Speed: Unknown!
+	Duplex: Unknown! (255)
+	Auto-negotiation: on
+	Link detected: no
+	Address: d4:ae:52:b2:cb:b0
+
+[idrac]
+	Link detected: no
+	Address: 78:45:c4:ec:9d:04
+
+<<<tcp_conn_stats>>>
+01 25
+04 1
+0A 25
+06 133
+<<<diskstat>>>
+1525532564
+   8      16 sdb 49397176 355 409465368 588244490 9600637 8775656 1000343288 16236319 0 59434686 604468101
+   8       0 sda 78113231 157404499 3743633570 485299153 64796868 1581493424 13290080192 316124569 1 87697216 801914003
+   8      32 sdc 1519301 0 12740372 1265645 44 0 0 0 0 1264448 1265123
+[dmsetup_info]
+No devices found
+<<<kernel>>>
+1525532564
+nr_free_pages 15937039
+nr_alloc_batch 3052
+nr_inactive_anon 37296
+nr_active_anon 12119
+nr_inactive_file 137644
+nr_active_file 58851
+nr_unevictable 0
+nr_mlock 0
+nr_anon_pages 22270
+nr_mapped 9397
+nr_file_pages 223841
+nr_dirty 190
+nr_writeback 0
+nr_slab_reclaimable 122350
+nr_slab_unreclaimable 13654
+nr_page_table_pages 3198
+nr_kernel_stack 308
+nr_unstable 0
+nr_bounce 0
+nr_vmscan_write 1637600491
+nr_vmscan_immediate_reclaim 545025
+nr_writeback_temp 0
+nr_isolated_anon 0
+nr_isolated_file 0
+nr_shmem 7471
+nr_dirtied 143022944
+nr_written 1785654946
+numa_hit 18254571674
+numa_miss 3623815694
+numa_foreign 3623815694
+numa_interleave 44842
+numa_local 18254807014
+numa_other 3623580354
+workingset_refault 332142000
+workingset_activate 29476436
+workingset_nodereclaim 0
+nr_anon_transparent_hugepages 0
+nr_free_cma 0
+nr_dirty_threshold 3208865
+nr_dirty_background_threshold 1604432
+pgpgin 2082919751
+pgpgout 7145211740
+pswpin 181312270
+pswpout 1636043334
+pgalloc_dma 531
+pgalloc_dma32 4189192305
+pgalloc_normal 45343173923
+pgalloc_movable 0
+pgfree 49548376842
+pgactivate 1949525026
+pgdeactivate 3684023091
+pgfault 78819627929
+pgmajfault 61971572
+pgrefill_dma 0
+pgrefill_dma32 270261684
+pgrefill_normal 3427692193
+pgrefill_movable 0
+pgsteal_kswapd_dma 0
+pgsteal_kswapd_dma32 172695478
+pgsteal_kswapd_normal 1927355017
+pgsteal_kswapd_movable 0
+pgsteal_direct_dma 0
+pgsteal_direct_dma32 1219863
+pgsteal_direct_normal 4513926
+pgsteal_direct_movable 0
+pgscan_kswapd_dma 0
+pgscan_kswapd_dma32 432593139
+pgscan_kswapd_normal 6116271823
+pgscan_kswapd_movable 0
+pgscan_direct_dma 0
+pgscan_direct_dma32 3203881
+pgscan_direct_normal 13756041
+pgscan_direct_movable 0
+pgscan_direct_throttle 0
+zone_reclaim_failed 0
+pginodesteal 57
+slabs_scanned 1201488384
+kswapd_inodesteal 1670823
+kswapd_low_wmark_hit_quickly 39766322
+kswapd_high_wmark_hit_quickly 4421318
+pageoutrun 44826695
+allocstall 87126
+pgrotated 1631938735
+drop_pagecache 0
+drop_slab 0
+numa_pte_updates 116827145980
+numa_huge_pte_updates 107751547
+numa_hint_faults 57352708976
+numa_hint_faults_local 37474030771
+numa_pages_migrated 874731838
+pgmigrate_success 874796544
+pgmigrate_fail 1836763136
+compact_migrate_scanned 81852
+compact_free_scanned 98535842
+compact_isolated 132521
+compact_stall 96
+compact_fail 40
+compact_success 56
+htlb_buddy_alloc_success 0
+htlb_buddy_alloc_fail 0
+unevictable_pgs_culled 0
+unevictable_pgs_scanned 0
+unevictable_pgs_rescued 0
+unevictable_pgs_mlocked 0
+unevictable_pgs_munlocked 0
+unevictable_pgs_cleared 0
+unevictable_pgs_stranded 0
+thp_fault_alloc 296230
+thp_fault_fallback 108330
+thp_collapse_alloc 19531
+thp_collapse_alloc_failed 30571
+thp_split 9416
+thp_zero_page_alloc 8
+thp_zero_page_alloc_failed 0
+balloon_inflate 0
+balloon_deflate 0
+balloon_migrate 0
+cpu  352719575 31800 38794166 2605239966 22870561 0 2896776 0 0 0
+cpu0 29367135 2419 2767613 155315029 870079 0 145489 0 0 0
+cpu1 34366155 3115 1936000 150956968 2063085 0 76286 0 0 0
+cpu2 25800423 2143 3405566 157348790 1340222 0 303753 0 0 0
+cpu3 33623984 3292 1904790 151972364 2051159 0 29318 0 0 0
+cpu4 26881802 4512 3096589 156462291 2510336 0 84425 0 0 0
+cpu5 32935572 2139 1930518 152567752 2117635 0 27719 0 0 0
+cpu6 26324079 3686 3774454 155820188 1895988 0 339126 0 0 0
+cpu7 31155807 1946 1906345 154355798 2132759 0 26835 0 0 0
+cpu8 12630782 541 7913542 161126977 317312 0 1503049 0 0 0
+cpu9 16594223 856 1017859 171122600 1175583 0 8330 0 0 0
+cpu10 15738206 1517 2653448 168401764 1035472 0 278124 0 0 0
+cpu11 12412782 864 1098856 174895671 1442714 0 12632 0 0 0
+cpu12 12253626 2112 1829058 174773192 997744 0 9456 0 0 0
+cpu13 13732963 576 1077532 173732623 1347489 0 9752 0 0 0
+cpu14 13835709 889 1450373 173848851 311544 0 33265 0 0 0
+cpu15 15066321 1188 1031618 172539101 1261433 0 9212 0 0 0
+intr 22249577914 43 0 0 0 0 0 0 0 1 0 177250429 0 0 0 0 0 0 0 0 0 0 0 35 245 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 201959601 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 928212 0 0 3309521641 34298456 903137752 1910270729 60719128 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ctxt 27516627292
+btime 1523632134
+processes 18950109
+procs_running 1
+procs_blocked 1
+softirq 26462093244 7 426009868 810801436 779369518 182876777 0 580992661 1287850885 0 919355612
+<<<ipmi:cached(1525532528,300)>>>
+Fan1 2400.000 RPM ok na 600.000 840.000 na na na
+Fan2 2400.000 RPM ok na 600.000 840.000 na na na
+Fan3 2400.000 RPM ok na 600.000 840.000 na na na
+Fan4 2280.000 RPM ok na 600.000 840.000 na na na
+Fan5 2400.000 RPM ok na 600.000 840.000 na na na
+Fan6 2280.000 RPM ok na 600.000 840.000 na na na
+Inlet_Temp 19.000 degrees_C ok na -7.000 3.000 42.000 47.000 na
+Exhaust_Temp 30.000 degrees_C ok na 3.000 8.000 70.000 75.000 na
+Temp 47.000 degrees_C ok na 3.000 8.000 97.000 102.000 na
+Temp 46.000 degrees_C ok na 3.000 8.000 97.000 102.000 na
+Current_1 1.400 Amps ok na na na na na na
+Current_2 0.200 Amps ok na na na na na na
+Voltage_1 116.000 Volts ok na na na na na na
+Voltage_2 118.000 Volts ok na na na na na na
+Pwr_Consumption 168.000 Watts ok na na na 896.000 980.000 na
+<<<ipmi_discrete:sep(124):cached(1525532288,300)>>>
+SEL              | 72h | ns  |  0.1 | No Reading
+Intrusion        | 73h | ok  |  7.1 | 
+OS Watchdog      | 71h | ok  |  7.1 | 
+VCORE PG         | 23h | ok  |  3.1 | State Deasserted
+VCORE PG         | 24h | ok  |  3.2 | State Deasserted
+3.3V PG          | 19h | ok  |  7.1 | State Deasserted
+5V PG            | 1Ah | ok  |  7.1 | State Deasserted
+USB Cable Pres   | 50h | ok  |  7.1 | Connected
+Dedicated NIC    | 70h | ok  |  7.1 | Present
+VGA Cable Pres   | 51h | ok  |  7.1 | Connected
+Presence         | 49h | ok  | 11.2 | Present
+Presence         | 40h | ok  |  3.1 | Present
+Presence         | 41h | ok  |  3.2 | Present
+PLL PG           | 22h | ok  |  3.2 | State Deasserted
+PLL PG           | 25h | ok  |  3.1 | State Deasserted
+1.1V PG          | 27h | ok  |  7.1 | State Deasserted
+BP0 5V PG        | F6h | ns  |  7.1 | Disabled
+M23 VDDQ PG      | 15h | ok  |  3.1 | State Deasserted
+M23 VTT PG       | 16h | ok  |  3.1 | State Deasserted
+FETDRV PG        | 21h | ok  |  7.1 | State Deasserted
+Presence         | 43h | ok  | 10.2 | Present
+VSA PG           | 29h | ok  |  3.2 | State Deasserted
+VSA PG           | 2Bh | ok  |  3.1 | State Deasserted
+M01 VDDQ PG      | 1Bh | ok  |  3.2 | State Deasserted
+M01 VDDQ PG      | 1Eh | ok  |  3.1 | State Deasserted
+M23 VTT PG       | 2Eh | ok  |  3.2 | State Deasserted
+M01 VTT PG       | 1Ch | ok  |  3.2 | State Deasserted
+NDC PG           | 2Fh | ok  |  7.1 | State Deasserted
+LCD Cable Pres   | 4Ch | ok  |  7.1 | Connected
+VTT PG           | 1Fh | ok  |  3.2 | State Deasserted
+VTT PG           | 20h | ok  |  3.1 | State Deasserted
+M23 VDDQ PG      | 1Dh | ok  |  3.2 | State Deasserted
+Presence         | 4Ah | ok  | 11.1 | Present
+Presence         | 48h | ok  | 11.3 | Absent
+Status           | 60h | ok  |  3.1 | Presence detected
+Status           | 61h | ok  |  3.2 | Presence detected
+Fan Redundancy   | 75h | ok  |  7.1 | Fully Redundant
+Riser Config Err | 64h | ok  |  7.1 | Connected
+1.5V PG          | 28h | ok  |  7.1 | State Deasserted
+PS2 PG Fail      | 2Ch | ok  |  7.1 | State Deasserted
+PS1 PG Fail      | 2Dh | ok  |  7.1 | State Deasserted
+BP1 5V PG        | F7h | ok  |  7.1 | State Deasserted
+BP2 5V PG        | F8h | ns  |  7.1 | Disabled
+BP3 5V PG        | F9h | ns  |  7.1 | Disabled
+M01 VTT PG       | 14h | ok  |  3.1 | State Deasserted
+Presence         | 42h | ok  | 10.1 | Present
+PCIe Slot1       | 90h | ns  |  7.1 | Disabled
+PCIe Slot2       | 91h | ns  |  7.1 | Disabled
+PCIe Slot3       | 92h | ns  |  7.1 | Disabled
+PCIe Slot4       | 93h | ns  |  7.1 | Disabled
+PCIe Slot5       | 94h | ns  |  7.1 | Disabled
+PCIe Slot6       | 95h | ns  |  7.1 | Disabled
+PCIe Slot7       | 96h | ns  |  7.1 | Disabled
+A                | C0h | ok  | 32.1 | Presence Detected
+B                | CCh | ok  | 32.1 | Presence Detected
+vFlash           | FAh | ok  | 12.1 | 
+CMOS Battery     | 65h | ok  |  7.1 | 
+Presence         | 54h | ok  | 26.1 | Absent
+Presence         | 55h | ok  | 26.2 | Present
+Presence         | 56h | ok  | 26.3 | Absent
+Presence         | 57h | ok  | 26.4 | Absent
+PS Redundancy    | 74h | ok  |  7.1 | Fully Redundant
+Status           | 62h | ok  | 10.1 | Presence detected
+Status           | 63h | ok  | 10.2 | Presence detected
+Power Optimized  | 76h | ok  |  7.1 | 
+SD1              | F4h | ns  | 11.3 | Disabled
+SD2              | F5h | ns  | 11.3 | Disabled
+Redundancy       | 78h | ns  | 11.3 | Disabled
+ECC Corr Err     | 01h | ok  | 34.1 | Presence Detected, Configuration Error
+ECC Uncorr Err   | 02h | ns  | 34.1 | No Reading
+I/O Channel Chk  | 03h | ns  | 34.1 | No Reading
+PCI Parity Err   | 04h | ok  | 34.1 | EISA failsafe timeout, Bus Correctable error
+PCI System Err   | 05h | ns  | 34.1 | No Reading
+SBE Log Disabled | 06h | ns  | 34.1 | No Reading
+Logging Disabled | 07h | ns  | 34.1 | No Reading
+Unknown          | 08h | ns  | 34.1 | No Reading
+CPU Protocol Err | 0Ah | ns  | 34.1 | No Reading
+CPU Bus PERR     | 0Bh | ns  | 34.1 | No Reading
+CPU Init Err     | 0Ch | ns  | 34.1 | No Reading
+CPU Machine Chk  | 0Dh | ns  | 34.1 | No Reading
+Memory Spared    | 11h | ns  | 34.1 | No Reading
+Memory Mirrored  | 12h | ns  | 34.1 | No Reading
+Memory RAID      | 13h | ns  | 34.1 | No Reading
+Memory Added     | 14h | ok  | 34.1 | Correctable ECC
+Memory Removed   | 15h | ok  | 34.1 | Correctable ECC
+Memory Cfg Err   | 16h | ok  | 34.1 | Correctable ECC
+Mem Redun Gain   | 17h | ns  | 34.1 | No Reading
+PCIE Fatal Err   | 18h | ns  | 34.1 | No Reading
+Chipset Err      | 19h | ok  | 34.1 | NMI/Diag Interrupt
+Err Reg Pointer  | 1Ah | ok  | 34.1 | 
+Mem ECC Warning  | 1Bh | ok  | 34.1 | Transition to OK
+Mem CRC Err      | 1Ch | ok  | 34.1 | Transition to OK
+USB Over-current | 1Dh | ok  | 34.1 | Transition to OK
+POST Err         | 1Eh | ok  | 34.1 | Unknown Error
+Hdwr version err | 1Fh | ok  | 34.1 | Hardware change detected
+Mem Overtemp     | 20h | ok  | 34.1 | Correctable ECC
+Mem Fatal SB CRC | 21h | ok  | 34.1 | Correctable ECC
+Mem Fatal NB CRC | 22h | ok  | 34.1 | Correctable ECC
+OS Watchdog Time | 71h | ok  | 34.1 | 
+Non Fatal PCI Er | 26h | ns  | 34.1 | No Reading
+Fatal IO Error   | 27h | ok  | 34.1 | 
+MSR Info Log     | 28h | ok  | 34.1 | 
+TXT Status       | 2Ah | ns  | 34.1 | No Reading
+Drive 0          | A0h | ok  |  7.1 | Drive Present
+Drive 15         | AFh | ns  |  7.1 | Disabled
+Drive 30         | BEh | ns  |  7.1 | Disabled
+Cable SAS A      | E0h | ns  | 26.1 | Disabled
+Cable SAS B      | E1h | ns  | 26.1 | Disabled
+Cable SAS C      | E2h | ns  | 26.1 | Disabled
+Cable SAS D      | E3h | ns  | 26.1 | Disabled
+Cable SAS A      | E4h | ok  | 26.2 | Connected
+Cable SAS B      | E5h | ok  | 26.2 | Connected
+Cable SAS C      | E6h | ns  | 26.2 | Disabled
+Cable SAS D      | E7h | ns  | 26.2 | Disabled
+Cable SAS A      | E8h | ns  | 26.3 | Disabled
+Cable SAS B      | E9h | ns  | 26.3 | Disabled
+Cable SAS C      | EAh | ns  | 26.3 | Disabled
+Cable SAS D      | EBh | ns  | 26.3 | Disabled
+Cable SAS A      | ECh | ns  | 26.4 | Disabled
+Cable SAS B      | EDh | ns  | 26.4 | Disabled
+Cable SAS C      | EEh | ns  | 26.4 | Disabled
+Cable SAS D      | EFh | ns  | 26.4 | Disabled
+Power Cable      | 58h | ns  | 26.1 | Disabled
+Signal Cable     | 59h | ns  | 26.1 | Disabled
+Power Cable      | 5Ah | ok  | 26.2 | Connected
+Signal Cable     | 5Bh | ok  | 26.2 | Connected
+Power Cable      | 5Ch | ns  | 26.3 | Disabled
+Signal Cable     | 5Dh | ns  | 26.3 | Disabled
+Power Cable      | 5Eh | ns  | 26.4 | Disabled
+Signal Cable     | 5Fh | ns  | 26.4 | Disabled
+PFault Fail Safe | 66h | ns  |  7.1 | No Reading
+ROMB Battery     | 68h | ok  | 11.2 | 
+ROMB Battery     | 69h | ns  | 11.4 | Disabled
+Riser 1 Presence | 4Dh | ok  |  7.1 | Connected
+Riser 2 Presence | 4Eh | ok  |  7.1 | Connected
+Riser 3 Presence | 4Fh | ok  |  7.1 | Connected
+<<<ipmi_sensors>>>
+<<<ipmi_sensors:cached(1525532324,300)>>>
+20 Temperature_Inlet_Temp 19.00_C_(-7.00/47.00) [OK]
+21 Temperature_Exhaust_Temp 30.00_C_(3.00/75.00) [OK]
+22 Temperature_Temp 47.00_C_(NA/NA) [OK]
+23 Temperature_Temp 46.00_C_(NA/NA) [OK]
+14 Fan_Fan1 2400.00_RPM_(600.00/NA) [OK]
+15 Fan_Fan2 2400.00_RPM_(600.00/NA) [OK]
+16 Fan_Fan3 2280.00_RPM_(600.00/NA) [OK]
+17 Fan_Fan4 2280.00_RPM_(600.00/NA) [OK]
+18 Fan_Fan5 2400.00_RPM_(600.00/NA) [OK]
+19 Fan_Fan6 2280.00_RPM_(600.00/NA) [OK]
+58 Fan_Fan_Redundancy [Fully_Redundant]
+<<<md>>>
+Personalities : 
+unused devices: <none>
+<<<vbox_guest>>>
+<<<ntp:cached(1525532504,30)>>>
+<<<chrony:cached(1525532504,30)>>>
+Reference ID    : C0A804F8 (192.168.4.248)
+Stratum         : 2
+Ref time (UTC)  : Sat May 05 15:01:20 2018
+System time     : 0.000006190 seconds slow of NTP time
+Last offset     : -0.000004563 seconds
+RMS offset      : 0.000169923 seconds
+Frequency       : 20.715 ppm slow
+Residual freq   : -0.001 ppm
+Skew            : 0.119 ppm
+Root delay      : 0.000220324 seconds
+Root dispersion : 0.000582684 seconds
+Update interval : 130.0 seconds
+Leap status     : Normal
+<<<postfix_mailq>>>
+QUEUE_deferred 4 0
+QUEUE_active 4 0
+<<<job>>>
+<<<local>>>
+2 HawkSummary_Data - 0 ok, 1 problems - No DataMapper? 
+2 HawkSummary_Processes - 0 ok, 1 problems - No ProcessMapper? 
+0 SBandAntennaMovement_stationaryPeriod stationaryPeriod=0;30;61;0;61; OK - stationaryPeriod = 0 sec
+<<<logins>>>
+3

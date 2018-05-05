@@ -1,0 +1,12 @@
+/omd/sites/prod/var/log/mkeventd.log {
+	missingok
+	rotate 52
+	compress
+	delaycompress
+	notifempty
+	sharedscripts
+        olddir mkeventd
+	postrotate
+		echo "COMMAND REOPENLOG" | unixcat /omd/sites/prod/tmp/run/mkeventd/status
+	endscript
+}

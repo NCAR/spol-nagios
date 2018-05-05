@@ -1,0 +1,10 @@
+Title: Fixed broken user list when non unicode mail addresses are loaded
+Level: 1
+Component: wato
+Class: fix
+Compatible: compat
+State: unknown
+Version: 1.2.8b1
+Date: 1447422113
+
+

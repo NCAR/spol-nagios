@@ -1,0 +1,189 @@
+<script type="text/javascript" src="{$pathHeaderJs}"></script>
+{if $showStates}<script type="text/javascript">var g_map_names = {$mapNames};</script>{/if}
+
+<div id="headershow" class="header"><a href="#" onclick="toggleHeader(true)" title="Show header menu">&gt;</a></div>
+<div id="header" class="header">
+<ul class="head">
+    <div id="sidetoggle" onclick="toggleSidebar(true)"><img src="{$pathImages}/internal/sidebar_open.png" /></div>
+    <li class="toggle"><a href="#" onclick="toggleHeader(true)" title="Hide header menu">&lt;</a></li>
+    <li class="logo"><a href="http://www.nagvis.org/"><img src="{$pathImages}/internal/logo_small.png" alt="NagVis" /></a></li>
+    <li class="dropdown">
+        <span id="views-ddheader" onclick="ddMenuToggle(event, 'views')">{$langOpen}</span>
+        {template headMaps maps pathBase currentMap indent=1}
+        {foreach $maps map}<li class="lvl{$indent}{if $currentMap == $map.mapName} current{/if}">{if $map.configError == true}<a class="error" href="#">{$map.mapAlias}</a>
+            {else}<a href="{$pathBase}/frontend/nagvis-js/index.php?mod=Map&amp;act=view&amp;show={$map.mapName}">{$map.mapAlias}</a> {/if}</li>
+            {if $map.childs}{headMaps $map.childs $pathBase $currentMap $indent+1}{/if}{/foreach}
+        {/template}
+        <ul id="views-ddcontent">
+            {if $permittedOverview}
+              <li><a href="{$pathBase}/frontend/nagvis-js/index.php">{$langOverview}</a></li>
+            {/if}
+            {if count($maps) > 0}
+              <li class="spacer"><hr /></li>
+              {headMaps $maps $pathBase $currentMap}
+            {/if}
+            <li class="spacer underline"></li>
+        </ul>
+    </li>
+    {if ($mod == 'Map' && (($permittedEdit == true && $act != 'edit') || ($permittedView == true && $act != 'view') || $permittedSearch)) || $bRotation == true}
+    <li class="dropdown">
+        <span id="action-ddheader" onclick="ddMenuToggle(event, 'action')">{$langActions}</span>
+        <ul id="action-ddcontent">
+            {if $mod == 'Map' && $permittedSearch}
+            <li><a href="javascript:void(0)" onclick="showFrontendDialog(oGeneralProperties.path_server+'?mod=Search&amp;act=view', '{$langSearch}')">{$langSearch}</a></li>
+            {/if}
+            {if $mod == 'Map' && $permittedEdit == true}
+            <li><a href="#" onclick="showFrontendDialog(oGeneralProperties.path_server+'?mod=Map&amp;act=addModify&amp;show={$currentMap}&amp;object_id=0&mode=view_params'+getViewParams(null, true), '{$langModifyParams}');">{$langModifyParams}</a></li>
+            {/if}
+            {if $bRotation == true}
+            <li id="rotationStart" style="display:none"><a href="#" onclick="switchRotation()">{$langRotationStart}</a></li>
+            <li id="rotationStop" style="display:inline"><a href="#" onclick="switchRotation()">{$langRotationStop}</a></li>
+            {/if}
+            {if $mod == 'Map' && $usesSources && $permittedEdit == true}
+            <li><a href="#" onclick="showFrontendDialog(oGeneralProperties.path_server+'?mod=Map&amp;act=toStaticMap&amp;show='+escapeUrlValues(oPageProperties.map_name)+'&amp;view_params='+escapeUrlValues(getViewParams(null, true)), '{$langToStaticMap}')">{$langToStaticMap}</a></li>
+            {/if}
+            <li class="spacer underline"></li>
+        </ul>
+    </li>
+    {/if}
+    {if $mod == 'Map' && $currentMap != '' && $permittedEdit == true}
+    <li class="dropdown">
+        <span id="map-ddheader" onclick="ddMenuToggle(event, 'map')">{$langMapEdit}</span>
+        <ul id="map-ddcontent">
+            {if $canMoveObjects || $canAddObjects || $canEditObjects}
+            <li><a href="#" onclick="toggleAllMapObjectsLock(event);ddMenuHide()">{$langLockUnlockAll}</a></li>
+            <li class="spacer"><hr /></li>
+            {/if}
+            {if $canMoveObjects}
+            <li><a href="#" onclick="gridToggle();ddMenuHide()">{$langToggleGrid}</a></li>
+            <li class="spacer"><hr /></li>
+            {/if}
+            {if $canAddObjects}
+            <li onmouseover="ddMenu('map-addicon', true)" class="dropdown subdropdown">
+                <a class="submenu-link" id="map-addicon-ddheader" href="#">{$langMapAddIcon}</a>
+                <ul id="map-addicon-ddcontent">
+                	<li><a class="topline" href="#" onclick="addObject(event, 'host', 'icon', 1, 'add');ddMenuHide();">{$langHost}</a></li>
+                	<li><a class="" href="#" onclick="addObject(event, 'service', 'icon', 1, 'add');ddMenuHide();">{$langService}</a></li>
+                	<li><a class="" href="#" onclick="addObject(event, 'hostgroup', 'icon', 1, 'add');ddMenuHide();">{$langHostgroup}</a></li>
+                	<li><a class="" href="#" onclick="addObject(event, 'servicegroup', 'icon', 1, 'add');ddMenuHide();">{$langServicegroup}</a></li>
+                	<li><a class="" href="#" onclick="addObject(event, 'dyngroup', 'icon', 1, 'add');ddMenuHide();">{$langDynGroup}</a></li>
+                	<li><a class="" href="#" onclick="addObject(event, 'aggr', 'icon', 1, 'add');ddMenuHide();">{$langAggr}</a></li>
+                	<li><a class="underline" href="#" onclick="addObject(event, 'map', 'icon', 1, 'add');ddMenuHide();">{$langMap}</a></li>
+                </ul>
+            </li>
+            <li onmouseover="ddMenu('map-addline', true)" class="dropdown subdropdown">
+                <a class="submenu-link" id="map-addline-ddheader" href="#">{$langMapAddLine}</a>
+                <ul id="map-addline-ddcontent">
+                	<li><a class="topline" href="#" onclick="addObject(event, 'host', 'line', 2, 'add');ddMenuHide();">{$langHost}</a></li>
+                	<li><a class="" href="#" onclick="addObject(event, 'service', 'line', 2, 'add');ddMenuHide();">{$langService}</a></li>
+                	<li><a class="" href="#" onclick="addObject(event, 'hostgroup', 'line', 2, 'add');ddMenuHide();">{$langHostgroup}</a></li>
+                	<li><a class="" href="#" onclick="addObject(event, 'servicegroup', 'line', 2, 'add');ddMenuHide();">{$langServicegroup}</a></li>
+                	<li><a class="" href="#" onclick="addObject(event, 'dyngroup', 'line', 2, 'add');ddMenuHide();">{$langDynGroup}</a></li>
+                	<li><a class="" href="#" onclick="addObject(event, 'aggr', 'line', 2, 'add');ddMenuHide();">{$langAggr}</a></li>
+                	<li><a class="underline" href="#" onclick="addObject(event, 'map', 'line', 2, 'add');ddMenuHide();">{$langMap}</a></li>
+                </ul>
+            </li>
+            <li onmouseover="ddMenu('map-addspecial', true)" class="dropdown subdropdown">
+                <a class="submenu-link" id="map-addspecial-ddheader" href="#">{$langMapAddSpecial}</a>
+                <ul id="map-addspecial-ddcontent">
+                	<li><a class="topline" href="#" onclick="addObject(event, 'shape', '', 1, 'add');ddMenuHide();">{$langShape}</a></li>
+                	<li><a class="" href="#" onclick="addObject(event, 'textbox', '', 2, 'add');ddMenuHide();">{$langTextbox}</a></li>
+                	<li><a class="" href="#" onclick="addObject(event, 'line', 'line', 2, 'add');ddMenuHide();">{$langStateless} {$langLine}</a></li>
+                	<li><a class="underline" href="javascript:void(0)" onclick="addObject(event, 'container', '', 2, 'add');ddMenuHide();">{$langContainer}</a></li>
+                </ul>
+            </li>
+            <li class="spacer"><hr /></li>
+            {if $isWorldmap}
+            <li onmouseover="ddMenu('map-viewport', true)" class="dropdown subdropdown">
+                <a class="submenu-link" id="map-viewport-ddheader" href="#">{$langMapViewport}</a>
+                <ul id="map-viewport-ddcontent">
+                	<li><a class="topline" href="javascript:void(0)" onclick="g_view.scaleToAll();ddMenuHide();">{$langScaleToAll}</a></li>
+                        <li class="spacer"><hr /></li>
+                	<li><a href="javascript:void(0)" onclick="g_view.saveView();ddMenuHide();">{$langSaveView}</a></li>
+                	<li><a class="underline" href="javascript:void(0)" onclick="showFrontendDialog(oGeneralProperties.path_server+'?mod=Map&amp;act=viewToNewMap&amp;show='+escapeUrlValues(oPageProperties.map_name)+'&amp;view_params='+escapeUrlValues(getViewParams(null, true)), '{$langSaveViewAsNewMap}');ddMenuHide();">{$langSaveViewAsNewMap}</a></li>
+                </ul>
+            </li>
+            <li class="spacer"><hr /></li>
+            {/if}
+            <li><a href="#" onclick="showFrontendDialog(oGeneralProperties.path_server+'?mod=Map&amp;act=manageTmpl&amp;show={$currentMap}', '{$langMapManageTmpl}');ddMenuHide();">{$langMapManageTmpl}</a></li>
+            {/if}
+            <li><a href="#" onclick="showFrontendDialog(oGeneralProperties.path_server+'?mod=Map&amp;act=addModify&amp;show={$currentMap}&amp;object_id=0', '{$langMapOptions}');ddMenuHide();" class="underline">{$langMapOptions}</a></li>
+        </ul>
+    </li>
+    {/if}
+    {if $permittedEditMainCfg || $permittedManageBackgrounds || $permittedManageMaps || $permittedManageShapes}
+    <li class="dropdown">
+        <span id="wui-ddheader" onclick="ddMenuToggle(event, 'wui')">{$langOptions}</span>
+        <ul id="wui-ddcontent">
+            {if $permittedEditMainCfg}<li><a href="#" onclick="showFrontendDialog(oGeneralProperties.path_server+'?mod=MainCfg&amp;act=edit', '{$langEditMainCfg}', 550);ddMenuHide();">{$langEditMainCfg}</a></li>
+            <li class="spacer"><hr /></li>
+            <li><a href="#" onclick="showFrontendDialog(oGeneralProperties.path_server+'?mod=MainCfg&amp;act=manageBackends', '{$langMgmtBackends}');ddMenuHide();">{$langMgmtBackends}</a></li>{/if}
+            {if $permittedManageBackgrounds}<li><a href="#" onclick="showFrontendDialog(oGeneralProperties.path_server+'?mod=ManageBackgrounds&amp;act=view', '{$langMgmtBackgrounds}');ddMenuHide();">{$langMgmtBackgrounds}</a></li>{/if}
+            {if $permittedManageMaps}<li><a href="#" onclick="showFrontendDialog(oGeneralProperties.path_server+'?mod=Map&amp;act=manage', '{$langMgmtMaps}');ddMenuHide();">{$langMgmtMaps}</a></li>{/if}
+            {if $permittedManageShapes}<li><a class="underline" href="#" onclick="showFrontendDialog(oGeneralProperties.path_server+'?mod=ManageShapes&amp;act=view', '{$langMgmtShapes}');ddMenuHide();">{$langMgmtShapes}</a></li>{/if}
+        </ul>
+    </li>
+    {/if}
+</ul>
+<ul class="head right">
+    <li><div id="refreshCounterHead"></div></li>
+    <li id="editIndicator" style="display:none">
+        <span>Edit Mode!</span>
+    </li>
+    <li class="dropdown">
+        <span id="user-ddheader" onclick="ddMenuToggle(event, 'user')">{$langUser}</span>
+        <ul id="user-ddcontent">
+        	<li><a href="#">{$langLoggedIn}: {$currentUser}</a></li>
+        	{if $supportedChangePassword && $permittedChangePassword}<li><a href="#" onclick="showFrontendDialog(oGeneralProperties.path_server+'?mod=ChangePassword&amp;act=view', '{$langChangePassword}');ddMenuHide();">{$langChangePassword}</a></li>{/if}
+        	{if $permittedUserMgmt}<li><a href="#" onclick="showFrontendDialog(oGeneralProperties.path_server+'?mod=UserMgmt&amp;act=view', '{$langUserMgmt}');ddMenuHide();">{$langUserMgmt}</a></li>{/if}
+        	{if $rolesConfigurable && $permittedRoleMgmt}<li><a href="#" onclick="showFrontendDialog(oGeneralProperties.path_server+'?mod=RoleMgmt&amp;act=view', '{$langManageRoles}', 500);ddMenuHide();">{$langManageRoles}</a></li>{/if}
+            {if $permittedLogout}<li><a href="#" onclick="logout();ddMenuHide();return false;">{$langLogout}</a></li>{/if}
+            <li class="spacer underline"></li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <span id="language-ddheader" onclick="ddMenuToggle(event, 'language')">{$langChooseLanguage}</span>
+        <ul id="language-ddcontent">
+            {foreach $langs lang}<li><a href="{str_replace('&', '&amp;', $currentUri)}{if strpos($currentUri,'?') !== false}&amp;{else}?{/if}lang={$lang.language}">{$lang.langLanguageLocated}</a></li>{/foreach}
+          	<li class="spacer underline"></li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <span id="support-ddheader" onclick="ddMenuToggle(event, 'support')">{$langNeedHelp}</span>
+        <ul id="support-ddcontent">
+            <li><a target="_blank" href="{$pathBase}/docs/{$docLanguage}/index.html">{$langOnlineDoc}</a></li>
+            <li><a target="_blank" href="http://www.monitoring-portal.org/wbb/index.php?page=Board&amp;boardID=42">{$langForum}</a></li>
+            <li><a target="_blank" href="{$pathBase}/frontend/nagvis-js/index.php?mod=Info" class="underline">{$langSupportInfo}</a></li>
+        </ul>
+    </li>
+    <li style="width:120px"></li>
+</ul>
+</div>
+
+{template sideMaps maps pathBase showStates currentMap indent=1}
+{foreach $maps map}<li class="lvl{$indent}{if $map.childs} closed parent{/if}{if $currentMap == $map.mapName} current{/if}"><div>
+{if $showStates}<div class="statediv" id="side-state-{$map.mapName}"></div>{/if}
+{if $map.childs}<a class=open href="{$pathBase}/frontend/nagvis-js/index.php?mod=Map&amp;act=view&amp;show={$map.mapName}">&gt;</a>{/if}
+<a class="{if $map.childs}title{/if} {$map.class} {if $map.configError}error{/if}" {if $map.childs}onclick="sidebarToggleSubtree(this);return false" id="sb-{$map.mapName}"{/if}
+{if $map.childs}href="#"{else}href="{$pathBase}/frontend/nagvis-js/index.php?mod=Map&amp;act=view&amp;show={$map.mapName}"{/if}>{$map.mapAlias}</a>
+</div>{if $map.childs}<ul id="sb-{$map.mapName}-childs" style="display:none;">{sideMaps $map.childs $pathBase $showStates $currentMap $indent+1}</ul>{/if}</li>{/foreach}
+{/template}
+<div id="sidebar">
+<ul>
+    {if $permittedOverview}<li class="spacerbottom"><div><a href="{$pathBase}/frontend/nagvis-js/index.php">{$langOverview}</a></div></li>{/if}
+    <li class="closed"><div><a id="sb-maps" class="title" href="#" onclick="sidebarToggleSubtree(this);return false;">{$langMaps}</a></div>
+        <ul id="sb-maps-childs" style="display:none;">{sideMaps $maps $pathBase $showStates $currentMap}</ul>
+    </li>
+    {if count($rotations) > 0}
+    <li class="closed spacertop"><div><a id="sb-rotations" class="title" href="#" onclick="sidebarToggleSubtree(this);return false">{$langRotations}</a></div>
+        <ul id="sb-rotations-childs" style="display:none;">
+        {foreach $rotations rotation}
+            <li class=lvl1><div><a href="{$pathBase}/frontend/nagvis-js/index.php?mod=Rotation&act=view&show={$rotation}">{$rotation}</a></div></li>
+        {/foreach}
+        </ul>
+    </li>
+    {/if}
+</ul>
+</div>
+<div id="headerspacer"></div>
+<script type="text/javascript">addDOMLoadEvent(function()\{sidebarDraw(); headerDraw();});</script>

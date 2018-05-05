@@ -1,0 +1,12 @@
+/omd/sites/prod/var/log/apache/*_log {
+	missingok
+	rotate 52
+	compress
+	delaycompress
+	notifempty
+	create 640 prod prod 
+	sharedscripts
+	postrotate
+		/omd/sites/prod/etc/init.d/apache reload
+	endscript
+}

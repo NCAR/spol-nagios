@@ -1,0 +1,40 @@
+2018-05-05 01:10:16 flushing old values
+2018-05-05 01:10:16 rotating journals
+2018-05-05 01:10:16 started new journal /opt/omd/sites/prod/var/rrdcached/rrd.journal.1525482616.912257
+2018-05-05 01:10:16 removing old journal /opt/omd/sites/prod/var/rrdcached/rrd.journal.1525468216.912199
+2018-05-05 03:10:16 flushing old values
+2018-05-05 03:10:16 rotating journals
+2018-05-05 03:10:16 started new journal /opt/omd/sites/prod/var/rrdcached/rrd.journal.1525489816.912189
+2018-05-05 03:10:16 removing old journal /opt/omd/sites/prod/var/rrdcached/rrd.journal.1525475416.912213
+2018-05-05 05:10:16 flushing old values
+2018-05-05 05:10:16 rotating journals
+2018-05-05 05:10:16 started new journal /opt/omd/sites/prod/var/rrdcached/rrd.journal.1525497016.912307
+2018-05-05 05:10:16 removing old journal /opt/omd/sites/prod/var/rrdcached/rrd.journal.1525482616.912257
+2018-05-05 07:10:16 flushing old values
+2018-05-05 07:10:16 rotating journals
+2018-05-05 07:10:16 started new journal /opt/omd/sites/prod/var/rrdcached/rrd.journal.1525504216.912192
+2018-05-05 07:10:16 removing old journal /opt/omd/sites/prod/var/rrdcached/rrd.journal.1525489816.912189
+2018-05-05 09:10:16 flushing old values
+2018-05-05 09:10:16 rotating journals
+2018-05-05 09:10:16 started new journal /opt/omd/sites/prod/var/rrdcached/rrd.journal.1525511416.912198
+2018-05-05 09:10:16 removing old journal /opt/omd/sites/prod/var/rrdcached/rrd.journal.1525497016.912307
+2018-05-05 11:10:16 flushing old values
+2018-05-05 11:10:16 rotating journals
+2018-05-05 11:10:16 started new journal /opt/omd/sites/prod/var/rrdcached/rrd.journal.1525518616.912197
+2018-05-05 11:10:16 removing old journal /opt/omd/sites/prod/var/rrdcached/rrd.journal.1525504216.912192
+2018-05-05 13:10:16 flushing old values
+2018-05-05 13:10:16 rotating journals
+2018-05-05 13:10:16 started new journal /opt/omd/sites/prod/var/rrdcached/rrd.journal.1525525816.912184
+2018-05-05 13:10:16 removing old journal /opt/omd/sites/prod/var/rrdcached/rrd.journal.1525511416.912198
+2018-05-05 15:10:16 flushing old values
+2018-05-05 15:10:16 rotating journals
+2018-05-05 15:10:16 started new journal /opt/omd/sites/prod/var/rrdcached/rrd.journal.1525533016.912189
+2018-05-05 15:10:16 removing old journal /opt/omd/sites/prod/var/rrdcached/rrd.journal.1525518616.912197
+2018-05-05 17:10:16 flushing old values
+2018-05-05 17:10:16 rotating journals
+2018-05-05 17:10:16 started new journal /opt/omd/sites/prod/var/rrdcached/rrd.journal.1525540216.912196
+2018-05-05 17:10:16 removing old journal /opt/omd/sites/prod/var/rrdcached/rrd.journal.1525525816.912184
+2018-05-05 19:10:16 flushing old values
+2018-05-05 19:10:16 rotating journals
+2018-05-05 19:10:16 started new journal /opt/omd/sites/prod/var/rrdcached/rrd.journal.1525547416.912464
+2018-05-05 19:10:16 removing old journal /opt/omd/sites/prod/var/rrdcached/rrd.journal.1525533016.912189

@@ -1,0 +1,110 @@
+2015-06-05:
+    * FIX: net-snmp: Being more robust against duplicat engineIDs when monitoring SNMPv3 devices
+      The engineID is defined to be a globally unique identifier of a SNMPv3 device, but it happens
+      that users configure the same engineID multiple times for different devices, which made
+      Check_MK only talk to one of them and reporting "No Response from host (Timeout 0/-24)" for
+      the other devices. This has been changed now that Check_MK disregards the misconfiguration
+      and works as usual.
+
+2015-05-15:
+    * FIX: net-snmp: snmp get is now processing NOSUCHOBJECT, ENDOFMIBVIEW, NOSUCHINSTANCE correctly
+
+2015-04-13:
+    * FIX: Now shipping with simplejson python module to support older
+      distributions which have no json module included
+
+2015-03-10:
+    * FIX: RH7 - Removed wrong dependency perl-Time-HiRes
+
+2015-03-02:
+    * FIX: Bulk notifications for sites using nagios as core are now working again
+      (were broken in all releases since Wed Jan 14 2015)
+
+2015-02-18:
+    * Added libsnap7 and python-snap7 for future SPS monitoring
+
+2015-01-13:
+    * Updated net-snmp to 5.7.3
+
+2014-12-03:
+    * Cronjob cmk_multisite produces no output anymore
+
+2014-10-31:
+    * Changed default core to Check_MK Microcore
+    * cma builds depend on at least firmware 1.1.2 now
+
+2014-04-14:
+    * FIX: mkeventd archive files were not cleaned up by diskspace cleanup
+
+2014-03-19:
+    * Set nagios init script option: $CORE_NOVERIFY=yes
+
+2014-03-06:
+    * Added cron job for combination non-CMC core with bulk notifications
+
+2014-02-05:
+    * package net-snmp. setup.py: add --basedir option. set to zip_safe = False
+
+2013-12-16:
+    * Added libpcap as runtime dependency on Debian/Ubuntu distros
+      (needed for cmc icmphelper)
+
+2013-12-06:
+    * Add build support for RedHat Enterprise Linux/CentOS 6.5 and 5.10
+
+2013-11-21:
+    * Add net-snmp 5.7.2 to OMD builds to have an up-to-date SNMP library
+
+2013-10-25:
+    * Patch: Fixed handling of some special chars in pnp4nagios service descriptions
+
+2013-10-19:
+    * Add build support for Ubuntu 13.10 (Saucy Salamander)
+
+2013-09-18:
+    * Regular update of Check_MK DNS cache via cron job
+
+2013-06-04:
+    * Integrated Livestatus Proxy-Daemon
+
+2013-03-28
+    * Fixed problem with RHEL/CENTOS6.4 mounts
+      Symlinks in fstab are no longer allowed in this versions
+
+2013-02-20
+    * Added Perl module perl-Time-HiRes to OS dependencies for all
+      Centos/RedHat 6.X versions. This is needed in minimal builds
+      for PNP4Nagios to work.
+
+2012-07-20
+    * Set log_initial_state=1 in nagios configuration. This creates a 
+      log entry for each check executed the very first time. We need
+      this for availability reporting.
+
+2011-12-28
+    * Added patch from Andreas Ericson that speeds up the scheduling of
+      active checks in Nagios
+
+2011-12-22
+    * Added OMD config hooks to configure multisite based authentication and also
+      authorisation. This configures Multisite, NagVis and pnp4nagios at the moment
+    * pnp4nagios: Add optional config.d/ directory
+
+2011-10-29
+    * Remove sample configuration files in etc/nagios/conf.d. They contain
+      elements that may conflict with user defined ones, especially via WATO.
+
+2011-10-19
+    * Added new build for SLES10SP1-64. Special case here: SLES10 does not provide
+      the correct versions of cairo/pango for compiling rrdtool. Though we added
+      glib (2.13.7), cairo (1.4.6), pango (1.17.5) to the SLES10SP1 omd package.
+      SLES10SP1 uses the apache "shared" mode by default the "own" mode does not
+      work on SLES10 platforms since mod_proxy has a too old version.
+      The package php5-sqlite3 has been added to the SLES10 builds to make NagVis
+      work.
+
+2011-09-09
+    * Setting default website to "check_mk" to configure Multisite as default GUI
+    * Changed RRD_STORAGE_TYPE of pnp4nagios to MULTIPLE for improved flexibility
+    * Changed default pnp theme to multisite
+    * Changed NagVis urls to point to multisite

@@ -1,0 +1,1535 @@
+[1523318400] LOG ROTATION: DAILY
+[1523318400] LOG VERSION: 2.0
+[1523318400] CURRENT HOST STATE: control1.gate.rtf;UP;HARD;1;OK - 192.168.4.2: rta 0.013ms, lost 0%
+[1523318400] CURRENT HOST STATE: control2.gate.rtf;UP;HARD;1;OK - 192.168.4.10: rta 0.128ms, lost 0%
+[1523318400] CURRENT HOST STATE: mgen1.gate.rtf;UP;HARD;1;OK - 192.168.4.3: rta 3.393ms, lost 0%
+[1523318400] CURRENT HOST STATE: mgen2.gate.rtf;UP;HARD;1;OK - 192.168.4.22: rta 0.078ms, lost 0%
+[1523318400] CURRENT HOST STATE: pgen1.gate.rtf;UP;HARD;1;OK - 192.168.4.23: rta 0.128ms, lost 0%
+[1523318400] CURRENT HOST STATE: pgen2.gate.rtf;UP;HARD;1;OK - 192.168.4.25: rta 0.152ms, lost 0%
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Antenna_Door_Open_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Az_Run_Line_Active;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Azimuth_Brake_Bypass_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Azimuth_Brakes_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Azimuth_Fans_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Azimuth_Stowed_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Azimuth_Temperature_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_COHO_Gate_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Circulator_Temperature_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_El_Run_Line_Active;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Elevation_Brake_Bypass_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Elevation_Brakes_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Elevation_Fans_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Elevation_Limit_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Elevation_Stowed_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Elevation_Temperature_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Mitch_Switch_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Oil_Pressure_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_RF_Disabled_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_RF_Ladder_Lockout_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Wave_Guide_Pressure_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;ANT_Wave_Guide_Switch_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;CPU load;OK;HARD;1;OK - 15 min load 0.15 at 16 Cores (0.01 per Core)
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;CPU utilization;OK;HARD;1;OK - user: 0.6%, system: 0.3%, wait: 0.0%, steal: 0.0%, guest: 0.0%, total: 0.9%
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;Check_MK;OK;HARD;1;OK - Agent version 1.2.8p26, execution time 0.7 sec
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;Check_MK Discovery;OK;HARD;1;OK - no unmonitored services found, no vanished services found
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;Disk IO SUMMARY;OK;HARD;1;OK - Utilization: 0.0%, Read: 136.53 B/s, Write: 58.32 kB/s, Average Wait: 0.06 ms, Average Read Wait: 9.25 ms, Average Write Wait: 0.02 ms, Latency: 0.05 ms
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;Filesystem /;OK;HARD;1;OK - 41.7% used (16.28 of 39.04 GB), trend: -146.58 MB / 24 hours
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;Filesystem /data;OK;HARD;1;OK - 25.6% used (400.50 GB of 1.53 TB), trend: +206.79 MB / 24 hours
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;Filesystem /home;OK;HARD;1;OK - 63.9% used (30.16 of 47.17 GB), trend: +97.33 MB / 24 hours
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;HP_DataMapper_primary;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;HP_DsFileDist_ext_data;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;HP_DsServerMgr_primary;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;HP_Fmq2Fmq_monitoring;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;HP_InputWatcher_spol_cams;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;HP_Janitor_logs;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;HP_Janitor_sysview;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;HP_LdataWatcher_sysview;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;HP_Scout_primary;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;HP_SpolMonCtrl_ops;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;HawkSummary_Data;OK;HARD;1;OK - 0 data set(s) have problems
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 10/0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;Interface 2;OK;HARD;1;OK - [em1] (up) MAC: 78:2b:cb:0d:ae:c0, 1 Gbit/s, in: 6.96 kB/s(0.0%), out: 9.08 kB/s(0.0%)
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;Interface 3;OK;HARD;1;OK - [em2] (up) MAC: 78:2b:cb:0d:ae:c1, 1 Gbit/s, in: 24.26 B/s(0.0%), out: 15.31 B/s(0.0%)
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;Kernel Context Switches;OK;HARD;1;OK - 778/s
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;Kernel Major Page Faults;OK;HARD;1;OK - 0/s
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;Kernel Process Creations;OK;HARD;1;OK - 9/s
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;Logins;OK;HARD;1;OK - 11 logins on system (warn/crit at 20/30)
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;Memory;OK;HARD;1;OK - RAM used: 1.31 GB of 11.56 GB, Swap used: 0.00 B of 3.91 GB, Total virtual memory used: 1.31 GB of 15.47 GB (8.5%),
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;Mount options of /;OK;HARD;1;OK - mount options exactly as expected
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;Mount options of /data;OK;HARD;1;OK - mount options exactly as expected
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;Mount options of /home;OK;HARD;1;OK - mount options exactly as expected
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;NTP Time;OK;HARD;1;OK - stratum 2, offset 0.0354 ms, reference: C0A804F8 (192.168.4.248)
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;Number of threads;OK;HARD;1;OK - 569 threads
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;OMD prod apache;OK;HARD;1;OK - 0.08 Requests/s, 0.02 Seconds serving/s, 5.53 kB Sent/s
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;OMD prod performance;OK;HARD;1;OK - Host Checks: 0.1/s, Service Checks: 5.8/s, Process Creations: 0.2/s, Livestatus Connects: 0.1/s, Livestatus Requests: 0.3/s, Log Messages: 0.0/s, 6 Hosts, 351 Services, Core version: 3.5.0, Livestatus version: 1.2.8p15
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;OMD prod status;OK;HARD;1;OK - running
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;PM_AC_Power;OK;HARD;1;OK - Source 2
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;PM_Frequency;OK;HARD;1;OK - 600
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;PM_Source_Switched;OK;HARD;1;OK - ---
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;PM_TotalKW;OK;HARD;1;OK - 6548
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;PM_VoltageA;OK;HARD;1;OK - 122
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;PM_VoltageB;OK;HARD;1;OK - 122
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;PM_VoltageC;OK;HARD;1;OK - 123
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;PM_XmitPowerDbmH;CRITICAL;HARD;1;CRIT - CRITICAL - 60.85
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;PM_XmitPowerDbmTxTop;CRITICAL;HARD;1;CRIT - CRITICAL - 40.24
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;PM_XmitPowerDbmV;CRITICAL;HARD;1;CRIT - CRITICAL - 57.31
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;Postfix Queue;OK;HARD;1;OK - deferred queue length is 0, active queue length is 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TCP Connections;OK;HARD;1;OK - ESTABLISHED: 47, TIME_WAIT: 29, FIN_WAIT1: 12, LISTEN: 33
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TEMP_Annex;OK;HARD;1;OK - 28.5
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TEMP_Front_Wall;UNKNOWN;HARD;1;UNKNOWN - Unknown - 1370.0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TEMP_Horiz_LNA;UNKNOWN;HARD;1;UNKNOWN - Unknown - 1370.0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TEMP_Klystron;OK;HARD;1;OK - 18.8
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TEMP_Rcvr_Enclosure;UNKNOWN;HARD;1;UNKNOWN - Unknown - 1370.0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TEMP_Rear_Wall;OK;HARD;1;OK - 18.5
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TEMP_UPS_Container;OK;HARD;1;OK - 23.7
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TEMP_Vert_LNA;UNKNOWN;HARD;1;UNKNOWN - Unknown - 1370.0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Cabinet_Air_Temperature_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Cabinet_Airflow_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Cabinet_Interlock_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Charging_System_Fail_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Circulator_Temperature_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Filament_PS_Voltage_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Filament_ps_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Focus_Coil_Airflow_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Focus_Coil_Current_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Focus_Coil_PS_Voltage_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Inverse_Diode_Current_HV_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Klystron_Air_Temperature_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Klystron_Airflow_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Klystron_Current_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Klystron_Filament_Current_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Klystron_Vacuum_Pump_Current_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Klystron_Warmup_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_M15_VDC_PS_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Main_Power_Voltage_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Maintenance_Required_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Modulator_Inverse_Current_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Modulator_Overload_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Modulator_Switch_Fail_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Modulator_Switch_Maintenance_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_P15_VDC_PS_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_P28_VDC_PS_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_P45_VDC_PS_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_P5_VDC_PS_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_PRF_Limit_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Post_Charge_Regulator_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Spectrum_Filter_Pressure_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Transmitter_Avail_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Transmitter_Battery_Charging_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Transmitter_Oil_Level_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Transmitter_Oil_Temperature_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Transmitter_Overcurrent_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Transmitter_Overvoltage_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Transmitter_Spare_0_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Transmitter_Spare_1_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Trigger_Amplifier_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Vacuum_Pump_PS_Voltage_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_W_G_PFN_Transfer_Interlock_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Waveguide_Arc_VSWR_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Waveguide_Pressure_Humidity_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;TX_Waveguide_Switch_Position_Fault;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;UPSB_Alarms;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;UPSB_BatteryState;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;UPSB_OutputState;OK;HARD;1;OK - 0
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;UPS_Alarms;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;UPS_BatteryState;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;UPS_BatteryVoltage;OK;HARD;1;OK - 328
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;UPS_OutputState;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;Uptime;OK;HARD;1;OK - up since Wed Apr  4 19:07:27 2018 (5d 04:51:56)
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;WG_PressurePSI;OK;HARD;1;OK - 5.37
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;WG_RH;OK;HARD;1;OK - 4.06
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;WG_TempC;OK;HARD;1;OK - 21.17
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;WX_RH;OK;HARD;1;OK - 27.60
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;WX_hailIntensityHitsPerCm2;OK;HARD;1;OK - 0.00
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;WX_heatingTempC;OK;HARD;1;OK - 15.10
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;WX_heatingVoltage;OK;HARD;1;OK - 24.00
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;WX_pressureHpa;OK;HARD;1;OK - 829.00
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;WX_rainRateMmPerHr;OK;HARD;1;OK - 0.00
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;WX_supplyVoltage;OK;HARD;1;OK - 24.20
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;WX_tempC;OK;HARD;1;OK - 11.70
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;WX_windDirnDeg;OK;HARD;1;OK - 18.00
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;WX_windSpeedMps;OK;HARD;1;OK - 1.30
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;XMIT_High_Voltage_Power;CRITICAL;HARD;1;CRIT - CRITICAL - 32773
+[1523318400] CURRENT SERVICE STATE: control1.gate.rtf;XMIT_Panel_Power;CRITICAL;HARD;1;CRIT - CRITICAL - 36700
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;CPU load;OK;HARD;1;OK - 15 min load 0.05 at 16 Cores (0.00 per Core)
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;CPU utilization;OK;HARD;1;OK - user: 0.1%, system: 0.1%, wait: 0.0%, steal: 0.0%, guest: 0.0%, total: 0.3%
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;Check_MK;OK;HARD;1;OK - Agent version 1.2.8p18, execution time 0.2 sec
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;Check_MK Discovery;OK;HARD;1;OK - no unmonitored services found, no vanished services found
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;Disk IO SUMMARY;OK;HARD;1;OK - Utilization: 0.0%, Read: 68.27 B/s, Write: 47.00 kB/s, Average Wait: 0.02 ms, Average Read Wait: 2.00 ms, Average Write Wait: 0.02 ms, Latency: 0.02 ms
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;Filesystem /;OK;HARD;1;OK - 40.9% used (15.68 of 38.32 GB), trend: -4.17 MB / 24 hours
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;Filesystem /data;OK;HARD;1;OK - 5.3% used (380.17 GB of 6.96 TB), trend: +3.60 kB / 24 hours
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;Filesystem /home;OK;HARD;1;OK - 72.5% used (34.21 of 47.17 GB), trend: 0.00 B / 24 hours
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;Interface 2;OK;HARD;1;OK - [em1] (up) MAC: 78:2b:cb:0d:b1:3c, 1 Gbit/s, in: 3.28 kB/s(0.0%), out: 1.01 kB/s(0.0%)
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;Interface 3;OK;HARD;1;OK - [em2] (up) MAC: 78:2b:cb:0d:b1:3d, 1 Gbit/s, in: 10.52 B/s(0.0%), out: 0.00 B/s(0.0%)
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;Kernel Context Switches;OK;HARD;1;OK - 272/s
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;Kernel Major Page Faults;OK;HARD;1;OK - 0/s
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;Kernel Process Creations;OK;HARD;1;OK - 7/s
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;Logins;OK;HARD;1;OK - 1 logins on system (warn/crit at 20/30)
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;Memory;OK;HARD;1;OK - RAM used: 657.83 MB of 11.56 GB, Swap used: 0.00 B of 3.72 GB, Total virtual memory used: 657.83 MB of 15.29 GB (4.2%),
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;Mount options of /;OK;HARD;1;OK - mount options exactly as expected
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;Mount options of /data;OK;HARD;1;OK - mount options exactly as expected
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;Mount options of /home;OK;HARD;1;OK - mount options exactly as expected
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;NTP Time;OK;HARD;1;OK - stratum 2, offset 0.0806 ms, reference: 192.168.4.248 (ntp.gate.rtf)
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;Number of threads;OK;HARD;1;OK - 383 threads
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;OMD prod apache;OK;HARD;1;OK - No activity since last check
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;OMD prod performance;CRITICAL;HARD;1;CRIT - Host Checks: 0.1/s, Service Checks: 3.8/s, Process Creations: 0.2/s, Livestatus Connects: 0.0/s, Livestatus Requests: 0.0/s, Log Messages: 0.0/s, 6 Hosts, 232 Services, Core version: 3.5.0, Livestatus version: 1.2.8p15, Notifications are disabled(!!)
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;OMD prod status;OK;HARD;1;OK - running
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;Postfix Queue;OK;HARD;1;OK - deferred queue length is 0, active queue length is 0
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;TCP Connections;OK;HARD;1;OK - ESTABLISHED: 1, TIME_WAIT: 3, LISTEN: 7
+[1523318400] CURRENT SERVICE STATE: control2.gate.rtf;Uptime;OK;HARD;1;OK - up since Mon Apr  2 21:18:11 2018 (7d 02:40:53)
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;AntennaStatus;CRITICAL;HARD;1;CRIT - CRITICAL Antenna stopped for 4395 seconds
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;CPU load;OK;HARD;1;OK - 15 min load 1.55 at 16 Cores (0.10 per Core)
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;CPU utilization;OK;HARD;1;OK - user: 12.3%, system: 0.8%, wait: 0.0%, steal: 0.0%, guest: 0.0%, total: 13.1%
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;Check_MK;OK;HARD;1;OK - Agent version 1.2.8p26, execution time 0.4 sec
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;Check_MK Discovery;WARNING;HARD;1;WARN - 3 unmonitored services (local:3)(!), no vanished services found
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;Disk IO SUMMARY;OK;HARD;1;OK - Utilization: 0.0%, Read: 4.47 kB/s, Write: 23.60 kB/s, Average Wait: 0.30 ms, Average Read Wait: 1.50 ms, Average Write Wait: 0.01 ms, Latency: 0.30 ms
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;Filesystem /;OK;HARD;1;OK - 17.3% used (16.56 of 96.00 GB), trend: +222.29 kB / 24 hours
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;Filesystem /data;OK;HARD;1;OK - 75.2% used (1.33 of 1.77 TB), trend: +584.03 MB / 24 hours
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;Filesystem /home;OK;HARD;1;OK - 9.9% used (9.54 of 96.00 GB), trend: +1007.07 kB / 24 hours
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HD_/tmp/fmq/SpolMonCtrl;CRITICAL;HARD;1;CRIT - missing
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HD_/tmp/fmq/angles/shmem_30000;CRITICAL;HARD;1;CRIT - missing
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HD_/tmp/fmq/moments/sband/shmem_20000;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HD_/tmp/fmq/syscon;WARNING;HARD;1;WARN - late
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HD_/tmp/fmq/ts/sband/shmem_10000;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_DataMapper_primary;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_DsFileDist_suncal;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_DsFileDist_time_series;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_DsServerMgr_primary;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_Fmq2Fmq_moments.sband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_Fmq2Fmq_moments.sband2;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_Fmq2Fmq_moments.spoldrx;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_Fmq2Fmq_ts.sband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_Fmq2Fmq_ts.sband2;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_Iq2Dsr_sband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_Iq2Dsr_spoldrx;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_Janitor_logs;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_Janitor_time_series;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_RadMon_log.sband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_Scout_primary;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_SpolSysconRelay_sband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_SpolTs2Fmq_sband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_SpolTsMonitor_sband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_SunCal_sband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HP_TsTcp2Fmq_rvp8;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HawkSummary_Data;CRITICAL;HARD;1;CRIT - Services ok/prob: 2/3
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;IPMI Sensor Fan_Fan1;OK;HARD;1;OK - Current value 2400.0 RPM, critical below 600.0 RPM
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;IPMI Sensor Fan_Fan2;OK;HARD;1;OK - Current value 2400.0 RPM, critical below 600.0 RPM
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;IPMI Sensor Fan_Fan3;OK;HARD;1;OK - Current value 2280.0 RPM, critical below 600.0 RPM
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;IPMI Sensor Fan_Fan4;OK;HARD;1;OK - Current value 2280.0 RPM, critical below 600.0 RPM
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;IPMI Sensor Fan_Fan5;OK;HARD;1;OK - Current value 2400.0 RPM, critical below 600.0 RPM
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;IPMI Sensor Fan_Fan6;OK;HARD;1;OK - Current value 2280.0 RPM, critical below 600.0 RPM
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;IPMI Sensor Fan_Fan_Redundancy;OK;HARD;1;OK - Sensor status is Fully_Redundant
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;IPMI Sensor Temperature_Exhaust_Temp;OK;HARD;1;OK - Current value 29.0 C, valid range is 3.0 C ... 75.0 C
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;IPMI Sensor Temperature_Inlet_Temp;OK;HARD;1;OK - Current value 20.0 C, valid range is -7.0 C ... 47.0 C
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;IPMI Sensor Temperature_Temp;OK;HARD;1;OK - Current value 49.0 C
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;Interface 2;OK;HARD;1;OK - [em1] (up) MAC: d4:ae:52:b2:cb:ad, 1 Gbit/s, in: 23.84 MB/s(20.0%), out: 30.40 MB/s(25.5%)
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;Kernel Context Switches;OK;HARD;1;OK - 12930/s
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;Kernel Major Page Faults;OK;HARD;1;OK - 0/s
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;Kernel Process Creations;OK;HARD;1;OK - 10/s
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;Logins;OK;HARD;1;OK - 5 logins on system (warn/crit at 20/30)
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;Memory;OK;HARD;1;OK - RAM used: 2.73 GB of 62.71 GB, Swap used: 0.00 B of 31.25 GB, Total virtual memory used: 2.73 GB of 93.96 GB (2.9%),
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;Mount options of /;OK;HARD;1;OK - mount options exactly as expected
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;Mount options of /data;OK;HARD;1;OK - mount options exactly as expected
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;Mount options of /home;OK;HARD;1;OK - mount options exactly as expected
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;NTP Time;OK;HARD;1;OK - stratum 2, offset 0.0064 ms, reference: C0A804F8 (192.168.4.248)
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;Number of threads;OK;HARD;1;OK - 345 threads
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;Postfix Queue;OK;HARD;1;OK - deferred queue length is 0, active queue length is 0
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;HARD;1;WARN - stationaryPeriod = 4716 sec
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;TCP Connections;OK;HARD;1;OK - ESTABLISHED: 24, CLOSE_WAIT: 1, TIME_WAIT: 109, FIN_WAIT2: 1, LISTEN: 36
+[1523318400] CURRENT SERVICE STATE: mgen1.gate.rtf;Uptime;OK;HARD;1;OK - up since Thu Mar 29 17:11:04 2018 (11d 06:48:01)
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;CPU load;OK;HARD;1;OK - 15 min load 0.05 at 16 Cores (0.00 per Core)
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;CPU utilization;OK;HARD;1;OK - user: 0.1%, system: 0.3%, wait: 0.0%, steal: 0.0%, guest: 0.0%, total: 0.4%
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;Check_MK;OK;HARD;1;OK - Agent version 1.2.8p26, execution time 0.3 sec
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;Check_MK Discovery;OK;HARD;1;OK - no unmonitored services found, no vanished services found
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;Disk IO SUMMARY;OK;HARD;1;OK - Utilization: 0.0%, Read: 3.33 kB/s, Write: 15.27 kB/s, Average Wait: 0.04 ms, Average Read Wait: 0.01 ms, Average Write Wait: 0.03 ms, Latency: 0.04 ms
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;Filesystem /;OK;HARD;1;OK - 15.2% used (14.58 of 96.00 GB), trend: +2.07 MB / 24 hours
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;Filesystem /data;OK;HARD;1;OK - 53.7% used (973.93 GB of 1.77 TB), trend: +891.84 kB / 24 hours
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;Filesystem /home;OK;HARD;1;OK - 11.7% used (11.19 of 96.00 GB), trend: 0.00 B / 24 hours
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;IPMI Sensor Fan_Fan1;OK;HARD;1;OK - Current value 2280.0 RPM, critical below 600.0 RPM
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;IPMI Sensor Fan_Fan2;OK;HARD;1;OK - Current value 2160.0 RPM, critical below 600.0 RPM
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;IPMI Sensor Fan_Fan3;OK;HARD;1;OK - Current value 2280.0 RPM, critical below 600.0 RPM
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;IPMI Sensor Fan_Fan4;OK;HARD;1;OK - Current value 2160.0 RPM, critical below 600.0 RPM
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;IPMI Sensor Fan_Fan5;OK;HARD;1;OK - Current value 2160.0 RPM, critical below 600.0 RPM
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;IPMI Sensor Fan_Fan6;OK;HARD;1;OK - Current value 2280.0 RPM, critical below 600.0 RPM
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;IPMI Sensor Fan_Fan_Redundancy;OK;HARD;1;OK - Sensor status is Fully_Redundant
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;IPMI Sensor Temperature_Exhaust_Temp;OK;HARD;1;OK - Current value 27.0 C, valid range is 3.0 C ... 75.0 C
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;IPMI Sensor Temperature_Inlet_Temp;OK;HARD;1;OK - Current value 19.0 C, valid range is -7.0 C ... 47.0 C
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;IPMI Sensor Temperature_Temp;OK;HARD;1;OK - Current value 39.0 C
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;Interface 2;OK;HARD;1;OK - [em1] (up) MAC: d4:ae:52:b6:1b:40, 1 Gbit/s, in: 169.22 kB/s(0.1%), out: 124.02 kB/s(0.1%)
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;Kernel Context Switches;OK;HARD;1;OK - 7755/s
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;Kernel Major Page Faults;OK;HARD;1;OK - 0/s
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;Kernel Process Creations;OK;HARD;1;OK - 7/s
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;Logins;OK;HARD;1;OK - 0 logins on system (warn/crit at 20/30)
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;Memory;OK;HARD;1;OK - RAM used: 689.05 MB of 62.71 GB, Swap used: 0.00 B of 7.81 GB, Total virtual memory used: 689.05 MB of 70.52 GB (1.0%),
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;Mount options of /;OK;HARD;1;OK - mount options exactly as expected
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;Mount options of /data;OK;HARD;1;OK - mount options exactly as expected
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;Mount options of /home;OK;HARD;1;OK - mount options exactly as expected
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;NTP Time;OK;HARD;1;OK - stratum 2, offset 0.0114 ms, reference: C0A804F8 (192.168.4.248)
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;Number of threads;OK;HARD;1;OK - 279 threads
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;Postfix Queue;OK;HARD;1;OK - deferred queue length is 0, active queue length is 0
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;TCP Connections;OK;HARD;1;OK - ESTABLISHED: 3, TIME_WAIT: 31, LISTEN: 19
+[1523318400] CURRENT SERVICE STATE: mgen2.gate.rtf;Uptime;OK;HARD;1;OK - up since Thu Mar 29 17:11:16 2018 (11d 06:48:02)
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;CPU load;OK;HARD;1;OK - 15 min load 0.21 at 24 Cores (0.01 per Core)
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;CPU utilization;OK;HARD;1;OK - user: 0.8%, system: 0.3%, wait: 0.0%, steal: 0.0%, guest: 0.0%, total: 1.0%
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;Check_MK;OK;HARD;1;OK - Agent version 1.2.8p18, execution time 0.6 sec
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;Check_MK Discovery;OK;HARD;1;OK - no unmonitored services found, 2 vanished services (local:2)
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;Disk IO SUMMARY;OK;HARD;1;OK - Utilization: 0.0%, Read: 0.00 B/s, Write: 14.38 kB/s, Average Wait: 0.03 ms, Average Read Wait: 0.00 ms, Average Write Wait: 0.03 ms, Latency: 0.03 ms
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;Filesystem /;OK;HARD;1;OK - 16.7% used (16.00 of 96.00 GB), trend: -3.78 MB / 24 hours
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;Filesystem /home;OK;HARD;1;OK - 16.6% used (15.93 of 96.00 GB), trend: +305.63 kB / 24 hours
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;Filesystem /mnt/data;OK;HARD;1;OK - 72.9% used (19.88 of 27.28 TB), trend: +127.68 GB / 24 hours
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HD_cfradial/moments/sband;WARNING;HARD;1;WARN - late
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HD_fmq/moments/sband/shmem_20000;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HD_spdb/monitor/sband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HD_spdb/rhi/sband;CRITICAL;HARD;1;CRIT - missing
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_DataMapper_primary;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_DsFileDist_front;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_DsFmqServer_manager;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_DsServerMgr_primary;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_Dsr2Radx_bscan.sband;UNKNOWN;HARD;1;UNKNOWN - Item not found in agent output
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_Dsr2Radx_bscan.spoldrx;UNKNOWN;HARD;1;UNKNOWN - Item not found in agent output
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_Dsr2Radx_covar.sband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_Dsr2Radx_moments.kband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_Dsr2Radx_moments.sband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_Dsr2Radx_sunscan.sband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_RadxPartRain_sband.rhi;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_RadxPartRain_sband.sur;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_Rhi2Spdb_sband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_Scout_primary;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HP_TsSmartSave_sband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HawkSummary_Data;CRITICAL;HARD;1;CRIT - Services ok/prob: 2/2
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 13/0
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;Interface 2;OK;HARD;1;OK - [em1] (up) MAC: d4:ae:52:b5:be:0b, 1 Gbit/s, in: 13.16 MB/s(11.0%), out: 131.34 kB/s(0.1%)
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;Kernel Context Switches;OK;HARD;1;OK - 5868/s
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;Kernel Major Page Faults;OK;HARD;1;OK - 0/s
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;Kernel Process Creations;OK;HARD;1;OK - 7/s
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;Logins;OK;HARD;1;OK - 1 logins on system (warn/crit at 20/30)
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;Memory;OK;HARD;1;OK - RAM used: 4.65 GB of 62.71 GB, Swap used: 683.89 MB of 7.81 GB, Total virtual memory used: 5.31 GB of 70.53 GB (7.5%),
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;Mount options of /;OK;HARD;1;OK - mount options exactly as expected
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;Mount options of /home;OK;HARD;1;OK - mount options exactly as expected
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;Mount options of /mnt/data;OK;HARD;1;OK - mount options exactly as expected
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;NTP Time;OK;HARD;1;OK - stratum 2, offset 0.0344 ms, reference: 192.168.4.248 (ntp.gate.rtf)
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;Number of threads;OK;HARD;1;OK - 368 threads
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;Postfix Queue;OK;HARD;1;OK - deferred queue length is 0, active queue length is 0
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;TCP Connections;OK;HARD;1;OK - ESTABLISHED: 5, TIME_WAIT: 67, LISTEN: 30
+[1523318400] CURRENT SERVICE STATE: pgen1.gate.rtf;Uptime;OK;HARD;1;OK - up since Thu Mar 29 17:11:11 2018 (11d 06:48:02)
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;CPU load;OK;HARD;1;OK - 15 min load 0.13 at 24 Cores (0.01 per Core)
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;CPU utilization;OK;HARD;1;OK - user: 0.6%, system: 0.2%, wait: 0.0%, steal: 0.0%, guest: 0.0%, total: 0.9%
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;Check_MK;OK;HARD;1;OK - Agent version 1.2.8p18, execution time 0.6 sec
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;Check_MK Discovery;OK;HARD;1;OK - no unmonitored services found, no vanished services found
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;Disk IO SUMMARY;OK;HARD;1;OK - Utilization: 0.0%, Read: 0.00 B/s, Write: 15.04 kB/s, Average Wait: 0.01 ms, Average Read Wait: 0.00 ms, Average Write Wait: 0.01 ms, Latency: 0.01 ms
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;Filesystem /;OK;HARD;1;OK - 16.1% used (15.46 of 96.00 GB), trend: -7.32 MB / 24 hours
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;Filesystem /home;OK;HARD;1;OK - 11.7% used (11.21 of 96.00 GB), trend: +265.70 kB / 24 hours
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;Filesystem /mnt/data;OK;HARD;1;OK - 79.2% used (21.61 of 27.28 TB), trend: +95.06 GB / 24 hours
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;HD_cfradial/moments/sband;WARNING;HARD;1;WARN - late
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;HD_fmq/moments/sband/shmem_20000;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;HD_spdb/monitor/sband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;HD_spdb/rhi/sband;CRITICAL;HARD;1;CRIT - missing
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_DataMapper_primary;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_DsFileDist_front;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_DsFmqServer_manager;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_DsServerMgr_primary;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_Dsr2Radx_covar.sband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_Dsr2Radx_moments.kband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_Dsr2Radx_moments.sband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_Dsr2Radx_sunscan.sband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_RadxPartRain_sband.rhi;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_RadxPartRain_sband.sur;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_Rhi2Spdb_sband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_Scout_primary;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;HP_TsSmartSave_sband;OK;HARD;1;OK - OK
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;HawkSummary_Data;CRITICAL;HARD;1;CRIT - Services ok/prob: 2/2
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 13/0
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;Interface 2;OK;HARD;1;OK - [em1] (up) MAC: d4:ae:52:b5:b0:cc, 1 Gbit/s, in: 13.17 MB/s(11.0%), out: 131.20 kB/s(0.1%)
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;Interface 3;OK;HARD;1;OK - [em2] (up) MAC: d4:ae:52:b5:b0:cd, 1 Gbit/s, in: 129.91 B/s(0.0%), out: 0.00 B/s(0.0%)
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;Kernel Context Switches;OK;HARD;1;OK - 4076/s
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;Kernel Major Page Faults;OK;HARD;1;OK - 0/s
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;Kernel Process Creations;OK;HARD;1;OK - 7/s
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;Logins;OK;HARD;1;OK - 0 logins on system (warn/crit at 20/30)
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;Memory;OK;HARD;1;OK - RAM used: 4.60 GB of 62.71 GB, Swap used: 0.00 B of 7.81 GB, Total virtual memory used: 4.60 GB of 70.53 GB (6.5%),
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;Mount options of /;OK;HARD;1;OK - mount options exactly as expected
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;Mount options of /home;OK;HARD;1;OK - mount options exactly as expected
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;Mount options of /mnt/data;OK;HARD;1;OK - mount options exactly as expected
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;NTP Time;OK;HARD;1;OK - stratum 2, offset 0.0176 ms, reference: 192.168.4.248 (ntp.gate.rtf)
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;Number of threads;OK;HARD;1;OK - 361 threads
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;Postfix Queue;OK;HARD;1;OK - deferred queue length is 0, active queue length is 0
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;TCP Connections;OK;HARD;1;OK - ESTABLISHED: 4, CLOSE_WAIT: 1, TIME_WAIT: 63, FIN_WAIT2: 1, LISTEN: 23
+[1523318400] CURRENT SERVICE STATE: pgen2.gate.rtf;Uptime;OK;HARD;1;OK - up since Thu Mar 29 17:11:33 2018 (11d 06:47:32)
+[1523318400] TIMEPERIOD TRANSITION: 24X7;1;1
+[1523318526] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523318586] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523318664] SERVICE FLAPPING ALERT: control1.gate.rtf;TEMP_SCC;STOPPED; Service appears to have stopped flapping (3.9% change < 5.0% threshold)
+[1523318664] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;FLAPPINGSTOP (OK);check-mk-notify;OK - 31.5
+[1523318706] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523318766] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523318873] Auto-save of retention data completed successfully.
+[1523319006] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523319066] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523319186] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523319246] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523319486] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523319546] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523319666] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523319726] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523319966] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523319984] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.1
+[1523319984] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.1
+[1523320026] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523320146] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523320164] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523320164] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.9
+[1523320206] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523320446] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523320506] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523320626] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523320686] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523320926] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523320986] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523321106] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523321166] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523321406] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523321466] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523321586] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523321646] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523321886] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523321946] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523322024] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523322024] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.5
+[1523322066] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523322126] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523322144] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523322144] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.8
+[1523322366] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523322426] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523322473] Auto-save of retention data completed successfully.
+[1523322546] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523322606] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523322846] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523322906] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523323026] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523323086] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523323326] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523323386] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523323524] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523323524] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.5
+[1523323626] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523323644] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523323644] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.8
+[1523323746] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523323866] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523323926] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523324166] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523324226] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523324346] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523324406] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523324646] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523324706] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523324826] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523324886] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523325024] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.3
+[1523325024] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.3
+[1523325126] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523325186] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523325264] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523325264] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.6
+[1523325306] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523325366] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523325606] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523325666] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523325906] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523325966] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523326073] Auto-save of retention data completed successfully.
+[1523326086] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523326146] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523326386] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523326446] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523326524] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523326524] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.5
+[1523326566] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523326626] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523326704] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.5
+[1523326704] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.5
+[1523326866] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523326926] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523327046] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523327106] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523327346] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523327406] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523327526] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523327586] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523327826] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523327844] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.3
+[1523327844] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.3
+[1523327886] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523327964] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523327964] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.6
+[1523328006] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523328066] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523328306] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523328366] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523328486] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523328546] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523328786] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523328846] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523328966] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523329026] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523329104] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523329104] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.5
+[1523329224] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523329224] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.6
+[1523329266] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523329326] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523329626] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523329673] Auto-save of retention data completed successfully.
+[1523329686] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523329806] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523329866] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523330106] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523330166] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523330286] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523330304] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.4
+[1523330304] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.4
+[1523330346] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523330424] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523330424] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.6
+[1523330586] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523330646] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523330766] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523330826] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523331066] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523331126] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523331246] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523331306] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523331444] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523331444] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.5
+[1523331546] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523331564] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523331564] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.6
+[1523331606] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523331726] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523331786] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523332026] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523332086] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523332206] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523332266] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523332506] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523332566] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523332644] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523332644] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.5
+[1523332686] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523332746] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523332764] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.5
+[1523332764] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.5
+[1523332986] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523333046] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523333273] Auto-save of retention data completed successfully.
+[1523333286] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523333346] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523333466] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523333526] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523333784] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523333784] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.7
+[1523333886] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523333904] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.5
+[1523333904] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.5
+[1523333946] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523334186] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523334246] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523334366] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523334426] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523334666] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523334726] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523334846] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523334906] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523334984] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.4
+[1523334984] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.4
+[1523335104] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.5
+[1523335104] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.5
+[1523335146] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523335206] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523335386] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523335446] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523335686] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523335746] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523336106] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523336124] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.4
+[1523336124] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.4
+[1523336166] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523336244] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.3
+[1523336244] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.3
+[1523336406] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523336466] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523336586] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523336646] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523336873] Auto-save of retention data completed successfully.
+[1523336886] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523336946] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523337066] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523337126] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523337264] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523337264] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.5
+[1523337366] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523337384] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523337384] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.6
+[1523337426] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523337546] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523337606] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523337846] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523337906] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523338026] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523338086] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523338326] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523338386] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523338404] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.9
+[1523338404] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.9
+[1523338506] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523338524] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523338524] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.8
+[1523338566] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523338806] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523338866] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523338986] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523339046] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523339286] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523339346] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523339586] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523339604] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.4
+[1523339604] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.4
+[1523339646] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523339766] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523339784] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.3
+[1523339784] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.3
+[1523339826] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523340066] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523340126] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523340246] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523340306] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523340473] Auto-save of retention data completed successfully.
+[1523340546] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523340606] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523340684] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523340684] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.5
+[1523340726] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523340786] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523340804] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523340804] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.6
+[1523341026] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523341146] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523341266] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523341326] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523341566] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523341626] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523341746] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523341764] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.4
+[1523341764] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.4
+[1523341806] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523341884] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523341884] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.8
+[1523342046] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523342106] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523342226] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523342286] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523342526] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523342586] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523342706] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523342766] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523342904] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.3
+[1523342904] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.3
+[1523343006] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523343066] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523343144] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.3
+[1523343144] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.3
+[1523343306] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523343366] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523343486] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523343546] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523343786] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523343846] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523343966] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523343984] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.3
+[1523343984] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.3
+[1523344026] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523344073] Auto-save of retention data completed successfully.
+[1523344104] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523344104] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.9
+[1523344266] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523344326] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523344446] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523344506] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523344746] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523344806] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523344926] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523344986] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523345004] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.9
+[1523345004] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.9
+[1523345124] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523345124] SERVICE FLAPPING ALERT: control1.gate.rtf;TEMP_SCC;STARTED; Service appears to have started flapping (20.0% change >= 20.0% threshold)
+[1523345124] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;FLAPPINGSTART (OK);check-mk-notify;OK - 31.6
+[1523345226] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523345286] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523345406] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523345466] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523345706] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523345766] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523345886] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523345946] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523346084] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.3
+[1523346186] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523346204] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523346246] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523346486] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523346546] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523346666] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523346726] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523347026] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523347044] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523347086] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523347164] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523347206] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523347266] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523347506] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523347566] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523347673] Auto-save of retention data completed successfully.
+[1523347686] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523347746] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523347986] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523348046] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523348166] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523348184] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523348226] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523348304] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523348466] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523348526] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523348646] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523348706] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523348946] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523349006] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523349126] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523349186] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523349204] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.1
+[1523349384] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523349426] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523349486] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523349606] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523349666] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523349906] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523349966] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523350086] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523350146] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523350386] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523350404] SERVICE FLAPPING ALERT: control1.gate.rtf;TEMP_SCC;STOPPED; Service appears to have stopped flapping (4.0% change < 5.0% threshold)
+[1523350404] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;FLAPPINGSTOP (OK);check-mk-notify;OK - 30.6
+[1523350446] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523350584] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523350584] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.7
+[1523350704] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523350704] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.8
+[1523350806] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523350866] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523351106] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523351166] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523351273] Auto-save of retention data completed successfully.
+[1523351286] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523351346] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523351586] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523351646] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523351766] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523351826] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523351844] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.9
+[1523351844] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.9
+[1523351964] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523351964] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.6
+[1523352066] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523352126] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523352246] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523352306] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523352546] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523352606] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523352786] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523352846] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523353044] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.4
+[1523353044] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.4
+[1523353086] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523353146] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523353224] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.5
+[1523353224] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.5
+[1523353266] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523353326] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523353566] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523353626] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523353746] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523353806] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523354046] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523354106] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523354184] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523354184] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.7
+[1523354304] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523354304] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.6
+[1523354346] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523354406] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523354526] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523354586] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523354826] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523354873] Auto-save of retention data completed successfully.
+[1523354886] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523355006] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523355066] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523355426] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523355444] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523355444] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.7
+[1523355486] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523355564] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523355564] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.8
+[1523355726] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523355786] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523355906] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523355966] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523356206] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523356266] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523356386] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523356446] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523356686] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523356746] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523356824] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.4
+[1523356824] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.4
+[1523356866] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523356926] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523356944] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523356944] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.6
+[1523357166] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523357226] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523357346] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523357406] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523357646] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523357706] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523357826] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523357886] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523358084] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.3
+[1523358084] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.3
+[1523358126] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523358186] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523358204] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.5
+[1523358204] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.5
+[1523358426] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523358473] Auto-save of retention data completed successfully.
+[1523358546] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523358666] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523358726] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523358966] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523359026] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523359146] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523359206] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523359284] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523359284] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.5
+[1523359404] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.5
+[1523359404] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.5
+[1523359446] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523359506] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523359626] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523359686] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523359926] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523359986] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523360106] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523360166] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523360304] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.9
+[1523360304] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.9
+[1523360406] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523360424] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523360424] SERVICE FLAPPING ALERT: control1.gate.rtf;TEMP_SCC;STARTED; Service appears to have started flapping (20.0% change >= 20.0% threshold)
+[1523360424] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;FLAPPINGSTART (OK);check-mk-notify;OK - 31.6
+[1523360466] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523360586] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523360646] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523360886] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523360946] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523361066] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523361126] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523361324] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523361366] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523361426] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523361444] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.5
+[1523361546] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523361606] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523361846] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523361906] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523362026] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523362073] Auto-save of retention data completed successfully.
+[1523362086] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523362284] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523362326] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523362386] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523362404] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523362506] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523362566] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523362806] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523362866] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523362986] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523363046] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523363286] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523363346] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523363466] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523363484] SERVICE FLAPPING ALERT: control1.gate.rtf;TEMP_SCC;STOPPED; Service appears to have stopped flapping (3.9% change < 5.0% threshold)
+[1523363484] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;FLAPPINGSTOP (OK);check-mk-notify;OK - 30.7
+[1523363526] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523363664] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523363664] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.7
+[1523363766] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523363784] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523363784] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.9
+[1523363826] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523363946] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523364006] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523364246] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523364366] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523364486] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523364546] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523364786] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523364846] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523364966] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523365026] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523365164] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.5
+[1523365164] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.5
+[1523365266] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523365326] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523365344] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.8
+[1523365344] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.8
+[1523365446] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523365506] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523365673] Auto-save of retention data completed successfully.
+[1523365746] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523365806] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523365926] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523365986] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523366226] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523366286] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523366646] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523366706] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523366946] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523367006] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523367084] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 33.0
+[1523367084] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 33.0
+[1523367126] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523367186] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523367324] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523367324] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.9
+[1523367426] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523367486] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523367606] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523367666] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523367906] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523367966] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523368086] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523368146] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523368386] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523368446] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523368566] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523368626] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523368866] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523368926] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523369046] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523369064] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.7
+[1523369064] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.7
+[1523369106] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523369244] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.6
+[1523369244] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.6
+[1523369273] Auto-save of retention data completed successfully.
+[1523369346] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523369406] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523369526] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523369586] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523369826] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523369886] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523370006] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523370126] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523370366] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523370426] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523370786] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523370846] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523370984] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.3
+[1523370984] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.3
+[1523371164] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 31.9
+[1523371164] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 31.9
+[1523371206] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523371266] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523371506] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523371566] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523371686] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523371746] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523371986] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523372046] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523372166] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523372226] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523372466] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523372526] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523372646] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523372706] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523372873] Auto-save of retention data completed successfully.
+[1523372946] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523373006] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523373126] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523373186] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523373426] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523373486] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523373606] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523373666] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523373906] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523373966] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523374206] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523374266] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523374386] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523374446] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523374686] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523374746] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523374866] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523374926] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523375166] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523375226] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523375346] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523375406] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523375646] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523375706] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523375886] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523375946] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523376186] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523376246] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523376366] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523376426] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523376473] Auto-save of retention data completed successfully.
+[1523376666] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523376726] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523376846] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523376906] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523377146] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523377206] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523377326] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523377386] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523377626] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523377686] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523377806] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523377866] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523378106] SERVICE ALERT: mgen1.gate.rtf;HD_/tmp/fmq/syscon;OK;HARD;1;OK - OK
+[1523378106] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;HD_/tmp/fmq/syscon;OK;check-mk-notify;OK - OK
+[1523378107] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523378166] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523378166] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;OK;HARD;1;OK - stationaryPeriod = 0 sec
+[1523378166] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;OK;check-mk-notify;OK - stationaryPeriod = 0 sec
+[1523378226] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;WARNING;HARD;1;WARN - CRITICAL - stationaryPeriod = 56 sec
+[1523378226] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;WARNING;check-mk-notify;WARN - CRITICAL - stationaryPeriod = 56 sec
+[1523378244] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Brakes_Fault;OK;HARD;1;OK - 0
+[1523378244] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Brakes_Fault;OK;check-mk-notify;OK - 0
+[1523378245] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Fans_Fault;OK;HARD;1;OK - 0
+[1523378245] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Fans_Fault;OK;check-mk-notify;OK - 0
+[1523378246] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Brakes_Fault;OK;HARD;1;OK - 0
+[1523378246] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Brakes_Fault;OK;check-mk-notify;OK - 0
+[1523378247] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Fans_Fault;OK;HARD;1;OK - 0
+[1523378247] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Fans_Fault;OK;check-mk-notify;OK - 0
+[1523378247] SERVICE ALERT: control1.gate.rtf;ANT_Oil_Pressure_Fault;OK;HARD;1;OK - 0
+[1523378247] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Oil_Pressure_Fault;OK;check-mk-notify;OK - 0
+[1523378248] SERVICE ALERT: control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;OK;HARD;1;OK - 0
+[1523378248] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;OK;check-mk-notify;OK - 0
+[1523378286] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;OK;HARD;1;OK - stationaryPeriod = 28 sec
+[1523378286] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;OK;check-mk-notify;OK - stationaryPeriod = 28 sec
+[1523378346] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;HARD;1;WARN - stationaryPeriod = 76 sec
+[1523378346] SERVICE FLAPPING ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;STARTED; Service appears to have started flapping (24.2% change >= 20.0% threshold)
+[1523378346] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;FLAPPINGSTART (CRITICAL);check-mk-notify;WARN - stationaryPeriod = 76 sec
+[1523378364] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Brakes_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523378364] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Brakes_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523378365] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Fans_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523378365] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Fans_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523378365] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Brakes_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523378365] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Brakes_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523378366] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Fans_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523378366] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Fans_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523378367] SERVICE ALERT: control1.gate.rtf;ANT_Oil_Pressure_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523378367] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Oil_Pressure_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523378368] SERVICE ALERT: control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523378368] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523378526] SERVICE ALERT: mgen1.gate.rtf;HD_/tmp/fmq/syscon;WARNING;HARD;1;WARN - late
+[1523378526] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;HD_/tmp/fmq/syscon;WARNING;check-mk-notify;WARN - late
+[1523378527] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523378586] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523378826] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523378886] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523379006] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523379066] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523379306] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523379366] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523379486] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523379486] SERVICE FLAPPING ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;STOPPED; Service appears to have stopped flapping (3.8% change < 5.0% threshold)
+[1523379486] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;FLAPPINGSTOP (CRITICAL);check-mk-notify;WARN - stationaryPeriod = 1228 sec
+[1523379487] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;check-mk-notify;WARN - stationaryPeriod = 1228 sec
+[1523379546] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523379786] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523379846] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523379966] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523380026] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523380073] Auto-save of retention data completed successfully.
+[1523380266] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523380326] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523380446] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523380506] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523380746] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523380806] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523380926] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523380986] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523381226] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523381286] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523381406] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523381466] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523381586] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523381646] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523381766] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523381826] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523382066] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523382126] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523382246] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523382306] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523382546] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523382606] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523382726] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523382786] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523383026] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523383086] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523383206] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523383266] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523383506] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523383566] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523383673] Auto-save of retention data completed successfully.
+[1523383686] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523383746] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523383824] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.1
+[1523383824] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.1
+[1523383986] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523384046] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523384166] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523384226] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523384466] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523384526] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523384886] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523384946] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523385186] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523385246] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523385366] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523385426] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523385666] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523385726] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523385846] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523385906] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523386146] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523386206] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523386326] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523386386] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523386626] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523386686] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523386806] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523386866] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523387106] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523387166] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523387273] Auto-save of retention data completed successfully.
+[1523387286] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523387406] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523387646] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523387706] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523388066] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523388126] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523388366] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523388426] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523388504] SERVICE ALERT: control1.gate.rtf;TEMP_Front_Wall;CRITICAL;HARD;1;CRIT - CRITICAL - 341.0
+[1523388504] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_Front_Wall;CRITICAL;check-mk-notify;CRIT - CRITICAL - 341.0
+[1523388505] SERVICE ALERT: control1.gate.rtf;TEMP_Horiz_LNA;CRITICAL;HARD;1;CRIT - CRITICAL - 328.1
+[1523388505] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_Horiz_LNA;CRITICAL;check-mk-notify;CRIT - CRITICAL - 328.1
+[1523388505] SERVICE ALERT: control1.gate.rtf;TEMP_Rcvr_Enclosure;CRITICAL;HARD;1;CRIT - CRITICAL - 337.5
+[1523388505] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_Rcvr_Enclosure;CRITICAL;check-mk-notify;CRIT - CRITICAL - 337.5
+[1523388506] SERVICE ALERT: control1.gate.rtf;TEMP_Vert_LNA;CRITICAL;HARD;1;CRIT - CRITICAL - 331.1
+[1523388506] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_Vert_LNA;CRITICAL;check-mk-notify;CRIT - CRITICAL - 331.1
+[1523388546] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523388606] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523388786] SERVICE ALERT: mgen1.gate.rtf;HD_/tmp/fmq/syscon;OK;HARD;1;OK - OK
+[1523388786] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;HD_/tmp/fmq/syscon;OK;check-mk-notify;OK - OK
+[1523388786] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;OK;HARD;1;OK - stationaryPeriod = 6 sec
+[1523388786] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;OK;check-mk-notify;OK - stationaryPeriod = 6 sec
+[1523388804] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Brakes_Fault;OK;HARD;1;OK - 0
+[1523388804] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Brakes_Fault;OK;check-mk-notify;OK - 0
+[1523388805] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Fans_Fault;OK;HARD;1;OK - 0
+[1523388805] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Fans_Fault;OK;check-mk-notify;OK - 0
+[1523388806] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Brakes_Fault;OK;HARD;1;OK - 0
+[1523388806] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Brakes_Fault;OK;check-mk-notify;OK - 0
+[1523388807] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Fans_Fault;OK;HARD;1;OK - 0
+[1523388807] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Fans_Fault;OK;check-mk-notify;OK - 0
+[1523388807] SERVICE ALERT: control1.gate.rtf;ANT_Oil_Pressure_Fault;OK;HARD;1;OK - 0
+[1523388807] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Oil_Pressure_Fault;OK;check-mk-notify;OK - 0
+[1523388808] SERVICE ALERT: control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;OK;HARD;1;OK - 0
+[1523388808] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;OK;check-mk-notify;OK - 0
+[1523388846] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523388906] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523388906] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;HARD;1;WARN - stationaryPeriod = 70 sec
+[1523388906] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;check-mk-notify;WARN - stationaryPeriod = 70 sec
+[1523388924] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Brakes_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523388924] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Brakes_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523388925] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Fans_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523388925] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Fans_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523388926] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Brakes_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523388926] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Brakes_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523388927] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Fans_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523388927] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Fans_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523388927] SERVICE ALERT: control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523388927] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523389026] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523389086] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523389104] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Brakes_Fault;OK;HARD;1;OK - 0
+[1523389104] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Brakes_Fault;OK;check-mk-notify;OK - 0
+[1523389105] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Fans_Fault;OK;HARD;1;OK - 0
+[1523389105] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Fans_Fault;OK;check-mk-notify;OK - 0
+[1523389105] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Brakes_Fault;OK;HARD;1;OK - 0
+[1523389105] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Brakes_Fault;OK;check-mk-notify;OK - 0
+[1523389106] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Fans_Fault;OK;HARD;1;OK - 0
+[1523389106] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Fans_Fault;OK;check-mk-notify;OK - 0
+[1523389107] SERVICE ALERT: control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;OK;HARD;1;OK - 0
+[1523389107] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;OK;check-mk-notify;OK - 0
+[1523389146] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;WARNING;HARD;1;WARN - CRITICAL - stationaryPeriod = 42 sec
+[1523389146] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;WARNING;check-mk-notify;WARN - CRITICAL - stationaryPeriod = 42 sec
+[1523389206] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;HARD;1;WARN - stationaryPeriod = 106 sec
+[1523389206] SERVICE FLAPPING ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;STARTED; Service appears to have started flapping (23.3% change >= 20.0% threshold)
+[1523389206] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;FLAPPINGSTART (CRITICAL);check-mk-notify;WARN - stationaryPeriod = 106 sec
+[1523389266] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;OK;HARD;1;OK - stationaryPeriod = 6 sec
+[1523389326] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523389326] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;HARD;1;WARN - stationaryPeriod = 70 sec
+[1523389386] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523389404] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Brakes_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523389404] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Azimuth_Brakes_Fault;STARTED; Service appears to have started flapping (22.0% change >= 20.0% threshold)
+[1523389404] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Brakes_Fault;FLAPPINGSTART (CRITICAL);check-mk-notify;CRIT - FAULT - 1
+[1523389405] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Fans_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523389405] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Azimuth_Fans_Fault;STARTED; Service appears to have started flapping (22.0% change >= 20.0% threshold)
+[1523389405] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Fans_Fault;FLAPPINGSTART (CRITICAL);check-mk-notify;CRIT - FAULT - 1
+[1523389406] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Brakes_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523389406] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Elevation_Brakes_Fault;STARTED; Service appears to have started flapping (22.0% change >= 20.0% threshold)
+[1523389406] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Brakes_Fault;FLAPPINGSTART (CRITICAL);check-mk-notify;CRIT - FAULT - 1
+[1523389407] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Fans_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523389407] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Elevation_Fans_Fault;STARTED; Service appears to have started flapping (22.0% change >= 20.0% threshold)
+[1523389407] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Fans_Fault;FLAPPINGSTART (CRITICAL);check-mk-notify;CRIT - FAULT - 1
+[1523389408] SERVICE ALERT: control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523389408] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;STARTED; Service appears to have started flapping (22.0% change >= 20.0% threshold)
+[1523389408] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;FLAPPINGSTART (CRITICAL);check-mk-notify;CRIT - FAULT - 1
+[1523389446] SERVICE ALERT: mgen1.gate.rtf;HD_/tmp/fmq/syscon;WARNING;HARD;1;WARN - late
+[1523389446] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;HD_/tmp/fmq/syscon;WARNING;check-mk-notify;WARN - late
+[1523389464] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 25.9
+[1523389464] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 25.9
+[1523389506] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523389566] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523389644] SERVICE ALERT: control1.gate.rtf;ANT_Antenna_Door_Open_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523389644] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Antenna_Door_Open_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523389806] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523389866] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523389884] SERVICE ALERT: control1.gate.rtf;ANT_Antenna_Door_Open_Fault;OK;HARD;1;OK - 0
+[1523389884] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Antenna_Door_Open_Fault;OK;check-mk-notify;OK - 0
+[1523389884] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Brakes_Fault;OK;HARD;1;OK - 0
+[1523389884] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Fans_Fault;OK;HARD;1;OK - 0
+[1523389884] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Brakes_Fault;OK;HARD;1;OK - 0
+[1523389884] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Fans_Fault;OK;HARD;1;OK - 0
+[1523389884] SERVICE ALERT: control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;OK;HARD;1;OK - 0
+[1523389926] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;WARNING;HARD;1;WARN - CRITICAL - stationaryPeriod = 48 sec
+[1523389986] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523389986] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;HARD;1;WARN - stationaryPeriod = 112 sec
+[1523390046] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523390286] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523390346] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523390586] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523390604] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Azimuth_Brakes_Fault;STOPPED; Service appears to have stopped flapping (4.7% change < 5.0% threshold)
+[1523390604] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Brakes_Fault;FLAPPINGSTOP (OK);check-mk-notify;OK - 0
+[1523390604] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Azimuth_Fans_Fault;STOPPED; Service appears to have stopped flapping (4.7% change < 5.0% threshold)
+[1523390604] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Fans_Fault;FLAPPINGSTOP (OK);check-mk-notify;OK - 0
+[1523390605] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Elevation_Brakes_Fault;STOPPED; Service appears to have stopped flapping (4.7% change < 5.0% threshold)
+[1523390605] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Brakes_Fault;FLAPPINGSTOP (OK);check-mk-notify;OK - 0
+[1523390606] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Elevation_Fans_Fault;STOPPED; Service appears to have stopped flapping (4.7% change < 5.0% threshold)
+[1523390606] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Fans_Fault;FLAPPINGSTOP (OK);check-mk-notify;OK - 0
+[1523390607] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;STOPPED; Service appears to have stopped flapping (4.7% change < 5.0% threshold)
+[1523390607] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;FLAPPINGSTOP (OK);check-mk-notify;OK - 0
+[1523390646] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523390766] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523390826] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523390873] Auto-save of retention data completed successfully.
+[1523391066] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523391126] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523391126] SERVICE FLAPPING ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;STOPPED; Service appears to have stopped flapping (3.8% change < 5.0% threshold)
+[1523391126] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;FLAPPINGSTOP (CRITICAL);check-mk-notify;WARN - stationaryPeriod = 1248 sec
+[1523391127] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;check-mk-notify;WARN - stationaryPeriod = 1248 sec
+[1523391246] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523391264] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;WARNING;HARD;1;WARN - WARNING - 32.1
+[1523391264] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;WARNING;check-mk-notify;WARN - WARNING - 32.1
+[1523391306] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523391444] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Brakes_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523391444] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Brakes_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523391445] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Fans_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523391445] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Fans_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523391446] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Brakes_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523391446] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Brakes_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523391446] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Fans_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523391446] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Fans_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523391447] SERVICE ALERT: control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523391447] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523391504] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Brakes_Fault;OK;HARD;1;OK - 0
+[1523391504] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Brakes_Fault;OK;check-mk-notify;OK - 0
+[1523391504] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Fans_Fault;OK;HARD;1;OK - 0
+[1523391504] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Fans_Fault;OK;check-mk-notify;OK - 0
+[1523391505] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Brakes_Fault;OK;HARD;1;OK - 0
+[1523391505] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Brakes_Fault;OK;check-mk-notify;OK - 0
+[1523391506] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Fans_Fault;OK;HARD;1;OK - 0
+[1523391506] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Fans_Fault;OK;check-mk-notify;OK - 0
+[1523391507] SERVICE ALERT: control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;OK;HARD;1;OK - 0
+[1523391507] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;OK;check-mk-notify;OK - 0
+[1523391546] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523391606] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523391726] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523391786] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523391804] SERVICE ALERT: control1.gate.rtf;ANT_Antenna_Door_Open_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523391804] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Antenna_Door_Open_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523391804] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Brakes_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523391804] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Brakes_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523391805] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Fans_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523391805] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Fans_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523391806] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Brakes_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523391806] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Brakes_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523391807] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Fans_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523391807] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Fans_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523391864] SERVICE ALERT: control1.gate.rtf;ANT_Antenna_Door_Open_Fault;OK;HARD;1;OK - 0
+[1523391864] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Antenna_Door_Open_Fault;OK;check-mk-notify;OK - 0
+[1523391865] SERVICE ALERT: control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523391865] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523391984] SERVICE ALERT: control1.gate.rtf;ANT_Antenna_Door_Open_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523391984] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Antenna_Door_Open_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523392026] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523392086] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523392164] SERVICE ALERT: control1.gate.rtf;ANT_Antenna_Door_Open_Fault;OK;HARD;1;OK - 0
+[1523392164] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Antenna_Door_Open_Fault;STARTED; Service appears to have started flapping (23.2% change >= 20.0% threshold)
+[1523392164] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Antenna_Door_Open_Fault;FLAPPINGSTART (OK);check-mk-notify;OK - 0
+[1523392206] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523392224] SERVICE ALERT: control1.gate.rtf;ANT_Antenna_Door_Open_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523392266] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523392284] SERVICE ALERT: control1.gate.rtf;ANT_Antenna_Door_Open_Fault;OK;HARD;1;OK - 0
+[1523392344] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Brakes_Fault;OK;HARD;1;OK - 0
+[1523392344] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Azimuth_Brakes_Fault;STARTED; Service appears to have started flapping (20.0% change >= 20.0% threshold)
+[1523392344] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Brakes_Fault;FLAPPINGSTART (OK);check-mk-notify;OK - 0
+[1523392345] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Fans_Fault;OK;HARD;1;OK - 0
+[1523392345] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Azimuth_Fans_Fault;STARTED; Service appears to have started flapping (20.0% change >= 20.0% threshold)
+[1523392345] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Fans_Fault;FLAPPINGSTART (OK);check-mk-notify;OK - 0
+[1523392345] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Brakes_Fault;OK;HARD;1;OK - 0
+[1523392345] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Elevation_Brakes_Fault;STARTED; Service appears to have started flapping (20.0% change >= 20.0% threshold)
+[1523392345] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Brakes_Fault;FLAPPINGSTART (OK);check-mk-notify;OK - 0
+[1523392346] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Fans_Fault;OK;HARD;1;OK - 0
+[1523392346] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Elevation_Fans_Fault;STARTED; Service appears to have started flapping (20.0% change >= 20.0% threshold)
+[1523392346] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Fans_Fault;FLAPPINGSTART (OK);check-mk-notify;OK - 0
+[1523392347] SERVICE ALERT: control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;OK;HARD;1;OK - 0
+[1523392347] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;STARTED; Service appears to have started flapping (20.1% change >= 20.0% threshold)
+[1523392347] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;FLAPPINGSTART (OK);check-mk-notify;OK - 0
+[1523392506] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523392566] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523392686] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523392746] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523392986] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523393004] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Azimuth_Brakes_Fault;STOPPED; Service appears to have stopped flapping (4.8% change < 5.0% threshold)
+[1523393004] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Brakes_Fault;FLAPPINGSTOP (OK);check-mk-notify;OK - 0
+[1523393004] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Azimuth_Fans_Fault;STOPPED; Service appears to have stopped flapping (4.8% change < 5.0% threshold)
+[1523393004] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Fans_Fault;FLAPPINGSTOP (OK);check-mk-notify;OK - 0
+[1523393005] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Elevation_Brakes_Fault;STOPPED; Service appears to have stopped flapping (4.8% change < 5.0% threshold)
+[1523393005] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Brakes_Fault;FLAPPINGSTOP (OK);check-mk-notify;OK - 0
+[1523393006] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Elevation_Fans_Fault;STOPPED; Service appears to have stopped flapping (4.8% change < 5.0% threshold)
+[1523393006] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Fans_Fault;FLAPPINGSTOP (OK);check-mk-notify;OK - 0
+[1523393046] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523393064] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;STOPPED; Service appears to have stopped flapping (4.7% change < 5.0% threshold)
+[1523393064] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;FLAPPINGSTOP (OK);check-mk-notify;OK - 0
+[1523393166] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523393226] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523393346] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523393406] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523393424] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Antenna_Door_Open_Fault;STOPPED; Service appears to have stopped flapping (3.8% change < 5.0% threshold)
+[1523393424] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Antenna_Door_Open_Fault;FLAPPINGSTOP (OK);check-mk-notify;OK - 0
+[1523393425] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Brakes_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523393425] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Brakes_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523393426] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Fans_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523393426] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Fans_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523393427] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Brakes_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523393427] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Brakes_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523393428] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Fans_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523393428] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Fans_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523393429] SERVICE ALERT: control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523393429] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523393484] SERVICE ALERT: control1.gate.rtf;ANT_Antenna_Door_Open_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523393484] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Antenna_Door_Open_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523393526] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523393586] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523393664] SERVICE ALERT: control1.gate.rtf;ANT_Antenna_Door_Open_Fault;OK;HARD;1;OK - 0
+[1523393664] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Antenna_Door_Open_Fault;OK;check-mk-notify;OK - 0
+[1523393826] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523393844] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 29.0
+[1523393844] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 29.0
+[1523393886] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523394006] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523394066] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523394306] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523394366] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523394384] SERVICE ALERT: control1.gate.rtf;ANT_Antenna_Door_Open_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523394384] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Antenna_Door_Open_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523394444] SERVICE ALERT: control1.gate.rtf;ANT_Antenna_Door_Open_Fault;OK;HARD;1;OK - 0
+[1523394444] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Antenna_Door_Open_Fault;STARTED; Service appears to have started flapping (21.1% change >= 20.0% threshold)
+[1523394444] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Antenna_Door_Open_Fault;FLAPPINGSTART (OK);check-mk-notify;OK - 0
+[1523394473] Auto-save of retention data completed successfully.
+[1523394486] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523394504] SERVICE ALERT: control1.gate.rtf;ANT_Antenna_Door_Open_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523394546] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523394564] SERVICE ALERT: control1.gate.rtf;ANT_Antenna_Door_Open_Fault;OK;HARD;1;OK - 0
+[1523394666] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;OK;HARD;1;OK - stationaryPeriod = 20 sec
+[1523394666] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;OK;check-mk-notify;OK - stationaryPeriod = 20 sec
+[1523394684] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Brakes_Fault;OK;HARD;1;OK - 0
+[1523394684] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Brakes_Fault;OK;check-mk-notify;OK - 0
+[1523394685] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Fans_Fault;OK;HARD;1;OK - 0
+[1523394685] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Fans_Fault;OK;check-mk-notify;OK - 0
+[1523394686] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Brakes_Fault;OK;HARD;1;OK - 0
+[1523394686] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Brakes_Fault;OK;check-mk-notify;OK - 0
+[1523394687] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Fans_Fault;OK;HARD;1;OK - 0
+[1523394687] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Fans_Fault;OK;check-mk-notify;OK - 0
+[1523394688] SERVICE ALERT: control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;OK;HARD;1;OK - 0
+[1523394688] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;OK;check-mk-notify;OK - 0
+[1523394726] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;HARD;1;WARN - stationaryPeriod = 84 sec
+[1523394726] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;check-mk-notify;WARN - stationaryPeriod = 84 sec
+[1523394744] SERVICE ALERT: control1.gate.rtf;TEMP_Annex;WARNING;HARD;1;WARN - WARNING - 7.7
+[1523394744] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_Annex;WARNING;check-mk-notify;WARN - WARNING - 7.7
+[1523394786] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523394804] SERVICE ALERT: control1.gate.rtf;TEMP_Annex;OK;HARD;1;OK - 10.9
+[1523394804] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_Annex;OK;check-mk-notify;OK - 10.9
+[1523394846] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523394924] SERVICE ALERT: control1.gate.rtf;TEMP_Annex;UNKNOWN;HARD;1;UNKNOWN - Item not found in agent output
+[1523394924] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_Annex;UNKNOWN;check-mk-notify;UNKNOWN - Item not found in agent output
+[1523394924] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;UNKNOWN;HARD;1;UNKNOWN - Item not found in agent output
+[1523394924] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;UNKNOWN;check-mk-notify;UNKNOWN - Item not found in agent output
+[1523394966] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523395026] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523395044] SERVICE ALERT: control1.gate.rtf;TEMP_Annex;OK;HARD;1;OK - 19.3
+[1523395044] SERVICE FLAPPING ALERT: control1.gate.rtf;TEMP_Annex;STARTED; Service appears to have started flapping (23.6% change >= 20.0% threshold)
+[1523395044] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_Annex;FLAPPINGSTART (OK);check-mk-notify;OK - 19.3
+[1523395045] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 21.5
+[1523395045] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;OK;check-mk-notify;OK - 21.5
+[1523395224] SERVICE ALERT: control1.gate.rtf;TEMP_Annex;UNKNOWN;HARD;1;UNKNOWN - Item not found in agent output
+[1523395224] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;UNKNOWN;HARD;1;UNKNOWN - Item not found in agent output
+[1523395224] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;UNKNOWN;check-mk-notify;UNKNOWN - Item not found in agent output
+[1523395266] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523395326] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523395446] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523395506] SERVICE ALERT: mgen1.gate.rtf;HD_/tmp/fmq/syscon;OK;HARD;1;OK - OK
+[1523395506] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;HD_/tmp/fmq/syscon;OK;check-mk-notify;OK - OK
+[1523395507] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523395524] SERVICE ALERT: control1.gate.rtf;TEMP_Annex;OK;HARD;1;OK - 20.1
+[1523395524] SERVICE ALERT: control1.gate.rtf;TEMP_SCC;OK;HARD;1;OK - 22.1
+[1523395524] SERVICE FLAPPING ALERT: control1.gate.rtf;TEMP_SCC;STARTED; Service appears to have started flapping (22.0% change >= 20.0% threshold)
+[1523395524] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;FLAPPINGSTART (OK);check-mk-notify;OK - 22.1
+[1523395566] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;WARNING;HARD;1;WARN - CRITICAL - stationaryPeriod = 46 sec
+[1523395566] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;WARNING;check-mk-notify;WARN - CRITICAL - stationaryPeriod = 46 sec
+[1523395574] SERVICE ALERT: pgen1.gate.rtf;HD_cfradial/moments/sband;OK;HARD;1;OK - OK
+[1523395574] SERVICE NOTIFICATION: check-mk-notify;pgen1.gate.rtf;HD_cfradial/moments/sband;OK;check-mk-notify;OK - OK
+[1523395626] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;OK;HARD;1;OK - stationaryPeriod = 22 sec
+[1523395626] SERVICE FLAPPING ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;STARTED; Service appears to have started flapping (20.8% change >= 20.0% threshold)
+[1523395626] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;FLAPPINGSTART (OK);check-mk-notify;OK - stationaryPeriod = 22 sec
+[1523395626] SERVICE ALERT: pgen2.gate.rtf;HD_cfradial/moments/sband;OK;HARD;1;OK - OK
+[1523395626] SERVICE NOTIFICATION: check-mk-notify;pgen2.gate.rtf;HD_cfradial/moments/sband;OK;check-mk-notify;OK - OK
+[1523395644] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Brakes_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523395644] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Brakes_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523395644] SERVICE ALERT: control1.gate.rtf;ANT_Azimuth_Fans_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523395644] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Azimuth_Fans_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523395645] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Brakes_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523395645] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Brakes_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523395646] SERVICE ALERT: control1.gate.rtf;ANT_Elevation_Fans_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523395646] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Elevation_Fans_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523395647] SERVICE ALERT: control1.gate.rtf;ANT_Oil_Pressure_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523395647] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Oil_Pressure_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523395648] SERVICE ALERT: control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;CRITICAL;HARD;1;CRIT - FAULT - 1
+[1523395648] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Pedestal_Switch_Disabled_Fault;CRITICAL;check-mk-notify;CRIT - FAULT - 1
+[1523395686] SERVICE ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;HARD;1;WARN - stationaryPeriod = 86 sec
+[1523395704] SERVICE FLAPPING ALERT: control1.gate.rtf;ANT_Antenna_Door_Open_Fault;STOPPED; Service appears to have stopped flapping (3.8% change < 5.0% threshold)
+[1523395704] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;ANT_Antenna_Door_Open_Fault;FLAPPINGSTOP (OK);check-mk-notify;OK - 0
+[1523395746] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523395806] SERVICE ALERT: mgen1.gate.rtf;HD_/tmp/fmq/syscon;WARNING;HARD;1;WARN - late
+[1523395806] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;HD_/tmp/fmq/syscon;WARNING;check-mk-notify;WARN - late
+[1523395806] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523395926] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523395986] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523396226] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523396286] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523396406] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523396424] SERVICE FLAPPING ALERT: control1.gate.rtf;TEMP_Annex;STOPPED; Service appears to have stopped flapping (4.3% change < 5.0% threshold)
+[1523396424] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_Annex;FLAPPINGSTOP (OK);check-mk-notify;OK - 25.3
+[1523396425] SERVICE FLAPPING ALERT: control1.gate.rtf;TEMP_SCC;STOPPED; Service appears to have stopped flapping (4.3% change < 5.0% threshold)
+[1523396425] SERVICE NOTIFICATION: check-mk-notify;control1.gate.rtf;TEMP_SCC;FLAPPINGSTOP (OK);check-mk-notify;OK - 29.5
+[1523396466] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523396586] SERVICE ALERT: pgen2.gate.rtf;HD_cfradial/moments/sband;WARNING;HARD;1;WARN - late
+[1523396586] SERVICE NOTIFICATION: check-mk-notify;pgen2.gate.rtf;HD_cfradial/moments/sband;WARNING;check-mk-notify;WARN - late
+[1523396594] SERVICE ALERT: pgen1.gate.rtf;HD_cfradial/moments/sband;WARNING;HARD;1;WARN - late
+[1523396594] SERVICE NOTIFICATION: check-mk-notify;pgen1.gate.rtf;HD_cfradial/moments/sband;WARNING;check-mk-notify;WARN - late
+[1523396706] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523396766] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523396826] SERVICE FLAPPING ALERT: mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;STOPPED; Service appears to have stopped flapping (3.8% change < 5.0% threshold)
+[1523396826] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;FLAPPINGSTOP (CRITICAL);check-mk-notify;WARN - stationaryPeriod = 1222 sec
+[1523396827] SERVICE NOTIFICATION: check-mk-notify;mgen1.gate.rtf;SBandAntennaMovement_stationaryPeriod;CRITICAL;check-mk-notify;WARN - stationaryPeriod = 1222 sec
+[1523396886] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523396946] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523397186] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523397246] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523397486] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523397546] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523397666] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523397726] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523397966] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523398026] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523398073] Auto-save of retention data completed successfully.
+[1523398146] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523398206] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523398446] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523398506] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523398626] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523398686] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523398926] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523399046] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523399166] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523399226] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523399466] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523399526] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523399886] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523399946] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523400186] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523400246] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523400366] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523400426] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523400666] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523400726] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523400846] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523400906] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523401146] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523401206] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523401326] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523401386] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523401626] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523401673] Auto-save of retention data completed successfully.
+[1523401686] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523401806] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523401866] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523402106] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523402166] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523402286] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523402346] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523402586] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523402646] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523402766] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523402826] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523403066] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523403126] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523403486] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523403546] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523403786] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523403846] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523403966] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523404026] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523404266] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523404326] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523404446] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;CRITICAL;HARD;1;CRIT - Services ok/prob: 22/1
+[1523404506] SERVICE ALERT: mgen1.gate.rtf;HawkSummary_Processes;OK;HARD;1;OK - Services ok/prob: 23/0
+[1523404800] TIMEPERIOD TRANSITION: 24X7;1;1

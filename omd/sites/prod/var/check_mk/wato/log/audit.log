@@ -1,0 +1,56 @@
+1485442358 :control1.gate.rtf omdadmin create-host Created new host control1.gate.rtf.
+1485442400 control1.gate.rtf omdadmin refresh-autochecks Refreshed check configuration of host [control1.gate.rtf] with 23 services
+1485442428 - omdadmin snapshot-created Created snapshot wato-snapshot-2017-01-26-14-53-47.tar
+1485442431 - omdadmin mkeventd-activate Activated changes of event console configuration
+1485442617 :control2.gate.rtf omdadmin create-host Created new host control2.gate.rtf.
+1485442655 control2.gate.rtf omdadmin set-autochecks Saved check configuration of host [control2.gate.rtf] with 34 services
+1485442664 - omdadmin snapshot-created Created snapshot wato-snapshot-2017-01-26-14-57-43.tar
+1485442667 - omdadmin mkeventd-activate Activated changes of event console configuration
+1485442728 :mgen1.gate.rtf omdadmin create-host Created new host mgen1.gate.rtf.
+1485442870 - omdadmin edit-rule Created new rule in ruleset Disabled services in folder Main directory
+1485442913 mgen1.gate.rtf omdadmin refresh-autochecks Refreshed check configuration of host [mgen1.gate.rtf] with 49 services
+1485442928 - omdadmin snapshot-created Created snapshot wato-snapshot-2017-01-26-15-02-07.tar
+1485442931 - omdadmin mkeventd-activate Activated changes of event console configuration
+1485442990 :mgen2.gate.rtf omdadmin create-host Created new host mgen2.gate.rtf.
+1485443004 - omdadmin edit-rule Created new rule in ruleset Disabled services in folder Main directory
+1485443014 mgen2.gate.rtf omdadmin refresh-autochecks Refreshed check configuration of host [mgen2.gate.rtf] with 21 services
+1485443022 - omdadmin snapshot-created Created snapshot wato-snapshot-2017-01-26-15-03-41.tar
+1485443026 - omdadmin mkeventd-activate Activated changes of event console configuration
+1485443055 :pgen1.gate.rtf omdadmin create-host Created new host pgen1.gate.rtf.
+1485443490 - omdadmin edit-rule Created new rule in ruleset Disabled services in folder Main directory
+1485443579 pgen1.gate.rtf omdadmin refresh-autochecks Refreshed check configuration of host [pgen1.gate.rtf] with 36 services
+1485443585 - omdadmin snapshot-created Created snapshot wato-snapshot-2017-01-26-15-13-04.tar
+1485443589 - omdadmin mkeventd-activate Activated changes of event console configuration
+1485443721 :pgen2.gate.rtf omdadmin create-host Created new host pgen2.gate.rtf.
+1485443745 - omdadmin edit-rule Created new rule in ruleset Disabled services in folder Main directory
+1485443759 pgen2.gate.rtf omdadmin refresh-autochecks Refreshed check configuration of host [pgen2.gate.rtf] with 36 services
+1485443766 - omdadmin snapshot-created Created snapshot wato-snapshot-2017-01-26-15-16-05.tar
+1485443770 - omdadmin mkeventd-activate Activated changes of event console configuration
+1490136048 - omdadmin edit-users Create new user nagios
+1496711653 control1.gate.rtf omdadmin bulk-inventory Did service discovery on host: 0 added, 0 removed, 24 kept, 24 total services
+1496711653 control2.gate.rtf omdadmin bulk-inventory Did service discovery on host: 0 added, 0 removed, 25 kept, 25 total services
+1496711653 mgen1.gate.rtf omdadmin bulk-inventory Did service discovery on host: 0 added, 0 removed, 46 kept, 46 total services
+1496711653 mgen2.gate.rtf omdadmin bulk-inventory Did service discovery on host: 0 added, 0 removed, 22 kept, 22 total services
+1496711653 pgen1.gate.rtf omdadmin bulk-inventory Did service discovery on host: 0 added, 0 removed, 33 kept, 33 total services
+1496711653 pgen2.gate.rtf omdadmin bulk-inventory Did service discovery on host: 0 added, 0 removed, 33 kept, 33 total services
+1496711686 :mgen2.gate.rtf omdadmin delete-host Deleted host mgen2.gate.rtf
+1496711695 :control2.gate.rtf omdadmin delete-host Deleted host control2.gate.rtf
+1496711706 control1.gate.rtf omdadmin bulk-inventory Did service discovery on host: 0 added, 0 removed, 24 kept, 24 total services
+1496711706 mgen1.gate.rtf omdadmin bulk-inventory Did service discovery on host: 0 added, 0 removed, 46 kept, 46 total services
+1496711706 pgen1.gate.rtf omdadmin bulk-inventory Did service discovery on host: 0 added, 0 removed, 33 kept, 33 total services
+1496711706 pgen2.gate.rtf omdadmin bulk-inventory Did service discovery on host: 0 added, 0 removed, 33 kept, 33 total services
+1496711754 :control2.gate.rtf omdadmin create-host Created new host control2.gate.rtf.
+1496711781 control1.gate.rtf omdadmin bulk-inventory Did service discovery on host: 0 added, 0 removed, 24 kept, 24 total services
+1496711781 control2.gate.rtf omdadmin bulk-inventory Did service discovery on host: 0 added, 0 removed, 25 kept, 25 total services
+1496711781 mgen1.gate.rtf omdadmin bulk-inventory Did service discovery on host: 0 added, 0 removed, 46 kept, 46 total services
+1496711781 pgen1.gate.rtf omdadmin bulk-inventory Did service discovery on host: 0 added, 0 removed, 33 kept, 33 total services
+1496711781 pgen2.gate.rtf omdadmin bulk-inventory Did service discovery on host: 0 added, 0 removed, 33 kept, 33 total services
+1496711791 control1.gate.rtf omdadmin bulk-inventory Did service discovery on host: 0 added, 0 removed, 24 kept, 24 total services
+1496711791 control2.gate.rtf omdadmin bulk-inventory Did service discovery on host: 0 added, 0 removed, 25 kept, 25 total services
+1496711791 mgen1.gate.rtf omdadmin bulk-inventory Did service discovery on host: 0 added, 0 removed, 46 kept, 46 total services
+1496711791 pgen1.gate.rtf omdadmin bulk-inventory Did service discovery on host: 0 added, 0 removed, 33 kept, 33 total services
+1496711791 pgen2.gate.rtf omdadmin bulk-inventory Did service discovery on host: 0 added, 0 removed, 33 kept, 33 total services
+1496714841 - omdadmin changes-discarded Discarded pending changes (Restored wato-snapshot-2017-01-26-15-16-05.tar)
+1496714845 - omdadmin mkeventd-activate Activated changes of event console configuration
+1496714845 - omdadmin changes-discarded Discarded pending changes (Restored wato-snapshot-2017-01-26-15-16-05.tar)
+1496714848 - omdadmin mkeventd-activate Activated changes of event console configuration

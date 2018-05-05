@@ -1,0 +1,12 @@
+{if $iframe}<iframe src="" id="url" name="url"></iframe>{else}<div id="url" class="url"></div>{/if}
+<script type="text/javascript">
+oGeneralProperties = {$generalProperties};
+oWorkerProperties = {$workerProperties};
+oRotationProperties = {$rotationProperties};
+oPageProperties = {$pageProperties};
+oLocales = {$locales};
+oFileAges = {$fileAges};
+
+// Kick of the worker
+addDOMLoadEvent(function()\{runWorker(0, 'url', '{$url}');});
+</script>

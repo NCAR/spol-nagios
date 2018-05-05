@@ -1,0 +1,14 @@
+logrotate state -- version 2
+"/omd/sites/prod/var/log/diskspace.log" 2018-4-14-0:0:0
+"/omd/sites/prod/var/log/alerts.log" 2018-4-14-0:0:0
+"/omd/sites/prod/var/log/apache/access_log" 2018-5-5-0:0:1
+"/omd/sites/prod/var/nagios/livestatus.log" 2018-5-2-0:0:1
+"/omd/sites/prod/var/log/apache/stats" 2018-4-14-0:0:0
+"/omd/sites/prod/var/log/xinetd.log" 2018-4-14-0:0:0
+"/omd/sites/prod/var/log/apache/error_log" 2018-5-5-0:0:1
+"/omd/sites/prod/var/log/mkeventd.log" 2018-5-5-0:0:1
+"/omd/sites/prod/var/log/web.log" 2018-5-4-0:0:1
+"/omd/sites/prod/var/log/rrdcached.log" 2018-5-5-0:0:1
+"/omd/sites/prod/var/log/ldap.log" 2018-4-14-0:0:0
+"/omd/sites/prod/var/log/notify.log" 2018-5-5-0:0:1
+"/omd/sites/prod/var/log/update.log" 2018-4-14-0:0:0

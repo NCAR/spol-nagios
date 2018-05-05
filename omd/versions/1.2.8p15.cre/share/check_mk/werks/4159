@@ -1,0 +1,10 @@
+Title: smart: added compatibility for Intel SSDs
+Level: 1
+Component: checks
+Compatible: compat
+Version: 1.2.8p15
+Date: 1481548894
+Class: feature
+
+The check is now able to use temperature information from Intel SSDs.
+

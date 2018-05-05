@@ -1,0 +1,70 @@
+#!/usr/bin/python
+# -*- encoding: utf-8; py-indent-offset: 4 -*-
+# +------------------------------------------------------------------+
+# |             ____ _               _        __  __ _  __           |
+# |            / ___| |__   ___  ___| | __   |  \/  | |/ /           |
+# |           | |   | '_ \ / _ \/ __| |/ /   | |\/| | ' /            |
+# |           | |___| | | |  __/ (__|   <    | |  | | . \            |
+# |            \____|_| |_|\___|\___|_|\_\___|_|  |_|_|\_\           |
+# |                                                                  |
+# | Copyright Mathias Kettner 2014             mk@mathias-kettner.de |
+# +------------------------------------------------------------------+
+#
+# This file is part of Check_MK.
+# The official homepage is at http://mathias-kettner.de/check_mk.
+#
+# check_mk is free software;  you can redistribute it and/or modify it
+# under the  terms of the  GNU General Public License  as published by
+# the Free Software Foundation in version 2.  check_mk is  distributed
+# in the hope that it will be useful, but WITHOUT ANY WARRANTY;  with-
+# out even the implied warranty of  MERCHANTABILITY  or  FITNESS FOR A
+# PARTICULAR PURPOSE. See the  GNU General Public License for more de-
+# tails. You should have  received  a copy of the  GNU  General Public
+# License along with GNU Make; see the file  COPYING.  If  not,  write
+# to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
+# Boston, MA 02110-1301 USA.
+
+factory_settings["brocade_mlx_temperature_default_levels"] = {
+    "levels" : (105, 110)
+}
+
+def parse_brocade_mlx_temp(info):
+    parsed = {}
+    for temp_descr, temp_value in info:
+        if temp_value and temp_value != '0':
+            item = temp_descr.replace("temperature", "")\
+                    .replace("module", "Module")\
+                    .replace("sensor", "Sensor")\
+                    .replace(",", "")\
+                    .strip()
+            parsed[item] = float(temp_value) * 0.5
+    return parsed
+
+
+def inventory_brocade_mlx_temp(parsed):
+    for item in parsed:
+        yield item, {}
+
+
+def check_brocade_mlx_temp(item, params, parsed):
+    if item in parsed:
+        return check_temperature(parsed[item], params, "brocade_mlx_temp_%s" % item)
+    elif "Module" in item and not "Sensor" in item:
+        # item discovered in 1.2.6 had the sensor-id stripped and module id replaced
+        # so it's impossible to look by that name
+        return 3, "check had an incompatible change, please re-discover this host"
+
+
+
+check_info["brocade_mlx_temp"] = {
+    "parse_function"          : parse_brocade_mlx_temp,
+    "check_function"          : check_brocade_mlx_temp,
+    "inventory_function"      : inventory_brocade_mlx_temp,
+    "service_description"     : "Temperature %s",
+    "snmp_info"               : ('.1.3.6.1.4.1.1991.1.1.2.13.1.1', [ 3, 4 ]), # descr, temperature
+    "snmp_scan_function"      : lambda oid: oid(".1.3.6.1.2.1.1.2.0").startswith(".1.3.6.1.4.1.1991.1."),
+    "has_perfdata"            : True,
+    "default_levels_variable" : "brocade_mlx_temperature_default_levels",
+    "group"                   : "temperature",
+    "includes"                : [ "temperature.include" ],
+}

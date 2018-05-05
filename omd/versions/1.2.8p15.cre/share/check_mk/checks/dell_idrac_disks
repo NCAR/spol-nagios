@@ -1,0 +1,111 @@
+#!/usr/bin/python
+# -*- encoding: utf-8; py-indent-offset: 4 -*-
+# +------------------------------------------------------------------+
+# |             ____ _               _        __  __ _  __           |
+# |            / ___| |__   ___  ___| | __   |  \/  | |/ /           |
+# |           | |   | '_ \ / _ \/ __| |/ /   | |\/| | ' /            |
+# |           | |___| | | |  __/ (__|   <    | |  | | . \            |
+# |            \____|_| |_|\___|\___|_|\_\___|_|  |_|_|\_\           |
+# |                                                                  |
+# | Copyright Mathias Kettner 2014             mk@mathias-kettner.de |
+# +------------------------------------------------------------------+
+#
+# This file is part of Check_MK.
+# The official homepage is at http://mathias-kettner.de/check_mk.
+#
+# check_mk is free software;  you can redistribute it and/or modify it
+# under the  terms of the  GNU General Public License  as published by
+# the Free Software Foundation in version 2.  check_mk is  distributed
+# in the hope that it will be useful, but WITHOUT ANY WARRANTY;  with-
+# out even the implied warranty of  MERCHANTABILITY  or  FITNESS FOR A
+# PARTICULAR PURPOSE. See the  GNU General Public License for more de-
+# tails. You should have  received  a copy of the  GNU  General Public
+# License along with GNU Make; see the file  COPYING.  If  not,  write
+# to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
+# Boston, MA 02110-1301 USA.
+
+
+# .1.3.6.1.4.1.674.10892.5.5.1.20.130.4.1.2.1 Physical Disk 0:1:0 --> IDRAC-MIB::physicalDiskName.1
+# .1.3.6.1.4.1.674.10892.5.5.1.20.130.4.1.2.2 Physical Disk 0:1:1 --> IDRAC-MIB::physicalDiskName.2
+# .1.3.6.1.4.1.674.10892.5.5.1.20.130.4.1.4.1 8 --> IDRAC-MIB::physicalDiskState.1
+# .1.3.6.1.4.1.674.10892.5.5.1.20.130.4.1.4.2 8 --> IDRAC-MIB::physicalDiskState.2
+# .1.3.6.1.4.1.674.10892.5.5.1.20.130.4.1.11.1 1144064 --> IDRAC-MIB::physicalDiskCapacityInMB.1
+# .1.3.6.1.4.1.674.10892.5.5.1.20.130.4.1.11.2 1144064 --> IDRAC-MIB::physicalDiskCapacityInMB.2
+# .1.3.6.1.4.1.674.10892.5.5.1.20.130.4.1.22.1 1 --> IDRAC-MIB::physicalDiskSpareState.1
+# .1.3.6.1.4.1.674.10892.5.5.1.20.130.4.1.22.2 1 --> IDRAC-MIB::physicalDiskSpareState.2
+# .1.3.6.1.4.1.674.10892.5.5.1.20.130.4.1.24.1 3 --> IDRAC-MIB::physicalDiskComponentStatus.1
+# .1.3.6.1.4.1.674.10892.5.5.1.20.130.4.1.24.2 3 --> IDRAC-MIB::physicalDiskComponentStatus.2
+# .1.3.6.1.4.1.674.10892.5.5.1.20.130.4.1.31.1 0 --> IDRAC-MIB::physicalDiskSmartAlertIndication.1
+# .1.3.6.1.4.1.674.10892.5.5.1.20.130.4.1.31.2 0 --> IDRAC-MIB::physicalDiskSmartAlertIndication.2
+# .1.3.6.1.4.1.674.10892.5.5.1.20.130.4.1.55.1 Disk 0 in Backplane 1 of Integrated RAID Controller 1 --> IDRAC-MIB::physicalDiskDisplayName.1
+# .1.3.6.1.4.1.674.10892.5.5.1.20.130.4.1.55.2 Disk 1 in Backplane 1 of Integrated RAID Controller 1 --> IDRAC-MIB::physicalDiskDisplayName.2
+
+
+def inventory_dell_idrac_disks(info):
+    inventory = []
+    for line in info:
+        inventory.append(( line[0], None ))
+    return inventory
+
+
+def check_dell_idrac_disks(item, _no_params, info):
+    map_states = {
+        "disk_states" : {
+            "1" : (1, "unknown"),
+            "2" : (0, "ready"),
+            "3" : (0, "online"),
+            "4" : (1, "foreign"),
+            "5" : (2, "offline"),
+            "6" : (2, "blocked"),
+            "7" : (2, "failed"),
+            "8" : (0, "non-raid"),
+            "9" : (0, "removed"),
+        },
+        "component_states" : {
+            "1" : (0, "other"),
+            "2" : (1, "unknown"),
+            "3" : (0, "OK"),
+            "4" : (0, "non-critical"),
+            "5" : (2, "critical"),
+            "6" : (1, "non-recoverable"),
+        },
+    }
+    map_spare_state_info = {
+        "1" : "not a spare",
+        "2" : "dedicated hotspare",
+        "3" : "global hotspare",
+    }
+    for disk_name, disk_state, capacity_MB, spare_state, \
+        component_state, smart_alert, display_name in info:
+        if disk_name == item:
+            yield 0, "[%s] Size: %s" % \
+                (display_name, get_bytes_human_readable(int(capacity_MB) * 1024 * 1024))
+
+            for what, what_key, what_text in [
+                (disk_state, "disk_states", "Disk state"),
+                (component_state, "component_states", "Component state")]:
+                state, state_readable = map_states[what_key][what]
+                yield state, "%s: %s" % (what_text, state_readable)
+
+            if smart_alert != "0":
+                yield 2, "Smart alert on disk"
+
+            if spare_state != "1":
+                yield 0, map_spare_state_info[spare_state]
+
+
+check_info["dell_idrac_disks"] = {
+    "check_function"        : check_dell_idrac_disks,
+    "inventory_function"    : inventory_dell_idrac_disks,
+    "service_description"   : "Disk %s",
+    "snmp_scan_function"    : lambda oid: oid('.1.3.6.1.2.1.1.2.0') == ".1.3.6.1.4.1.674.10892.5",
+    "snmp_info"             : (".1.3.6.1.4.1.674.10892.5.5.1.20.130.4.1", [
+                                    "2",    # physicalDiskName
+                                    "4",    # physicalDiskState
+                                    "11",   # physicalDiskCapacityInMB
+                                    "22",   # physicalDiskSpareState
+                                    "24",   # physicalDiskComponentStatus
+                                    "31",   # physicalDiskSmartAlertIndication
+                                    "55",   # physicalDiskDisplayName
+                              ]),
+}

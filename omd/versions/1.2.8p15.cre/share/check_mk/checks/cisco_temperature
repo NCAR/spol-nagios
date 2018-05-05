@@ -1,0 +1,238 @@
+#!/usr/bin/python
+# -*- encoding: utf-8; py-indent-offset: 4 -*-
+# +------------------------------------------------------------------+
+# |             ____ _               _        __  __ _  __           |
+# |            / ___| |__   ___  ___| | __   |  \/  | |/ /           |
+# |           | |   | '_ \ / _ \/ __| |/ /   | |\/| | ' /            |
+# |           | |___| | | |  __/ (__|   <    | |  | | . \            |
+# |            \____|_| |_|\___|\___|_|\_\___|_|  |_|_|\_\           |
+# |                                                                  |
+# | Copyright Mathias Kettner 2015             mk@mathias-kettner.de |
+# +------------------------------------------------------------------+
+#
+# This file is part of Check_MK.
+# The official homepage is at http://mathias-kettner.de/check_mk.
+#
+# check_mk is free software;  you can redistribute it and/or modify it
+# under the  terms of the  GNU General Public License  as published by
+# the Free Software Foundation in version 2.  check_mk is  distributed
+# in the hope that it will be useful, but WITHOUT ANY WARRANTY;  with-
+# out even the implied warranty of  MERCHANTABILITY  or  FITNESS FOR A
+# PARTICULAR PURPOSE. See the  GNU General Public License for more de-
+# tails. You should have  received  a copy of the  GNU  General Public
+# License along with GNU Make; see the file  COPYING.  If  not,  write
+# to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
+# Boston, MA 02110-1301 USA.
+
+
+# NOTE: Devices of type 3850 with firmware versions 3.2.0SE, 3.2.1, 3.2.2
+# have been observed to display a tenth of the actual temperature value.
+# A firmware update on the device fixes this.
+
+# CISCO-ENTITY-SENSOR-MIB::entSensorScale
+
+cisco_entity_exponents = {
+    "1"  : -24,  #     1:yocto
+    "2"  : -21,  #     2:zepto
+    "3"  : -18,  #     3:atto
+    "4"  : -15,  #     4:femto
+    "5"  : -12,  #     5:pico
+    "6"  : -9,   #     6:nano
+    "7"  : -6,   #     7:micro
+    "8"  : -3,   #     8:milli
+    "9"  : 0,    #     9:units
+    "10" : 3,    #     10:kilo
+    "11" : 6,    #     11:mega
+    "12" : 9,    #     12:giga
+    "13" : 12,   #     13:tera
+    "14" : 18,   #     14:exa
+    "15" : 15,   #     15:peta
+    "16" : 21,   #     16:zetta
+    "17" : 24,   #     17:yotta
+}
+
+# CISCO-ENTITY-SENSOR-MIB::entSensorStatus
+#     1:ok
+#     2:unavailable
+#     3:nonoperational
+
+
+def parse_cisco_temperature(info):
+    def merge_dict(dest, src):
+        # recursively merge two dicts and don't overwrite
+        # if the source-field contains None
+        for k, v in src.iteritems():
+            if k not in dest:
+                dest[k] = v
+            elif isinstance(dest[k], dict) and isinstance(v, dict):
+                merge_dict(dest[k], v)
+            elif v is not None:
+                dest[k] = v
+
+    description_info, state_info, levels_info, perfstuff = info
+
+    # Parse OIDs described by CISCO-ENTITY-SENSOR-MIB
+    entity_parsed = {}
+
+    # Create dict of sensor descriptions
+    descriptions = dict(description_info)
+
+    # Create dict with thresholds
+    thresholds = {}
+    for sensor_id, sensortype, scalecode, magnitude, value, sensorstate in state_info:
+        thresholds.setdefault(sensor_id, [])
+
+    for endoid, level in levels_info:
+        # endoid is e.g. 21549.9 or 21459.10
+        sensor_id, subid = endoid.split('.')
+        thresholds.setdefault(sensor_id, []).append(level)
+
+    for sensor_id, sensortype, scalecode, magnitude, value, sensorstate in state_info:
+        if sensor_id in descriptions:
+            descr = descriptions[sensor_id]
+        else:
+            descr = sensor_id
+        if descr and sensortype == '8': # only care about temperature sensors
+
+            if sensorstate == '2':
+                entity_parsed[descr] = (3, "Data from sensor currently not available")
+            elif sensorstate == '3':
+                entity_parsed[descr] = (3, "Sensor is broken")
+            elif sensorstate == '1':
+                entity_parsed[descr] = {}
+                scale = 10**int(magnitude)
+
+                scale *= 10 ** (-1 * cisco_entity_exponents[scalecode])
+
+                entity_parsed[descr]['temp'] = float(value) / scale
+
+                if len(thresholds[sensor_id]) in [ 2, 4 ]:
+                    warnraw, critraw = thresholds[sensor_id][0:2]
+                    # Some devices deliver these values in the wrong order
+                    dev_levels = ( min(float(warnraw)/scale, float(critraw)/scale),
+                                   max(float(warnraw)/scale, float(critraw)/scale) )
+                else:
+                    dev_levels = None
+                entity_parsed[descr]['dev_levels'] = dev_levels
+
+                entity_parsed[descr]['dev_status'] = None
+
+    # Now parse OIDs described by CISCO-ENVMON-MIB
+    envmon_states = {
+     '1': "normal",
+     '2': "warning",
+     '3': "critical",
+     '4': "shutdown",
+     '5': "not present",
+     '6': "not functioning"
+    }
+
+    parsed = {}
+
+    for statustext, temp, max_temp, state, sensor_id in perfstuff:
+        if sensor_id in descriptions and descriptions[sensor_id] in entity_parsed:
+            # if this sensor is already in the dictionary, ensure we use the same name
+            item = descriptions[sensor_id]
+            prev_description = cisco_sensor_item(statustext, sensor_id)
+            # also register the name we would have used up to 1.2.8b4, so we can give
+            # the user a proper info message.
+            # It's the little things that show you care
+            parsed[prev_description] = {"obsolete": True}
+        else:
+            item = cisco_sensor_item(statustext, sensor_id)
+
+        if state in ['5', '6']:
+            parsed[item] = (3, "Sensor %s" % envmon_states[state])
+        elif int(temp) == 0:
+            if state in ('123'):
+                parsed[item] = ( int(state) - 1, "Sensor reports %s state" % envmon_states[state] )
+            else:
+                parsed[item] = (3, "Sensor defect")
+        else:
+            parsed[item] = {}
+            parsed[item]['temp'] = int(temp)
+
+            if state == '1':
+                parsed[item]['dev_status'] = 0
+            elif state == '2':
+                parsed[item]['dev_status'] = 1
+            elif state in ['3', '4']:
+                parsed[item]['dev_status'] = 2
+            else:
+                parsed[item]['dev_status'] = None
+
+            # TODO using max_temp as a crit level is not really practical as, according
+            # to the mib, the device will be shut down at this temperature!
+            if max_temp and int(max_temp):
+                parsed[item]['dev_levels'] = (int(max_temp), int(max_temp))
+            else:
+                parsed[item]['dev_levels'] = None
+
+    # Merge the two dicts, preferring keys generated from ENTITY data
+    merge_dict(parsed, entity_parsed)
+
+    return parsed
+
+
+def inventory_cisco_temperature(parsed):
+    for item, value in parsed.iteritems():
+        if type(parsed[item]) == tuple or not value.get("obsolete", False):
+            yield item, {}
+
+
+def check_cisco_temperature(item, params, parsed):
+    if item in parsed:
+        if type(parsed[item]) == tuple:
+            return parsed[item]
+        elif parsed[item].get("obsolete", False):
+            return 3, "This sensor is obsolete, please rediscover"
+        else:
+            return check_temperature(parsed[item]['temp'], params, "cisco_temperature_%s" % item,
+                        dev_levels = parsed[item]['dev_levels'],
+                        dev_status = parsed[item]['dev_status'])
+
+
+check_info['cisco_temperature'] = {
+    "parse_function"     : parse_cisco_temperature,
+    "inventory_function" : inventory_cisco_temperature,
+    "check_function"     : check_cisco_temperature,
+    "service_description": "Temperature %s",
+    "group"              : "temperature",
+    "has_perfdata"       : True,
+    "snmp_scan_function" : lambda oid: "cisco" in oid(".1.3.6.1.2.1.1.1.0").lower() and \
+                                    ( oid(".1.3.6.1.4.1.9.9.91.1.1.1.1.*") != None or
+                                      oid(".1.3.6.1.4.1.9.9.13.1.3.1.3.*") != None ),
+    "snmp_info"          : [
+                               # cisco_temp_sensor data
+                               ( ".1.3.6.1.2.1.47.1.1.1.1", [
+                                 OID_END,
+                                 CACHED_OID(2), # Description of the sensor
+                               ]),
+
+                               # Type and current state
+                               ( ".1.3.6.1.4.1.9.9.91.1.1.1.1", [
+                                 OID_END,
+                                 1, # CISCO-ENTITY-SENSOR-MIB::entSensorType
+                                 2, # CISCO-ENTITY-SENSOR-MIB::entSensorScale
+                                 3, # CISCO-ENTITY-SENSOR-MIB::entSensorPrecision
+                                 4, # CISCO-ENTITY-SENSOR-MIB::entSensorValue
+                                 5, # CISCO-ENTITY-SENSOR-MIB::entSensorStatus
+                               ]),
+
+                               # Threshold
+                               ( ".1.3.6.1.4.1.9.9.91.1.2.1.1", [
+                                 OID_END,
+                                 4, # Thresholds
+                               ]),
+
+                               # cisco_temp_perf data
+                               ( ".1.3.6.1.4.1.9.9.13.1.3.1", [ # CISCO-SMI
+                                                               2, # ciscoEnvMonTemperatureStatusDescr
+                                                               3, # ciscoEnvMonTemperatureStatusValue
+                                                               4, # ciscoEnvMonTemperatureThreshold
+                                                               6, # ciscoEnvMonTemperatureState
+                                                               OID_END
+                               ]),
+                            ],
+    "includes"          : [ "temperature.include", 'cisco_sensor_item.include' ],
+}

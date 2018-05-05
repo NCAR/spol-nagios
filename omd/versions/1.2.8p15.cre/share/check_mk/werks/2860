@@ -1,0 +1,10 @@
+Title: mssql.vbs: Now really used the configuration file from the agent config directory
+Level: 1
+Component: checks
+Class: fix
+Compatible: compat
+State: unknown
+Version: 1.2.8b1
+Date: 1449137317
+
+

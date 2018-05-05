@@ -1,0 +1,312 @@
+#!/usr/bin/python
+# -*- encoding: utf-8; py-indent-offset: 4 -*-
+# +------------------------------------------------------------------+
+# |             ____ _               _        __  __ _  __           |
+# |            / ___| |__   ___  ___| | __   |  \/  | |/ /           |
+# |           | |   | '_ \ / _ \/ __| |/ /   | |\/| | ' /            |
+# |           | |___| | | |  __/ (__|   <    | |  | | . \            |
+# |            \____|_| |_|\___|\___|_|\_\___|_|  |_|_|\_\           |
+# |                                                                  |
+# | Copyright Mathias Kettner 2014             mk@mathias-kettner.de |
+# +------------------------------------------------------------------+
+#
+# This file is part of Check_MK.
+# The official homepage is at http://mathias-kettner.de/check_mk.
+#
+# check_mk is free software;  you can redistribute it and/or modify it
+# under the  terms of the  GNU General Public License  as published by
+# the Free Software Foundation in version 2.  check_mk is  distributed
+# in the hope that it will be useful, but WITHOUT ANY WARRANTY;  with-
+# out even the implied warranty of  MERCHANTABILITY  or  FITNESS FOR A
+# PARTICULAR PURPOSE. See the  GNU General Public License for more de-
+# tails. You should have  received  a copy of the  GNU  General Public
+# License along with GNU Make; see the file  COPYING.  If  not,  write
+# to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
+# Boston, MA 02110-1301 USA.
+
+# Example outputs from agent:
+# <<<heartbeat_crm>>>
+# ============
+# Last updated: Thu Jul  1 07:48:19 2010
+# Current DC: mwp (118cc1e7-bbf3-4550-b820-cac372885be1)
+# 2 Nodes configured.
+# 2 Resources configured.
+# ============
+# Node: smwp (2395453b-d647-48ff-a908-a7cd76062265): online
+# Node: mwp (118cc1e7-bbf3-4550-b820-cac372885be1): online
+# Full list of resources:
+# Resource Group: group_slapmaster
+#     resource_virtip1  (ocf::heartbeat:IPaddr):  Started mwp
+#     resource_virtip2  (ocf::heartbeat:IPaddr):  Started mwp
+#     resource_pingnodes  (ocf::heartbeat:pingd): Started mwp
+#     resource_slapmaster (ocf::heartbeat:OpenLDAP):  Started mwp
+# resource_slapslave  (ocf::heartbeat:OpenLDAP):  Started smwp
+
+# Nails down the DC to the node which is the DC during inventory. The check
+# will report CRITICAL when another node becomes the DC during later checks.
+# If set to "False" the check will be passed.
+#
+# Leave this option to be compatible with inventorized pre 1.2.5i6
+heartbeat_crm_naildown = True
+
+# Max age of "last updated"
+#
+# Leave this option to be compatible with inventorized pre 1.2.5i6
+heartbeat_crm_default_max_age = 60
+
+# Naildown the resources to the nodes which care about the resources during
+# the inventory run
+#
+# Leave this option to be compatible with inventorized pre 1.2.5i6
+heartbeat_crm_resources_naildown = True
+
+# Holds a dict of settings which tell the inventory functions whether or not
+# some options like the resources and DC role shal be nailed down to the
+# node which holds these resources during inventory.
+inventory_heartbeat_crm_rules = []
+
+factory_settings["heartbeat_crm_default_levels"] = {
+    "max_age" : heartbeat_crm_default_max_age,
+}
+
+def heartbeat_crm_parse_general(info):
+    last_updated = None
+    dc = None
+    num_nodes = None
+    num_resources = None
+    for line in info:
+        line_txt = ' '.join(line)
+
+        if line_txt.startswith("Last updated:"):
+            if "Last change:" in line_txt:
+                # Some versions seem to combine both lines
+                last_updated = line_txt[:line_txt.index("Last change:")].split(": ")[1].strip()
+            else:
+                last_updated = ' '.join(line[2:])
+
+        elif line_txt.startswith('Current DC:'):
+            dc = line[2]
+
+        elif "nodes and" in line_txt and "resources configured" in line_txt:
+            # Some versions put number of nodes and resources in one line
+            num_nodes     = int(line[0])
+            num_resources = int(line[3])
+
+        elif ' '.join(line[1:3]).rstrip('.,') == 'Nodes configured':
+            num_nodes = int(line[0])
+        elif ' '.join(line[1:3]).rstrip('.,') == 'Resources configured':
+            num_resources = int(line[0])
+    return (last_updated, dc, num_nodes, num_resources)
+
+
+#   .--CRM-----------------------------------------------------------------.
+#   |                          ____ ____  __  __                           |
+#   |                         / ___|  _ \|  \/  |                          |
+#   |                        | |   | |_) | |\/| |                          |
+#   |                        | |___|  _ <| |  | |                          |
+#   |                         \____|_| \_\_|  |_|                          |
+#   |                                                                      |
+#   +----------------------------------------------------------------------+
+#   |                                                                      |
+#   '----------------------------------------------------------------------'
+def inventory_heartbeat_crm(info):
+    # Use these lines to gather the inventory and perform this check:
+    # ============
+    # Last updated: Thu Jul  1 07:48:19 2010
+    # Current DC: mwp (118cc1e7-bbf3-4550-b820-cac372885be1)
+    # 2 Nodes configured.
+    # 2 Resources configured.
+    # ============
+    #
+    # - Naildown the DC or not.
+    # - Check the number of nodes/resources
+    # - Check the age of "last updated"
+    settings = host_extra_conf_merged(g_hostname, inventory_heartbeat_crm_rules)
+    try:
+        last_updated, dc, num_nodes, num_resources = heartbeat_crm_parse_general(info)
+    except:
+        # In the case that CRM is not working, add it as a service and show the error later
+        last_updated, dc, num_nodes, num_resources = 0,0,0,0
+    params = {
+        'num_nodes'     : num_nodes,
+        'num_resources' : num_resources,
+    }
+    if settings.get('naildown_dc', False):
+        params['dc'] = dc
+    return [(None, params)]
+
+def check_heartbeat_crm(item, params, info):
+    if len(info) > 0:
+        if info[0][0].lower().startswith("critical"):
+            return 2, " ".join(info[0])
+        last_updated, dc, numNodes, numResources = heartbeat_crm_parse_general(info)
+
+        # Convert old tuple params (pre 1.2.5i6)
+        if type(params) == tuple:
+            params = {
+                'max_age'       : params[0],
+                'dc'            : params[1] != "" and params[1] or None,
+                'num_nodes'     : params[2] != -1 and params[2] or None,
+                'num_resources' : params[3] != -1 and params[3] or None,
+            }
+
+        # Check the freshness of the crm_mon output and terminate with CRITICAL
+        # when too old information are found
+        dt = utc_mktime(time.strptime(last_updated, '%a %b %d %H:%M:%S %Y'))
+        now = time.time()
+        delta = now - dt
+        if delta > params['max_age']:
+            return 3, 'Ignoring reported data (Status output too old: %s)' % get_age_human_readable(delta)
+
+        output = ''
+        status = 0
+
+        # Check for correct DC when enabled
+        if params.get('dc') == None or dc == params['dc']:
+            output += 'DC: %s, ' % dc
+        else:
+            output += 'DC: %s (Expected %s (!!)), ' % (dc, params['dc'])
+            status = 2
+
+        # Check for number of nodes when enabled
+        if params['num_nodes'] != None:
+            if numNodes == params['num_nodes']:
+                output += 'Nodes: %d, ' % numNodes
+            else:
+                output += 'Nodes: %d (Expected %d (!!)), ' % (numNodes, params['num_nodes'])
+                status = 2
+
+        # Check for number of resources when enabled
+        if params['num_resources'] != None:
+            if numResources == params['num_resources']:
+                output += 'Resources: %d, ' % numResources
+            else:
+                output += 'Resources: %d (Expected %d (!!)), ' % (numResources, params['num_resources'])
+                status = 2
+
+        return (status, output.rstrip(', '))
+
+
+check_info["heartbeat_crm"] = {
+    'check_function'          : check_heartbeat_crm,
+    'inventory_function'      : inventory_heartbeat_crm,
+    'service_description'     : 'Heartbeat CRM General',
+    'group'                   : 'heartbeat_crm',
+    'default_levels_variable' : 'heartbeat_crm_default_levels',
+}
+
+
+def heartbeat_crm_parse_resources(info):
+    blockStart = False
+    resources = {}
+    resource = ''
+    mode = 'single'
+    for parts in info:
+        line = " ".join(parts)
+
+        if line == 'Failed actions:':
+            blockStart = False
+        elif not blockStart and line == 'Full list of resources:':
+            blockStart = True
+        elif blockStart:
+            if line.startswith('Resource Group:'):
+                # Resource group
+                resources[parts[2]] = []
+                resource = parts[2]
+                mode = 'resourcegroup'
+            elif line.startswith('Clone Set:'):
+                # Clone set
+                resources[parts[2]] = []
+                resource = parts[2]
+                mode = 'cloneset'
+            elif line.startswith('Master/Slave Set:'):
+                # Master/Slave set
+                resources[parts[2]] = []
+                resource = parts[2]
+                mode = 'masterslaveset'
+            elif line[0] == '_':
+                # Cleanup inconsistent agent output in clone set lines
+                if parts[0] != "_":
+                    parts.insert(1, parts[0][1:])
+                    parts[0] = "_"
+
+                # Resource group or set member
+                if mode == 'resourcegroup':
+                    resources[resource].append(parts[1:])
+                elif mode == 'cloneset':
+                    if parts[1] == 'Started:':
+                        resources[resource].append([ resource, 'Clone', 'Started', parts[3:-1] ])
+                elif mode == 'masterslaveset':
+                    if parts[1] == 'Masters:':
+                        resources[resource].append([ resource, 'Master', 'Started', parts[3] ])
+                    if parts[1] == 'Slaves:':
+                        resources[resource].append([ resource, 'Slave', 'Started', parts[3] ])
+            else:
+                # Single resource
+                resources[parts[0]] = [ parts ]
+
+    return resources
+
+
+#.
+#   .--Resources-----------------------------------------------------------.
+#   |            ____                                                      |
+#   |           |  _ \ ___  ___  ___  _   _ _ __ ___ ___  ___              |
+#   |           | |_) / _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|             |
+#   |           |  _ <  __/\__ \ (_) | |_| | | | (_|  __/\__ \             |
+#   |           |_| \_\___||___/\___/ \__,_|_|  \___\___||___/             |
+#   |                                                                      |
+#   '----------------------------------------------------------------------'
+
+def inventory_heartbeat_crm_resources(info):
+    # Full list of resources:
+    # Resource Group: group_slapmaster
+    #     resource_virtip1  (ocf::heartbeat:IPaddr):  Started mwp
+    #     resource_virtip2  (ocf::heartbeat:IPaddr):  Started mwp
+    #     resource_pingnodes  (ocf::heartbeat:pingd): Started mwp
+    #     resource_slapmaster (ocf::heartbeat:OpenLDAP):  Started mwp
+    # resource_slapslave  (ocf::heartbeat:OpenLDAP):  Started smwp
+    inventory = []
+    settings = host_extra_conf_merged(g_hostname, inventory_heartbeat_crm_rules)
+    for name, resources in heartbeat_crm_parse_resources(info).iteritems():
+        # In naildown mode only resources which are started somewhere can be
+        # inventorized
+        if settings.get('naildown_resources', False) and resources[0][2] != 'Stopped':
+            inventory.append((name, '"%s"' % resources[0][3]))
+        else:
+            inventory.append((name, None))
+    return inventory
+
+
+def check_heartbeat_crm_resources(item, target_node, info):
+    output = ''
+    status = 0
+
+    resources = None
+    for name, this_resources in heartbeat_crm_parse_resources(info).items():
+        if name == item:
+            resources = this_resources
+    if resources == None:
+        return
+
+    for resource in resources:
+        output += ' '.join([ type(p) == list and repr(p) or p for p in resource ])
+        if len(resource) == 3 or resource[2] != 'Started':
+            status = 2
+            output += ' (Resource is in state "%s" (!!))' % resource[2]
+        elif target_node and target_node != resource[3] and resource[1] != 'Slave' and resource[1] != 'Clone':
+            status = 2
+            output += ' (Expected node: %s (!!))' % target_node
+        output += ', '
+
+    if not output:
+        output = "no resources found"
+    return (status, output.rstrip(', '))
+
+
+check_info["heartbeat_crm.resources"] = {
+    'check_function'      : check_heartbeat_crm_resources,
+    'inventory_function'  : inventory_heartbeat_crm_resources,
+    'service_description' : 'Heartbeat CRM %s',
+    'group'               : 'heartbeat_crm_resources',
+}

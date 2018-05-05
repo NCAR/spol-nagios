@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<NAGIOS>
+  <DATASOURCE>
+    <TEMPLATE>check-mk-host-ping</TEMPLATE>
+    <RRDFILE>/omd/sites/prod/var/pnp4nagios/perfdata/mgen1.gate.rtf/_HOST__rta.rrd</RRDFILE>
+    <RRD_STORAGE_TYPE>MULTIPLE</RRD_STORAGE_TYPE>
+    <RRD_HEARTBEAT>8460</RRD_HEARTBEAT>
+    <IS_MULTI>0</IS_MULTI>
+    <DS>1</DS>
+    <NAME>rta</NAME>
+    <LABEL>rta</LABEL>
+    <UNIT>ms</UNIT>
+    <ACT>0.110</ACT>
+    <WARN>200.000</WARN>
+    <WARN_MIN></WARN_MIN>
+    <WARN_MAX></WARN_MAX>
+    <WARN_RANGE_TYPE></WARN_RANGE_TYPE>
+    <CRIT>500.000</CRIT>
+    <CRIT_MIN></CRIT_MIN>
+    <CRIT_MAX></CRIT_MAX>
+    <CRIT_RANGE_TYPE></CRIT_RANGE_TYPE>
+    <MIN>0</MIN>
+    <MAX></MAX>
+  </DATASOURCE>
+  <DATASOURCE>
+    <TEMPLATE>check-mk-host-ping</TEMPLATE>
+    <RRDFILE>/omd/sites/prod/var/pnp4nagios/perfdata/mgen1.gate.rtf/_HOST__pl.rrd</RRDFILE>
+    <RRD_STORAGE_TYPE>MULTIPLE</RRD_STORAGE_TYPE>
+    <RRD_HEARTBEAT>8460</RRD_HEARTBEAT>
+    <IS_MULTI>0</IS_MULTI>
+    <DS>1</DS>
+    <NAME>pl</NAME>
+    <LABEL>pl</LABEL>
+    <UNIT>%%</UNIT>
+    <ACT>0</ACT>
+    <WARN>80</WARN>
+    <WARN_MIN></WARN_MIN>
+    <WARN_MAX></WARN_MAX>
+    <WARN_RANGE_TYPE></WARN_RANGE_TYPE>
+    <CRIT>100</CRIT>
+    <CRIT_MIN></CRIT_MIN>
+    <CRIT_MAX></CRIT_MAX>
+    <CRIT_RANGE_TYPE></CRIT_RANGE_TYPE>
+    <MIN></MIN>
+    <MAX></MAX>
+  </DATASOURCE>
+  <DATASOURCE>
+    <TEMPLATE>check-mk-host-ping</TEMPLATE>
+    <RRDFILE>/omd/sites/prod/var/pnp4nagios/perfdata/mgen1.gate.rtf/_HOST__rtmax.rrd</RRDFILE>
+    <RRD_STORAGE_TYPE>MULTIPLE</RRD_STORAGE_TYPE>
+    <RRD_HEARTBEAT>8460</RRD_HEARTBEAT>
+    <IS_MULTI>0</IS_MULTI>
+    <DS>1</DS>
+    <NAME>rtmax</NAME>
+    <LABEL>rtmax</LABEL>
+    <UNIT>ms</UNIT>
+    <ACT>0.208</ACT>
+    <WARN></WARN>
+    <WARN_MIN></WARN_MIN>
+    <WARN_MAX></WARN_MAX>
+    <WARN_RANGE_TYPE></WARN_RANGE_TYPE>
+    <CRIT></CRIT>
+    <CRIT_MIN></CRIT_MIN>
+    <CRIT_MAX></CRIT_MAX>
+    <CRIT_RANGE_TYPE></CRIT_RANGE_TYPE>
+    <MIN></MIN>
+    <MAX></MAX>
+  </DATASOURCE>
+  <DATASOURCE>
+    <TEMPLATE>check-mk-host-ping</TEMPLATE>
+    <RRDFILE>/omd/sites/prod/var/pnp4nagios/perfdata/mgen1.gate.rtf/_HOST__rtmin.rrd</RRDFILE>
+    <RRD_STORAGE_TYPE>MULTIPLE</RRD_STORAGE_TYPE>
+    <RRD_HEARTBEAT>8460</RRD_HEARTBEAT>
+    <IS_MULTI>0</IS_MULTI>
+    <DS>1</DS>
+    <NAME>rtmin</NAME>
+    <LABEL>rtmin</LABEL>
+    <UNIT>ms</UNIT>
+    <ACT>0.062</ACT>
+    <WARN></WARN>
+    <WARN_MIN></WARN_MIN>
+    <WARN_MAX></WARN_MAX>
+    <WARN_RANGE_TYPE></WARN_RANGE_TYPE>
+    <CRIT></CRIT>
+    <CRIT_MIN></CRIT_MIN>
+    <CRIT_MAX></CRIT_MAX>
+    <CRIT_RANGE_TYPE></CRIT_RANGE_TYPE>
+    <MIN></MIN>
+    <MAX></MAX>
+  </DATASOURCE>
+  <RRD>
+    <RC>0</RC>
+    <TXT>successful updated</TXT>
+  </RRD>
+  <NAGIOS_AUTH_HOSTNAME>mgen1.gate.rtf</NAGIOS_AUTH_HOSTNAME>
+  <NAGIOS_AUTH_SERVICEDESC>Host Perfdata</NAGIOS_AUTH_SERVICEDESC>
+  <NAGIOS_CHECK_COMMAND>check-mk-host-ping!-w 200.00,80.00% -c 500.00,100.00%</NAGIOS_CHECK_COMMAND>
+  <NAGIOS_DATATYPE>HOSTPERFDATA</NAGIOS_DATATYPE>
+  <NAGIOS_DISP_HOSTNAME>mgen1.gate.rtf</NAGIOS_DISP_HOSTNAME>
+  <NAGIOS_DISP_SERVICEDESC>Host Perfdata</NAGIOS_DISP_SERVICEDESC>
+  <NAGIOS_HOSTCHECKCOMMAND>check-mk-host-ping!-w 200.00,80.00% -c 500.00,100.00%</NAGIOS_HOSTCHECKCOMMAND>
+  <NAGIOS_HOSTNAME>mgen1.gate.rtf</NAGIOS_HOSTNAME>
+  <NAGIOS_HOSTPERFDATA>rta=0.110ms;200.000;500.000;0; pl=0%;80;100;; rtmax=0.208ms;;;; rtmin=0.062ms;;;;</NAGIOS_HOSTPERFDATA>
+  <NAGIOS_HOSTSTATETYPE>1</NAGIOS_HOSTSTATETYPE>
+  <NAGIOS_MULTI_PARENT></NAGIOS_MULTI_PARENT>
+  <NAGIOS_PERFDATA>rta=0.110ms;200.000;500.000;0; pl=0%;80;100;; rtmax=0.208ms;;;; rtmin=0.062ms;;;; </NAGIOS_PERFDATA>
+  <NAGIOS_RRDFILE></NAGIOS_RRDFILE>
+  <NAGIOS_SERVICEDESC>_HOST_</NAGIOS_SERVICEDESC>
+  <NAGIOS_TIMET>1525550593</NAGIOS_TIMET>
+  <NAGIOS_XMLFILE>/omd/sites/prod/var/pnp4nagios/perfdata/mgen1.gate.rtf/_HOST_.xml</NAGIOS_XMLFILE>
+  <XML>
+   <VERSION>4</VERSION>
+  </XML>
+</NAGIOS>

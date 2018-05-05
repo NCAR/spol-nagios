@@ -1,0 +1,272 @@
+#!/usr/bin/python
+# -*- encoding: utf-8; py-indent-offset: 4 -*-
+# +------------------------------------------------------------------+
+# |             ____ _               _        __  __ _  __           |
+# |            / ___| |__   ___  ___| | __   |  \/  | |/ /           |
+# |           | |   | '_ \ / _ \/ __| |/ /   | |\/| | ' /            |
+# |           | |___| | | |  __/ (__|   <    | |  | | . \            |
+# |            \____|_| |_|\___|\___|_|\_\___|_|  |_|_|\_\           |
+# |                                                                  |
+# | Copyright Mathias Kettner 2014             mk@mathias-kettner.de |
+# +------------------------------------------------------------------+
+#
+# This file is part of Check_MK.
+# The official homepage is at http://mathias-kettner.de/check_mk.
+#
+# check_mk is free software;  you can redistribute it and/or modify it
+# under the  terms of the  GNU General Public License  as published by
+# the Free Software Foundation in version 2.  check_mk is  distributed
+# in the hope that it will be useful, but WITHOUT ANY WARRANTY;  with-
+# out even the implied warranty of  MERCHANTABILITY  or  FITNESS FOR A
+# PARTICULAR PURPOSE. See the  GNU General Public License for more de-
+# tails. You should have  received  a copy of the  GNU  General Public
+# License along with GNU Make; see the file  COPYING.  If  not,  write
+# to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
+# Boston, MA 02110-1301 USA.
+
+# .1.3.6.1.4.1.318.1.1.1.2.1.1.0 2
+# .1.3.6.1.4.1.318.1.1.1.4.1.1.0 2
+# .1.3.6.1.4.1.318.1.1.1.11.1.1.0 0001010000000000001000000000000000000000000000000000000000000000
+# .1.3.6.1.4.1.318.1.1.1.2.2.1.0 100
+# .1.3.6.1.4.1.318.1.1.1.2.2.2.0 25
+# .1.3.6.1.4.1.318.1.1.1.2.2.4.0 1
+# .1.3.6.1.4.1.318.1.1.1.2.2.6.0 0
+# .1.3.6.1.4.1.318.1.1.1.2.2.8.0 218
+# .1.3.6.1.4.1.318.1.1.1.2.2.9.0 0
+# .1.3.6.1.4.1.318.1.1.1.3.2.1.0 231
+# .1.3.6.1.4.1.318.1.1.1.4.2.1.0 231
+# .1.3.6.1.4.1.318.1.1.1.4.2.4.0
+# .1.3.6.1.4.1.318.1.1.1.2.2.3.0 360000
+# .1.3.6.1.4.1.318.1.1.1.7.2.6.0 2
+# .1.3.6.1.4.1.318.1.1.1.4.2.3.0 37
+# .1.3.6.1.4.1.318.1.1.1.7.2.4.0 0
+
+# upsBasicStateOutputState:
+# The flags are numbered 1 to 64, read from left to right. The flags are defined as follows:
+# 1: Abnormal Condition Present, 2: On Battery, 3: Low Battery, 4: On Line
+# 5: Replace Battery, 6: Serial Communication Established, 7: AVR Boost Active
+# 8: AVR Trim Active, 9: Overload, 10: Runtime Calibration, 11: Batteries Discharged
+# 12: Manual Bypass, 13: Software Bypass, 14: In Bypass due to Internal Fault
+# 15: In Bypass due to Supply Failure, 16: In Bypass due to Fan Failure
+# 17: Sleeping on a Timer, 18: Sleeping until Utility Power Returns
+# 19: On, 20: Rebooting, 21: Battery Communication Lost, 22: Graceful Shutdown Initiated
+# 23: Smart Boost or Smart Trim Fault, 24: Bad Output Voltage, 25: Battery Charger Failure
+# 26: High Battery Temperature, 27: Warning Battery Temperature, 28: Critical Battery Temperature
+# 29: Self Test In Progress, 30: Low Battery / On Battery, 31: Graceful Shutdown Issued by Upstream Device
+# 32: Graceful Shutdown Issued by Downstream Device, 33: No Batteries Attached
+# 34: Synchronized Command is in Progress, 35: Synchronized Sleeping Command is in Progress
+# 36: Synchronized Rebooting Command is in Progress, 37: Inverter DC Imbalance
+# 38: Transfer Relay Failure, 39: Shutdown or Unable to Transfer, 40: Low Battery Shutdown
+# 41: Electronic Unit Fan Failure, 42: Main Relay Failure, 43: Bypass Relay Failure
+# 44: Temporary Bypass, 45: High Internal Temperature, 46: Battery Temperature Sensor Fault
+# 47: Input Out of Range for Bypass, 48: DC Bus Overvoltage, 49: PFC Failure
+# 50: Critical Hardware Fault, 51: Green Mode/ECO Mode, 52: Hot Standby
+# 53: Emergency Power Off (EPO) Activated, 54: Load Alarm Violation, 55: Bypass Phase Fault
+# 56: UPS Internal Communication Failure, 57-64: <Not Used>
+
+
+# old format:
+# apc_default_levels = ( 95, 40, 1, 220 )
+# Temperature default now 60C: regadring to a apc technician a temperature up tp 70C is possible
+factory_settings["apc_default_levels"] = {
+        "levels": ( 95, 60, 1, 220 )
+}
+
+
+def inventory_apc(info):
+    if info:
+        return [(None, "apc_default_levels")]
+
+
+def check_apc(item, params, info):
+    if not info:
+        return
+
+    # some numeric fields may be empty
+    battery_status, output_status, state_output_state, battery_capacity, battery_temp, battery_replace, \
+    battery_num_batt_packs, battery_current, input_voltage, output_voltage, output_current, \
+    battery_time_remain, calib_result, output_load, last_diag_date = info[0]
+
+    if state_output_state != '':
+        output_state_bitmask = int(state_output_state, 2) # string contains a bitmask, convert to int
+    else:
+        output_state_bitmask = 0
+    self_test_in_progress = output_state_bitmask & 1<<35 != 0
+
+    # convert old format tuple to dict, new format with up to 6 params in dict
+    if type(params) is tuple:
+        params = { "levels": params }
+    alt_crit_capacity = None
+    crit_capacity, crit_sys_temp, crit_batt_curr, crit_voltage = params['levels']
+    if params.get("post_calibration_levels"):
+        # the last_diag_date is reported as %m/%d/%Y or %y
+        if last_diag_date != 'Unknown' and len(last_diag_date) in [8, 10]:
+            year_format       = len(last_diag_date) == 8 and '%y' or '%Y'
+            last_ts           = time.mktime(time.strptime(last_diag_date, '%m/%d/'+year_format))
+            diff_sec          = time.time() - last_ts
+            allowed_delay_sec = 86400 + params['post_calibration_levels']['additional_time_span']
+            alt_crit_capacity = params['post_calibration_levels']['altcapacity']
+
+    state, state_readable = {
+        "1" : (3, "unknown"),
+        "2" : (0, "normal"),
+        "3" : (2, "low"),
+        "4" : (2, "in fault condition"), }.get(battery_status, (3, "unexpected(%s)" % battery_status))
+    yield state, "Battery status: %s" % state_readable
+
+    if battery_replace:
+        state, state_readable = {
+            "1" : (0, "no battery needs replacing"),
+            "2" : (1, "battery needs replacing"), }[battery_replace]
+        if battery_num_batt_packs and int(battery_num_batt_packs) > 1:
+            yield 2, "%i batteries need replacement" % int(battery_num_batt_packs)
+        elif state:
+            yield state, state_readable
+
+    if output_status:
+        output_status_txts = {
+            "1"  : "unknown",                       "2"  : "on line",
+            "3"  : "on battery",                    "4"  : "on smart boost",
+            "5"  : "timed sleeping",                "6"  : "software bypass",
+            "7"  : "off",                           "8"  : "rebooting",
+            "9"  : "switched bypass",               "10" : "hardware failure bypass",
+            "11" : "sleeping until power return",   "12" : "on smart trim",
+            "13" : "eco mode",                      "14" : "hot standby",
+            "15" : "on battery test",               "16" : "emergency static bypass",
+            "17" : "static bypass standby",         "18" : "power saving mode",
+            "19" : "spot mode",                     "20" : "e conversion", }
+        state_readable = output_status_txts.get(output_status, "unexpected(%s)" % output_status)
+
+        if output_status not in output_status_txts:
+            state = 3
+        elif output_status not in ["2", "4", "12"] and \
+             calib_result != "3" and not self_test_in_progress:
+            state = 2
+        else:
+            state = 0
+
+        calib_text = {
+            "1" : "",
+            "2" : " (calibration invalid)",
+            "3" : " (calibration in progress)", }.get(calib_result, " (calibration unexpected(%s))" % calib_result)
+
+        yield state, "Output status: %s%s%s" % (state_readable, calib_text,
+                      self_test_in_progress and " (self-test running)" or "")
+
+    if battery_capacity:
+        battery_capacity = int(battery_capacity)
+        state            = 0
+        levelstxt        = ""
+        if alt_crit_capacity != None and diff_sec < allowed_delay_sec:
+            if battery_capacity < alt_crit_capacity:
+                state     = 2
+                levelstxt = " (crit below %d%% in delay after calibration)" % alt_crit_capacity
+        else:
+            if battery_capacity < crit_capacity:
+                state     = 2
+                levelstxt = " (crit below %d%%)" % crit_capacity
+
+        yield state, "Capacity: %d%%%s" % (battery_capacity, levelstxt), \
+              [("capacity", battery_capacity, None, crit_capacity, 0, 100)]
+
+    if battery_temp:
+        battery_temp = float(battery_temp)
+        state        = 0
+        levelstxt    = ""
+        if battery_temp >= crit_sys_temp:
+            state     = 2
+            levelstxt = u" (crit at %d °C)" % crit_sys_temp
+        yield state, u"Temperature: %d °C%s" % (battery_temp, levelstxt), \
+              [("systemp", battery_temp, None, crit_sys_temp)]
+
+    if battery_current:
+        battery_current = int(battery_current)
+        state           = 0
+        levelstxt       = ""
+        if not ((alt_crit_capacity != None and diff_sec < allowed_delay_sec) or self_test_in_progress) \
+           and battery_current >= crit_batt_curr:
+            state     = 2
+            levelstxt = " (crit at %d A)" % crit_batt_curr
+        yield state, "Battery current: %d A%s" % (battery_current, levelstxt), \
+              [("batcurr", battery_current, None, crit_batt_curr, 0)]
+
+    if input_voltage:
+        yield 0, "Input voltage: %s V" % input_voltage
+
+    if output_voltage:
+        output_voltage = int(output_voltage)
+        state          = 0
+        levelstxt      = ""
+        if output_voltage < crit_voltage:
+            state     = 2
+            levelstxt = " (crit below %d V)" % crit_voltage
+        yield state, "Output voltage: %d V%s" % (output_voltage, levelstxt), \
+              [("voltage", output_voltage, None, crit_voltage, 0)]
+
+    if output_current:
+        yield 0, "Output current: %s A" % output_current, [("current", output_current)]
+
+    if battery_time_remain:
+        battery_time_remain           = float(battery_time_remain)/100
+        battery_time_remain_readable  = get_age_human_readable(battery_time_remain)
+        state                         = 0
+        levelstxt                     = ""
+        battery_time_warn, battery_time_crit = None, None
+        if params.get('battime'):
+            battery_time_warn, battery_time_crit = params['battime']
+            if battery_time_remain < battery_time_crit:
+                state = 2
+            elif battery_time_remain < battery_time_warn:
+                state = 1
+        if state:
+            levelstxt = " (warn/crit below %s/%s)" % \
+                          (get_age_human_readable(battery_time_warn),
+                           get_age_human_readable(battery_time_crit))
+
+        yield state, "Time remaining: %s%s" % (battery_time_remain_readable, levelstxt), \
+              [("runtime", battery_time_remain/60, battery_time_warn, battery_time_crit)]
+
+    if output_load:
+        output_load        = int(output_load)
+        state              = 0
+        levelstxt          = ""
+        loadwarn, loadcrit = None, None
+        if params.get('output_load'):
+            loadwarn, loadcrit = params['output_load']
+            if output_load >= loadcrit:
+                state = 2
+            elif output_load >= loadwarn:
+                state = 1
+        if state:
+            levelstxt = " (warn/crit at %d%%/%d%%)" % (loadwarn, loadcrit)
+
+        yield state, "Current output load: %d%%%s" % (output_load, levelstxt), \
+              [("OutputLoad", output_load, loadwarn, loadcrit )]
+
+
+check_info['apc_symmetra'] = {
+  "inventory_function"      : inventory_apc,
+  "check_function"          : check_apc,
+  "service_description"     : "APC Symmetra status",
+  "snmp_info"               : (".1.3.6.1.4.1.318.1.1.1", [
+                                    "2.1.1.0",  # PowerNet-MIB::upsBasicBatteryStatus,
+                                    "4.1.1.0",  # PowerNet-MIB::upsBasicOutputStatus,
+                                    "11.1.1.0", # PowerNet-MIB::upsBasicStateOutputState
+                                    "2.2.1.0",  # PowerNet-MIB::upsAdvBatteryCapacity,
+                                    "2.2.2.0",  # PowerNet-MIB::upsAdvBatteryTemperature,
+                                    "2.2.4.0",  # PowerNet-MIB::upsAdvBatteryReplaceIndicator,
+                                    "2.2.6.0",  # PowerNet-MIB::upsAdvBatteryNumOfBadBattPacks,
+                                    "2.2.9.0",  # PowerNet-MIB::upsAdvBatteryCurrent,
+                                    "3.2.1.0",  # PowerNet-MIB::upsAdvInputVoltage,
+                                    "4.2.1.0",  # PowerNet-MIB::upsAdvOutputVoltage,
+                                    "4.2.4.0",  # PowerNet-MIB::upsAdvOutputCurrent,
+                                    "2.2.3.0",  # PowerNet-MIB::upsAdvBatteryRunTimeRemaining,
+                                    "7.2.6.0",  # PowerNet-MIB::upsAdvTestCalibrationResults
+                                    "4.2.3.0",  # PowerNet-MIB::upsAdvOutputLoad
+                                    "7.2.4.0",  # PowerNet-MIB::upsLastDiagnosticsDate
+                              ]),
+  "snmp_scan_function"      : lambda oid: oid(".1.3.6.1.2.1.1.2.0").startswith(".1.3.6.1.4.1.318.1.3"),
+  "has_perfdata"            : True,
+  "group"                   : "apc_symentra",
+  "default_levels_variable" : "apc_default_levels",
+}

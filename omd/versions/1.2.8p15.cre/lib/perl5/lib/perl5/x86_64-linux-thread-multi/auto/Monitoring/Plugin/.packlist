@@ -1,0 +1,16 @@
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/lib/perl5/Monitoring/Plugin.pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/lib/perl5/Monitoring/Plugin/Config.pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/lib/perl5/Monitoring/Plugin/ExitResult.pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/lib/perl5/Monitoring/Plugin/Functions.pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/lib/perl5/Monitoring/Plugin/Getopt.pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/lib/perl5/Monitoring/Plugin/Performance.pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/lib/perl5/Monitoring/Plugin/Range.pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/lib/perl5/Monitoring/Plugin/Threshold.pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/man/man3/Monitoring::Plugin.3pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/man/man3/Monitoring::Plugin::Config.3pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/man/man3/Monitoring::Plugin::ExitResult.3pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/man/man3/Monitoring::Plugin::Functions.3pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/man/man3/Monitoring::Plugin::Getopt.3pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/man/man3/Monitoring::Plugin::Performance.3pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/man/man3/Monitoring::Plugin::Range.3pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/man/man3/Monitoring::Plugin::Threshold.3pm

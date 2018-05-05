@@ -1,0 +1,14 @@
+#!/bin/sh
+
+. "/omd/sites/prod/.profile"
+
+export PHP_FCGI_MAX_REQUESTS=1000
+
+# Replace with the path to your FastCGI-enabled PHP executable
+exec /usr/bin/php-cgi -c /omd/sites/prod/etc/apache/php.ini \
+    -d session.save_handler=files \
+    -d session.save_path=/omd/sites/prod/tmp/php/session \
+    -d upload_tmp_dir=/omd/sites/prod/tmp/php/upload \
+    -d soap.wsdl_cache_dir=/omd/sites/prod/tmp/php/wsdl-cache \
+    -d safe_mode='Off' \
+    -d mysql.default_socket=/omd/sites/prod/tmp/run/mysqld/mysqld.sock

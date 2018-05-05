@@ -1,0 +1,244 @@
+#!/usr/bin/python
+# -*- encoding: utf-8; py-indent-offset: 4 -*-
+# +------------------------------------------------------------------+
+# |             ____ _               _        __  __ _  __           |
+# |            / ___| |__   ___  ___| | __   |  \/  | |/ /           |
+# |           | |   | '_ \ / _ \/ __| |/ /   | |\/| | ' /            |
+# |           | |___| | | |  __/ (__|   <    | |  | | . \            |
+# |            \____|_| |_|\___|\___|_|\_\___|_|  |_|_|\_\           |
+# |                                                                  |
+# | Copyright Mathias Kettner 2014             mk@mathias-kettner.de |
+# +------------------------------------------------------------------+
+#
+# This file is part of Check_MK.
+# The official homepage is at http://mathias-kettner.de/check_mk.
+#
+# check_mk is free software;  you can redistribute it and/or modify it
+# under the  terms of the  GNU General Public License  as published by
+# the Free Software Foundation in version 2.  check_mk is  distributed
+# in the hope that it will be useful, but WITHOUT ANY WARRANTY;  with-
+# out even the implied warranty of  MERCHANTABILITY  or  FITNESS FOR A
+# PARTICULAR PURPOSE. See the  GNU General Public License for more de-
+# tails. You should have  received  a copy of the  GNU  General Public
+# License along with GNU Make; see the file  COPYING.  If  not,  write
+# to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
+# Boston, MA 02110-1301 USA.
+
+# Common file for all (modern) checks that check CPU utilization (not load!)
+
+# Example for check parameters:
+# 1. Variant: Tuple (warn, crit). This is legaacy style
+# 2. Variant: dictionary:
+#
+#  param = {
+#     "levels" : .... --> compatible with check_levels(), optional
+#     "average" : 15 # -> compute average for 15 minutes, optional
+#   }
+
+
+# normalize name of a cpu core so that the perfdata-template
+# recognizes it. If the input name doesn't end on a number, this
+# returns consecutive numbers per call so this function has to be
+# called exactly once per core
+def cpu_util_core_name(orig, core_counter):
+    expr = regex("\d+$")
+    match = expr.search(orig)
+    if match is not None:
+        num = match.group(0)
+    else:
+        # fallback: if the cores have odd names, use
+        # consecutive numbers for each call
+        num = core_counter
+        core_counter += 1
+    return "cpu_core_util_%s" % num, core_counter
+
+
+def check_cpu_util(util, params, this_time = None, cores = None):
+    # Convert legacy param style to new dict style
+    if this_time == None:
+        this_time = time.time()
+
+    if params == None:
+        params = {}
+    elif type(params) == tuple:
+        params = {
+            "levels" : params,
+        }
+
+    infotext = "%.1f%% used" % util
+
+    # Averaging
+    if "average" in params:
+        util_avg = get_average("cpu_utilization.avg", this_time, util, params["average"])
+        check_against = util_avg
+        perfvar = "avg"
+        infotext += ", %dmin average: %.1f%%" % (params["average"], util_avg)
+    else:
+        check_against = util
+        perfvar = "util"
+
+
+    levels = params.get("levels")
+    if type(levels) == tuple:
+        warn, crit = levels # only for perfdata
+    else:
+        warn, crit = None, None
+
+    state, extrainfo, extraperf = check_levels(check_against, perfvar, levels)
+    if extrainfo:
+        infotext += "," + extrainfo
+
+    perfdata = [ ("util", util, warn, crit, 0, 100) ]
+    if "average" in params:
+        perfdata.append( ("avg", util_avg, warn, crit, 0, 100) )
+
+    perfdata += extraperf # reference curve for predictive levels
+    yield state, infotext, perfdata
+
+    if cores and ("core_util_graph" in params or "core_util_time" in params):
+        core_counter = 0
+        for core, total_perc in cores:
+            if "core_util_graph" in params:
+                core_name, core_counter = cpu_util_core_name(core, core_counter)
+                yield 0, None, [(core_name, total_perc)]
+
+            if "core_util_time" in params:
+                threshold, warn_core, crit_core = params["core_util_time"]
+                core_state_name = "cpu.util.core.high.%s" % core
+                if total_perc > threshold:
+                    timestamp = get_item_state(core_state_name, 0)
+                    high_load_duration = (this_time - timestamp)
+                    if timestamp == 0:
+                        set_item_state(core_state_name, this_time)
+                    elif high_load_duration > crit_core:
+                        yield 2, "%s is under high load for %s minutes (warn/crit at %s/%s minutes)" %\
+                            (core, high_load_duration / 60, warn_core / 60, crit_core / 60), None
+                    elif high_load_duration > warn_core:
+                        yield 1, "%s is under high load for %s minutes (warn/crit at %s/%s minutes)" %\
+                            (core, high_load_duration / 60, warn_core / 60, crit_core / 60), None
+                else:
+                    clear_item_state(core_state_name)
+
+
+# This one can handle user, system and wait. values is a list of:
+# - 0 - user: normal processes executing in user mode
+# - 1 - nice: niced processes executing in user mode
+# - 2 - system: processes executing in kernel mode
+# - 3 - idle: twiddling thumbs
+# - 4 - iowait: waiting for I/O to complete
+# - 5 - irq: servicing interrupts
+# - 6 - softirq: servicing softirqs
+# - 7 - steal: involuntary wait
+# - 8 - guest: time spent in guest OK
+# - 9 - guest_nice: time spent in niced guest OK
+def check_cpu_util_unix(values, params, cores = None):
+    this_time = int(time.time())
+    # Compute jiffi-differences of all relevant counters
+    diff_values = []
+    n = 0
+    for v in values:
+        n += 1
+        countername = "cpu.util.%d" % n
+        last_time, last_val = get_item_state(countername, (0, 0))
+        diff_values.append(v - last_val)
+        set_item_state(countername, (this_time, v))
+
+    sum_jiffies = sum(diff_values) # do not account for steal!
+    if sum_jiffies == 0:
+        raise MKCounterWrapped("Too short time difference since last check")
+
+    user        = diff_values[0] + diff_values[1] # add user + nice
+    system      = diff_values[2] + diff_values[5] + diff_values[6]
+    wait        = diff_values[4]
+    user_perc   = 100.0 * float(user)   / float(sum_jiffies)
+    system_perc = 100.0 * float(system) / float(sum_jiffies)
+    wait_perc   = 100.0 * float(wait)   / float(sum_jiffies)
+    perfdata = [
+          ( "user",   "%.3f" % user_perc ),
+          ( "system", "%.3f" % system_perc ),
+          ( "wait",   "%.3f" % wait_perc ) ]
+
+    yield 0, "user: %.1f%%, system: %.1f%%" % (user_perc, system_perc), perfdata
+
+    # Handle level on iowait
+    state = 0
+    if "iowait" in params and params["iowait"] != None:
+        warn, crit = params["iowait"]
+        if wait_perc >= crit:
+            state = 2
+        elif wait_perc >= warn:
+            state = 1
+    yield state, "wait: %.1f%%" % (wait_perc)
+
+    # Compute values used in virtualized environments (Xen, etc.)
+    # Only do this for counters that have counted at least one tick
+    # since the system boot. This avoids silly output in systems
+    # where these counters are not being used
+    if len(values) >= 8: #  and values[7]:
+        steal = diff_values[7]
+        steal_perc = 100.0 * float(steal) / float(sum_jiffies)
+        yield 0, "steal: %.1f%%" % steal_perc, [ ("steal", steal_perc) ]
+    else:
+        steal_perc = 0
+
+    if len(values) >= 10: # and (values[8] or values[9]):
+        guest = diff_values[8] + diff_values[9]
+        guest_perc = 100.0 * float(guest) / float(sum_jiffies)
+        yield 0, "guest: %.1f%%" % guest_perc, [ ("guest", guest_perc) ]
+    else:
+        guest_perc = 0
+
+    # Total utilization
+    util_total_perc = user_perc + system_perc + wait_perc + steal_perc + guest_perc
+    state = 0
+    levelstext = ""
+    if "util" in params:
+        warn, crit = params["util"]
+        if util_total_perc >= crit:
+            state = 2
+        elif util_total_perc >= warn:
+            state = 1
+        else:
+            state = 0
+        if state:
+            levelstext = " (warn/crit at %.1f%%/%.1f%%)" % (warn, crit)
+
+    yield state, "total: %.1f%%" % util_total_perc + levelstext
+
+    if cores and\
+            ("core_util_graph" in params or \
+             "core_util_time" in params):
+        core_counter = 0
+        cores_padded = [line + [0] * (11 - len(line)) for line in cores]
+        for core, user, nice, system, idle, iowait,\
+            irq, softirq, steal, guest, guest_nice in cores_padded:
+
+            total = user + nice + system + iowait + irq + softirq + steal + guest + guest_nice
+
+            prev_total = get_item_state("cpu.util.%s.total" % core, 0)
+            total_diff = total - prev_total
+            set_item_state("cpu.util.%s.total" % core, total)
+
+            total_perc = ((100.0 * total_diff) / sum_jiffies) * len(cores)
+
+            if "core_util_graph" in params:
+                core_name, core_counter = cpu_util_core_name(core, core_counter)
+                yield 0, None, [(core_name, total_perc)]
+
+            if "core_util_time" in params:
+                threshold, warn_core, crit_core = params["core_util_time"]
+                core_state_name = "cpu.util.core.high.%s" % core
+                if total_perc > threshold:
+                    timestamp = get_item_state(core_state_name, 0)
+                    high_load_duration = (this_time - timestamp)
+                    if timestamp == 0:
+                        set_item_state(core_state_name, this_time)
+                    elif high_load_duration > crit_core:
+                        yield 2, "%s is under high load for %s minutes (warn/crit at %s/%s minutes)" %\
+                            (core, high_load_duration / 60, warn_core / 60, crit_core / 60)
+                    elif high_load_duration > warn_core:
+                        yield 1, "%s is under high load for %s minutes (warn/crit at %s/%s minutes)" %\
+                            (core, high_load_duration / 60, warn_core / 60, crit_core / 60)
+                else:
+                    clear_item_state(core_state_name)
+

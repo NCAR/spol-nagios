@@ -1,0 +1,136 @@
+#!/usr/bin/python
+# -*- encoding: utf-8; py-indent-offset: 4 -*-
+# +------------------------------------------------------------------+
+# |             ____ _               _        __  __ _  __           |
+# |            / ___| |__   ___  ___| | __   |  \/  | |/ /           |
+# |           | |   | '_ \ / _ \/ __| |/ /   | |\/| | ' /            |
+# |           | |___| | | |  __/ (__|   <    | |  | | . \            |
+# |            \____|_| |_|\___|\___|_|\_\___|_|  |_|_|\_\           |
+# |                                                                  |
+# | Copyright Mathias Kettner 2014             mk@mathias-kettner.de |
+# +------------------------------------------------------------------+
+#
+# This file is part of Check_MK.
+# The official homepage is at http://mathias-kettner.de/check_mk.
+#
+# check_mk is free software;  you can redistribute it and/or modify it
+# under the  terms of the  GNU General Public License  as published by
+# the Free Software Foundation in version 2.  check_mk is  distributed
+# in the hope that it will be useful, but WITHOUT ANY WARRANTY;  with-
+# out even the implied warranty of  MERCHANTABILITY  or  FITNESS FOR A
+# PARTICULAR PURPOSE. See the  GNU General Public License for more de-
+# tails. You should have  received  a copy of the  GNU  General Public
+# License along with GNU Make; see the file  COPYING.  If  not,  write
+# to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
+# Boston, MA 02110-1301 USA.
+
+# <<<ad_replication>>>
+# showrepl_COLUMNS,Destination DC Site,Destination DC,Naming Context,Source DC Site,Source DC,\
+#Transport Type,Number of Failures,Last Failure Time,Last Success Time,Last Failure Status
+# showrepl_INFO,Standardname-des-ersten-Standorts,WIN2003,"DC=corp,DC=de",Standardname-des-ers\
+#ten-Standorts,WIN2003-DC2,RPC,0,0,2010-07-02 13:33:27,0
+# showrepl_INFO,Standardname-des-ersten-Standorts,WIN2003,"CN=Configuration,DC=corp,DC=de",Sta\
+#ndardname-des-ersten-Standorts,WIN2003-DC2,RPC,0,0,2010-07-02 12:54:08,0
+# showrepl_INFO,Standardname-des-ersten-Standorts,WIN2003,"CN=Schema,CN=Configuration,DC=corp,\
+#DC=de",Standardname-des-ersten-Standorts,WIN2003-DC2,RPC,0,0,2010-07-02 12:46:28,0
+
+ad_replication_default_params = (15,20)
+
+def parse_ad_replication_dates(s):
+    if s == '0' or s == '(never)':
+        return None, "unknown"
+    else:
+        s_val = time.mktime(time.strptime(s, '%Y-%m-%d %H:%M:%S'))
+        s_txt = get_relative_date_human_readable(s_val)
+        return s_val, s_txt
+
+def parse_ad_replication_info(info):
+    lines = []
+    for line_parts in info:
+        # Make lines split by , instead of spaces
+        line_txt = ' '.join(line_parts).replace(',CN=', ';CN=').replace(',DC=', ';DC=')
+        line_parts = line_txt.split(',')
+        if len(line_parts) in [ 11, 10 ]:
+            lines.append(line_parts)
+    return lines
+
+def inventory_ad_replication(info):
+    inv = []
+    for line in parse_ad_replication_info(info):
+        if len(line) == 11:
+            source_site = line[4]
+            source_dc = line[5]
+        elif len(line) == 10:
+            source_site = line[3]
+            source_dc =  line[4]
+        else:
+            break # unhandled data
+        entry = ('%s/%s' % (source_site, source_dc), 'ad_replication_default_params')
+        if line[0] == 'showrepl_INFO' and entry not in inv:
+            inv.append(entry)
+    return inv
+
+def check_ad_replication(item, params, info):
+    status    = 0
+    output    = ''
+    foundLine = False
+
+    for l in parse_ad_replication_info(info):
+        if len(l) == 11:
+            (lineType, destSite, destDC, naming_context, source_site, source_dc,
+             transport, num_failures, time_last_failure, time_last_success,
+             statusLastFailure ) = l
+        elif len(l) == 10:
+            (lineType, destSite, naming_context, source_site, source_dc,
+             transport, num_failures, time_last_failure, time_last_success,
+             statusLastFailure ) = l
+        else:
+            break # unhandled data
+
+        if lineType == 'showrepl_INFO' and source_site+'/'+source_dc == item:
+            foundLine = True
+            time_last_failure, time_last_failure_txt = parse_ad_replication_dates(time_last_failure)
+            time_last_success, time_last_success_txt = parse_ad_replication_dates(time_last_success)
+
+            max_failures_warn = params[0]
+            max_failures_crit = params[1]
+
+            if int(num_failures) > max_failures_warn:
+                status = 1
+                output += '(!) %s/%s replication of context %s reached ' \
+                          ' the threshold of maximum failures (%s) (Last success: %s, ' \
+                          'Last failure: %s, Num failures: %s, Status: %s), ' % \
+                         (source_site, source_dc, naming_context, max_failures_warn,
+                          time_last_success_txt, time_last_failure_txt, num_failures, statusLastFailure)
+
+            if int(num_failures) > max_failures_crit:
+                status = 2
+                output += '(!!) %s/%s replication of context %s reached ' \
+                          ' the threshold of maximum failures (%s) (Last success: %s, ' \
+                          'Last failure: %s, Num failures: %s, Status: %s), ' % \
+                         (source_site, source_dc, naming_context, max_failures_crit,
+                          time_last_success_txt, time_last_failure_txt, num_failures, statusLastFailure)
+
+            if time_last_failure != None and time_last_success != None \
+               and time_last_failure > time_last_success:
+                status = 2
+                output += '(!!) %s/%s replication of context %s failed ' \
+                         '(Last success: %s, Last failure: %s, Num failures: %s, Status: %s), ' % \
+                         (source_site, source_dc, naming_context,
+                          time_last_success_txt, time_last_failure_txt, num_failures, statusLastFailure)
+
+    if not foundLine:
+        return (3, 'Replication information for %s not found' % item)
+
+    if status != 0:
+        return (status, output.rstrip(', '))
+    else:
+        return (status, 'All replications are OK.')
+
+
+check_info["ad_replication"] = {
+    'check_function':          check_ad_replication,
+    'inventory_function':      inventory_ad_replication,
+    'service_description':     'AD Replication %s',
+    'group':                   'ad_replication',
+}

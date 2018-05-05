@@ -1,0 +1,1 @@
+{'allservices': {'refresh': 30}}

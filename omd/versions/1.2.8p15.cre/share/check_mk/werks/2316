@@ -1,0 +1,11 @@
+Title: windows agent: fix garbled output of cached agent plugins
+Level: 2
+Component: checks
+Class: fix
+Compatible: compat
+State: unknown
+Version: 1.2.7i3
+Date: 1435308547
+
+If you configured a <i>cache_age</i> for plugins in your <i>check_mk.ini</i>
+file, those plugins delivered broken output. This has been fixed.

@@ -1,0 +1,78 @@
+#!/usr/bin/python
+# -*- encoding: utf-8; py-indent-offset: 4 -*-
+# +------------------------------------------------------------------+
+# |             ____ _               _        __  __ _  __           |
+# |            / ___| |__   ___  ___| | __   |  \/  | |/ /           |
+# |           | |   | '_ \ / _ \/ __| |/ /   | |\/| | ' /            |
+# |           | |___| | | |  __/ (__|   <    | |  | | . \            |
+# |            \____|_| |_|\___|\___|_|\_\___|_|  |_|_|\_\           |
+# |                                                                  |
+# | Copyright Mathias Kettner 2014             mk@mathias-kettner.de |
+# +------------------------------------------------------------------+
+#
+# This file is part of Check_MK.
+# The official homepage is at http://mathias-kettner.de/check_mk.
+#
+# check_mk is free software;  you can redistribute it and/or modify it
+# under the  terms of the  GNU General Public License  as published by
+# the Free Software Foundation in version 2.  check_mk is  distributed
+# in the hope that it will be useful, but WITHOUT ANY WARRANTY;  with-
+# out even the implied warranty of  MERCHANTABILITY  or  FITNESS FOR A
+# PARTICULAR PURPOSE. See the  GNU General Public License for more de-
+# tails. You should have  received  a copy of the  GNU  General Public
+# License along with GNU Make; see the file  COPYING.  If  not,  write
+# to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
+# Boston, MA 02110-1301 USA.
+
+def parse_casa_info_temp(info):
+    entity_names = dict(map(lambda x: [int(x[0]), x[1]], info[0]))
+    temp_value   = dict(map(lambda x: [int(x[0]), x[1]], info[1]))
+    temp_status  = dict(map(lambda x: [int(x[0]), x[1]], info[2]))
+    temp_unit    = dict(map(lambda x: [int(x[0]), x[1]], info[3]))
+    data = {}
+    for entry in info[1]:
+        entry_nr = int(entry[0])
+        def beautify_module_text(text):
+            text = text.replace("temperature sensor", "")
+            if text.startswith("Module "):
+                text = text.rsplit(None, 1)[0] # Drop trailing " CPU"
+            return text
+        data[beautify_module_text(entity_names[entry_nr])] = {
+                                "temp_value"      : temp_value.get(entry_nr),
+                                "temp_status"     : temp_status.get(entry_nr),
+                                "temp_unit"       : temp_unit.get(entry_nr),
+                            }
+    return data
+
+def inventory_casa_cpu_temp(parsed):
+    for key, value in parsed.items():
+        if value.get("temp_value"):
+            yield key, None
+
+def check_casa_cpu_temp(item, params, parsed):
+    state = 0
+    perfdata = []
+    if item in parsed:
+        if parsed[item]["temp_status"] == "1":
+            value  = float(parsed[item]["temp_value"]) / 10
+            return check_temperature(value, params, "case_cpu_temp_%s" % item)
+        else:
+            return (2, "Sensor failure!", [])
+
+
+check_info["casa_cpu_temp"] = {
+    "check_function"        : check_casa_cpu_temp,
+    "inventory_function"    : inventory_casa_cpu_temp,
+    "parse_function"        : parse_casa_info_temp,
+    "service_description"   : "Temperature CPU %s",
+    "group"                 : "temperature",
+    "has_perfdata"          : True,
+    "snmp_scan_function"    : lambda oid: oid(".1.3.6.1.2.1.1.2.0").startswith(".1.3.6.1.4.1.20858.2."),
+    "snmp_info"             : [
+               ( ".1.3.6.1.2.1.47.1.1.1.1.2",        [ OID_END, '' ] ), # Entity descriptions, quite long...
+               ( ".1.3.6.1.2.1.99.1.1.1.4",          [ OID_END, '' ] ), # Temperatures, Value
+               ( ".1.3.6.1.2.1.99.1.1.1.5",          [ OID_END, '' ] ), # Temperatures, Status
+               ( ".1.3.6.1.2.1.99.1.1.1.6",          [ OID_END, '' ] ), # Temperatures, Unit
+                              ],
+    "imports"               : [ "temperature.include" ]
+}

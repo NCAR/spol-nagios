@@ -1,0 +1,13 @@
+/omd/sites/prod/var/log/apache/stats {
+        missingok
+        rotate 1
+        size 1M
+        compress
+        delaycompress
+        notifempty
+        create 640 prod prod 
+        sharedscripts
+        postrotate
+                /omd/sites/prod/etc/init.d/apache reload >/dev/null
+        endscript
+}

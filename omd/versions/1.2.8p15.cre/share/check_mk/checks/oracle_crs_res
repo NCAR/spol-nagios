@@ -1,0 +1,141 @@
+#!/usr/bin/python
+# -*- encoding: utf-8; py-indent-offset: 4 -*-
+# +------------------------------------------------------------------+
+# |             ____ _               _        __  __ _  __           |
+# |            / ___| |__   ___  ___| | __   |  \/  | |/ /           |
+# |           | |   | '_ \ / _ \/ __| |/ /   | |\/| | ' /            |
+# |           | |___| | | |  __/ (__|   <    | |  | | . \            |
+# |            \____|_| |_|\___|\___|_|\_\___|_|  |_|_|\_\           |
+# |                                                                  |
+# | Copyright Mathias Kettner 2014             mk@mathias-kettner.de |
+# +------------------------------------------------------------------+
+#
+# This file is part of Check_MK.
+# The official homepage is at http://mathias-kettner.de/check_mk.
+#
+# check_mk is free software;  you can redistribute it and/or modify it
+# under the  terms of the  GNU General Public License  as published by
+# the Free Software Foundation in version 2.  check_mk is  distributed
+# in the hope that it will be useful, but WITHOUT ANY WARRANTY;  with-
+# out even the implied warranty of  MERCHANTABILITY  or  FITNESS FOR A
+# PARTICULAR PURPOSE. See the  GNU General Public License for more de-
+# tails. You should have  received  a copy of the  GNU  General Public
+# License along with GNU Make; see the file  COPYING.  If  not,  write
+# to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
+# Boston, MA 02110-1301 USA.
+
+# Original version by Thorsten Bruhns from OPITZ CONSULTING Deutschland GmbH
+
+# <<<oracle_crs_res:sep(124)>>>
+# ezszds8c|NAME=ora.DG_CLUSTER.dg
+# ezszds8c|TYPE=ora.diskgroup.type
+# ezszds8c|STATE=ONLINE on ezszds8c
+# ezszds8c|TARGET=ONLINE
+# ezszds8c|NAME=ora.I31_ARCH.dg
+# ezszds8c|TYPE=ora.diskgroup.type
+# ezszds8c|STATE=ONLINE on ezszds8c
+# ezszds8c|TARGET=ONLINE
+# ezszds8c|NAME=ora.I31_DATA.dg
+# ezszds8c|TYPE=ora.diskgroup.type
+# ezszds8c|STATE=ONLINE on ezszds8c
+# ezszds8c|TARGET=ONLINE
+# ezszds8c|NAME=ora.I31_MLOG.dg
+# ezszds8c|TYPE=ora.diskgroup.type
+# ezszds8c|STATE=ONLINE on ezszds8c
+# ezszds8c|TARGET=ONLINE
+# ...usw...
+
+# Parse output into dict of dicts of dicts:
+# nodename -> ressource name -> entry
+# ressource. Example:
+# { 'ezszds8c' :
+#     { 'ora.I31_ARCH.dg' : {
+#           'state': 'ONLINE on ezszds9c',
+#           'target': 'ONLINE',
+#           'type': 'ora.diskgroup.type'}
+#     }
+# }
+# Returns a pair of CRS node name and the former dict
+def parse_oracle_crs_res(info):
+    ressources = {}
+    for nodename, varsetting in info:
+        if nodename == "nodename":
+            crs_nodename = varsetting
+            continue
+
+        key, value = varsetting.split("=", 1)
+        if key == "NAME":
+            res_name = value
+            entry = {}
+            ressources.setdefault(res_name, {})
+            ressources[res_name][nodename] = entry
+        else:
+            entry[key.lower()] = value
+    return crs_nodename, ressources
+
+
+def inventory_oracle_crs_res(parsed):
+    return [ (name, None) for name in parsed[1] ]
+
+
+def get_oracle_crs_runninginfo(item, data):
+    infotext = ''
+    for line in data:
+        resname = line[0]['NAME']
+        resstate = line[0]['STATE'].split(' ', 1)[0]
+        resstatelong = line[0]['STATE']
+        nodename = line[1]
+
+        if item == resname  and nodename not in ('nodename', 'csslocal', 'crslocal') \
+        and resstate == 'ONLINE':
+
+            # sometime there is only 'ONLINE' instead 'ONLINE on <nodename>'
+            # prevent duplicate entries
+            infotextshort = ' [online on %s]' % (nodename)
+            if infotextshort not in infotext:
+                infotext += infotextshort
+
+    return infotext
+
+
+def check_oracle_crs_res(item, _no_params, parsed):
+    crs_nodename, ressources = parsed
+
+    # In case of missing information we assume that the clusterware
+    # is not running and we simple skip the result
+    if item not in ressources:
+        if item == 'ora.cssd':
+            yield 2, "Clusterware not running"
+        elif item == 'ora.crsd':
+            yield 2, "Cluster Resource Service Daemon not running!"
+        else:
+            raise MKCounterWrapped("No ressource details found for %s. Maybe the cssd/crsd is not running" % item)
+        return
+
+    for nodename, entry in ressources[item].items():
+        restype   = entry["type"]
+        resstate  = entry["state"].split(' ', 1)[0]
+        restarget = entry["target"]
+
+        if nodename == "csslocal":
+            infotext = "local: "
+        else:
+            infotext = "on " + nodename + ": "
+        infotext += resstate.lower()
+
+        if resstate != restarget:
+            state = 2
+            infotext += ", target state %s" % restarget.lower()
+        else:
+            state = 0
+        yield state, infotext
+
+
+
+check_info['oracle_crs_res'] = {
+    "parse_function"          : parse_oracle_crs_res,
+    "check_function"          : check_oracle_crs_res,
+    "inventory_function"      : inventory_oracle_crs_res,
+    "service_description"     : "ORA-GI %s Resource",
+    "group"                   : "oracle_crs_res",
+}

@@ -1,0 +1,18 @@
+title: Fan rpm via IBM Integrated Management Module (IMM)
+agents: snmp
+catalog: hw/server/ibm
+license: GPL
+distribution: check_mk
+description:
+ This check monitors the percentage of maximum RPM of fans via the IBM
+ Integrated Management Module (IMM). It uses snmp and the IBM IMM MIB to
+ gather the fan data.
+
+ The lower default levels are set to 28%/25%.
+ Upper and lower levels are configurable.
+
+inventory:
+ The service discovery will find one service per fan
+
+item:
+ The name of the fan as extracted from the OID {fanDescr}

@@ -1,0 +1,10 @@
+Title: sap.value_groups: new check
+Level: 1
+Component: checks
+Compatible: compat
+Version: 1.2.5i6
+Date: 1407765950
+Class: feature
+
+With this check it's possible to create groups of SAP values to avoid dozen of service checks.
+

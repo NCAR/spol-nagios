@@ -1,0 +1,23 @@
+<!--[if IE]>
+<style type=”text/css”>
+div.infopage a:hover {
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+filter:alpha(opacity=50);
+}
+</style>
+<![endif]-->
+<div id="overview" class="infopage"></div>
+
+<script type="text/javascript">
+oGeneralProperties = {$generalProperties};
+oWorkerProperties = {$workerProperties};
+oUserProperties = {$userProperties};
+oPageProperties = {$pageProperties};
+oStates = {$stateProperties};
+g_map_names = {$map_names};
+oLocales = {$locales};
+oFileAges = {$fileAges};
+
+// Kick of the worker
+addDOMLoadEvent(function()\{runWorker(0, 'overview');});
+</script>

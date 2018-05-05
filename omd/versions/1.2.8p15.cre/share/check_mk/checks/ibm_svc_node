@@ -1,0 +1,86 @@
+#!/usr/bin/python
+# -*- encoding: utf-8; py-indent-offset: 4 -*-
+# +------------------------------------------------------------------+
+# |             ____ _               _        __  __ _  __           |
+# |            / ___| |__   ___  ___| | __   |  \/  | |/ /           |
+# |           | |   | '_ \ / _ \/ __| |/ /   | |\/| | ' /            |
+# |           | |___| | | |  __/ (__|   <    | |  | | . \            |
+# |            \____|_| |_|\___|\___|_|\_\___|_|  |_|_|\_\           |
+# |                                                                  |
+# | Copyright Mathias Kettner 2014             mk@mathias-kettner.de |
+# +------------------------------------------------------------------+
+#
+# This file is part of Check_MK.
+# The official homepage is at http://mathias-kettner.de/check_mk.
+#
+# check_mk is free software;  you can redistribute it and/or modify it
+# under the  terms of the  GNU General Public License  as published by
+# the Free Software Foundation in version 2.  check_mk is  distributed
+# in the hope that it will be useful, but WITHOUT ANY WARRANTY;  with-
+# out even the implied warranty of  MERCHANTABILITY  or  FITNESS FOR A
+# PARTICULAR PURPOSE. See the  GNU General Public License for more de-
+# tails. You should have  received  a copy of the  GNU  General Public
+# License along with GNU Make; see the file  COPYING.  If  not,  write
+# to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
+# Boston, MA 02110-1301 USA.
+
+# Example output from agent:
+# Put here the example output from your TCP-Based agent. If the
+# check is SNMP-Based, then remove this section
+
+# newer agent output with more columns
+# 1:N1_164191:10001AA202:500507680100D7CA:online:0:io_grp0:no:2040000051442002:CG8:iqn.1986-03.com.ibm:2145.svc-cl.n1164191::164191:::::
+# 2:N2_164373:10001AA259:500507680100D874:online:0:io_grp0:no:2040000051442149:CG8:iqn.1986-03.com.ibm:2145.svc-cl.n2164373::164373:::::
+# 5:N3_162711:100025E317:500507680100D0A7:online:1:io_grp1:no:2040000085543047:CG8:iqn.1986-03.com.ibm:2145.svc-cl.n3162711::162711:::::
+# 6:N4_164312:100025E315:500507680100D880:online:1:io_grp1:yes:2040000085543045:CG8:iqn.1986-03.com.ibm:2145.svc-cl.n4164312::164312:::::
+
+def inventory_ibm_svc_node(info):
+    io_groups = {}
+    inventory = []
+    for line in info:
+        node_id, node_name, ups_serial, wwnn, node_status, io_group_id,\
+        io_group_name, config_node, ups_unique_id, hardware, iscsi_name,\
+        iscsi_alias, panel_name, enclosure_id, canister_id,\
+        enclosure_serial_number, additional = line[:17]
+        io_groups[io_group_name] = 1
+    for io_group_name in io_groups.keys():
+        inventory.append( (io_group_name, None) )
+    return inventory
+
+def check_ibm_svc_node(item, _no_params, info):
+    message = ""
+    status = 0
+    online_nodes = 0
+    nodes_of_iogroup = 0
+
+    for line in info:
+        node_id, node_name, ups_serial, wwnn, node_status, io_group_id,\
+        io_group_name, config_node, ups_unique_id, hardware, iscsi_name,\
+        iscsi_alias, panel_name, enclosure_id, canister_id,\
+        enclosure_serial_number, additional = line[:17]
+        if io_group_name == item:
+            if message != "":
+                message += ", "
+            message += "Node %s is %s" % (node_name, node_status)
+            nodes_of_iogroup += 1
+            if node_status == "online":
+                online_nodes += 1
+
+    if nodes_of_iogroup == 0:
+        return 3, "IO Group %s not found in agent output" % item
+
+    if nodes_of_iogroup == online_nodes:
+        status = 0
+    elif online_nodes == 0:
+        status = 2
+    else:
+        status = 1
+
+    return status, message
+
+check_info["ibm_svc_node"] = {
+    "check_function"        : check_ibm_svc_node,
+    "inventory_function"    : inventory_ibm_svc_node,
+    "service_description"   : "IO Group %s",
+}
+

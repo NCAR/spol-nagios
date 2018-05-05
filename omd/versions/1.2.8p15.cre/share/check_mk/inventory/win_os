@@ -1,0 +1,57 @@
+#!/usr/bin/python
+# -*- encoding: utf-8; py-indent-offset: 4 -*-
+# +------------------------------------------------------------------+
+# |             ____ _               _        __  __ _  __           |
+# |            / ___| |__   ___  ___| | __   |  \/  | |/ /           |
+# |           | |   | '_ \ / _ \/ __| |/ /   | |\/| | ' /            |
+# |           | |___| | | |  __/ (__|   <    | |  | | . \            |
+# |            \____|_| |_|\___|\___|_|\_\___|_|  |_|_|\_\           |
+# |                                                                  |
+# | Copyright Mathias Kettner 2013             mk@mathias-kettner.de |
+# +------------------------------------------------------------------+
+#
+# This file is part of Check_MK.
+# The official homepage is at http://mathias-kettner.de/check_mk.
+#
+# check_mk is free software;  you can redistribute it and/or modify it
+# under the  terms of the  GNU General Public License  as published by
+# the Free Software Foundation in version 2.  check_mk is  distributed
+# in the hope that it will be useful, but WITHOUT ANY WARRANTY;  with-
+# out even the implied warranty of  MERCHANTABILITY  or  FITNESS FOR A
+# PARTICULAR PURPOSE. See the  GNU General Public License for more de-
+# tails. You should have  received  a copy of the  GNU  General Public
+# License along with GNU Make; see the file  COPYING.  If  not,  write
+# to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
+# Boston, MA 02110-1301 USA.
+
+# Example output
+# <<<win_os>>>
+# WIN2003|Microsoft(R) Windows(R) Server 2003 Standard Edition|5.2.3790||2|0|20100620230628.000000+120
+
+def inv_win_os(info):
+    node = inv_tree("software.os.")
+    line = info[0]
+    if len(line) == 7:
+        node["name"] = line[1]
+        node["kernel_version"] = line[2]
+        if line[3]:
+            if line[3].lower() == "64-bit":
+                node["arch"] = "x86_64"
+            else:
+                node["arch"] = "i386"
+        node["service_pack"] = line[4]+"."+line[5]
+
+        if '+' in line[6]:
+            datestr, tz = line[6].split('+')
+            tz = int(tz)
+        elif '-' in line[6]:
+            datestr, tz = line[6].split('-')
+            tz = int(tz)*-1
+        else:
+            datestr, tz = line[6], 0
+        node["install_date"] = int(time.mktime(time.strptime(datestr, "%Y%m%d%H%M%S.%f"))) - tz*60
+
+
+inv_info['win_os'] = {
+   "inv_function"           : inv_win_os,
+}

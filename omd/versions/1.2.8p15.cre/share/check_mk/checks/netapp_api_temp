@@ -1,0 +1,79 @@
+#!/usr/bin/python
+# -*- encoding: utf-8; py-indent-offset: 4 -*-
+# +------------------------------------------------------------------+
+# |             ____ _               _        __  __ _  __           |
+# |            / ___| |__   ___  ___| | __   |  \/  | |/ /           |
+# |           | |   | '_ \ / _ \/ __| |/ /   | |\/| | ' /            |
+# |           | |___| | | |  __/ (__|   <    | |  | | . \            |
+# |            \____|_| |_|\___|\___|_|\_\___|_|  |_|_|\_\           |
+# |                                                                  |
+# | Copyright Mathias Kettner 2014             mk@mathias-kettner.de |
+# +------------------------------------------------------------------+
+#
+# This file is part of Check_MK.
+# The official homepage is at http://mathias-kettner.de/check_mk.
+#
+# check_mk is free software;  you can redistribute it and/or modify it
+# under the  terms of the  GNU General Public License  as published by
+# the Free Software Foundation in version 2.  check_mk is  distributed
+# in the hope that it will be useful, but WITHOUT ANY WARRANTY;  with-
+# out even the implied warranty of  MERCHANTABILITY  or  FITNESS FOR A
+# PARTICULAR PURPOSE. See the  GNU General Public License for more de-
+# tails. You should have  received  a copy of the  GNU  General Public
+# License along with GNU Make; see the file  COPYING.  If  not,  write
+# to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
+# Boston, MA 02110-1301 USA.
+
+# <<<netapp_api_temp:sep(9)>>>
+# temp-sensor-list 11 temp-sensor-current-condition normal_temperature_range  temp-sensor-is-ambient true temp-sensor-low-warning 5   temp-sensor-hi-warning 40   temp-sensor-hi-critical 42  temp-sensor-current-temperature 24  temp-sensor-element-no 1    temp-sensor-low-critical 0  temp-sensor-is-error false
+
+def inventory_netapp_api_temp(parsed):
+    shelfs = set(map(lambda x: x.split(".")[0], parsed.keys()))
+    for shelf in shelfs:
+        yield "Internal Shelf %s" % shelf, {}
+        yield "Ambient Shelf %s"  % shelf, {}
+
+def check_netapp_api_temp(item, params, parsed):
+    is_ambient = item.startswith("Ambient") and "true" or "false"
+
+    sensors = []
+    for name, values in parsed.items():
+        if name.split(".")[0] == item.split()[-1]:
+            if values.get("temp-sensor-is-not-installed") != "true" and\
+               is_ambient == values.get("temp-sensor-is-ambient"):
+                sensors.append(values)
+
+
+    sensorlist = []
+    for sensor in sensors:
+        current_temp = int(sensor["temp-sensor-current-temperature"])
+        sensor_no    =     sensor["temp-sensor-element-no"]
+        warn_low     = int(sensor["temp-sensor-low-warning"])
+        crit_low     = int(sensor["temp-sensor-low-critical"])
+        warn_high    = int(sensor["temp-sensor-hi-warning"])
+        crit_high    = int(sensor["temp-sensor-hi-critical"])
+
+        kwargs = {
+            "dev_levels"         : (warn_high, crit_high),
+            "dev_levels_lower"   : (warn_low, crit_low),
+        }
+
+        sensorlist.append( (item.split()[-1] + "/" + sensor_no, current_temp, kwargs) )
+
+    if not sensorlist:
+        return 0, "No temperature sensors assigned to this filer"
+    else:
+        return check_temperature_list(sensorlist, params, "netapp_api_temp_%s" % item)
+
+
+check_info["netapp_api_temp"] = {
+    'check_function'      : check_netapp_api_temp,
+    'inventory_function'  : inventory_netapp_api_temp,
+    'parse_function'      : lambda info: netapp_api_parse_lines(info,
+                                custom_keys = ["temp-sensor-list", "temp-sensor-element-no"]),
+    'has_perfdata'        : True,
+    'group'               : "temperature",
+    'service_description' : 'Temperature %s',
+    'includes'            : ["netapp_api.include", "temperature.include"]
+}
+

@@ -1,0 +1,10 @@
+Title: Hosts/Hostproblems snapin: Fixed wrong livestatus query when filtering lists
+Level: 1
+Component: multisite
+Class: fix
+Compatible: compat
+State: unknown
+Version: 1.2.8b1
+Date: 1446813511
+
+

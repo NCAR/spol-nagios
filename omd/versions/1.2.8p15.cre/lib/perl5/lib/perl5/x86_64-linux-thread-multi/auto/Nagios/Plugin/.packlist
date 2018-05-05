@@ -1,0 +1,16 @@
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/lib/perl5/Nagios/Plugin.pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/lib/perl5/Nagios/Plugin/Config.pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/lib/perl5/Nagios/Plugin/ExitResult.pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/lib/perl5/Nagios/Plugin/Functions.pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/lib/perl5/Nagios/Plugin/Getopt.pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/lib/perl5/Nagios/Plugin/Performance.pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/lib/perl5/Nagios/Plugin/Range.pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/lib/perl5/Nagios/Plugin/Threshold.pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/man/man3/Nagios::Plugin.3pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/man/man3/Nagios::Plugin::Config.3pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/man/man3/Nagios::Plugin::ExitResult.3pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/man/man3/Nagios::Plugin::Functions.3pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/man/man3/Nagios::Plugin::Getopt.3pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/man/man3/Nagios::Plugin::Performance.3pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/man/man3/Nagios::Plugin::Range.3pm
+/bauen/check-mk-raw-1.2.8p15.cre/rpm.topdir/BUILD/check-mk-raw-1.2.8p15.cre/packages/perl-modules/../perl-modules/dist/dest/man/man3/Nagios::Plugin::Threshold.3pm

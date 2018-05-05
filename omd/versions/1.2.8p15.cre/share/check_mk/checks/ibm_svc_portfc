@@ -1,0 +1,84 @@
+#!/usr/bin/python
+# -*- encoding: utf-8; py-indent-offset: 4 -*-
+# +------------------------------------------------------------------+
+# |             ____ _               _        __  __ _  __           |
+# |            / ___| |__   ___  ___| | __   |  \/  | |/ /           |
+# |           | |   | '_ \ / _ \/ __| |/ /   | |\/| | ' /            |
+# |           | |___| | | |  __/ (__|   <    | |  | | . \            |
+# |            \____|_| |_|\___|\___|_|\_\___|_|  |_|_|\_\           |
+# |                                                                  |
+# | Copyright Mathias Kettner 2014             mk@mathias-kettner.de |
+# +------------------------------------------------------------------+
+#
+# This file is part of Check_MK.
+# The official homepage is at http://mathias-kettner.de/check_mk.
+#
+# check_mk is free software;  you can redistribute it and/or modify it
+# under the  terms of the  GNU General Public License  as published by
+# the Free Software Foundation in version 2.  check_mk is  distributed
+# in the hope that it will be useful, but WITHOUT ANY WARRANTY;  with-
+# out even the implied warranty of  MERCHANTABILITY  or  FITNESS FOR A
+# PARTICULAR PURPOSE. See the  GNU General Public License for more de-
+# tails. You should have  received  a copy of the  GNU  General Public
+# License along with GNU Make; see the file  COPYING.  If  not,  write
+# to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
+# Boston, MA 02110-1301 USA.
+
+# Output may have 11 fields:
+# id:fc_io_port_id:port_id:type:port_speed:node_id:node_name:WWPN:nportid:status:attachment
+# Example output from agent:
+# <<<ibm_svc_portfc:sep(58)>>>
+# 0:1:1:fc:8Gb:1:node1:5005076803042126:030400:active:switch
+# 1:2:2:fc:8Gb:1:node1:5005076803082126:040400:active:switch
+# 2:3:3:fc:N/A:1:node1:50050768030C2126:000000:inactive_unconfigured:none
+# 3:4:4:fc:N/A:1:node1:5005076803102126:000000:inactive_unconfigured:none
+# 8:1:1:fc:8Gb:2:node2:5005076803042127:030500:active:switch
+# 9:2:2:fc:8Gb:2:node2:5005076803082127:040500:active:switch
+# 10:3:3:fc:N/A:2:node2:50050768030C2127:000000:inactive_unconfigured:none
+# 11:4:4:fc:N/A:2:node2:5005076803102127:000000:inactive_unconfigured:none
+#
+# Output may have 12 fields:
+# id:fc_io_port_id:port_id:type:port_speed:node_id:node_name:WWPN:nportid:status:attachment:cluster_use
+# Example output from agent:
+# <<<ibm_svc_portfc:sep(58)>>>
+# 0:1:1:fc:8Gb:1:node1:5005076803042126:030400:active:switch:local_partner
+# 1:2:2:fc:8Gb:1:node1:5005076803082126:040400:active:switch:local_partner
+# 2:3:3:fc:N/A:1:node1:50050768030C2126:000000:inactive_unconfigured:none:local_partner
+# 3:4:4:fc:N/A:1:node1:5005076803102126:000000:inactive_unconfigured:none:local_partner
+# 8:1:1:fc:8Gb:2:node2:5005076803042127:030500:active:switch:local_partner
+# 9:2:2:fc:8Gb:2:node2:5005076803082127:040500:active:switch:local_partner
+# 10:3:3:fc:N/A:2:node2:50050768030C2127:000000:inactive_unconfigured:none:local_partner
+# 11:4:4:fc:N/A:2:node2:5005076803102127:000000:inactive_unconfigured:none:local_partner
+
+
+def inventory_ibm_svc_portfc(info):
+    for line in info:
+        if len(line) in (11, 12) and line[9] == "active":
+            item = "Port %s" % line[0]
+            yield item, None
+        elif len(line) == 14 and line[9] == "active":
+            item = "Node %s Slot %s Port %s" % (line[5], line[12], line[13])
+            yield item, None
+
+def check_ibm_svc_portfc(item, _no_params, info):
+    if not item.startswith("Port") and\
+            not item.startswith("Node"):
+        return 3, "check had an incompatible change, please re-discover services on this host"
+    for line in info:
+        if ( len(line) in (11, 12) and "Port %s" % line[0] == item) or \
+                ( len(line) == 14 and  "Node %s Slot %s Port %s" % (line[5], line[12], line[13]) ) == item:
+            infotext = "Status: %s, Speed: %s, WWPN: %s" % (line[9], line[4], line[7])
+
+            if line[9] == "active":
+                state = 0
+            else:
+                state = 2
+
+            return state, infotext
+
+check_info["ibm_svc_portfc"] = {
+    "check_function"        : check_ibm_svc_portfc,
+    "inventory_function"    : inventory_ibm_svc_portfc,
+    "service_description"   : "FC %s",
+}
+

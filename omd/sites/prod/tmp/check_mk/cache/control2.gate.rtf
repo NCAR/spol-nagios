@@ -1,0 +1,574 @@
+<<<check_mk>>>
+Version: 1.2.8p18
+AgentOS: linux
+Hostname: control2.gate.rtf
+AgentDirectory: /etc/check-mk-agent
+DataDirectory: /var/lib/check_mk_agent
+SpoolDirectory: /var/lib/check_mk_agent/spool
+PluginsDirectory: /usr/share/check-mk-agent/plugins
+LocalDirectory: /usr/share/check-mk-agent/local
+OnlyFrom: 
+<<<df>>>
+/dev/sda3      ext4        40182828 13671716   24446844      36% /
+devtmpfs       devtmpfs     6047156        0    6047156       0% /dev
+tmpfs          tmpfs        6061436       84    6061352       1% /dev/shm
+tmpfs          tmpfs        6061436   451608    5609828       8% /run
+tmpfs          tmpfs        6061436        0    6061436       0% /sys/fs/cgroup
+/dev/sdb2      ext4      7469286372 22182004 7070649256       1% /data
+/dev/sda2      ext3        49463156 33452972   13450228      72% /home
+tmpfs          tmpfs        6061436      652    6060784       1% /opt/omd/sites/prod/tmp
+tmpfs          tmpfs        1212288       16    1212272       1% /run/user/42
+<<<df>>>
+[df_inodes_start]
+/dev/sda3      ext4       2564096 258883   2305213   11% /
+devtmpfs       devtmpfs   1511789    535   1511254    1% /dev
+tmpfs          tmpfs      1515359      6   1515353    1% /dev/shm
+tmpfs          tmpfs      1515359    695   1514664    1% /run
+tmpfs          tmpfs      1515359     16   1515343    1% /sys/fs/cgroup
+/dev/sdb2      ext4     235274240 255529 235018711    1% /data
+/dev/sda2      ext3      12812288 864624  11947664    7% /home
+tmpfs          tmpfs      1515359     66   1515293    1% /opt/omd/sites/prod/tmp
+tmpfs          tmpfs      1515359     16   1515343    1% /run/user/42
+[df_inodes_end]
+<<<nfsmounts>>>
+<<<cifsmounts>>>
+<<<mounts>>>
+/dev/sda3 / ext4 rw,relatime,data=ordered 0 0
+/dev/sdb2 /data ext4 rw,relatime,data=ordered 0 0
+/dev/sda2 /home ext3 rw,relatime,data=ordered 0 0
+<<<ps>>>
+(root,191712,4656,00:07:10/22-04:53:33,1) /usr/lib/systemd/systemd --switched-root --system --deserialize 21
+(root,0,0,00:00:00/22-04:53:33,2) [kthreadd]
+(root,0,0,00:00:01/22-04:53:33,3) [ksoftirqd/0]
+(root,0,0,00:00:00/22-04:53:33,5) [kworker/0:0H]
+(root,0,0,00:00:32/22-04:53:33,6) [kworker/u64:0]
+(root,0,0,00:00:00/22-04:53:33,8) [migration/0]
+(root,0,0,00:00:00/22-04:53:33,9) [rcu_bh]
+(root,0,0,00:08:10/22-04:53:33,10) [rcu_sched]
+(root,0,0,00:00:05/22-04:53:33,11) [watchdog/0]
+(root,0,0,00:00:05/22-04:53:33,12) [watchdog/1]
+(root,0,0,00:00:00/22-04:53:33,13) [migration/1]
+(root,0,0,00:00:01/22-04:53:33,14) [ksoftirqd/1]
+(root,0,0,00:00:00/22-04:53:33,16) [kworker/1:0H]
+(root,0,0,00:00:00/22-04:53:33,17) [kworker/u66:0]
+(root,0,0,00:00:04/22-04:53:33,18) [watchdog/2]
+(root,0,0,00:00:00/22-04:53:33,19) [migration/2]
+(root,0,0,00:00:00/22-04:53:33,20) [ksoftirqd/2]
+(root,0,0,00:00:00/22-04:53:33,22) [kworker/2:0H]
+(root,0,0,00:00:04/22-04:53:33,23) [watchdog/3]
+(root,0,0,00:00:00/22-04:53:33,24) [migration/3]
+(root,0,0,00:00:01/22-04:53:33,25) [ksoftirqd/3]
+(root,0,0,00:00:00/22-04:53:33,27) [kworker/3:0H]
+(root,0,0,00:00:04/22-04:53:33,28) [watchdog/4]
+(root,0,0,00:00:00/22-04:53:33,29) [migration/4]
+(root,0,0,00:00:00/22-04:53:33,30) [ksoftirqd/4]
+(root,0,0,00:00:00/22-04:53:33,32) [kworker/4:0H]
+(root,0,0,00:00:04/22-04:53:33,33) [watchdog/5]
+(root,0,0,00:00:00/22-04:53:33,34) [migration/5]
+(root,0,0,00:00:01/22-04:53:33,35) [ksoftirqd/5]
+(root,0,0,00:00:00/22-04:53:33,37) [kworker/5:0H]
+(root,0,0,00:00:04/22-04:53:33,38) [watchdog/6]
+(root,0,0,00:00:00/22-04:53:33,39) [migration/6]
+(root,0,0,00:00:00/22-04:53:33,40) [ksoftirqd/6]
+(root,0,0,00:00:00/22-04:53:33,42) [kworker/6:0H]
+(root,0,0,00:00:04/22-04:53:33,43) [watchdog/7]
+(root,0,0,00:00:00/22-04:53:33,44) [migration/7]
+(root,0,0,00:00:01/22-04:53:33,45) [ksoftirqd/7]
+(root,0,0,00:00:00/22-04:53:33,47) [kworker/7:0H]
+(root,0,0,00:00:04/22-04:53:33,48) [watchdog/8]
+(root,0,0,00:00:02/22-04:53:33,49) [migration/8]
+(root,0,0,00:00:00/22-04:53:33,50) [ksoftirqd/8]
+(root,0,0,00:00:00/22-04:53:33,52) [kworker/8:0H]
+(root,0,0,00:00:04/22-04:53:33,53) [watchdog/9]
+(root,0,0,00:00:02/22-04:53:33,54) [migration/9]
+(root,0,0,00:00:00/22-04:53:33,55) [ksoftirqd/9]
+(root,0,0,00:00:00/22-04:53:33,57) [kworker/9:0H]
+(root,0,0,00:00:04/22-04:53:33,58) [watchdog/10]
+(root,0,0,00:00:25/22-04:53:33,59) [migration/10]
+(root,0,0,00:00:07/22-04:53:33,60) [ksoftirqd/10]
+(root,0,0,00:00:00/22-04:53:33,62) [kworker/10:0H]
+(root,0,0,00:00:04/22-04:53:33,63) [watchdog/11]
+(root,0,0,00:00:26/22-04:53:33,64) [migration/11]
+(root,0,0,00:00:12/22-04:53:33,65) [ksoftirqd/11]
+(root,0,0,00:00:00/22-04:53:33,67) [kworker/11:0H]
+(root,0,0,00:00:04/22-04:53:33,68) [watchdog/12]
+(root,0,0,00:00:06/22-04:53:33,69) [migration/12]
+(root,0,0,00:00:02/22-04:53:33,70) [ksoftirqd/12]
+(root,0,0,00:00:00/22-04:53:33,72) [kworker/12:0H]
+(root,0,0,00:00:04/22-04:53:33,73) [watchdog/13]
+(root,0,0,00:00:05/22-04:53:33,74) [migration/13]
+(root,0,0,00:00:01/22-04:53:33,75) [ksoftirqd/13]
+(root,0,0,00:00:00/22-04:53:33,77) [kworker/13:0H]
+(root,0,0,00:00:04/22-04:53:33,78) [watchdog/14]
+(root,0,0,00:00:01/22-04:53:33,79) [migration/14]
+(root,0,0,00:00:04/22-04:53:33,80) [ksoftirqd/14]
+(root,0,0,00:00:00/22-04:53:33,82) [kworker/14:0H]
+(root,0,0,00:00:04/22-04:53:33,83) [watchdog/15]
+(root,0,0,00:00:01/22-04:53:33,84) [migration/15]
+(root,0,0,00:00:00/22-04:53:33,85) [ksoftirqd/15]
+(root,0,0,00:00:00/22-04:53:33,87) [kworker/15:0H]
+(root,0,0,00:00:00/22-04:53:33,90) [kdevtmpfs]
+(root,0,0,00:00:00/22-04:53:33,91) [netns]
+(root,0,0,00:00:00/22-04:53:33,92) [khungtaskd]
+(root,0,0,00:00:00/22-04:53:33,93) [writeback]
+(root,0,0,00:00:00/22-04:53:33,94) [kintegrityd]
+(root,0,0,00:00:00/22-04:53:33,95) [bioset]
+(root,0,0,00:00:00/22-04:53:33,96) [kblockd]
+(root,0,0,00:00:00/22-04:53:33,97) [md]
+(root,0,0,00:00:00/22-04:53:33,103) [kswapd0]
+(root,0,0,00:00:00/22-04:53:33,104) [kswapd1]
+(root,0,0,00:00:00/22-04:53:33,105) [ksmd]
+(root,0,0,00:00:10/22-04:53:33,106) [khugepaged]
+(root,0,0,00:00:00/22-04:53:33,107) [fsnotify_mark]
+(root,0,0,00:00:00/22-04:53:33,108) [crypto]
+(root,0,0,00:00:00/22-04:53:33,116) [kthrotld]
+(root,0,0,00:00:00/22-04:53:33,118) [kmpath_rdacd]
+(root,0,0,00:00:00/22-04:53:33,121) [kpsmoused]
+(root,0,0,00:00:00/22-04:53:33,123) [ipv6_addrconf]
+(root,0,0,00:00:00/22-04:53:33,142) [deferwq]
+(root,0,0,00:00:38/22-04:53:33,143) [kworker/u64:1]
+(root,0,0,00:00:34/22-04:53:33,179) [kworker/u66:1]
+(root,0,0,00:00:00/22-04:53:33,181) [kauditd]
+(root,0,0,00:00:00/22-04:53:33,318) [scsi_eh_0]
+(root,0,0,00:00:00/22-04:53:33,319) [scsi_tmf_0]
+(root,0,0,00:00:00/22-04:53:33,321) [ata_sff]
+(root,0,0,00:00:03/22-04:53:33,323) [kworker/9:1]
+(root,0,0,00:00:00/22-04:53:33,342) [ttm_swap]
+(root,0,0,00:00:00/22-04:53:32,371) [scsi_eh_1]
+(root,0,0,00:00:00/22-04:53:32,372) [scsi_tmf_1]
+(root,0,0,00:00:00/22-04:53:32,373) [scsi_eh_2]
+(root,0,0,00:00:00/22-04:53:32,374) [scsi_tmf_2]
+(root,0,0,00:00:00/22-04:53:32,375) [kworker/u65:2]
+(root,0,0,00:00:00/22-04:53:32,380) [scsi_eh_3]
+(root,0,0,00:00:00/22-04:53:32,381) [scsi_tmf_3]
+(root,0,0,00:00:00/22-04:53:32,382) [scsi_eh_4]
+(root,0,0,00:00:00/22-04:53:32,383) [scsi_tmf_4]
+(root,0,0,00:00:21/22-04:53:32,384) [kworker/u65:3]
+(root,0,0,00:01:06/22-04:53:30,410) [jbd2/sda3-8]
+(root,0,0,00:00:00/22-04:53:30,411) [ext4-rsv-conver]
+(root,98312,48356,00:02:15/22-04:53:28,492) /usr/lib/systemd/systemd-journald
+(root,0,0,00:00:00/22-04:53:27,520) [rpciod]
+(root,44500,2636,00:00:00/22-04:53:27,522) /usr/lib/systemd/systemd-udevd
+(root,0,0,00:00:00/22-04:53:27,524) [kworker/9:1H]
+(root,0,0,00:00:00/22-04:53:27,525) [kworker/1:1H]
+(root,0,0,00:00:00/22-04:53:26,566) [edac-poller]
+(root,0,0,00:00:00/22-04:53:26,603) [kipmi0]
+(root,118892,1304,00:00:00/22-04:53:26,648) /usr/sbin/lvmetad -f
+(root,0,0,00:00:00/22-04:53:26,657) [kvm-irqfd-clean]
+(root,0,0,00:00:00/22-04:53:25,658) [jbd2/sdb2-8]
+(root,0,0,00:00:00/22-04:53:25,659) [ext4-rsv-conver]
+(root,0,0,00:00:04/22-04:53:25,662) [kworker/15:2]
+(root,0,0,00:00:00/22-04:53:25,667) [jbd2/sda2-8]
+(root,0,0,00:00:00/22-04:53:25,668) [ext4-rsv-conver]
+(dbus,27260,2384,00:10:48/22-04:53:25,693) /bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+(root,201212,1208,00:00:01/22-04:53:25,695) /usr/sbin/gssproxy -D
+(root,16808,992,00:00:00/22-04:53:25,697) /usr/sbin/alsactl -s -n 19 -c -E ALSA_CONFIG_PATH=/etc/alsa/alsactl.conf --initfile=/lib/alsa/init/00main rdaemon
+(root,212612,5376,00:00:00/22-04:53:25,702) /usr/sbin/abrtd -d -s
+(chrony,115848,3976,00:00:16/22-04:53:25,703) /usr/sbin/chronyd
+(root,210284,4564,00:00:05/22-04:53:25,706) /usr/bin/abrt-watch-log -F BUG: WARNING: at WARNING: CPU: INFO: possible recursive locking detected ernel BUG at list_del corruption list_add corruption do_IRQ: stack overflow: ear stack overflow (cur: eneral protection fault nable to handle kernel ouble fault: RTNL: assertion failed eek! page_mapcount(page) went negative! adness at NETDEV WATCHDOG ysctl table check failed : nobody cared IRQ handler type mismatch Machine Check Exception: Machine check events logged divide error: bounds: coprocessor segment overrun: invalid TSS: segment not present: invalid opcode: alignment check: stack segment: fpu exception: simd exception: iret exception: /var/log/messages -- /usr/bin/abrt-dump-oops -xtD
+(root,210284,4560,00:00:00/22-04:53:25,709) /usr/bin/abrt-watch-log -F Backtrace /var/log/Xorg.0.log -- /usr/bin/abrt-dump-xorg -xD
+(root,19320,1264,00:02:16/22-04:53:25,713) /usr/sbin/irqbalance --foreground
+(root,24240,1764,00:03:48/22-04:53:25,756) /usr/lib/systemd/systemd-logind
+(root,24324,2316,00:00:00/22-04:53:25,757) /usr/sbin/smartd -n -q never
+(root,126252,1608,00:00:18/22-04:53:25,766) /usr/sbin/crond -n
+(root,25844,928,00:00:00/22-04:53:25,767) /usr/sbin/atd -f
+(root,0,0,00:00:00/22-04:53:25,788) [kworker/4:1H]
+(root,0,0,00:00:00/22-04:53:22,883) [kworker/0:1H]
+(root,0,0,00:00:00/22-04:53:18,962) [kworker/7:1H]
+(root,424796,28696,00:00:44/22-04:53:14,1036) /usr/sbin/httpd -DFOREGROUND
+(root,105956,4108,00:00:00/22-04:53:14,1038) /usr/sbin/sshd -D
+(root,592340,28348,00:01:26/22-04:53:14,1039) /usr/sbin/rsyslogd -n
+(root,27104,1040,00:00:29/22-04:53:14,1044) /usr/sbin/xinetd -stayalive -pidfile /var/run/xinetd.pid
+(root,466864,4228,00:00:00/22-04:53:14,1059) /usr/sbin/gdm
+(prod,221000,7676,00:10:29/22-04:53:13,1108) /usr/bin/python /omd/sites/prod/bin/mkeventd
+(prod,801188,9764,00:28:17/22-04:53:13,1114) /omd/sites/prod/bin/rrdcached -w 3600 -z 1800 -f 7200 -s prod -m 660 -l unix:/omd/sites/prod/tmp/run/rrdcached.sock -p /omd/sites/prod/tmp/rrdcached.pid -j /omd/sites/prod/var/rrdcached
+(prod,156068,784,00:01:01/22-04:53:13,1136) /omd/sites/prod/bin/npcd -d -f /omd/sites/prod/etc/pnp4nagios/npcd.cfg
+(root,91612,2248,00:00:05/22-04:53:13,1189) /usr/libexec/postfix/master -w
+(postfix,91892,4252,00:00:01/22-04:53:13,1193) qmgr -l -t unix -u
+(root,53860,10892,00:00:00/22-04:53:13,1194) /usr/libexec/nss_pcache 98307 off /etc/httpd/alias
+(prod,1466852,21632,00:22:06/22-04:53:13,1195) /omd/sites/prod/bin/nagios -ud /omd/sites/prod/tmp/nagios/nagios.cfg
+(root,0,0,00:00:00/03:33,1231) [kworker/7:1]
+(prod,158052,60916,00:00:35/22-04:53:13,1232) /usr/sbin/httpd -f /omd/sites/prod/etc/apache/apache.conf
+(root,476640,23592,00:00:10/22-04:53:11,1265) /usr/bin/Xorg :0 -background none -noreset -audit 4 -verbose -auth /run/gdm/auth-for-gdm-xMKfX4/database -seat seat0 -nolisten tcp vt1
+(root,387648,4236,00:01:59/22-04:53:11,1266) /usr/libexec/accounts-daemon
+(polkitd,531192,15884,00:02:44/22-04:53:11,1270) /usr/lib/polkit-1/polkitd --no-debug
+(root,358288,5196,00:01:59/22-04:53:11,1317) gdm-session-worker [pam/gdm-launch-environment]
+(root,0,0,00:00:00/22-04:53:11,1326) [kworker/3:1H]
+(gdm,562676,8968,00:01:45/22-04:53:11,1327) /usr/bin/gnome-session --autostart /usr/share/gdm/greeter/autostart
+(gdm,13944,596,00:00:00/22-04:53:11,1330) /usr/bin/dbus-launch --exit-with-session /usr/bin/gnome-session --autostart /usr/share/gdm/greeter/autostart
+(gdm,26704,1116,00:00:00/22-04:53:10,1331) /bin/dbus-daemon --fork --print-pid 4 --print-address 6 --session
+(gdm,337788,3176,00:00:00/22-04:53:10,1334) /usr/libexec/at-spi-bus-launcher
+(gdm,26620,1760,00:00:00/22-04:53:10,1339) /bin/dbus-daemon --config-file=/etc/at-spi2/accessibility.conf --nofork --print-address 3
+(gdm,201268,3424,00:00:00/22-04:53:10,1341) /usr/libexec/at-spi2-registryd --use-gnome-session
+(gdm,1080552,18732,00:01:02/22-04:53:10,1366) /usr/libexec/gnome-settings-daemon
+(root,372436,8432,00:01:22/22-04:53:10,1374) /usr/libexec/upowerd
+(gdm,1609840,99076,00:19:37/22-04:53:10,1402) gnome-shell --mode=gdm
+(colord,404208,5948,00:00:00/22-04:53:10,1403) /usr/libexec/colord
+(gdm,446168,3612,00:00:00/22-04:53:10,1430) /usr/bin/pulseaudio --start --log-target=syslog
+(rtkit,164648,1264,00:00:28/22-04:53:10,1431) /usr/libexec/rtkit-daemon
+(gdm,178508,2576,00:00:00/22-04:53:10,1448) /usr/libexec/dconf-service
+(root,0,0,00:00:00/22-04:53:10,1451) [kworker/5:1H]
+(gdm,437300,4704,00:00:00/22-04:53:09,1470) ibus-daemon --xim --panel disable
+(gdm,360328,2944,00:00:00/22-04:53:09,1474) /usr/libexec/ibus-dconf
+(gdm,421312,8288,00:00:00/22-04:53:09,1476) /usr/libexec/ibus-x11 --kill-daemon
+(root,51404,2732,00:00:00/22-04:53:09,1488) /usr/sbin/wpa_supplicant -u -f /var/log/wpa_supplicant.log -c /etc/wpa_supplicant/wpa_supplicant.conf -P /var/run/wpa_supplicant.pid
+(gdm,573160,7384,00:00:00/22-04:53:09,1490) /usr/libexec/caribou
+(gdm,286512,4884,00:00:00/22-04:53:09,1508) /usr/libexec/ibus-engine-simple
+(root,0,0,00:00:01/22-04:53:05,1514) [kworker/14:1H]
+(root,0,0,00:00:03/22-04:53:03,1518) [kworker/13:1H]
+(root,0,0,00:00:00/22-04:52:35,1542) [kworker/2:1H]
+(root,0,0,00:00:00/22-04:52:08,1571) [kworker/11:1H]
+(root,0,0,00:00:00/22-04:51:37,1585) [kworker/6:1H]
+(root,0,0,00:00:00/22-04:50:38,1803) [kworker/10:1H]
+(root,0,0,00:00:00/01:18,2292) [kworker/11:2]
+(root,115252,1628,00:00:00/00:00,2766) /bin/bash /usr/bin/check_mk_agent
+(root,47440,1652,00:00:00/00:00,2785) ps ax -o user:32,vsz,rss,cputime,etime,pid,command --columns 10000
+(root,13264,916,00:00:00/00:00,2786) sed -e 1d -e s/ *\([^ ]*\) *\([^ ]*\) *\([^ ]*\) *\([^ ]*\) *\([^ ]*\) *\([^ ]*\) */(\1,\2,\3,\4\/\5,\6) /
+(root,0,0,00:00:00/02:36:33,3345) [kworker/1:1]
+(root,0,0,00:00:00/01:16:32,3773) [kworker/0:2]
+(root,0,0,00:00:00/01:13:32,4985) [kworker/11:0]
+(apache,377204,17708,00:00:03/5-15:02:54,6341) /usr/sbin/httpd -DFOREGROUND
+(apache,441772,29236,00:00:01/5-15:02:54,6352) /usr/sbin/httpd -DFOREGROUND
+(apache,441772,29236,00:00:01/5-15:02:54,6353) /usr/sbin/httpd -DFOREGROUND
+(apache,441772,29052,00:00:01/5-15:02:54,6354) /usr/sbin/httpd -DFOREGROUND
+(apache,441772,29052,00:00:01/5-15:02:54,6355) /usr/sbin/httpd -DFOREGROUND
+(apache,441772,29052,00:00:01/5-15:02:54,6356) /usr/sbin/httpd -DFOREGROUND
+(root,0,0,00:00:00/02:23:32,8667) [kworker/8:1]
+(root,0,0,00:00:00/07:37:33,9178) [kworker/10:2]
+(root,0,0,00:00:00/57:33,11521) [kworker/5:0]
+(root,0,0,00:00:00/22-04:20:27,13836) [kworker/8:1H]
+(root,0,0,00:00:00/03:23:33,16371) [kworker/7:2]
+(root,0,0,00:00:00/43:33,17305) [kworker/4:2]
+(root,0,0,00:00:00/39:17,19033) [kworker/13:1]
+(root,0,0,00:00:00/12:28:33,19036) [kworker/12:2]
+(root,0,0,00:00:00/37:33,19716) [kworker/12:0]
+(root,0,0,00:00:00/22-04:05:28,19836) [kworker/15:1H]
+(root,0,0,00:00:00/07:08:33,21007) [kworker/2:1]
+(root,0,0,00:00:00/33:33,21351) [kworker/1:2]
+(root,0,0,00:00:00/05:48:00,21735) [kworker/11:1]
+(root,0,0,00:00:00/01:49:32,22486) [kworker/13:0]
+(root,0,0,00:00:00/30:33,22548) [kworker/14:0]
+(root,0,0,00:00:00/05:44:32,23162) [kworker/14:1]
+(root,0,0,00:00:00/27:18,23895) [kworker/7:0]
+(root,0,0,00:00:00/22-03:54:27,24319) [kworker/12:1H]
+(root,0,0,00:00:00/01:43:32,25018) [kworker/6:1]
+(root,0,0,00:00:01/13:32:00,25235) [kworker/13:2]
+(root,0,0,00:00:00/23:32,25458) [kworker/5:1]
+(root,0,0,00:00:00/03:00:32,25718) [kworker/10:0]
+(root,0,0,00:00:00/22:32,25813) [kworker/0:0]
+(prod,158052,56752,00:00:00/20:03:33,25912) /usr/sbin/httpd -f /omd/sites/prod/etc/apache/apache.conf
+(prod,311308,104688,00:00:03/20:03:33,25913) /usr/sbin/httpd -f /omd/sites/prod/etc/apache/apache.conf
+(prod,311308,104688,00:00:02/20:03:33,25914) /usr/sbin/httpd -f /omd/sites/prod/etc/apache/apache.conf
+(prod,311308,104688,00:00:02/20:03:33,25915) /usr/sbin/httpd -f /omd/sites/prod/etc/apache/apache.conf
+(prod,311308,104688,00:00:03/20:03:33,25916) /usr/sbin/httpd -f /omd/sites/prod/etc/apache/apache.conf
+(prod,311308,104688,00:00:02/20:03:33,25917) /usr/sbin/httpd -f /omd/sites/prod/etc/apache/apache.conf
+(prod,311308,104688,00:00:03/20:02:33,26287) /usr/sbin/httpd -f /omd/sites/prod/etc/apache/apache.conf
+(root,0,0,00:00:00/02:57:32,26945) [kworker/6:0]
+(root,0,0,00:00:00/06:53:32,27190) [kworker/3:0]
+(apache,441772,29052,00:00:01/4-23:43:02,28164) /usr/sbin/httpd -DFOREGROUND
+(apache,441772,29052,00:00:01/4-23:43:01,28165) /usr/sbin/httpd -DFOREGROUND
+(apache,441772,29052,00:00:01/4-23:43:00,28166) /usr/sbin/httpd -DFOREGROUND
+(root,0,0,00:00:00/14:43:33,28324) [kworker/3:1]
+(apache,441772,29052,00:00:02/4-23:41:30,28723) /usr/sbin/httpd -DFOREGROUND
+(apache,441772,29052,00:00:01/4-23:41:16,28892) /usr/sbin/httpd -DFOREGROUND
+(root,0,0,00:00:00/21:13:32,29448) [kworker/15:1]
+(root,0,0,00:00:00/13:33,29506) [kworker/2:2]
+(root,0,0,00:00:00/11:33,30351) [kworker/4:0]
+(root,0,0,00:00:00/02:48:51,30543) [kworker/8:0]
+(root,0,0,00:00:00/08:03:33,30774) [kworker/9:2]
+(postfix,91716,4020,00:00:00/08:10,31677) pickup -l -t unix -u
+<<<mem>>>
+MemTotal:       12122872 kB
+MemFree:         5048796 kB
+MemAvailable:   10389516 kB
+Buffers:          530768 kB
+Cached:          3143024 kB
+SwapCached:            0 kB
+Active:          3569224 kB
+Inactive:         777168 kB
+Active(anon):     944120 kB
+Inactive(anon):   183856 kB
+Active(file):    2625104 kB
+Inactive(file):   593312 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:       3905532 kB
+SwapFree:        3905532 kB
+Dirty:               592 kB
+Writeback:             0 kB
+AnonPages:        672348 kB
+Mapped:           107576 kB
+Shmem:            455388 kB
+Slab:            2565692 kB
+SReclaimable:    2509300 kB
+SUnreclaim:        56392 kB
+KernelStack:        6864 kB
+PageTables:        25052 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     9966968 kB
+Committed_AS:    2983308 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      303252 kB
+VmallocChunk:   34352560124 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    321536 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      126436 kB
+DirectMap2M:     5103616 kB
+DirectMap1G:     7340032 kB
+<<<cpu>>>
+0.04 0.06 0.05 1/390 2789 16
+<<<uptime>>>
+1918413.52 30602826.22
+<<<lnx_if>>>
+[start_iplink]
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: em1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT qlen 1000
+    link/ether 78:2b:cb:0d:b1:3c brd ff:ff:ff:ff:ff:ff
+3: em2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT qlen 1000
+    link/ether 78:2b:cb:0d:b1:3d brd ff:ff:ff:ff:ff:ff
+4: p1p1: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT qlen 1000
+    link/ether 00:10:18:93:ca:64 brd ff:ff:ff:ff:ff:ff
+5: p1p2: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT qlen 1000
+    link/ether 00:10:18:93:ca:66 brd ff:ff:ff:ff:ff:ff
+[end_iplink]
+<<<lnx_if:sep(58)>>>
+    lo: 3025507484 13759102    0    0    0     0          0         0 3025507484 13759102    0    0    0     0       0          0
+   em2: 30440893  393765    0  734    0     0          0        51      808      10    0    0    0     0       0          0
+   em1: 7222152285 18718851    0  734    0     0          0        51 2495101771 16249618    0    0    0     0       0          0
+  p1p1:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  p1p2:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+[lo]
+	Link detected: yes
+	Address: 00:00:00:00:00:00
+
+[em1]
+	Speed: 1000Mb/s
+	Duplex: Full
+	Auto-negotiation: on
+	Link detected: yes
+	Address: 78:2b:cb:0d:b1:3c
+
+[em2]
+	Speed: 1000Mb/s
+	Duplex: Full
+	Auto-negotiation: on
+	Link detected: yes
+	Address: 78:2b:cb:0d:b1:3d
+
+[p1p1]
+	Speed: Unknown!
+	Duplex: Half
+	Auto-negotiation: on
+	Link detected: no
+	Address: 00:10:18:93:ca:64
+
+[p1p2]
+	Speed: Unknown!
+	Duplex: Half
+	Auto-negotiation: on
+	Link detected: no
+	Address: 00:10:18:93:ca:66
+
+<<<tcp_conn_stats>>>
+01 1
+0A 10
+06 3
+<<<diskstat>>>
+1525550614
+   8      16 sdb 18133 0 145662 62635 1 0 8 0 0 13748 62631
+   8       0 sda 158457 48 4428608 914387 11078901 9445703 209892267 4043398 0 1186659 4953360
+[dmsetup_info]
+No devices found
+<<<kernel>>>
+1525550614
+nr_free_pages 1261851
+nr_alloc_batch 4777
+nr_inactive_anon 45964
+nr_active_anon 236126
+nr_inactive_file 148328
+nr_active_file 656276
+nr_unevictable 0
+nr_mlock 0
+nr_anon_pages 87669
+nr_mapped 26800
+nr_file_pages 918448
+nr_dirty 148
+nr_writeback 0
+nr_slab_reclaimable 627325
+nr_slab_unreclaimable 14102
+nr_page_table_pages 6531
+nr_kernel_stack 429
+nr_unstable 0
+nr_bounce 0
+nr_vmscan_write 0
+nr_vmscan_immediate_reclaim 0
+nr_writeback_temp 0
+nr_isolated_anon 0
+nr_isolated_file 0
+nr_shmem 113847
+nr_dirtied 19008015
+nr_written 18516236
+numa_hit 2333394513
+numa_miss 0
+numa_foreign 0
+numa_interleave 23414
+numa_local 2333362890
+numa_other 31623
+workingset_refault 0
+workingset_activate 0
+workingset_nodereclaim 0
+nr_anon_transparent_hugepages 157
+nr_free_cma 0
+nr_dirty_threshold 400698
+nr_dirty_background_threshold 200349
+pgpgin 2287147
+pgpgout 104946137
+pswpin 0
+pswpout 0
+pgalloc_dma 15
+pgalloc_dma32 670786260
+pgalloc_normal 1717978378
+pgalloc_movable 0
+pgfree 2390033485
+pgactivate 3554986
+pgdeactivate 0
+pgfault 6176288777
+pgmajfault 46154
+pgrefill_dma 0
+pgrefill_dma32 0
+pgrefill_normal 0
+pgrefill_movable 0
+pgsteal_kswapd_dma 0
+pgsteal_kswapd_dma32 0
+pgsteal_kswapd_normal 0
+pgsteal_kswapd_movable 0
+pgsteal_direct_dma 0
+pgsteal_direct_dma32 0
+pgsteal_direct_normal 0
+pgsteal_direct_movable 0
+pgscan_kswapd_dma 0
+pgscan_kswapd_dma32 0
+pgscan_kswapd_normal 0
+pgscan_kswapd_movable 0
+pgscan_direct_dma 0
+pgscan_direct_dma32 0
+pgscan_direct_normal 0
+pgscan_direct_movable 0
+pgscan_direct_throttle 0
+zone_reclaim_failed 0
+pginodesteal 0
+slabs_scanned 0
+kswapd_inodesteal 0
+kswapd_low_wmark_hit_quickly 0
+kswapd_high_wmark_hit_quickly 0
+pageoutrun 2
+allocstall 0
+pgrotated 0
+drop_pagecache 0
+drop_slab 0
+numa_pte_updates 25760327
+numa_huge_pte_updates 19014
+numa_hint_faults 15065757
+numa_hint_faults_local 13435348
+numa_pages_migrated 2677480
+pgmigrate_success 2677480
+pgmigrate_fail 1024
+compact_migrate_scanned 0
+compact_free_scanned 0
+compact_isolated 0
+compact_stall 0
+compact_fail 0
+compact_success 0
+htlb_buddy_alloc_success 0
+htlb_buddy_alloc_fail 0
+unevictable_pgs_culled 0
+unevictable_pgs_scanned 0
+unevictable_pgs_rescued 0
+unevictable_pgs_mlocked 0
+unevictable_pgs_munlocked 0
+unevictable_pgs_cleared 0
+unevictable_pgs_stranded 0
+thp_fault_alloc 10245
+thp_fault_fallback 0
+thp_collapse_alloc 4395
+thp_collapse_alloc_failed 0
+thp_split 2948
+thp_zero_page_alloc 0
+thp_zero_page_alloc_failed 0
+balloon_inflate 0
+balloon_deflate 0
+balloon_migrate 0
+cpu  5540593 59184 2968306 3059645500 750863 0 24984 0 0 0
+cpu0 122755 3626 52754 191601704 1856 0 2923 0 0 0
+cpu1 114794 2380 61052 191611194 9258 0 4285 0 0 0
+cpu2 116957 1131 44213 191652929 527 0 944 0 0 0
+cpu3 130734 3833 70613 191582135 10441 0 2086 0 0 0
+cpu4 563318 2343 147992 191102529 359 0 1292 0 0 0
+cpu5 586792 5621 159881 191032217 7101 0 3616 0 0 0
+cpu6 127604 1236 55416 191633440 290 0 992 0 0 0
+cpu7 176657 15016 80229 191500304 25620 0 1410 0 0 0
+cpu8 103952 887 55479 191673552 62 0 62 0 0 0
+cpu9 124905 1034 57574 191649258 254 0 170 0 0 0
+cpu10 1235516 2514 750004 189815784 216 0 833 0 0 0
+cpu11 1561397 7766 822261 189409512 1767 0 2524 0 0 0
+cpu12 144112 621 216137 191462119 90 0 225 0 0 0
+cpu13 174457 1206 206160 190755847 675004 0 133 0 0 0
+cpu14 90353 6933 97202 191598449 17743 0 3000 0 0 0
+cpu15 166284 3031 91333 191564518 267 0 482 0 0 0
+intr 425403069 130 3 0 0 0 0 0 0 1 0 0 0 4 0 0 0 0 50 0 29 0 56 1873868 0 0 0 0 0 0 0 0 0 0 0 0 11547101 2293193 4055462 4119862 4097929 3683267 4332445 3947855 4156273 0 253529 12584 116847 327 7016 2312 364 136 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ctxt 540525462
+btime 1523632200
+processes 13067555
+procs_running 1
+procs_blocked 0
+softirq 757365592 12 324112971 767509 44837994 12003989 0 11295496 118989560 0 245358061
+<<<md>>>
+Personalities : 
+unused devices: <none>
+<<<vbox_guest>>>
+<<<ntp:cached(1525550596,30)>>>
+<<<chrony:cached(1525550596,30)>>>
+Reference ID    : 192.168.4.248 (ntp.gate.rtf)
+Stratum         : 2
+Ref time (UTC)  : Sat May  5 19:47:31 2018
+System time     : 0.000036599 seconds fast of NTP time
+Last offset     : +0.000028496 seconds
+RMS offset      : 0.000140185 seconds
+Frequency       : 5.573 ppm slow
+Residual freq   : +0.000 ppm
+Skew            : 0.047 ppm
+Root delay      : 0.001099 seconds
+Root dispersion : 0.001510 seconds
+Update interval : 1038.3 seconds
+Leap status     : Normal
+<<<postfix_mailq>>>
+QUEUE_deferred 4 0
+QUEUE_active 4 0
+<<<omd_status:cached(1525550554,60)>>>
+[prod]
+mkeventd 0
+rrdcached 0
+npcd 0
+nagios 0
+apache 0
+crontab 0
+OVERALL 0
+<<<mknotifyd:sep(0)>>>
+<<<omd_apache:sep(124)>>>
+[prod]
+<<<livestatus_status:sep(59)>>>
+[prod]
+accept_passive_host_checks;accept_passive_service_checks;cached_log_messages;check_external_commands;check_host_freshness;check_service_freshness;connections;connections_rate;enable_event_handlers;enable_flap_detection;enable_notifications;execute_host_checks;execute_service_checks;external_command_buffer_max;external_command_buffer_slots;external_command_buffer_usage;external_commands;external_commands_rate;forks;forks_rate;host_checks;host_checks_rate;interval_length;last_command_check;last_log_rotation;livecheck_overflows;livecheck_overflows_rate;livechecks;livechecks_rate;livestatus_active_connections;livestatus_queued_connections;livestatus_threads;livestatus_version;log_messages;log_messages_rate;mk_inventory_last;nagios_pid;neb_callbacks;neb_callbacks_rate;num_hosts;num_services;obsess_over_hosts;obsess_over_services;process_performance_data;program_start;program_version;requests;requests_rate;service_checks;service_checks_rate
+1;1;1366;1;1;1;118554;3.6388216906e-02;1;1;0;1;1;0;32768;0;0;0.0000000000e+00;387973;2.4793867268e-01;194550;1.3396036339e-01;60;1525550614;1525478400;0;0.0000000000e+00;0;0.0000000000e+00;1;0;20;1.2.8p15;22463;9.7287277059e-82;0;1195;14096363;7.5189951988e+00;6;232;0;0;1;1523632221;3.5.0;167618;3.8118403092e-02;7195156;1.3995013227e+00
+<<<job>>>
+<<<local>>>
+<<<logins>>>
+1

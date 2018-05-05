@@ -1,0 +1,55 @@
+Frequently Asked Questions
+**************************
+
+Q: Where can I find documentation for <insert name> plugin?
+
+A: All plugins that comply with minimal development guideline for
+   this project include internal documentation.  The documentation
+   can be read executing plugin with the -h or --help option. If 
+   the '-h' option does not work, that is a bug.
+
+
+Q: What version of <insert name> plugin am I running?
+
+A: All plugins that comply with minimal development guideline for
+   this project include detailed version information.  When executed
+   with the '-V' option, a version string will be printed:
+
+   check_radius v1.4.16 (monitoring-plugins 1.4.16)
+
+   All bug reports and help requests should reference this
+   information.
+
+
+Q: What information do I need to include when asking for help or
+   submitting a bug report?
+
+A: At a minimum, the output from 'uname -a' and the version string
+   from '<plugin_name> -V' and, of course, a description of the
+   problem and any solution/patch.
+
+
+Q: I get an error like
+
+   Warning: Return code of 127 for check of service 'PING' on host 'anyhost' was out of bounds.
+
+   when I run Nagios. (Often check_ping runs just fine on the
+   command line).
+
+A: Commonly, system administrators will make security as tight as
+   possible on the monitoring system. Sometimes this includes OS
+   options or hardening scripts that prevent unprivileged users from
+   running the ping command. Nagios runs with no more privileges
+   than 'nobody' -- check to be sure that the nagios user can
+   actually run check ping.  (This can also happen with other binaries
+   executed by nagios, but ping seems to be far and away the biggest
+   offender.)
+
+
+Q: I have a plugin to offer. What can I do?
+
+A: You can make it available on MonitoringExchange (http://monitoringexchange.org)
+   where other people can find it for use.
+
+   You can also get feedback on improving the plugin via the 
+   devel@monitoring-plugins.org mailing list.

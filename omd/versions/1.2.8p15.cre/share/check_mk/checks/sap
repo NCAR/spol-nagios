@@ -1,0 +1,261 @@
+#!/usr/bin/python
+# -*- encoding: utf-8; py-indent-offset: 4 -*-
+# +------------------------------------------------------------------+
+# |             ____ _               _        __  __ _  __           |
+# |            / ___| |__   ___  ___| | __   |  \/  | |/ /           |
+# |           | |   | '_ \ / _ \/ __| |/ /   | |\/| | ' /            |
+# |           | |___| | | |  __/ (__|   <    | |  | | . \            |
+# |            \____|_| |_|\___|\___|_|\_\___|_|  |_|_|\_\           |
+# |                                                                  |
+# | Copyright Mathias Kettner 2014             mk@mathias-kettner.de |
+# +------------------------------------------------------------------+
+#
+# This file is part of Check_MK.
+# The official homepage is at http://mathias-kettner.de/check_mk.
+#
+# check_mk is free software;  you can redistribute it and/or modify it
+# under the  terms of the  GNU General Public License  as published by
+# the Free Software Foundation in version 2.  check_mk is  distributed
+# in the hope that it will be useful, but WITHOUT ANY WARRANTY;  with-
+# out even the implied warranty of  MERCHANTABILITY  or  FITNESS FOR A
+# PARTICULAR PURPOSE. See the  GNU General Public License for more de-
+# tails. You should have  received  a copy of the  GNU  General Public
+# License along with GNU Make; see the file  COPYING.  If  not,  write
+# to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
+# Boston, MA 02110-1301 USA.
+
+
+# <<<sap:sep(9)>>>
+# sap_XYZ    1    50 Nagios/Allgemein/Intern/ResponseTime    249 msec
+# sap_XYZ    1    50 Nagios/Allgemein/Intern/ResponseTimeDialog  249 msec
+# sap_XYZ    1    50 Nagios/Allgemein/Intern/ResponseTimeDialogRFC   249 msec
+# sap_XYZ    1    50 Nagios/Allgemein/Intern/ResponseTimeHTTP    9830    msec
+# sap_XYZ    1    50 Nagios/Allgemein/Intern/FrontendResponseTime    542 msec
+# sap_XYZ    1    50 Nagios/Allgemein/Intern/LongRunners 120 sec
+# sap_XYZ    1    50 Nagios/Allgemein/Intern/ResponseTime(StandardTran.) 7   msec
+# sap_XYZ    1    50 Nagios/Allgemein/Intern/UsersLoggedIn   97  -
+# sap_XYZ    1    50 SAP CCMS Monitor Templates/Dialog Overview/Dialog Response Time/ResponseTime    249 msec
+# sap_XYZ    1    50 SAP CCMS Monitor Templates/Dialog Overview/Network Time/FrontEndNetTime 80  msec
+# sap_XYZ    1    50 SAP CCMS Monitor Templates/Dialog Overview/Standardized Response Time/ResponseTime(StandardTran.)   7   msec
+# sap_XYZ    1    50 SAP CCMS Monitor Templates/Dialog Overview/Users Logged On/UsersLoggedIn    97  -
+
+
+
+# This map converts between the SAP color codes (key values) and the
+# nagios state codes
+sap_nagios_state_map = [
+    0, # GRAY  (inactive or no current info available) -> OK
+    0, # GREEN  -> OK
+    1, # YELLOW -> WARNING
+    2, # RED    -> CRITICAL
+]
+
+def inventory_sap_dialog(info):
+    inv = []
+    for line in info:
+        if line[3] == 'SAP CCMS Monitor Templates/Dialog Overview/Dialog Response Time/ResponseTime':
+            inv.append((line[0], {}))
+    return inv
+
+def check_sap_dialog(item, params, info):
+    # First extract all infos
+    dialog = {}
+    for line in info:
+        if line[0] == item and line[3].startswith('SAP CCMS Monitor Templates/Dialog Overview/'):
+            key = line[3].split('/')[-1]
+            perfval = savefloat(line[4])
+            uom = line[5]
+            dialog[key] = perfval, uom
+
+    if not dialog:
+        # this isn't perfect. Sap data is delivered as piggyback output. Potentially multiple
+        # hosts can each send data for multiple sap instances. The data can also overlap.
+        # This means technically we may not get here and report then incomplete data if one host is
+        # down.
+        # And we would get here if the host isn't down if the item has simply disappeared from
+        # the output.
+        # There is no way inside this check to determine the host(s) that sent the data in info.
+        raise MKCounterWrapped("no output about sap dialogs in agent output")
+
+    def perf_clean_key(s):
+        return s.replace('(', '_').replace(')', '_').replace(' ', '_').replace('.', '_').rstrip('_')
+
+    # {'UsersLoggedIn': (2, '-'), 'ResponseTime(StandardTran.)': (6, 'msec'), 'FrontEndNetTime': (0, 'msec'), 'ResponseTime': (77, 'msec')}
+    for key, value in dialog.items():
+        state = 0
+        if key in params:
+            warn, crit = params[key]
+            if value[0] >= crit:
+                state = 2
+            elif value[0] >= warn:
+                state = 1
+        yield state, "%s: %d%s" % (key, value[0], (value[1] != '-' and value[1] or '') ), [ (perf_clean_key(key), value[0]) ]
+
+check_info['sap.dialog'] = {
+    "check_function"      : check_sap_dialog,
+    "group"               : "sap_dialog",
+    "inventory_function"  : inventory_sap_dialog,
+    "service_description" : "%s Dialog",
+    "has_perfdata"        : True,
+}
+
+#
+# Simple processing of nodes reported by sap agent
+#
+
+# Holds a list of rules which are matching hosts by names or tags
+# and where each rule holds a dictionary of paramteters
+#
+# at the moment the following parameters are supported:
+# 1. match: the sap-path matching definition
+inventory_sap_values = []
+sap_value_groups = []
+def inventory_sap_value(info):
+    inv = []
+
+    patterns = []
+    for rule in inventory_sap_values:
+        taglist, hostlist = rule[1:3]
+        # Filter out entries with do not match our current host
+        if not hosttags_match_taglist(tags_of_host(g_hostname), taglist) \
+           or not in_extraconf_hostlist(hostlist, g_hostname):
+            continue
+
+        v = rule[0]
+        patterns.append((v['match'], v.get('limit_item_levels')))
+
+    for line in info:
+        for pattern, limit_item_levels in patterns:
+            if sap_value_path_matches(line[3], pattern):
+                params = {}
+                if limit_item_levels:
+                    path = '/'.join(line[3].split('/')[-limit_item_levels:])
+                    params['limit_item_levels'] = limit_item_levels
+                else:
+                    path = line[3]
+                inv.append((line[0] + ' ' + path, params))
+
+    return inv
+
+def sap_value_path_matches(path, pattern):
+    if pattern is None:
+        return True
+    elif pattern[0] != '~' and path == pattern:
+        # exact path match
+        return True
+    elif pattern[0] == '~':
+        # regex matching
+        pattern = pattern[1:]
+        reg = regex(pattern)
+        matchobject = reg.match(path)
+        if matchobject:
+            return True
+    return False
+
+def check_sap_value(item, params, info):
+    status = None
+    perfdata = []
+
+    for line in info:
+        if params.get('limit_item_levels'):
+            this_path = '/'.join(line[3].split('/')[-params.get('limit_item_levels'):])
+        else:
+            this_path = line[3]
+
+        if line[0] + ' ' + this_path == item:
+            status  = sap_nagios_state_map[int(line[1])]
+            if line[4] != '-':
+                # This is a performance value, has no output
+                perfval  = savefloat(line[4])
+                perfdata = [('value', perfval)]
+                uom      = line[5]
+                output   = "%0.2f%s" % (perfval, uom)
+            else:
+                # This is a status field without perfdata
+                output  = ' '.join(line[6:])
+            break
+
+    if status is None:
+        raise MKCounterWrapped("no output about sap value in agent output")
+
+    return (status, output, perfdata)
+
+check_info['sap.value'] = {
+    "check_function"      : check_sap_value,
+    "inventory_function"  : inventory_sap_value,
+    "service_description" : "%s",
+    "has_perfdata"        : True,
+}
+
+def sap_value_groups_precompile(hostname, item, _unused):
+    return host_extra_conf(hostname, sap_value_groups)
+
+def sap_groups_of_value( value_name, patterns=False ):
+    groups = []
+    if not patterns:
+        patterns = host_extra_conf(g_hostname, sap_value_groups)
+
+    for line in patterns:
+        for group_name, pattern in line:
+            no_match = False
+            inclusion, exclusion = pattern
+            # Exclude:
+            if exclusion:
+                reg = regex(exclusion)
+                if reg.match(value_name):
+                    no_match = True
+                    break
+            #no match for this group, go on with the next group
+            if no_match:
+                break
+
+            # Include
+            reg = regex(inclusion)
+            if reg.match(value_name):
+                groups.append(group_name)
+    return groups
+
+def inventory_sap_value_groups( info ):
+    inventory = []
+    found_groups = []
+    for line in info:
+        path = line[3]
+        for group in sap_groups_of_value( path ):
+            if group not in found_groups:
+                inventory.append(( group, None ))
+                found_groups.append(group)
+    return inventory
+
+def check_sap_value_groups( item, params, info ):
+    frontend = []
+    backend = []
+    count_ok = 0
+    count_crit = 0
+    state = None
+    for line in info:
+        path = line[3]
+        if item in sap_groups_of_value( path, params ):
+            status = sap_nagios_state_map[int(line[1])]
+            output = ''
+            if line[4] == '-':
+                output  = ' '.join(line[6:])
+            backend.append( path + output + " " + core_state_names[status] )
+            state = max(state, status)
+            if status > 0:
+                count_crit += 1
+                frontend.append( path + output + " " + core_state_names[status] )
+            else:
+                count_ok += 1
+
+    if state is None:
+        raise MKCounterWrapped("no output about sap value groups in agent output")
+
+    return state, "%s OK, %s Crit %s\n%s" % ( count_ok, count_crit, ", ".join(frontend), "\n".join(backend) )
+
+
+check_info['sap.value-groups'] = {
+    'check_function':      check_sap_value_groups,
+    'inventory_function':  inventory_sap_value_groups,
+    'service_description': "%s",
+}
+precompile_params['sap.value-groups'] = sap_value_groups_precompile

@@ -1,0 +1,333 @@
+#!/usr/bin/python
+# -*- encoding: utf-8; py-indent-offset: 4 -*-
+# +------------------------------------------------------------------+
+# |             ____ _               _        __  __ _  __           |
+# |            / ___| |__   ___  ___| | __   |  \/  | |/ /           |
+# |           | |   | '_ \ / _ \/ __| |/ /   | |\/| | ' /            |
+# |           | |___| | | |  __/ (__|   <    | |  | | . \            |
+# |            \____|_| |_|\___|\___|_|\_\___|_|  |_|_|\_\           |
+# |                                                                  |
+# | Copyright Mathias Kettner 2015             mk@mathias-kettner.de |
+# +------------------------------------------------------------------+
+#
+# This file is part of Check_MK.
+# The official homepage is at http://mathias-kettner.de/check_mk.
+#
+# check_mk is free software;  you can redistribute it and/or modify it
+# under the  terms of the  GNU General Public License  as published by
+# the Free Software Foundation in version 2.  check_mk is  distributed
+# in the hope that it will be useful, but WITHOUT ANY WARRANTY;  with-
+# out even the implied warranty of  MERCHANTABILITY  or  FITNESS FOR A
+# PARTICULAR PURPOSE. See the  GNU General Public License for more de-
+# tails. You should have  received  a copy of the  GNU  General Public
+# License along with GNU Make; see the file  COPYING.  If  not,  write
+# to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
+# Boston, MA 02110-1301 USA.
+
+
+# This set of functions are used for checks that handle "generic" windows
+# performance counters as reported via wmi
+# They should also work with performance counters reported through other means
+# (i.e. pdh) as long as the data transmitted as a csv table.
+
+# Sample data:
+# <<<dotnet_clrmemory:sep(44)>>>
+# AllocatedBytesPersec,Caption,Description,FinalizationSurvivors,Frequency_Object,...
+# 26812621794240,,,32398,0,...
+# 2252985000,,,0,0,...
+
+
+#   .--Parse---------------------------------------------------------------.
+#   |                      ____                                            |
+#   |                     |  _ \ __ _ _ __ ___  ___                        |
+#   |                     | |_) / _` | '__/ __|/ _ \                       |
+#   |                     |  __/ (_| | |  \__ \  __/                       |
+#   |                     |_|   \__,_|_|  |___/\___|                       |
+#   |                                                                      |
+#   '----------------------------------------------------------------------'
+
+def parse_wmi_table(info, key="Name"):
+    # represents a 2-dimensional table. columns are fixed after
+    # initialization, rows can be appended. fields can be accessed
+    # by x/y index or using names.
+    # the column name is defined by the header parameter in the constructor,
+    # the row name is determined by the key_field
+    class Table:
+        def __init__(self, headers, key_field):
+            self.__headers = {}
+            index = 0
+            for header in headers:
+                self.__headers[header] = index
+                index += 1
+            self.__key_index = None
+            if key_field is not None:
+                try:
+                    self.__key_index = self.__headers[key_field]
+                except KeyError, e:
+                    raise KeyError(e.message + " missing, valid keys: "
+                                   + ", ".join(self.__headers.keys()))
+
+            self.__row_lookup = {}
+            self.__rows = []
+
+
+        def __repr__(self):
+            return repr((self.__headers, self.__rows))
+
+
+        def add_row(self, row):
+            self.__rows.append(row)
+            if self.__key_index is not None:
+                key = row[self.__key_index]
+                self.__row_lookup[key] = len(self.__rows) - 1
+
+
+        def get(self, row, column):
+            if isinstance(row, int):
+                row_index = row
+            else:
+                row_index = self.__row_lookup[row]
+
+            if isinstance(column, int):
+                col_index = column
+            else:
+                try:
+                    col_index = self.__headers[column]
+                except KeyError, e:
+                    raise KeyError("%s missing, valid keys: %s" % (e, ", ".join(self.__headers.keys())))
+
+            return self.__rows[row_index][col_index]
+
+        def row_labels(self):
+            return self.__row_lookup.keys()
+
+        def row_count(self):
+            return len(self.__rows)
+
+    try:
+        info_iter = iter(info)
+        res = None
+        # read input line by line. rows with [] start the table name.
+        # Each table has to start with a header line
+        line = info_iter.next()
+        while line is not None:
+            current = None
+            if len(line) == 1 and line[0].startswith("["):
+                # multi-table input
+                if res is None:
+                    res = {}
+                tablename = regex("\[(.*)\]").search(line[0]).group(1)
+                line = info_iter.next()
+                if tablename in res:
+                    # known table, append to it
+                    current = res[tablename]
+                else:
+                    # table is new, treat as header line
+                    current = Table(line, key)
+                    res[tablename] = current
+            else:
+                # single-table input
+                current = res = Table(line, key)
+
+            # read table content
+            line = info_iter.next()
+            while line is not None and not line[0].startswith("["):
+                current.add_row(line)
+                line = info_iter.next()
+
+    except StopIteration:
+        # regular end of block
+        pass
+
+    return res
+
+
+#.
+#   .--Filters-------------------------------------------------------------.
+#   |                     _____ _ _ _                                      |
+#   |                    |  ___(_) | |_ ___ _ __ ___                       |
+#   |                    | |_  | | | __/ _ \ '__/ __|                      |
+#   |                    |  _| | | | ||  __/ |  \__ \                      |
+#   |                    |_|   |_|_|\__\___|_|  |___/                      |
+#   |                                                                      |
+#   '----------------------------------------------------------------------'
+
+def wmi_filter_global_only(table, row):
+    return table.get(row, "Name") == "_Global_"
+
+
+#.
+#   .--Inventory-----------------------------------------------------------.
+#   |            ___                      _                                |
+#   |           |_ _|_ ____   _____ _ __ | |_ ___  _ __ _   _              |
+#   |            | || '_ \ \ / / _ \ '_ \| __/ _ \| '__| | | |             |
+#   |            | || | | \ V /  __/ | | | || (_) | |  | |_| |             |
+#   |           |___|_| |_|\_/ \___|_| |_|\__\___/|_|   \__, |             |
+#   |                                                   |___/              |
+#   '----------------------------------------------------------------------'
+
+def inventory_wmi_table(table, **kwargs):
+    if isinstance(table, dict):
+        # TODO if there are multiple tables we can currently only use
+        #  the first line. maybe inventarize every item that exists in
+        #  all tables?
+        return [("", kwargs.get('levels', None))]
+    elif 'filt' in kwargs:
+        filt = kwargs['filt']
+        return [(row, kwargs.get('levels', None))
+                for row in table.row_labels()
+                if filt(table, row)]
+    else:
+        return [(row, kwargs.get('levels', None))
+                for row in table.row_labels()]
+
+
+#.
+#   .--Check---------------------------------------------------------------.
+#   |                      ____ _               _                          |
+#   |                     / ___| |__   ___  ___| | __                      |
+#   |                    | |   | '_ \ / _ \/ __| |/ /                      |
+#   |                    | |___| | | |  __/ (__|   <                       |
+#   |                     \____|_| |_|\___|\___|_|\_\                      |
+#   |                                                                      |
+#   '----------------------------------------------------------------------'
+
+# determine time at which a sample was taken
+def get_wmi_time(table, row):
+    return float(table.get(row, "Timestamp_PerfTime")) /\
+        float(table.get(row, "Frequency_PerfTime"))
+
+
+def wmi_make_perfvar(varname, value, levels, min_value="", max_value=""):
+    if levels is not None:
+        upper_levels = levels.get('upper', ("", ""))
+    else:
+        upper_levels = ("", "")
+    res = (varname, value, upper_levels[0], upper_levels[1], min_value, max_value)
+    return res
+
+
+def wmi_determine_status(value, levels):
+    def worst_status(*args):
+        order = [0,1,3,2]
+        return sorted(args, key=lambda x: order[x], reverse=True)[0]
+
+    statuses = [0]
+    if levels:
+        if 'upper' in levels:
+            if value >= levels['upper'][1]:
+                statuses.append(2)
+            if value >= levels['upper'][0]:
+                statuses.append(1)
+        if 'lower' in levels:
+            if value <= levels['lower'][1]:
+                statuses.append(2)
+            if value <= levels['lower'][0]:
+                statuses.append(1)
+    return worst_status(*statuses)
+
+
+# to make wato rules simpler, levels are allowed to be passed as tuples if the level
+# specifies the upper limit
+def wmi_fix_levels(levels):
+    if isinstance(levels, tuple):
+        return {'upper': levels}
+    else:
+        return levels
+
+
+def wmi_yield_raw_persec(table, row, column, label, perfvar, levels=None):
+    if row == "":
+        row = 0
+
+    levels = wmi_fix_levels(levels)
+
+    try:
+        value = int(table.get(row, column))
+    except KeyError:
+        return 3, "item not present anymore", []
+
+    value_per_sec = get_rate(column, get_wmi_time(table, row), value)
+
+    status = wmi_determine_status(value_per_sec, levels)
+
+    return (status, "%s%s" % (value_per_sec, label),
+            [wmi_make_perfvar(perfvar, value_per_sec, levels)])
+
+
+def wmi_yield_raw_counter(table, row, column, label, perfvar, levels=None):
+    if row == "":
+        row = 0
+
+    levels = wmi_fix_levels(levels)
+
+    try:
+        value = int(table.get(row, column))
+    except KeyError:
+        return 3, "item not present anymore", []
+
+    status = wmi_determine_status(value, levels)
+
+    return (status, "%s%s" % (value, label),
+            [wmi_make_perfvar(perfvar, value, levels)])
+
+
+def wmi_calculate_raw_average(table, row, column, factor):
+    if row == "":
+        row = 0
+
+    measure = int(table.get(row, column)) * factor
+    base = int(table.get(row, column + "_Base"))
+
+    if base < 0:
+        # this is confusing as hell. why does wmi return this value as a 4 byte signed int
+        # when it clearly needs to be unsigned? And how does WMI Explorer know to cast this
+        # to unsigned?
+        base += 1 << 32
+
+    if base == 0:
+        return 0.0
+
+    # This is a total counter which can overflow on long-running systems
+    # (great choice of datatype, microsoft!)
+    # the following forces the counter into a range of 0.0-1.0, but there is no way to know
+    # how often the counter overran, so this bay still be wrong
+    while (base * factor) < measure:
+        base += 1 << 32
+
+    return float(measure) / base
+
+
+def wmi_yield_raw_average(table, row, column, label, perfvar, levels=None):
+    levels = wmi_fix_levels(levels)
+
+    try:
+        average = wmi_calculate_raw_average(table, row, column, 1)
+    except KeyError:
+        return 3, "item not present anymore", []
+
+    return (
+        wmi_determine_status(average, levels),
+        "%.2f%s" % (average, label),
+        [wmi_make_perfvar(perfvar, average, levels)]
+    )
+
+
+def wmi_yield_raw_fraction(table, row, column, label, perfvar, levels=None):
+    levels = wmi_fix_levels(levels)
+
+    try:
+        average = wmi_calculate_raw_average(table, row, column, 100)
+    except KeyError:
+        return 3, "item not present anymore", []
+
+    status = wmi_determine_status(average, levels)
+
+    return (
+        status,
+        "%.2f%s" % (average, label),
+        [wmi_make_perfvar(perfvar, average, levels, 0, 100)]
+    )
+
+#.
+

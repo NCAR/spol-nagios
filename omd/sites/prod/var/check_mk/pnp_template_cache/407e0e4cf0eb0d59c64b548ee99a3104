@@ -1,0 +1,3 @@
+Logins
+ --vertical-label ' ' --title 'Logins'  -l 0
+DEF:logins=$RRDBASE$_logins.rrd:1:MAX CDEF:logins_LEGSCALED=logins,1.000000,/ CDEF:logins_NEG=logins,-1,* CDEF:logins_LEGSCALED_NEG=logins_LEGSCALED,-1,* AREA:logins#cc00ff:"Logins" LINE:logins#a300cc GPRINT:logins_LEGSCALED:AVERAGE:"%8.2lf  average" GPRINT:logins_LEGSCALED:MAX:"%8.2lf  max" GPRINT:logins_LEGSCALED:LAST:"%8.2lf  last" COMMENT:"\n" 

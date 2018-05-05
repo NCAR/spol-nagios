@@ -1,0 +1,114 @@
+#!/usr/bin/python
+# -*- encoding: utf-8; py-indent-offset: 4 -*-
+# +------------------------------------------------------------------+
+# |             ____ _               _        __  __ _  __           |
+# |            / ___| |__   ___  ___| | __   |  \/  | |/ /           |
+# |           | |   | '_ \ / _ \/ __| |/ /   | |\/| | ' /            |
+# |           | |___| | | |  __/ (__|   <    | |  | | . \            |
+# |            \____|_| |_|\___|\___|_|\_\___|_|  |_|_|\_\           |
+# |                                                                  |
+# | Copyright Mathias Kettner 2014             mk@mathias-kettner.de |
+# +------------------------------------------------------------------+
+#
+# This file is part of Check_MK.
+# The official homepage is at http://mathias-kettner.de/check_mk.
+#
+# check_mk is free software;  you can redistribute it and/or modify it
+# under the  terms of the  GNU General Public License  as published by
+# the Free Software Foundation in version 2.  check_mk is  distributed
+# in the hope that it will be useful, but WITHOUT ANY WARRANTY;  with-
+# out even the implied warranty of  MERCHANTABILITY  or  FITNESS FOR A
+# PARTICULAR PURPOSE. See the  GNU General Public License for more de-
+# tails. You should have  received  a copy of the  GNU  General Public
+# License along with GNU Make; see the file  COPYING.  If  not,  write
+# to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
+# Boston, MA 02110-1301 USA.
+
+# <<<mysql_capacity>>>
+# greendb 163840  1428160512
+# hirn    16384   238026752
+# information_schema  9216    0
+# mysql   650067  0
+# performance_schema  0   0
+# wa-confluence   15499264    13805551616
+
+# new: can have instance headers (can be empty), e.g.:
+# <<<mysql_capacity>>>
+# [[]]
+# information_schema      147456  0
+# mysql   665902  292
+# performance_schema      0       0
+# test 409255936       54525952
+
+# FIXME: Crapy copy n paste! Consolidate with other mysql_* parse functions
+def parse_mysql_capacity(info):
+    parsed = {}
+    instance = False
+    for line in info:
+        if line[0].startswith("[["):
+            instance = line[0][2:-2]
+            if instance == "":
+                instance = "mysql"
+            parsed[instance] = []
+        elif instance:
+            parsed[instance].append(line)
+
+    if not instance:
+        parsed['mysql'] = []
+        for line in info:
+            parsed['mysql'].append(line)
+
+    return parsed
+
+
+def inventory_mysql_size(parsed):
+    for instance, values in parsed.items():
+        for dbname, used, avail in values:
+            if dbname not in [ "information_schema", "mysql", "performance_schema" ] \
+               and used != 'NULL' and avail != 'NULL':
+                yield "%s:%s" % (instance, dbname), None
+
+
+def check_mysql_size(item, params, parsed):
+    if ":" not in item:
+        # support items discovered before 1.2.7
+        instance = "mysql"
+        dbname = item
+    else:
+        instance, dbname = item.split(':')
+
+    dbs = parsed[instance]
+
+    # size and avail are given as bytes
+    for db, size, avail in dbs:
+        if db == dbname:
+            if size == 'NULL':
+                return 3, "Missing information - Size is reported as 'NULL'"
+            size = int(size)
+            infotext = "Size is %s" % get_bytes_human_readable(size)
+            if params:
+                state = 0
+                warn, crit = params
+                warn_b = warn * 1024
+                crit_b = crit * 1024
+                perfdata = [("database_size", size, warn_b, crit_b)]
+		if size > crit_b:
+                   state = 2
+                   infotext += " (critical at %s)" % get_bytes_human_readable(crit_b)
+                elif size > warn_b:
+                   state = 1
+                   infotext += " (warning at %s)" % get_bytes_human_readable(crit_b)
+            else:
+                state = 0
+                perfdata = [("database_size", size)]
+            return state, infotext, perfdata
+
+
+check_info['mysql_capacity'] = {
+    "parse_function"          : parse_mysql_capacity,
+    "inventory_function"      : inventory_mysql_size,
+    "check_function"          : check_mysql_size,
+    "service_description"     : "MySQL DB Size %s",
+    "has_perfdata"            : True,
+    "group"                   : "mysql_db_size",
+}
